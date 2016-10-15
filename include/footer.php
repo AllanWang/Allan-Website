@@ -1,5 +1,8 @@
 <?php include('config.php') ?>
-<footer class="page-footer teal">
+<footer class="page-footer" style="background-color:
+<?php echo(isset($theme_color) ? $theme_color : '#009688'); ?>
+    !important ">
+<!--defaults to teal-->
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -80,7 +83,7 @@
     //check for nav override vars
     <?php if (isset($navFrom)) {
         echo('navAnimOverride("' . $navFrom . '", "');
-        echo ((isset($navTo) ? $navTo : 'null') . '");');
+        echo((isset($navTo) ? $navTo : 'null') . '");');
     } ?>
 
 </script>

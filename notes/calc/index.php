@@ -6,7 +6,7 @@ $page_title = "Calc Notes";
 $page_description = "Common Derivatives & Integrals";
 $navFrom = 'notes';
 $navTo = 'commons';
-$logo_color = "#F44336"; //red
+$theme_color = "#F44336"; //red
 include("../../include/header.php"); ?>
 <body>
 <script type="text/javascript" async
@@ -194,8 +194,7 @@ include("../../include/header.php"); ?>
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="../../images/background2.jpg" alt="Unsplashed background img 2">
-    </div>
+    <div class="parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
 </div>
 
 <div class="container">

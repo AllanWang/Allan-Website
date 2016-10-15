@@ -3,7 +3,7 @@
 <?php
 $page_title = "Home";
 $page_description = "Main Page";
-$logo_color = "#0097A7"; //dark cyan
+$theme_color = "#0097A7"; //dark cyan
 include("include/header.php"); ?>
 <body>
 <?php include("include/nav.php"); ?>

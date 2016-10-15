@@ -5,7 +5,7 @@ $page_title = "Projects";
 $page_description = "Main Page";
 $navFrom = 'proj';
 $navTo = 'projects';
-$logo_color = '#4CAF50'; //green
+$theme_color = '#4CAF50'; //green
 include("../include/header.php"); ?>
 <body>
 <?php include("../include/nav.php"); ?>
