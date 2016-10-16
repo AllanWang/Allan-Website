@@ -7,6 +7,16 @@
     <link rel="icon" href="http://allanwang.ca/favicon.ico">
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="<?php echo $include_url; ?>css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
-    <link href="<?php echo $include_url; ?>css/style.css" type="text/css" rel="stylesheet" media="screen"/>
+
+    <?php
+
+    css("materialize.min");
+    css("style");
+    if (isset($preload)) css("preload.min");
+
+    function css($name) {
+        global $include_url;
+        echo "<link href=\"${include_url}css/${name}.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen\"/>\n";
+    }
+    ?>
 </head>

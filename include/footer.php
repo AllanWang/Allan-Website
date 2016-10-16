@@ -2,7 +2,7 @@
 <footer class="page-footer" style="background-color:
 <?php echo(isset($theme_color) ? $theme_color : '#009688'); ?>
     !important ">
-<!--defaults to teal-->
+    <!--defaults to teal-->
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -42,48 +42,29 @@
 <script src="<?php echo $include_url; ?>js/jquery-2.4.4.min.js"></script>
 <script src="<?php echo $include_url; ?>js/materialize.min.js"></script>
 <script src="<?php echo $include_url; ?>js/init.js"></script>
+<script src="<?php echo $include_url; ?>js/animate.js"></script>
 
 <script>
     //script for scroll animations
 
-    $(window).load(function () {
-        var scrollTo = <?php echo('"' . (isset($_GET['scroll_to']) ? $_GET['scroll_to'] : '') . '"'); ?>;
-        if (scrollTo) {
-            animateTo(scrollTo, 250);
+    $(window).on("load", function () {
+        <?php
+        if (isset($_GET['scroll_to'])) {
+            if (isset($preload)) {
+                echo "jumpTo(\"{$_GET["scroll_to"]}\");\n";
+            } else {
+                echo "animateTo(\"{$_GET["scroll_to"]}\", 250);\n";
+            }
         }
+        if (isset($preload)) echo "$('body').addClass('loaded');\n";
+        ?>
     });
-    function animateTo(idTo, delay) {
-        if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
-        if (!delay) delay = 0;
-        setTimeout(function () { //animate scroll after page load
-            $('html, body').animate({
-                scrollTop: $('#' + idTo).offset().top
-            }, 700, 'easeInOutExpo');
-        }, delay);
-
-    }
-
-    function animateSwitch(idFrom, idTo) {
-        if (!document.getElementById(idFrom)) return console.log('animateSwitch invalid id', idFrom);
-        $('#' + idFrom).bind('click', function (event) {
-            if (document.getElementById(idTo)) animateTo(idTo);
-            event.preventDefault();
-            $('.animated').sideNav('hide'); //close nav on click
-        });
-    }
-
-    //called by below for respective nav id
-    function navAnimOverride(idFrom, idTo) {
-        $(document).ready(function () {
-            animateSwitch('nr_' + idFrom, idTo);
-            animateSwitch('nrm_' + idFrom, idTo);
-        });
-    }
 
     //check for nav override vars
     <?php if (isset($navFrom)) {
         echo('navAnimOverride("' . $navFrom . '", "');
-        echo((isset($navTo) ? $navTo : 'null') . '");');
+        echo((isset($navTo) ? $navTo : 'null') . "\");\n");
     } ?>
+
 
 </script>
