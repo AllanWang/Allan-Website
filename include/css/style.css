@@ -98,6 +98,8 @@ footer.page-footer {
     -moz-transition-duration: 1s;
 }
 
+/* Image edits */
+
 .blur-darken {
     -webkit-filter: blur(10px) brightness(80%);
 }
@@ -108,4 +110,31 @@ footer.page-footer {
 
 .dim10 {
     -webkit-filter: blur(10px) brightness(90%);
+}
+
+/* Icon row */
+
+/*.icon-row {*/
+    /*padding: 8px;*/
+/*}*/
+
+.icon-row li {
+    font-size: 150%;
+    line-height: 150%;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.icon-row i {
+    color: white;
+    opacity: 0.75;
+}
+
+.icon-row i:hover {
+    opacity: 1;
+}
+
+.clickable {
+    cursor: pointer;
 }

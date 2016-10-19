@@ -60,8 +60,7 @@ function postCard()
                 <p>Running since Lollipop and still going with Marshmallow.</p>
             </div>
             <div class="card-action">
-                <a href="https://github.com/https://github.com/PitchedApps/Material-Glass" target="_blank">Github-CM</a>
-                <a href="https://github.com/PitchedApps/Material-Glass-Layers" target="_blank">Github-Layers</a>
+                <a href="https://github.com/PitchedApps/Material-Glass" target="_blank">Github</a>
                 <a href="https://play.google.com/store/apps/details?id=com.pitchedapps.material.glass.free"
                    target="_blank">Play Store</a>
             </div>
@@ -83,6 +82,7 @@ function postCard()
             <div class="card-content">
                 <p>An extensive UI library for icon packs.</p>
                 <p>Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.</p>
+                <p>Created with Jahir Fiquitiva</p>
             </div>
             <div class="card-action">
                 <a href="https://github.com/jahirfiquitiva/IconShowcase" target="_blank">Github</a>
@@ -94,7 +94,7 @@ function postCard()
         <div class="row">
             <?php preCard("capsule.png", "Capsule") ?>
             <div class="card-content">
-                <p>A UI framework library for heavy designs.</p>
+                <p>An android UI framework library for heavy designs.</p>
             </div>
             <div class="card-action">
                 <a href="https://github.com/AllanWang/Capsule" target="_blank">Github</a>
