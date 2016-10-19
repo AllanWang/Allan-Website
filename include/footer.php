@@ -1,4 +1,3 @@
-<?php include('config.php') ?>
 <footer class="page-footer" style="background-color:
 <?php echo(isset($theme_color) ? $theme_color : '#009688'); ?>
     !important ">
@@ -29,9 +28,11 @@
 
 
 <!--  Scripts-->
-<script src="<?php echo $include_url; ?>js/jquery-2.4.4.min.js"></script>
-<script src="<?php echo $include_url; ?>js/materialize.min.js"></script>
-<script src="<?php echo $include_url; ?>js/init.js"></script>
+<?php
+js('jquery-2.4.4.min');
+js('materialize.min');
+js('init');
+?>
 
 <script>
     //script for scroll animations

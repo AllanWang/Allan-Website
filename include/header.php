@@ -14,9 +14,5 @@
     css("style");
     if (isset($preload)) css("preload.min");
 
-    function css($name) {
-        global $include_url;
-        echo "<link href=\"${include_url}css/${name}.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen\"/>\n";
-    }
     ?>
 </head>
