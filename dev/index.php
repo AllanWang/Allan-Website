@@ -70,7 +70,9 @@ function card($image, $title, $desc, $full_desc, array $links)
             card("heroimage.png",
                 "Material Glass",
                 "The first Android theme created for Android 5.0.",
-                "Running since Lollipop and still going with Marshmallow.",
+                "&bull; Running since Lollipop and still going with Marshmallow.
+                    <br>&bull; Supports over 60 overlays in both CM and RRO, and comes with over 200 icons.
+                    <br>&bull; Also contains a full app UI with online wallpapers",
                 array("https://github.com/PitchedApps/Material-Glass|Github-CM",
                     "https://github.com/PitchedApps/Material-Glass-Layers|Github-RRO",
                     "https://play.google.com/store/apps/details?id=com.pitchedapps.material.glass.free|Play Store"));
@@ -78,7 +80,9 @@ function card($image, $title, $desc, $full_desc, array $links)
             card("frost_banner.png",
                 "Frost for Facebook",
                 "A comprehensive third party Facebook app, made with design and functionality in mind.",
-                "Running since Lollipop and still going with Marshmallow.",
+                "&bull; Fully themeable
+                    <br>&bull; Battery friendly
+                    <br>&bull; Uses the graph API",
                 array("https://github.com/AllanWang/Facebook-Frost|Github",
                     "https://play.google.com/store/apps/details?id=com.pitchedapps.facebook.frost|Play Store"));
             ?>
@@ -88,14 +92,17 @@ function card($image, $title, $desc, $full_desc, array $links)
             card("icon_showcase.png",
                 "Icon Showcase",
                 "An extensive UI library for icon packs.",
-                "Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.<br>Created with Jahir Fiquitiva",
-                array("https://github.com/jahirfiquitiva/IconShowcase|Github", "a|ss"));
+                "&bull; Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.
+                    <br>&bull; Created with Jahir Fiquitiva",
+                array("https://github.com/jahirfiquitiva/IconShowcase|Github"));
 
             card("capsule.png",
                 "Capsule",
                 "An android UI framework library for heavy designs.",
-                "Running since Lollipop and still going with Marshmallow.",
-                array("https://github.com/AllanWang/Capsule|Github", "Another|One"));
+                "&bull; Built around the coordinator layout view
+                    <br>&bull; Supports easy FAB and permission handling
+                    <br>&bull; Comes with many useful util methods",
+                array("https://github.com/AllanWang/Capsule|Github"));
             ?>
         </div>
         <div class="row" id="allanbots">
@@ -103,14 +110,17 @@ function card($image, $title, $desc, $full_desc, array $links)
             card("allanbot_banner.jpg",
                 "AllanBot",
                 "An extensive Facebook chatbot with Firebase integration.",
-                "Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.<br>Created with Jahir Fiquitiva",
+                "&bull; General chatbot through pandorabots
+                    <br>&bull; Supports reminders and notifications
+                    <br>&bull; Can change chat colors, chat title, and chat nicknames
+                    <br>&bull; For a full list of features, message \"@allanbot help\"",
                 array("https://github.com/AllanWang/AllanBot-Public|Github",
                     "https://www.facebook.com/profile.php?id=100004410158491&fref=ts|Facebook Account"));
 
             card("allanbot_official_banner.jpg",
                 "Allanbot Official",
                 "New bot, new features; uses the official messenger SDK",
-                "Currently built to scrape for McGill lecture recordings.",
+                "&bull; Currently built to scrape for McGill lecture recordings.",
                 array("http://m.me/theallanbot|Chat"));
             ?>
         </div>
