@@ -67,17 +67,18 @@ function card($image, $title, $desc, $full_desc, array $links)
         <!--   Android Cards   -->
         <div class="row" id="projects">
             <?php
-            card("heroimage.png",
+            card("heroimage.jpg",
                 "Material Glass",
                 "The first Android theme created for Android 5.0.",
                 "&bull; Running since Lollipop and still going with Marshmallow.
                     <br>&bull; Supports over 60 overlays in both CM and RRO, and comes with over 200 icons.
-                    <br>&bull; Also contains a full app UI with online wallpapers",
+                    <br>&bull; Also contains a full app UI with online wallpapers
+					<br>&bull; Over 500 000 downloads!",
                 array("https://github.com/PitchedApps/Material-Glass|Github-CM",
                     "https://github.com/PitchedApps/Material-Glass-Layers|Github-RRO",
                     "https://play.google.com/store/apps/details?id=com.pitchedapps.material.glass.free|Play Store"));
 
-            card("frost_banner.png",
+            card("frost_banner.jpg",
                 "Frost for Facebook",
                 "A comprehensive third party Facebook app, made with design and functionality in mind.",
                 "&bull; Fully themeable
@@ -89,14 +90,14 @@ function card($image, $title, $desc, $full_desc, array $links)
         </div>
         <div class="row" id="libraries">
             <?php
-            card("icon_showcase.png",
+            card("icon_showcase.jpg",
                 "Icon Showcase",
                 "An extensive UI library for icon packs.",
                 "&bull; Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.
                     <br>&bull; Created with Jahir Fiquitiva",
                 array("https://github.com/jahirfiquitiva/IconShowcase|Github"));
 
-            card("capsule.png",
+            card("capsule.jpg",
                 "Capsule",
                 "An android UI framework library for heavy designs.",
                 "&bull; Built around the coordinator layout view
