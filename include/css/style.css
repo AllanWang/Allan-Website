@@ -12,6 +12,21 @@ nav .brand-logo {
     color: #444;
 }
 
+.side-nav {
+    width: 240px;
+}
+
+/* nav now stickied on big screen */
+header, main, footer {
+    padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
 /*nav svg {*/
     /*display: block;*/
     /*height: 56px;*/

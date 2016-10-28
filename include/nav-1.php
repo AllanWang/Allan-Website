@@ -1,8 +1,4 @@
-<ul id="dropdown_notes" class="dropdown-content">
-    <li><a id="nr_n_calc" href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a></li>
-    <li><a id="nr_n_disc_m" href="http://allanwang.ca/notes/math240/MATH 240.pdf">Discrete Math</a></li>
-    <li><a id="nr_n_linalg" href="http://allanwang.ca/notes/linear/">Linear Algebra</a></li>
-</ul>
+
 
 <?php
 
@@ -12,7 +8,18 @@ if (isset($preload)) echo '<div id="loader-wrapper">
     <div class="loader-section section-right"></div>
     </div>';
 
-?>
+function navItems()
+{
+    // prefix all ids with nr_
+    return '
+    <li><a class="animated" id="nr_proj"
+       href="http://allanwang.ca/dev/?scroll_to=projects">Projects</a>
+    </li>
+    <li><a class="dropdown-button" id="nr_notes" data-activates="dropdown_notes">Notes<i
+        class="material-icons right">arrow_drop_down</i></a>
+    </li>
+    ';
+} ?>
 <!--<div class="navbar-fixed">-->
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -29,20 +36,23 @@ if (isset($preload)) echo '<div id="loader-wrapper">
                       d="M49.3 53l2.2-5.2.5 1 6.3 15 2.3 5.5H56l-3-7.6-3.7-8.6z"></path>
             </svg>
         </a>
-
-        <ul id="nav-bar" class="side-nav fixed">
-            <li><a class="animated" id="nr_proj"
-                   href="http://allanwang.ca/dev/?scroll_to=projects">Projects</a>
-            </li>
-            <li><a class="dropdown-button" id="nr_notes" data-activates="dropdown_notes">Notes<i
-                        class="material-icons right">arrow_drop_down</i></a>
-            </li>
+        <ul class="right hide-on-med-and-down">
+            <?php echo navItems() ?>
         </ul>
-        <a href="#" data-activates="nav-bar" class="button-collapse"><i class="material-icons"
+
+        <ul id="nav-mobile" class="side-nav">
+            <?php echo str_replace('id="nr_', 'id="nrm_', navItems()) ?>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons"
                 <?php if (isset($theme_color)) echo "style=\"color: $theme_color\""; ?>
             >menu</i></a>
     </div>
 </nav>
 
-
+<ul id="dropdown_notes" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+</ul>
 <!--</div>-->

@@ -42,6 +42,5 @@ function animateSwitch(idFrom, idTo) {
 function navAnimOverride(idFrom, idTo) {
   $(document).ready(function () {
     animateSwitch('nr_' + idFrom, idTo);
-    animateSwitch('nrm_' + idFrom, idTo);
   });
 }
