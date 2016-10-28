@@ -1,4 +1,6 @@
-<?php include('config.php'); ?>
+<?php
+global $page_title, $page_description, $theme_color;
+?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -13,9 +15,14 @@
     <?php
 
     css("materialize.min");
+
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';
+    } else {
+        echo "<meta name=\"theme-color\" content=\"$theme_color\">"; //only add theme meta data if it was explicitly defined
     }
+
+    $ripple_rgba = rippleColor($theme_color);
 
     function theme_background()
     {
@@ -29,7 +36,7 @@
 
     <style>
         .waves-effect.waves-nav .waves-ripple {
-            background-color: <?php echo rippleColor($theme_color)?>;
+            background-color: <?php echo $ripple_rgba?>;
         }
 
         .theme-color {
@@ -53,6 +60,22 @@
         textarea.materialize-textarea:focus:not([readonly]) {
             border-bottom: 1px solid <?php echo $theme_color?>;
             box-shadow: 0 1px 0 0 <?php echo $theme_color?>;
+        }
+
+        input:not([type]):focus:not([readonly]) + label,
+        input[type=text]:focus:not([readonly]) + label,
+        input[type=password]:focus:not([readonly]) + label,
+        input[type=email]:focus:not([readonly]) + label,
+        input[type=url]:focus:not([readonly]) + label,
+        input[type=time]:focus:not([readonly]) + label,
+        input[type=date]:focus:not([readonly]) + label,
+        input[type=datetime]:focus:not([readonly]) + label,
+        input[type=datetime-local]:focus:not([readonly]) + label,
+        input[type=tel]:focus:not([readonly]) + label,
+        input[type=number]:focus:not([readonly]) + label,
+        input[type=search]:focus:not([readonly]) + label,
+        textarea.materialize-textarea:focus:not([readonly]) + label {
+            color: <?php echo $theme_color?>;
         }
 
         input:not([type]):focus:not([readonly]) + label,

@@ -2,19 +2,20 @@
 <html lang="en">
 
 <?php
+include("../../include/config.php");
 $page_title = "Calc Notes";
 $page_description = "Common Derivatives & Integrals";
 $navFrom = 'n_calc';
 $navTo = 'commons';
 $theme_color = "#F44336"; //red
 
-include("../../include/header.php"); ?>
+phpHeader(); ?>
 <body>
 <script type="text/javascript" async
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<?php include("../../include/nav.php"); ?>
+<?php phpNav(); ?>
 
 <main>
 
@@ -257,7 +258,7 @@ include("../../include/header.php"); ?>
         </div>
     </div>
 </main>
-<?php include("../../include/footer.php"); ?>
+<?php phpFooter(); ?>
 </body>
 
 </html>

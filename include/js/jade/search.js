@@ -5,19 +5,17 @@
 
     $(document).ready(function () {
         window.index = lunr(function () {
-            this.field('title', {boost: 10});
-            this.field('tags', {boost: 5});
+            this.field('title', {boost: 100});
+            this.field('tags', {boost: 10});
             this.field('body');
             this.ref('href');
         });
         window.index.pipeline.reset();
 
-
-        window.index.add({
-            href: 'http://allanwang.ca/dev',
-            title: 'Dev Projects',
-            tags: 'Android, Material Glass, Capsule, Butler, Icon Showcase, Allanbot, Facebook, Firebase, Bot, Coding',
-            body: 'A showcase of my main projects'
+        $.each(database, function(key, fields) {
+            var item = jQuery.extend({}, fields); //shallow copy object so that database is not modified
+            item.href = "http://allanwang.ca/" + key;
+            window.index.add(item);
         });
 
         // icon click
@@ -53,19 +51,17 @@
 
         inputSearch.focus(function () {
             $(this).parent().addClass('focused');
-            $('.search-results').show();
+            $('.search-results').show(250); //same as ease in css for search-wrapper
         });
 
-        //todo remove results on focus out
-        inputSearch.focusout(function () {
-            $('.search-results').hide();
-        });
 
         inputSearch.blur(function () {
-            if (!$(this).val()) {
-                $(this).parent().removeClass('focused');
-            }
+            $(this).parent().removeClass('focused');
+            setTimeout(function () { //add delay so clicks are still registered (looks nice too)
+                $('.search-results').hide(250);
+            }, 100);
         });
+
 
         inputSearch.bind('keyup', debounce(function (e) {
             if ($(this).val() < 2) {
@@ -78,7 +74,7 @@
             var query = $(this).val();
             var results = window.index.search(query).slice(0, 6).map(function (result) {
                 var href = result.ref.split('http://allanwang.ca/')[1];
-                return [href.charAt(0).toUpperCase() + href.slice(1), result.ref];
+                return [database[href].title, result.ref];
             });
             renderResults(results);
         }));
@@ -130,7 +126,5 @@
             }
             e.preventDefault();
         }));
-
-
     });
 }(jQuery));

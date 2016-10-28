@@ -171,11 +171,13 @@ footer.page-footer {
 
 #nav-bar li.search .search-wrapper {
     margin: 0 12px;
-    transition: margin .25s ease
+    transition: margin .25s ease;
+    background-color: #fff;
 }
 
 #nav-bar li.search .search-wrapper.focused {
-    margin: 0
+    margin: 0;
+    background-color: #fff;
 }
 
 #nav-bar li.search .search-wrapper input#search {
@@ -311,4 +313,53 @@ a.button-collapse.top-nav i {
     a.button-collapse.top-nav {
         left: 5%
     }
+}
+
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap
+}
+
+nav .brand-logo.center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%)
+    }
+    nav .brand-logo.left,
+    nav .brand-logo.right {
+        padding: 0;
+        -webkit-transform: none;
+        transform: none
+    }
+    nav .brand-logo.left {
+        left: 0.5rem
+    }
+    nav .brand-logo.right {
+        right: 0.5rem;
+        left: auto
+    }
+}
+
+nav .brand-logo.right {
+    right: 0.5rem;
+    padding: 0
+}
+
+nav .brand-logo i,
+nav .brand-logo [class^="mdi-"],
+nav .brand-logo [class*="mdi-"],
+nav .brand-logo i.material-icons {
+    float: left;
+    margin-right: 15px
 }

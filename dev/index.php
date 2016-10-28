@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include("../include/config.php");
 $page_title = "Projects";
 $page_description = "Main Page";
 $navFrom = 'proj';
 $navTo = 'projects';
 $theme_color = '#4CAF50'; //green
-include("../include/header.php"); ?>
+phpHeader(); ?>
 <body>
 
-<?php include("../include/nav.php"); ?>
+<?php phpNav() ?>
 
 <main>
 
@@ -131,7 +132,7 @@ include("../include/header.php"); ?>
         </div>
     </div>
 </main>
-<?php include("../include/footer.php"); ?>
+<?php phpFooter(); ?>
 
 </body>
 

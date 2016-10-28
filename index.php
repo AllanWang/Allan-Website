@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include("include/config.php");
 $page_title = "Home";
 $page_description = "Main Page";
 $theme_color = "#0097A7"; //dark cyan
-include("include/header.php"); ?>
+phpHeader(); ?>
 <body>
 
-<?php include("include/nav.php"); ?>
+<?php phpNav(); ?>
 
 <main>
     <div id="index-banner" class="parallax-container">
@@ -52,7 +53,7 @@ include("include/header.php"); ?>
         </div>
     </div>
 </main>
-<?php include("include/footer.php"); ?>
+<?php phpFooter(); ?>
 
 </body>
 

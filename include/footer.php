@@ -1,3 +1,7 @@
+<?php
+global $navFrom, $navTo;
+?>
+
 <footer class="page-footer"
     <?php theme_background() ?>>
     <!--defaults to teal-->
@@ -29,7 +33,7 @@
 <!--  Scripts-->
 <?php
 js('jquery/jquery-2.4.4.min');
-js('materialize.min');
+js('materialize/materialize.min');
 js('init');
 ?>
 
@@ -38,7 +42,7 @@ js('init');
 
     window.onload = function () {
         <?php
-        if (isset($_GET['scroll_to'])) echo "animateToIfAbove(\"{$_GET["scroll_to"]}\", 250);\n";
+        if (isset($_GET['scroll_to'])) echo "animateTo(\"{$_GET["scroll_to"]}\", 250, true);\n";
         ?>
     };
 
@@ -60,5 +64,6 @@ js('init');
 <!--load last-->
 <?php
 js('jade/lunr.min');
-js('jade/search');
+js('jade/search_data');
+js('jade/search.min');
 ?>

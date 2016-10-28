@@ -1,3 +1,7 @@
+<?php
+global $theme_color;
+?>
+
 <header>
     <div class="container">
         <a href="#" data-activates="nav-bar"
@@ -6,7 +10,7 @@
 
     <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="brand-logo center">
-                <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" width="76.5" height="84"
+                <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" width="51" height="56"
                      viewBox="0 0 68.7 74.7">
                     <path fill="<?php echo $theme_color; ?>"
                           d="M31.5 0c.6 1 1 2.3 1.4 3.4l16 39-2.3 5.2L32.4 13l-1-2.3-.4.7-13.3 32-2.2 5.5L10 61.2 6 71l-1.5 3.7H0v-.2c.5-1 1-2 1.2-2.8l1.4-3.3 10.5-25c1-1.8 2-3.6 2.7-5.4L28 8.4c.5-1.6 1.2-3.2 2-4.7L31.4 0z"></path>
@@ -19,7 +23,8 @@
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
-                <input id="search"><label for="search"><i class="material-icons">search</i></label>
+                <input id="search" type="text" placeholder="Search"><label for="search"><i
+                        class="material-icons">search</i></label>
                 <div class="search-results"></div>
             </div>
         </li>

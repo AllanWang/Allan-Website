@@ -11,19 +11,17 @@
  * Animation functions
  */
 
-function animateToIfAbove(idTo, delay) {
-    if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
-    var top = window.pageYOffset || document.documentElement.scrollTop;
-    if (top > $('#' + idTo).offset().top) return;
-    animateTo(idTo, delay);
-}
-
-function animateTo(idTo, delay) {
+function animateTo(idTo, delay, onlyFromAbove) {
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     if (!delay) delay = 0;
+    var itemTop = $('#' + idTo).offset().top;
+    if (onlyFromAbove) {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        if (top > itemTop) return;
+    }
     setTimeout(function () { //animate scroll after page load
         $('html, body').animate({
-            scrollTop: $('#' + idTo).offset().top
+            scrollTop: itemTop
         }, 700, 'easeInOutExpo');
     }, delay);
 }
