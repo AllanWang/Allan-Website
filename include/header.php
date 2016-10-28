@@ -13,7 +13,6 @@
     <?php
 
     css("materialize.min");
-    css("style");
     if (isset($preload)) css("preload.min");
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';
@@ -25,6 +24,8 @@
         echo "style=\"background-color: $theme_color; !important \" ";
     }
 
+    css("style");
+
     ?>
 
     <style>
@@ -35,6 +36,40 @@
         .theme-color {
             color: <?php echo $theme_color?>;
         !important;
+        }
+
+        /*override search bar accents*/
+        input:not([type]):focus:not([readonly]),
+        input[type=text]:focus:not([readonly]),
+        input[type=password]:focus:not([readonly]),
+        input[type=email]:focus:not([readonly]),
+        input[type=url]:focus:not([readonly]),
+        input[type=time]:focus:not([readonly]),
+        input[type=date]:focus:not([readonly]),
+        input[type=datetime]:focus:not([readonly]),
+        input[type=datetime-local]:focus:not([readonly]),
+        input[type=tel]:focus:not([readonly]),
+        input[type=number]:focus:not([readonly]),
+        input[type=search]:focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid <?php echo $theme_color?>;
+            box-shadow: 0 1px 0 0 <?php echo $theme_color?>;
+        }
+
+        input:not([type]):focus:not([readonly]) + label,
+        input[type=text]:focus:not([readonly]) + label,
+        input[type=password]:focus:not([readonly]) + label,
+        input[type=email]:focus:not([readonly]) + label,
+        input[type=url]:focus:not([readonly]) + label,
+        input[type=time]:focus:not([readonly]) + label,
+        input[type=date]:focus:not([readonly]) + label,
+        input[type=datetime]:focus:not([readonly]) + label,
+        input[type=datetime-local]:focus:not([readonly]) + label,
+        input[type=tel]:focus:not([readonly]) + label,
+        input[type=number]:focus:not([readonly]) + label,
+        input[type=search]:focus:not([readonly]) + label,
+        textarea.materialize-textarea:focus:not([readonly]) + label {
+            color: <?php echo $theme_color?>;
         }
     </style>
 </head>

@@ -14,9 +14,9 @@ if (isset($preload)) echo '<div id="loader-wrapper">
     <div class="container">
         <a href="#" data-activates="nav-bar"
            class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
-            <i class="material-icons theme-color">menu</i></a></div>
+            <i class="material-icons">menu</i></a></div>
 
-    <ul id="nav-bar" class="side-nav fixed">
+    <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="brand-logo center">
                 <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" width="76.5" height="84"
                      viewBox="0 0 68.7 74.7">
@@ -31,7 +31,7 @@ if (isset($preload)) echo '<div id="loader-wrapper">
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
-                <label for="search"><input id="search"><i class="material-icons">search</i></label>
+                <input id="search"><label for="search"><i class="material-icons">search</i></label>
                 <div class="search-results"></div>
             </div>
         </li>

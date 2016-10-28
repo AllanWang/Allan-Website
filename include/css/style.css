@@ -217,8 +217,51 @@ footer.page-footer {
     outline: none
 }
 
+ul.side-nav.fixed li.logo {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 80px
+}
+
+ul.side-nav.fixed li.logo:hover,
 ul.side-nav.fixed li.logo #logo-container:hover {
     background-color: transparent
+}
+
+ul.side-nav.fixed {
+    overflow: hidden
+}
+
+ul.side-nav.fixed li {
+    line-height: 44px
+}
+
+ul.side-nav.fixed li.active {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+ul.side-nav.fixed li a {
+    font-size: 13px;
+    line-height: 44px;
+    height: 44px;
+    padding: 0 30px
+}
+
+ul.side-nav.fixed ul.collapsible-accordion {
+    background-color: #FFF
+}
+
+ul.side-nav.fixed ul.collapsible-accordion a.collapsible-header {
+    padding: 0 30px
+}
+
+ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
+    font-weight: 400;
+    padding: 0 37.5px 0 45px
+}
+
+ul.side-nav.fixed:hover {
+    overflow-y: auto
 }
 
 #logo-container {
@@ -230,4 +273,42 @@ ul.side-nav.fixed li.logo #logo-container:hover {
     display: inline-block;
     height: 100%;
     pointer-events: none
+}
+
+nav.top-nav {
+    height: 122px;
+    box-shadow: none
+}
+
+nav.top-nav a.page-title {
+    line-height: 122px;
+    font-size: 48px
+}
+
+a.button-collapse.top-nav {
+    position: absolute;
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    left: 7.5%;
+    top: 0;
+    float: none;
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 36px;
+    z-index: 2
+}
+
+a.button-collapse.top-nav.full {
+    line-height: 122px
+}
+
+a.button-collapse.top-nav i {
+    font-size: 32px
+}
+
+@media only screen and (max-width: 600px) {
+    a.button-collapse.top-nav {
+        left: 5%
+    }
 }
