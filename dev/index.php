@@ -38,9 +38,10 @@ phpHeader(); ?>
 
     function card($image, $title, $desc, $full_desc, array $links)
     {
+        $id = strtolower(str_replace(" ", "-", $title));
         echo
         "<div class=\"col s12 m6\">
-    <div class=\"card medium sticky-action\">
+    <div id=\"$id\" class=\"card medium sticky-action\">
         <div class=\"card-image waves-effect waves-block waves-light\">
             <img class=\"activator\" src=\"images/${image}\">
             <span class=\"card-title activator background-gradient\">${title}</span>
