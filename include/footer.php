@@ -44,7 +44,7 @@ js('jade/search');
             if (isset($preload)) {
                 echo "jumpTo(\"{$_GET["scroll_to"]}\");\n";
             } else {
-                echo "animateTo(\"{$_GET["scroll_to"]}\", 250);\n";
+                echo "animateToIfAbove(\"{$_GET["scroll_to"]}\", 250);\n";
             }
         }
         if (isset($preload)) echo "$('body').addClass('loaded');\n";
