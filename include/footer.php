@@ -1,6 +1,5 @@
-<footer class="page-footer" style="background-color:
-<?php echo $theme_color; ?>
-    !important ">
+<footer class="page-footer"
+    <?php theme_background() ?>>
     <!--defaults to teal-->
     <div class="container">
         <div class="row">

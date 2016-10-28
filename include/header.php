@@ -18,6 +18,13 @@
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';
     }
+
+    function theme_background()
+    {
+        global $theme_color;
+        echo "style=\"background-color: $theme_color; !important \" ";
+    }
+
     ?>
 
     <style>
@@ -25,12 +32,9 @@
             background-color: <?php echo rippleColor($theme_color)?>;
         }
 
-        .theme-background {
-            background-color: <?php echo $theme_color?>; !important;
-        }
-
         .theme-color {
-            color: <?php echo $theme_color?>; !important;
+            color: <?php echo $theme_color?>;
+        !important;
         }
     </style>
 </head>
