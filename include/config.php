@@ -21,4 +21,11 @@ function code_highlight()
     js('highlight.min');
     echo "<script>hljs.initHighlightingOnLoad();</script>\n";
 }
+
+function rippleColor($hex) {
+    $r = hexdec(substr($hex, 1, 2));
+    $g = hexdec(substr($hex, 3, 2));
+    $b = hexdec(substr($hex, 4, 2));
+    return "rgba($r, $g, $b, 0.2)";
+}
 ?>

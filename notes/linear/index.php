@@ -25,8 +25,10 @@ MathJax.Hub.Config({
 </script>
 
 <?php code_highlight(); ?>
+
+<?php include("../../include/nav.php"); ?>
+
 <main>
-    <?php include("../../include/nav.php"); ?>
 
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">

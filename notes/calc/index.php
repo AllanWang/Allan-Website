@@ -15,8 +15,9 @@ include("../../include/header.php"); ?>
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<?php include("../../include/nav.php"); ?>
+
 <main>
-    <?php include("../../include/nav.php"); ?>
 
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
@@ -44,7 +45,7 @@ include("../../include/header.php"); ?>
             <div class="row" id="commons">
                 <div class="col s12 m6">
                     <h5 class="header center">Common Derivatives</h5>
-                    <table class="light h5">
+                    <table class="light h5 highlight">
                         <tr>
                             <th>$$f$$</th>
                             <th>$$f'$$</th>
@@ -138,11 +139,12 @@ include("../../include/header.php"); ?>
                 </div>
                 <div class="col s12 m6">
                     <h5 class="header center">Common Integrals</h5>
-                    <table class="light h5">
+                    <table class="light h5 highlight">
                         <tr>
                             <th>$$f(x)$$</th>
                             <th>$$\int f(x)\,dx+C$$</th>
                         </tr>
+
                         <tr>
                             <th>$$ xe^x $$</th>
                             <th>$$ xe^x-x $$</th>
@@ -204,7 +206,7 @@ include("../../include/header.php"); ?>
         <div class="section">
             <div class="row" id="series">
                 <h5 class="header center">Power Series</h5>
-                <table class="light h5">
+                <table class="light h5 highlight">
                     <tr>
                         <th>$$ \frac{1}{1-x} $$</th>
                         <th>$$ \sum_{n=0}^\infty x^n $$</th>

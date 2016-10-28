@@ -8,8 +8,10 @@ $navTo = 'projects';
 $theme_color = '#4CAF50'; //green
 include("../include/header.php"); ?>
 <body>
+
+<?php include("../include/nav.php"); ?>
+
 <main>
-    <?php include("../include/nav.php"); ?>
 
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">

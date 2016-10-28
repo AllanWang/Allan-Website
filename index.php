@@ -6,9 +6,10 @@ $page_description = "Main Page";
 $theme_color = "#0097A7"; //dark cyan
 include("include/header.php"); ?>
 <body>
-<main>
-    <?php include("include/nav.php"); ?>
 
+<?php include("include/nav.php"); ?>
+
+<main>
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">

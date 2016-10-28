@@ -1,5 +1,5 @@
 <footer class="page-footer" style="background-color:
-<?php echo(isset($theme_color) ? $theme_color : '#009688'); ?>
+<?php echo $theme_color; ?>
     !important ">
     <!--defaults to teal-->
     <div class="container">
@@ -29,9 +29,11 @@
 
 <!--  Scripts-->
 <?php
-js('jquery-2.4.4.min');
+js('jquery/jquery-2.4.4.min');
 js('materialize.min');
 js('init');
+js('jade/lunr.min');
+js('jade/search');
 ?>
 
 <script>
