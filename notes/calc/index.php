@@ -19,14 +19,14 @@ phpHeader(); ?>
 
 <main>
 
-    <div id="index-banner" class="parallax-container">
+    <div id="index-banner" class="anti-parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
                 <br>
                 <br>
                 <h1 class="header center white-text text-lighten-2 pad-top-20">Calculus</h1>
                 <div class="row center">
-                    <h5 class="header col s12 light">140 &bull; 141 &bull; 222</h5>
+                    <h5 class="header col s12 light white-text">140 &bull; 141 &bull; 222</h5>
                 </div>
                 <!-- <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
@@ -36,7 +36,7 @@ phpHeader(); ?>
 
             </div>
         </div>
-        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
+        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
     </div>
 
 
@@ -191,15 +191,17 @@ phpHeader(); ?>
         </div>
     </div>
 
-    <div class="parallax-container valign-wrapper">
+    <div class="anti-parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">Middle TODO</h5>
-                </div>
+                <h1 class="header center white-text text-lighten-2 pad-top-20">Middle TODO</h1>
+
+<!--                <div class="row center">-->
+<!--                    <h5 class="header col s12 light white-text">Middle TODO</h5>-->
+<!--                </div>-->
             </div>
         </div>
-        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
+        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
     </div>
 
     <div class="container">

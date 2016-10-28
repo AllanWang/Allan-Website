@@ -20,7 +20,7 @@ phpHeader(); ?>
                 <br>
                 <br>
                 <h1 class="header center white-text text-lighten-2 pad-top-20">Coding Projects</h1>
-                <div class="row center">
+                <div class="row center white-text">
                     <h5 class="header col s12 light">Themes &bull; Android Apps &bull; Open Source</h5>
                 </div>
                 <!-- <div class="row center">
