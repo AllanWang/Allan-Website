@@ -31,8 +31,6 @@
 js('jquery/jquery-2.4.4.min');
 js('materialize.min');
 js('init');
-js('jade/lunr.min');
-js('jade/search');
 ?>
 
 <script>
@@ -40,14 +38,7 @@ js('jade/search');
 
     window.onload = function () {
         <?php
-        if (isset($_GET['scroll_to'])) {
-            if (isset($preload)) {
-                echo "jumpTo(\"{$_GET["scroll_to"]}\");\n";
-            } else {
-                echo "animateToIfAbove(\"{$_GET["scroll_to"]}\", 250);\n";
-            }
-        }
-        if (isset($preload)) echo "$('body').addClass('loaded');\n";
+        if (isset($_GET['scroll_to'])) echo "animateToIfAbove(\"{$_GET["scroll_to"]}\", 250);\n";
         ?>
     };
 
@@ -64,5 +55,10 @@ js('jade/search');
         echo((isset($navTo) ? $navTo : 'null') . "\");\n");
     } ?>
 
-
 </script>
+
+<!--load last-->
+<?php
+js('jade/lunr.min');
+js('jade/search');
+?>

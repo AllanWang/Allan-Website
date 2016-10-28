@@ -7,7 +7,6 @@ $page_description = "Linear Algebra Notes";
 $navFrom = 'n_linalg';
 //$navTo = 'commons';
 $theme_color = "#F44336"; //red
-//$preload = true;
 
 include("../../include/header.php"); ?>
 <body>

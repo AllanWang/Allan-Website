@@ -7,7 +7,6 @@ $page_description = "Common Derivatives & Integrals";
 $navFrom = 'n_calc';
 $navTo = 'commons';
 $theme_color = "#F44336"; //red
-//$preload = true;
 
 include("../../include/header.php"); ?>
 <body>

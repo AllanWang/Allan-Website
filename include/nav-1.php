@@ -2,12 +2,6 @@
 
 <?php
 
-if (isset($preload)) echo '<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-    </div>';
-
 function navItems()
 {
     // prefix all ids with nr_

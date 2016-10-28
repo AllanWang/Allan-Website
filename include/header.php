@@ -13,7 +13,6 @@
     <?php
 
     css("materialize.min");
-    if (isset($preload)) css("preload.min");
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';
     }

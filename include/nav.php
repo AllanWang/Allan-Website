@@ -1,15 +1,3 @@
-<?php
-
-if (isset($preload)) echo '<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-    </div>';
-
-?>
-
-
-<!--<div class="navbar-fixed">-->
 <header>
     <div class="container">
         <a href="#" data-activates="nav-bar"
