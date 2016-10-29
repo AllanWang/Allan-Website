@@ -124,10 +124,10 @@ phpHeader(); ?>
                         "https://www.facebook.com/profile.php?id=100004410158491&fref=ts|Facebook Account"));
 
                 card("allanbot_official_banner.jpg",
-                    "Allanbot Official",
+                    "AllanBot Official",
                     "New bot, new features; uses the official messenger SDK",
                     "&bull; Currently built to scrape for McGill lecture recordings.",
-                    array("http://m.me/theallanbot|Chat"));
+                    array("https://m.me/theallanbot|Chat"));
                 ?>
             </div>
         </div>
