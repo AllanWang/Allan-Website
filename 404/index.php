@@ -35,7 +35,24 @@ $error_tag = (isset($_GET['why']) ? $_GET['why'] : '404');
 </main>
 <?php phpFooter(); ?>
 <script src="http://allanwang.ca/404/js/jGravity.min.js"></script>
-<script src="http://allanwang.ca/404/js/404.js"></script>
+<script>
+    $(document).ready(function () {
+        var main = $('main');
+        setTimeout(function () {
+            main.jGravity({
+                target: '.gravity',
+                drag: true,
+                callback: function() { //modified jGravity with callback for more reliable movement checks
+                    setTimeout(function () {
+                        $(".stationary").fadeIn(3000);
+                    }, 1500);
+                }
+            });
+
+        }, 1000);
+
+    });
+</script>
 </body>
 
 </html>
