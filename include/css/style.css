@@ -190,7 +190,7 @@ footer.page-footer {
     position: absolute;
     left: 0;
     right: 0;
-    top: 120px;
+    top: 128px;
     margin-top: 1px;
     padding: 1px 0 0 0;
     z-index: 2
@@ -251,9 +251,9 @@ footer.page-footer {
 }
 
 ul.side-nav.fixed li.logo {
-    text-align: center;
-    margin-top: 32px;
-    margin-bottom: 80px
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 104px
 }
 
 ul.side-nav.fixed li.logo:hover,
@@ -304,7 +304,7 @@ ul.side-nav.fixed:hover {
 
 #front-page-logo {
     display: inline-block;
-    height: 100%;
+    height: 200%;
     pointer-events: none
 }
 
