@@ -190,7 +190,7 @@ footer.page-footer {
     position: absolute;
     left: 0;
     right: 0;
-    top: 128px;
+    top: 120px;
     margin-top: 1px;
     padding: 1px 0 0 0;
     z-index: 2
@@ -250,15 +250,16 @@ footer.page-footer {
     outline: none
 }
 
+/*nav height*/
 ul.side-nav.fixed li.logo {
-    text-align: left;
+    text-align: center;
     margin-top: 16px;
-    margin-bottom: 104px
+    margin-bottom: 80px
 }
 
 ul.side-nav.fixed li.logo:hover,
 ul.side-nav.fixed li.logo #logo-container:hover {
-    background-color: transparent
+    background-color: transparent;
 }
 
 ul.side-nav.fixed {
@@ -297,14 +298,15 @@ ul.side-nav.fixed:hover {
     overflow-y: auto
 }
 
+/*nav height*/
 #logo-container {
-    height: 57px;
+    height: 80px;
     margin-bottom: 32px
 }
 
 #front-page-logo {
     display: inline-block;
-    height: 200%;
+    height: 100%;
     pointer-events: none
 }
 

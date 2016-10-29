@@ -1,7 +1,7 @@
 var database = {
     "dev/?scroll_to=projects": {
         "title": "Dev Projects",
-        "tags": "Android, Material Glass, Capsule, Butler, Icon Showcase, Allanbot, Facebook, Firebase, Bot, Coding",
+        "tags": "Android, Material Glass, Capsule, Butler, Icon Showcase, Allanbot, Facebook, Firebase, Bot, Coding, hello world",
         "body": "A showcase of my main projects"
     },
     "dev/?scroll_to=material-glass": {

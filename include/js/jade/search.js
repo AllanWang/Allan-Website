@@ -12,7 +12,7 @@
         });
         window.index.pipeline.reset();
 
-        $.each(database, function(key, fields) {
+        $.each(database, function (key, fields) {
             var item = jQuery.extend({}, fields); //shallow copy object so that database is not modified
             item.href = "http://allanwang.ca/" + key;
             window.index.add(item);
@@ -30,6 +30,12 @@
         var renderResults = function (results) {
             var resultsContainer = $('.search-results');
             resultsContainer.empty();
+            if (!results) return; //empty input
+            if (results.length == 0) { //input with no match
+                var noResultDiv = $('<a>No results found</a>');
+                resultsContainer.append(noResultDiv);
+                return;
+            }
             Array.prototype.forEach.call(results, function (result) {
                 var resultDiv = $('<a href=' + result[1] + '>' + result[0] + '</a>');
                 resultsContainer.append(resultDiv);
@@ -65,13 +71,15 @@
 
         inputSearch.bind('keyup', debounce(function (e) {
             if ($(this).val() < 2) {
-                renderResults([]);
+                renderResults(null);
                 return;
             }
 
             if (e.which === 38 || e.which === 40 || e.keyCode === 13) return;
 
             var query = $(this).val();
+            if (!query) return renderResults(null);
+
             var results = window.index.search(query).slice(0, 6).map(function (result) {
                 var href = result.ref.split('http://allanwang.ca/')[1];
                 return [database[href].title, result.ref];
@@ -85,7 +93,7 @@
             if (e.keyCode === 27) {
                 $(this).val('');
                 $(this).blur();
-                renderResults([]);
+                renderResults(null);
                 return;
             } else if (e.keyCode === 13) {
                 // enter
