@@ -1,17 +1,18 @@
 <?php
-global $theme_color, $page_title;
+global $theme_color, $page_title, $pdf;
 ?>
 
 <header>
-    <div class="container">
+<!--    <div class="container">-->
         <a href="#" data-activates="nav-bar"
            class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
             <i class="material-icons"
 
                 <?php
-                if ($page_title === '404') echo 'style="color: ' . $theme_color . ';"';
+                if (isset($pdf) || $page_title === '404') echo 'style="color: ' . $theme_color . ';"';
                 ?>
-            >menu</i></a></div>
+            >menu</i></a>
+<!--    </div>-->
 
     <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="center">
@@ -46,7 +47,9 @@ global $theme_color, $page_title;
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
-                <input id="search" type="text" placeholder="<?php if ($page_title === '404') echo 'Press the Icon to '?>Search"><label for="search"><i
+                <input id="search" type="text"
+                       placeholder="<?php if ($page_title === '404') echo 'Press the Icon to ' ?>Search"><label
+                    for="search"><i
                         class="material-icons">search</i></label>
                 <div class="search-results"></div>
             </div>
@@ -75,3 +78,12 @@ global $theme_color, $page_title;
     </ul>
 
 </header>
+
+<?php
+
+//if (isset($pdf))
+//    echo '<main>
+//    <div id="pdf"></div>
+//</main>';
+
+?>

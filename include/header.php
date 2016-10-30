@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color;
+global $page_title, $page_description, $theme_color, $pdf;
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -33,7 +33,7 @@ global $page_title, $page_description, $theme_color;
     css("style");
 
     if ($page_title === '404') echo '<link href="http://allanwang.ca/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
-
+    if (isset($pdf)) css('pdf');
     ?>
 
     <style>

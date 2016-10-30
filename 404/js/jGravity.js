@@ -1,11 +1,13 @@
 /*
 
  * @project:	jGravity
- * @version:	0.8 - 29/04/2012
+ * @version:	0.9 - 29/10/2016
+ * @updater:    Allan Wang - www.allanwang.ca
+ * @releases:   https://github.com/AllanWang/jGravity/releases/
  * @author:		Craig Thomas - www.tinybigideas.com
  * @project:	http://tinybigideas.com/plugins/jquery-gravity/
  * @license:	jGravity is licensed under a Open Source Initiative OSI MIT License: http://opensource.org/licenses/mit-license.php
- * @changlog:	http://tinybigideas.com/plugins/jquery-gravity/
+ * @changelog:	http://tinybigideas.com/plugins/jquery-gravity/
 
  */
 
@@ -6274,22 +6276,27 @@
                 }
 
 // onDocumentMouseMove()
-                function onDocumentMouseMove() {
+                function onDocumentMouseMove(e) {
                     if (!isRunning) {
                         run();
                         if (jQuery.isFunction(o.callback)) {
                             o.callback();
                         }
                     }
-
-                    mouseX = window.event.clientX;
-                    mouseY = window.event.clientY;
+                    if (!e) {
+                        e = window.event;
+                    }
+                    mouseX = e.clientX + $(window).scrollLeft();
+                    mouseY = e.clientY + $(window).scrollTop();
                 }
 
 // onElementMouseDown()
-                function onElementMouseDown() {
-                    mouseOnClick[0] = window.event.clientX;
-                    mouseOnClick[1] = window.event.clientY;
+                function onElementMouseDown(e) {
+                    if (!e) {
+                        e = window.event;
+                    }
+                    mouseOnClick[0] = e.clientX + $(window).scrollLeft();
+                    mouseOnClick[1] = e.clientY + $(window).scrollTop();
                     return false;
                 }
 

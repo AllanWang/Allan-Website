@@ -1,5 +1,5 @@
 <?php
-global $navFrom, $navTo;
+global $navFrom, $navTo, $pdf;
 ?>
 
 <footer class="page-footer"
@@ -12,7 +12,8 @@ global $navFrom, $navTo;
             </div>
             <div align="center" class="col l6 s12">
                 <ul class="icon-row">
-                    <li><a href="mailto:me@allanwang.com?Subject=Web Inquiry" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="mailto:me@allanwang.com?Subject=Web Inquiry" target="_blank"><i
+                                class="fa fa-envelope"></i></a></li>
                     <li><a href="https://github.com/AllanWang" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://www.paypal.me/Allanw9" target="_blank"><i class="fa fa-paypal"></i></a></li>
                 </ul>
@@ -66,4 +67,8 @@ js('init');
 js('jade/lunr.min');
 js('jade/search_data');
 js('jade/search.min');
+//if (isset($pdf)) {
+//    js('pdf/pdfobject.min');
+//    echo '<script>PDFObject.embed("' . $pdf . '", "#pdf");</script>';
+//}
 ?>

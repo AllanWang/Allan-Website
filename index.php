@@ -28,7 +28,7 @@ phpHeader(); ?>
 
             </div>
         </div>
-        <div class="parallax dim10"><img src="images/polygon_clouds.jpg" alt="Polygon Clouds Header"></div>
+        <div class="parallax blur-darken"><img src="images/polygon_clouds.jpg" alt="Polygon Clouds Header"></div>
     </div>
 
     <div class="container">
