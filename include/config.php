@@ -6,24 +6,24 @@ $include_url = "http://allanwang.ca/include/";
 
 function phpHeader()
 {
-    include('header.php');
+    include_once('header.php');
 }
 
 function phpNav()
 {
-    include('nav.php');
+    include_once('nav.php');
 }
 
 function phpFooter()
 {
-    include('footer.php');
+    include_once('footer.php');
 }
 
 function phpPDF($url)
 {
     global $pdf;
     $pdf = $url;
-    include('pdf.php');
+    include_once('pdf.php');
 }
 
 function css($name)
@@ -44,6 +44,8 @@ function code_highlight()
     echo "\n";
     js('highlight.min');
     echo "<script>hljs.initHighlightingOnLoad();</script>\n";
+    include_once('code.php');
+
 }
 
 function rippleColor($hex)

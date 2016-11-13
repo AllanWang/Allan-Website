@@ -3,7 +3,8 @@
 
 <?php
 include("../../include/config.php");
-$page_title = "Calc Notes";
+$n_key = "Calculus";
+$page_title = "$n_key Notes";
 $page_description = "Common Derivatives & Integrals";
 $navFrom = 'n_calc';
 $navTo = 'commons';
@@ -24,7 +25,7 @@ phpHeader(); ?>
             <div class="container">
                 <br>
                 <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20">Calculus</h1>
+                <h1 class="header center white-text text-lighten-2 pad-top-20"><?php echo $n_key ?></h1>
                 <div class="row center">
                     <h5 class="header col s12 light white-text">140 &bull; 141 &bull; 222</h5>
                 </div>
@@ -36,7 +37,7 @@ phpHeader(); ?>
 
             </div>
         </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
+        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
     </div>
 
 
@@ -68,7 +69,7 @@ phpHeader(); ?>
                         </tr>
                         <tr>
                             <td>$$f \circ g$$</td>
-                            <td>$$f' - g'$$</td>
+                            <td>$$f'(g) * g'$$</td>
                         </tr>
 
                         <tr>
@@ -196,9 +197,9 @@ phpHeader(); ?>
             <div class="container">
                 <h1 class="header center white-text text-lighten-2 pad-top-20">Middle TODO</h1>
 
-<!--                <div class="row center">-->
-<!--                    <h5 class="header col s12 light white-text">Middle TODO</h5>-->
-<!--                </div>-->
+                <!--                <div class="row center">-->
+                <!--                    <h5 class="header col s12 light white-text">Middle TODO</h5>-->
+                <!--                </div>-->
             </div>
         </div>
         <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>

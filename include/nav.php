@@ -7,7 +7,6 @@ global $theme_color, $page_title, $pdf;
         <a href="#" data-activates="nav-bar"
            class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
             <i class="material-icons"
-
                 <?php
                 if (isset($pdf) || $page_title === '404') echo 'style="color: ' . $theme_color . ';"';
                 ?>
@@ -66,10 +65,12 @@ global $theme_color, $page_title, $pdf;
                             <li><a class="waves-effect waves-nav" id="nr_n_calc"
                                    href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_disc_m"
-                                   href="http://allanwang.ca/notes/math240/MATH 240.pdf">Discrete
+                                   href="http://allanwang.ca/notes/discrete/">Discrete
                                     Math</a></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_linalg"
-                                   href="http://allanwang.ca/notes/linear/">Linear Algebra</a></li>
+                                   href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear Algebra</a></li>
+                            <li><a class="waves-effect waves-nav" id="nr_n_comp"
+                                   href="http://allanwang.ca/notes/comp/">Computer Science</a></li>
                         </ul>
                     </div>
                 </li>

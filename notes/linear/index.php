@@ -3,10 +3,11 @@
 
 <?php
 include("../../include/config.php");
-$page_title = "Linear Algebra Notes";
-$page_description = "Linear Algebra Notes";
+$n_key = "Linear Algebra";
+$page_title = "$n_key Notes";
+$page_description = "$n_key Notes";
 $navFrom = 'n_linalg';
-//$navTo = 'commons';
+$navTo = 'common';
 $theme_color = "#F44336"; //red
 
 phpHeader(); ?>
@@ -18,13 +19,13 @@ MathJax.Hub.Config({
   displayIndent: "2em"
 });
 
+
 </script>
 <script type="text/javascript" async
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<?php code_highlight();
-phpNav(); ?>
+<?php phpNav(); ?>
 
 <main>
 
@@ -33,7 +34,7 @@ phpNav(); ?>
             <div class="container">
                 <br>
                 <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20">Linear Algebra</h1>
+                <h1 class="header center white-text text-lighten-2 pad-top-20"><?php echo $n_key ?></h1>
                 <div class="row center">
                     <h5 class="header col s12 light white-text">133</h5>
                 </div>
@@ -45,7 +46,7 @@ phpNav(); ?>
 
             </div>
         </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
+        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
     </div>
 
     <?php
@@ -70,14 +71,6 @@ phpNav(); ?>
                     \rightarrow a \times b = \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2, a_2b_1\rangle
                     <?php bullet() ?> \text{Only for 3D vectors}
                     $$</p>
-                <pre><code class="java">public void main (String[] args) {
-                    int test = 0;
-                    test++;
-                    for (int i = 0; i < test; i++) {
-                        //comment
-                        System.out.println(i);
-                    }
-                }</code></pre>
             </div>
         </div>
     </div>
