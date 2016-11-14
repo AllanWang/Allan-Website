@@ -41,44 +41,42 @@ phpNav(); ?>
     </div>
 
     <div class="container">
+        <!--        <table class="light h5 highlight" id="big-O">-->
+        <!--            <tr>-->
+        <!--                <th>a</th>-->
+        <!--                <th>b</th>-->
+        <!--                <th>c</th>-->
+        <!--                <th>d</th>-->
+        <!--                <th>e</th>-->
+        <!--                <th>f</th>-->
+        <!--                <th>g</th>-->
+        <!--                <th>h</th>-->
+        <!--            </tr>-->
+        <!--        </table>-->
+        <!--        <br>-->
+        <!--        <br>-->
         <h5 class="header center">Pseudocode</h5>
         <?php
-        code_collapsible(array(
-            'Binary Search|binary.java',
-            'Tree Traversal|tree_order.java'));
+        code_collapsible('Binary Search|binary.java',
+            'Tree Traversal|tree_order.java',
+            'Heap|heap.java');
         ?>
-    </div>
-
-    <div class="container">
+        <br>
+        <br>
         <div class="section">
             <div class="row" id="summations">
                 <h5 class="header center">Summations</h5>
                 <table class="light h5 highlight">
-                    <tr>
-                        <th>$$ \sum_{i=1}^{n} i $$</th>
-                        <th>$$ \frac{n(n+1)}{2} $$</th>
-                    </tr>
-                    <tr>
-                        <th>$$ \sum_{i=1}^{n} i^2 $$</th>
-                        <th>$$ \frac{n(n+1)(2n+1)}{6} $$</th>
-                    </tr>
-                    <tr>
-                        <th>$$ \sum_{i=1}^{n} i^3 $$</th>
-                        <th>$$ \frac{n^2(n+1)^2}{4} $$</th>
-                    </tr>
-                    <tr>
-                        <th>$$ \sum_{i=0}^{n-1} c^i $$</th>
-                        <th>$$ \frac{c^n - 1}{c-1} $$</th>
-                    </tr>
-                    <tr>
-                        <th>$$ \sum_{i=0}^n 2^i $$</th>
-                        <th>$$ 2^{n+1} - 1 $$</th>
-                    </tr>
-                    <tr>
-                        <th>$$ \sum_{i=0}^{n-1} i * 2^i $$</th>
-                        <th>$$ 2 + (n - 2)2^n $$</th>
-                    </tr>
+                    <?php
+                    math_table('\sum_{i=1}^{n} i', '\frac{n(n+1)}{2}');
+                    math_table('\sum_{i=1}^{n} i^2', '\frac{n(n+1)(2n+1)}{6}');
+                    math_table('\sum_{i=1}^{n} i^3', '\frac{n^2(n+1)^2}{4}');
+                    math_table('\sum_{i=0}^{n-1} c^i', '\frac{c^n - 1}{c-1}');
+                    math_table('\sum_{i=0}^n 2^i', '2^{n+1} - 1');
+                    math_table('\sum_{i=0}^{n-1} i * 2^i', '2 + (n - 2)2^n');
+                    ?>
                 </table>
+                <br>
                 <div class="center">
                     <a href="http://allanwang.ca/notes/calc/?scroll_to=series" target="_blank">More series here</a>
                 </div>
@@ -86,7 +84,11 @@ phpNav(); ?>
         </div>
     </div>
 </main>
-<?php phpFooter(); ?>
+<?php
+phpFooter();
+//json2html();
+?>
 </body>
+<!--<script src="code/bigO.js"></script>-->
 
 </html>

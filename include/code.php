@@ -18,7 +18,7 @@ function code_specific($type, $filename)
     echo '</code></pre>';
 }
 
-function code_collapsible(array $boxes)
+function code_collapsible(...$boxes)
 {
     echo '<ul class="collapsible" data-collapsible="accordion">';
     foreach ($boxes as $box) {

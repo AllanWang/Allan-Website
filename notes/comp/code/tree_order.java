@@ -1,6 +1,14 @@
 /*
  * Terms
  *
+ * Root             node from which all descendents stem
+ * Child            node with a parent
+ * Edge             line connecting parent with child
+ * Leaf             node without any children
+ *
+ * Height           maximum path length from that node to a leaf; leaves have height 0
+ * Depth/Level      number of edges from that node to root; root has depth 0
+ *
  * Depth first      all descendents of node visited before next sibling
  * Breadth first    all nodes of current depth visited before next depth
  *

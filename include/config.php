@@ -41,7 +41,7 @@ function js($name)
 function mathJax()
 {
     echo '<script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
     </script>';
 }
 
@@ -53,6 +53,30 @@ function code_highlight()
     echo "<script>hljs.initHighlightingOnLoad();</script>\n";
     include_once('code.php');
 
+}
+
+function json2html()
+{
+    js('json2html');
+    js('jquery.json2html');
+}
+
+function table(...$items)
+{
+    echo '<tr>';
+    foreach ($items as $item) {
+        echo "<th>$item</th>";
+    }
+    echo '<tr>';
+}
+
+function math_table(...$items)
+{
+    echo '<tr>';
+    foreach ($items as $item) {
+        echo "<td>$$ $item $$</td>";
+    }
+    echo '<tr>';
 }
 
 function rippleColor($hex)

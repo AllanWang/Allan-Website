@@ -5,17 +5,19 @@ var data = [
     createData('Stack', O_n, O_n, O_1, O_1)
 ];
 
+var format = '{"<>":"tr","html":[{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"},{"<>":"th","html":"a"}]}';
+
 function createData(key, a, s, i, d, a2, s2, i2, d2) {
     var obj = {};
-    obj[key].best = createSearchData(a, s, i, d);
+    obj[key].best = bigO(a, s, i, d);
     if (a2 == null) {
         obj[key].worst = obj[key].best;
     } else {
-        obj[key].worst = createSearchData(a2, s2, i2, d2);
+        obj[key].worst = bigO(a2, s2, i2, d2);
     }
     return obj;
 }
-function createSearchData(a, s, i, d) {
+function bigO(a, s, i, d) {
     return {
         access: a,
         search: s,
@@ -23,4 +25,8 @@ function createSearchData(a, s, i, d) {
         deletion: d
     };
 }
+
+$(function(){
+    $('#big-O').json2html(format,data);
+});
 
