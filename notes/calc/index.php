@@ -12,11 +12,8 @@ $theme_color = "#F44336"; //red
 
 phpHeader(); ?>
 <body>
-<script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
-<?php phpNav(); ?>
+<?php mathJax(); phpNav(); ?>
 
 <main>
 
@@ -192,23 +189,19 @@ phpHeader(); ?>
         </div>
     </div>
 
-    <div class="anti-parallax-container">
+    <div class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
-                <h1 class="header center white-text text-lighten-2 pad-top-20">Middle TODO</h1>
-
-                <!--                <div class="row center">-->
-                <!--                    <h5 class="header col s12 light white-text">Middle TODO</h5>-->
-                <!--                </div>-->
+                <h1 class="header center white-text text-lighten-2 pad-top-20">Power Series</h1>
             </div>
         </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Header"></div>
+        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Power Series"></div>
     </div>
 
     <div class="container">
         <div class="section">
             <div class="row" id="series">
-                <h5 class="header center">Power Series</h5>
+<!--                <h5 class="header center">Power Series</h5>-->
                 <table class="light h5 highlight">
                     <tr>
                         <th>$$ \frac{1}{1-x} $$</th>

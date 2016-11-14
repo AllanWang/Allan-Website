@@ -38,6 +38,13 @@ function js($name)
     echo "<script src=\"${include_url}js/${name}.js\"></script>\n";
 }
 
+function mathJax()
+{
+    echo '<script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>';
+}
+
 function code_highlight()
 {
     echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css">';

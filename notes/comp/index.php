@@ -14,7 +14,8 @@ phpHeader(); ?>
 
 <body>
 
-<?php code_highlight();
+<?php mathJax();
+code_highlight();
 phpNav(); ?>
 
 <main>
@@ -40,7 +41,49 @@ phpNav(); ?>
     </div>
 
     <div class="container">
-        <?php code('test.java'); ?>
+        <h5 class="header center">Pseudocode</h5>
+        <?php
+        code_collapsible(array(
+            'Binary Search|binary.java',
+            'Tree Traversal|tree_order.java'));
+        ?>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="row" id="summations">
+                <h5 class="header center">Summations</h5>
+                <table class="light h5 highlight">
+                    <tr>
+                        <th>$$ \sum_{i=1}^{n} i $$</th>
+                        <th>$$ \frac{n(n+1)}{2} $$</th>
+                    </tr>
+                    <tr>
+                        <th>$$ \sum_{i=1}^{n} i^2 $$</th>
+                        <th>$$ \frac{n(n+1)(2n+1)}{6} $$</th>
+                    </tr>
+                    <tr>
+                        <th>$$ \sum_{i=1}^{n} i^3 $$</th>
+                        <th>$$ \frac{n^2(n+1)^2}{4} $$</th>
+                    </tr>
+                    <tr>
+                        <th>$$ \sum_{i=0}^{n-1} c^i $$</th>
+                        <th>$$ \frac{c^n - 1}{c-1} $$</th>
+                    </tr>
+                    <tr>
+                        <th>$$ \sum_{i=0}^n 2^i $$</th>
+                        <th>$$ 2^{n+1} - 1 $$</th>
+                    </tr>
+                    <tr>
+                        <th>$$ \sum_{i=0}^{n-1} i * 2^i $$</th>
+                        <th>$$ 2 + (n - 2)2^n $$</th>
+                    </tr>
+                </table>
+                <div class="center">
+                    <a href="http://allanwang.ca/notes/calc/?scroll_to=series" target="_blank">More series here</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <?php phpFooter(); ?>

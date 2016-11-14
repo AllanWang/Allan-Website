@@ -6,7 +6,7 @@ var database = {
     },
     "dev/?scroll_to=material-glass": {
         "title": "Material Glass",
-        "tags": "Android, Material Glass, theme, design, java",
+        "tags": "Android, Material Glass, theme, design, java, lollipop, marshmallow",
         "body": "The first Android theme created for Android 5.0."
     },
     "dev/?scroll_to=frost-for-facebook": {
@@ -32,16 +32,16 @@ var database = {
     "notes/calc/?scroll_to=commons": {
         "title": "Calculus",
         "tags": "Math, 140, 141, 222, derivatives, integrals, series",
-        "body": "Notes"
+        "body": "Formula Sheet"
     },
     "notes/math240/MATH%20240.pdf": {
         "title": "Discrete Math",
         "tags": "Math, discrete, pdf, 240",
-        "body": "Notes"
+        "body": "PDF of lectures"
     },
-    "notes/linear": {
+    "notes/linear?scroll_to=common": {
         "title": "Linear Algebra",
         "tags": "math, linalg, 133",
-        "body": "Notes"
+        "body": "Formula Sheet"
     }
 };

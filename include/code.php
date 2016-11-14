@@ -18,4 +18,22 @@ function code_specific($type, $filename)
     echo '</code></pre>';
 }
 
+function code_collapsible(array $boxes)
+{
+    echo '<ul class="collapsible" data-collapsible="accordion">';
+    foreach ($boxes as $box) {
+        $items = explode("|", $box);
+        echo '<li><div class="collapsible-header">';
+        echo $items[0];
+        echo '</div><div class="collapsible-body">';
+        if (sizeof($items) == 3) {
+            code_specific($items[2], $items[1]);
+        } else {
+            code($items[1]);
+        }
+        echo '</div>';
+    }
+    echo '</ul>';
+}
+
 ?>
