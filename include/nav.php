@@ -71,10 +71,16 @@ global $theme_color, $page_title, $pdf;
                                    href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear Algebra</a></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_comp"
                                    href="http://allanwang.ca/notes/comp/">Computer Science</a></li>
+                            <li><div class="divider"></div></li>
+                            <li><a class="waves-effect waves-nav" id="nr_n_git"
+                                   href="http://allanwang.ca/notes/git/">Git Bash</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
+        </li>
+        <li><a class="animated waves-effect waves-nav" id="nr_about"
+               href="http://allanwang.ca/about/WIP">About</a>
         </li>
     </ul>
 

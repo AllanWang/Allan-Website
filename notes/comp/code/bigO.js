@@ -10,7 +10,7 @@ var format = '{"<>":"tr","html":[{"<>":"th","html":"a"},{"<>":"th","html":"a"},{
 function createData(key, a, s, i, d, a2, s2, i2, d2) {
     var obj = {};
     obj[key].best = bigO(a, s, i, d);
-    if (a2 == null) {
+    if (d2 == null) {
         obj[key].worst = obj[key].best;
     } else {
         obj[key].worst = bigO(a2, s2, i2, d2);

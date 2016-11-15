@@ -1,5 +1,6 @@
 /*
  * log in the context of this file shall refer to log of base 2
+ *
  * For a Binary Tree of n nodes, the height is log(n) at best and n at worst
  * It will have 1 root, n - 1 children, and n - 1 edges
  */

@@ -61,13 +61,22 @@ function json2html()
     js('jquery.json2html');
 }
 
-function table(...$items)
+function table_header(...$items)
 {
     echo '<tr>';
     foreach ($items as $item) {
         echo "<th>$item</th>";
     }
+    echo '</tr>';
+}
+
+function table(...$items)
+{
     echo '<tr>';
+    foreach ($items as $item) {
+        echo "<td>$item</td>";
+    }
+    echo '</tr>';
 }
 
 function math_table(...$items)
@@ -76,7 +85,7 @@ function math_table(...$items)
     foreach ($items as $item) {
         echo "<td>$$ $item $$</td>";
     }
-    echo '<tr>';
+    echo '</tr>';
 }
 
 function rippleColor($hex)

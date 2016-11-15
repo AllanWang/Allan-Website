@@ -55,9 +55,10 @@ phpNav(); ?>
         <!--        </table>-->
         <!--        <br>-->
         <!--        <br>-->
-        <h5 class="header center">Pseudocode</h5>
+        <h5 class="header center" id="pseudocode">Pseudocode</h5>
         <?php
         code_collapsible('Binary Search|binary.java',
+            'Binary Search Tree|bst.java',
             'Tree Traversal|tree_order.java',
             'Heap|heap.java');
         ?>
