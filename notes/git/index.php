@@ -3,8 +3,7 @@
 
 <?php
 include("../../include/config.php");
-$n_key = "Git";
-$page_title = "$n_key Cheat Sheet";
+$page_title = "Git Cheat Sheet";
 $page_description = "List of common git commands";
 $navFrom = 'n_git';
 //$navTo = 'commons';
@@ -29,7 +28,7 @@ phpNav(); ?>
                     table_header('Core');
                     table('git init', 'initializes .git');
                     table('git add -A', 'adds all the git files');
-                    table('git commit -m [message]', 'creates a commit with a message (message is mandatory)');
+                    table("git commit -m '[message]'", 'creates a commit with a message (message is mandatory)');
                     table('git push origin master', 'pushes to origin');
                     table('git pull origin master', 'pulls from origin');
 
