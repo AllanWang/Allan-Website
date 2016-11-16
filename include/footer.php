@@ -47,12 +47,7 @@ js('init');
         ?>
     };
 
-    $('#to-top').bind('click', function (event) {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 700, 'easeInOutExpo');
-        event.preventDefault();
-    });
+
 
     //check for nav override vars
     <?php if (isset($navFrom)) {

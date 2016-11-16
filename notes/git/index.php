@@ -12,7 +12,7 @@ $theme_color = "#4078c0"; //github blue
 phpHeader(); ?>
 <body>
 
-<?php mathJax();
+<?php
 phpNav(); ?>
 
 <main>

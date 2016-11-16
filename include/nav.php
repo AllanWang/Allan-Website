@@ -1,5 +1,6 @@
 <?php
 global $theme_color, $page_title, $pdf;
+include_once("analytics.php") ;
 ?>
 
 <header>
@@ -74,6 +75,8 @@ global $theme_color, $page_title, $pdf;
                             <li><div class="divider"></div></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_git"
                                    href="http://allanwang.ca/notes/git/">Git Bash</a></li>
+                            <li><a class="waves-effect waves-nav" id="nr_n_java"
+                                   href="http://allanwang.ca/notes/java/">Java</a></li>
                         </ul>
                     </div>
                 </li>

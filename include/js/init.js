@@ -4,7 +4,27 @@
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
 
+        $('#to-top').bind('click', function (event) {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700, 'easeInOutExpo');
+            event.preventDefault();
+        });
+
+        //workaround for big collapsible accordion
+        $('.collapsible .collapsible-header.click-scroll').on('click', function (event) {
+            var target = $(this);
+            setTimeout(function () {
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500, 'easeInOutExpo');
+                }
+            }, 300); //wait for accordion to finish
+        });
     }); // end of document ready
+
 })(jQuery); // end of jQuery name space
 
 /*

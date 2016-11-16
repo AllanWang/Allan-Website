@@ -44,7 +44,7 @@ phpNav(); ?>
             <div class="row" id="commons">
                 <div class="col s12 m6">
                     <h5 class="header center">Common Derivatives</h5>
-                    <table class="light h5 highlight">
+                    <table class="h5 highlight">
                         <?php
                         math_table('f', "f'");
                         math_table('f + g', "f' + g'");
@@ -64,8 +64,8 @@ phpNav(); ?>
                         math_table('csc(x)', '-csc(x)cot(x)');
                         math_table('sin^{-1}(x)', '\frac{1}{\sqrt{1-x^2}}');
                         math_table('cos^{-1}(x)', '\frac{-1}{\sqrt{1-x^2}}');
-                        math_table('tan^{-1}(x)', '\frac{1}{\sqrt{1+x^2}}');
-                        math_table('cot^{-1}(x)', '\frac{-1}{\sqrt{1+x^2}}');
+                        math_table('tan^{-1}(x)', '\frac{1}{1+x^2}');
+                        math_table('cot^{-1}(x)', '\frac{-1}{1+x^2}');
                         math_table('sec^{-1}(x)', '\frac{1}{|x|\sqrt{x^2-1}}');
                         math_table('csc^{-1}(x)', '\frac{-1}{|x|\sqrt{x^2-1}}');
                         ?>
@@ -73,7 +73,7 @@ phpNav(); ?>
                 </div>
                 <div class="col s12 m6">
                     <h5 class="header center">Common Integrals</h5>
-                    <table class="light h5 highlight">
+                    <table class="h5 highlight">
                         <?php
                         math_table('f(x)', '\int f(x)\,dx+C');
                         math_table('xe^x', 'xe^x-x');
@@ -105,8 +105,7 @@ phpNav(); ?>
     <div class="container">
         <div class="section">
             <div class="row" id="series">
-                <!--                <h5 class="header center">Power Series</h5>-->
-                <table class="light h5 highlight">
+                <table class="h5 highlight">
                     <?php
                     math_table('\frac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
                     math_table('e^x', '\sum_{n=0}^\infty \frac{x^n}{n!}', '1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}\,+\,...\,+\,\frac{x^n}{n!}');
