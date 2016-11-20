@@ -33,9 +33,9 @@ phpNav(); ?>
                     table('git pull origin master', 'pulls from origin');
 
                     table_header('Forceful Actions');
-                    table('git push - f origin master', 'force pushes to origin (remote will be exactly like the origin, changes there will be lost');
+                    table('git push - f origin master', 'force pushes to origin (remote will be exactly like the origin, changes there will be lost)');
                     table('git pull -f origin master', 'force pull from origin');
-                    table('git reset--hard HEAD~[number]', 'will remove the latest [number] commits (ie 1 will remove 1 commit) permanently');
+                    table('git reset --hard HEAD~[number]', 'will remove the latest [number] commits (ie 1 will remove 1 commit) permanently');
 
                     table_header('Remote');
                     table('git remote -v', 'view existing remotes');
@@ -51,6 +51,11 @@ phpNav(); ?>
 
                     table_header('Aliases', 'Custom Commands');
                     table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push origin master; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
+                    
+                    table_header('Pull Issues', 'Solution');
+                    table('Your local changes to the following files would be overwritten by merge', 'Add all your files and commit it; you can pull again afterwards');
+                    table('# Please enter a commit message to explain why this merge is necessary', 'Press Insert to toggle between insert and replace in the editor<br>Press esc to exit to a command<br>While in the command section, type ":wq" and press enter to save and exit.');
+                    table('Automatic merge failed; fix conflicts and then commit the result.', 'Search all your files for "<<<" or ">>>"<br>All conflicted lines will be encapsulated in those symbols; fix them, add all files, then commit again to resolve it');
                     ?>
                 </table>
 

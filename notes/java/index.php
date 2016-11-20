@@ -7,7 +7,7 @@ $page_title = "Java";
 $page_description = "An introduction to java";
 $navFrom = 'n_java';
 //$navTo = 'commons';
-$theme_color = "#E76F00"; //java orange
+$theme_color = "#387FB5"; //java blue
 
 phpHeader(); ?>
 <body>
