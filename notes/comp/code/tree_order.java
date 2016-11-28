@@ -31,6 +31,7 @@ public class TreeTraversal {
             }
         }
         root.visit() //do what you need to do with current node
+        //for preorder, visit root before calling depthFirst again (right after root != null)
     }
 
     //depth first iterative right to left

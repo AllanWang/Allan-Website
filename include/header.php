@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color, $pdf;
+global $page_title, $page_description, $theme_color, $pdf, $extend_header;
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -96,4 +96,4 @@ global $page_title, $page_description, $theme_color, $pdf;
             color: <?php echo $theme_color?>;
         }
     </style>
-</head>
+    <?php if (!isset($extend_header)) echo '</head>' ?>

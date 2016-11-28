@@ -60,7 +60,8 @@ phpNav(); ?>
         code_collapsible('Binary Search|binary.java',
             'Binary Search Tree|bst.java',
             'Tree Traversal|tree_order.java',
-            'Heap|heap.java');
+            'Heaps|heap.java',
+            'Graphs|graph.java');
         ?>
         <br>
         <br>

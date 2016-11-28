@@ -1,18 +1,18 @@
 <?php
-global $theme_color, $page_title, $pdf;
-include_once("analytics.php") ;
+global $theme_color, $page_title, $pdf, $table_of_contents;
+include_once("analytics.php");
 ?>
 
 <header>
-<!--    <div class="container">-->
-        <a href="#" data-activates="nav-bar"
-           class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
-            <i class="material-icons"
-                <?php
-                if (isset($pdf) || $page_title === '404') echo 'style="color: ' . $theme_color . ';"';
-                ?>
-            >menu</i></a>
-<!--    </div>-->
+    <!--    <div class="container">-->
+    <a href="#" data-activates="nav-bar"
+       class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
+        <i class="material-icons"
+            <?php
+            if (isset($pdf) || $page_title === '404') echo 'style="color: ' . $theme_color . ';"';
+            ?>
+        >menu</i></a>
+    <!--    </div>-->
 
     <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
         <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="center">
@@ -54,6 +54,7 @@ include_once("analytics.php") ;
                 <div class="search-results"></div>
             </div>
         </li>
+        <?php if (isset($table_of_contents)) $table_of_contents() ?>
         <li><a class="animated waves-effect waves-nav" id="nr_proj"
                href="http://allanwang.ca/dev/?scroll_to=projects">Projects</a>
         </li>
@@ -72,7 +73,9 @@ include_once("analytics.php") ;
                                    href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear Algebra</a></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_comp"
                                    href="http://allanwang.ca/notes/comp/">Computer Science</a></li>
-                            <li><div class="divider"></div></li>
+                            <li>
+                                <div class="divider"></div>
+                            </li>
                             <li><a class="waves-effect waves-nav" id="nr_n_git"
                                    href="http://allanwang.ca/notes/git/">Git Bash</a></li>
                             <li><a class="waves-effect waves-nav" id="nr_n_java"
