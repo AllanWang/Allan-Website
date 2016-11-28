@@ -1,5 +1,5 @@
 <?php
-global $navFrom, $navTo, $pdf;
+global $navFrom, $navTo, $table_of_contents;
 ?>
 
 <footer class="page-footer"
@@ -44,16 +44,18 @@ js('init');
     window.onload = function () {
         <?php
         if (isset($_GET['scroll_to'])) echo "animateTo(\"{$_GET["scroll_to"]}\", 250, true);\n";
+        if (isset($table_of_contents)) echo 'toc()';
         ?>
     };
 
 
-
     //check for nav override vars
-    <?php if (isset($navFrom)) {
+    <?php
+    if (isset($navFrom)) {
         echo('navAnimOverride("' . $navFrom . '", "');
         echo((isset($navTo) ? $navTo : 'null') . "\");\n");
-    } ?>
+    }
+    ?>
 
 </script>
 
@@ -62,8 +64,4 @@ js('init');
 js('jade/lunr.min');
 js('jade/search_data');
 js('jade/search.min');
-//if (isset($pdf)) {
-//    js('pdf/pdfobject.min');
-//    echo '<script>PDFObject.embed("' . $pdf . '", "#pdf");</script>';
-//}
 ?>

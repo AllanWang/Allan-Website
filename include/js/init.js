@@ -1,10 +1,6 @@
 (function ($) {
     $(function () {
-        $('.button-collapse').sideNav({
-            // menuWidth: 300, // Default is 240
-            closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-            draggable: true // Choose whether you can drag to open on touch screens
-        });
+        $('.button-collapse').sideNav();
         $('.parallax').parallax();
 
         $('#to-top').bind('click', function (event) {
@@ -62,7 +58,7 @@ function animateSwitch(idFrom, idTo) {
     $('#' + idFrom).bind('click', function (event) {
         if (document.getElementById(idTo)) animateTo(idTo);
         event.preventDefault();
-        // $('.animated').sideNav('hide'); //close nav on click
+        $('.animated').sideNav('hide'); //close nav on click
     });
 }
 
@@ -71,4 +67,8 @@ function navAnimOverride(idFrom, idTo) {
     $(document).ready(function () {
         animateSwitch('nr_' + idFrom, idTo);
     });
+}
+
+function toc() {
+    $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
 }

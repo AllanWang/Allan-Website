@@ -27,7 +27,7 @@ phpHeader(); ?>
 <?php
 function toc()
 {
-    include_once('240.outline');
+    include_once('240/240_toc.html');
 }
 
 $table_of_contents = 'toc';
@@ -37,6 +37,12 @@ phpNav(); ?>
     <?php
     include('240.html');
     ?>
+    <div class="fixed-action-btn">
+        <a href="http://allanwang.ca/notes/discrete/MATH%20240.pdf" download
+           class="btn-floating btn-large red waves-effect waves-light">
+            <i class="large material-icons">file_download</i>
+        </a>
+    </div>
 </main>
 
 <?php phpFooter(); ?>
