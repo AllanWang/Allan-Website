@@ -21,6 +21,8 @@ MathJax.Hub.Config({
   displayAlign: "left",
   displayIndent: "2em"
 });
+
+
 </script>
 <?php phpNav(); ?>
 
@@ -69,6 +71,16 @@ MathJax.Hub.Config({
                     <?php bullet() ?> \text{Only for 3D vectors}
                     $$</p>
             </div>
+            <table class="h5 highlight">
+                <?php
+                table_header_full('Distances', 3);
+                math_table_left('\text{Point-Point}', '|\overrightarrow{PQ}|', '\text{* In these cases, }|\overrightarrow{v}| \text{ implies } ||\overrightarrow{v}||');
+                math_table_left('\text{Point-Plane}', '\dfrac{|\overrightarrow{PQ}\,\cdot\,n|}{|n|}', '\text{P is the point, Q is some point on the plane, and n is the normal vector of that plane}');
+                math_table_left('\text{Point-Line}', '\dfrac{|(\overrightarrow{PQ}) \times u|}{|u|}', '\text{P is the point and the line } \overrightarrow{r}(t) = Q + t\overrightarrow{u}');
+                math_table_left('\text{Line-Line}', '\dfrac{|(\overrightarrow{PQ}) \cdot (u \times v)|}{|u \times v|}', '\overrightarrow{r}(t) = Q + t\overrightarrow{u} \quad\&\quad \overrightarrow{s}(t) = P + t\overrightarrow{v}');
+                math_table_left('\text{Plane-Plane}', '\dfrac{|e - d|}{|n|}', '\text{If} \quad n \cdot x = d \quad\&\quad n \cdot x = e \quad \text{are parallel; otherwise it would be 0}')
+                ?>
+            </table>
         </div>
     </div>
 </main>

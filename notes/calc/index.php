@@ -15,16 +15,16 @@ phpHeader(); ?>
 
 <?php mathJax();
 phpNav(); ?>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  displayAlign: "left"
-});
-
-</script>
+<!--<script type="text/x-mathjax-config">-->
+<!--MathJax.Hub.Config({-->
+<!--  displayAlign: "left"-->
+<!--});-->
+<!---->
+<!--</script>-->
 
 <main>
 
-    <div id="index-banner" class="anti-parallax-container">
+    <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="container">
                 <br>
@@ -41,7 +41,7 @@ MathJax.Hub.Config({
 
             </div>
         </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
+        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
     </div>
 
 
@@ -79,8 +79,8 @@ MathJax.Hub.Config({
                 </div>
             </li>
             <li>
-                <div class="collapsible-header">Common Integrals</div>
-                <div class="collapsible-body click-scroll">
+                <div class="collapsible-header click-scroll">Common Integrals</div>
+                <div class="collapsible-body">
                     <table class="h5 highlight">
                         <?php
                         math_table('f(x)', '\int f(x)\,dx+C');
@@ -99,8 +99,8 @@ MathJax.Hub.Config({
                 </div>
             </li>
             <li>
-                <div class="collapsible-header">Power Series</div>
-                <div class="collapsible-body click-scroll">
+                <div class="collapsible-header click-scroll">Power Series</div>
+                <div class="collapsible-body">
                     <table class="h5 highlight">
                         <?php
                         math_table('\frac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
@@ -123,13 +123,13 @@ MathJax.Hub.Config({
                 <h5 class="header center">Convergence</h5>
                 <table class="h5 highlight">
                     <?php
-                    table('Integral Test', "If f is a continuous function, it converges if and only if it's integral also converges");
+                    table('Integral Test', "If f is a continuous function, it converges if and only if its integral also converges");
                     table('P-series Test', '\(\sum_{n=1}^\infty n^{-p}\) converges for all p > 1');
                     table('Comparison Test', 'If a(n) is convergent and is always bigger than b(n) in an appropriate range, b(n) is also convergent.<br>If a(n) is divergent and is always smaller than b(n) in an appropriate range, b(n) is also divergent');
                     table('Limit Comparison Test', 'For a(n) and b(n), where i and j are their respective limits towards infinity, if i/j = c > 0 and is finite, then both functions converge or diverge (same behaviour).');
                     table('Alternating Series Test', 'An alternating series is one where the terms switch signs for every adjacent term. The series converges if its sequence in absolute values is decreasing and if it approaches 0 as \(n \rightarrow \infty\)');
                     table('Ratio Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \lvert \frac{a_{n+1}}{a_n} \rvert \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing<br>Used to find interval of convergence');
-                    table('Root Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \sqrt{n}{\lvert a_n \rvert} \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing');
+                    table('Root Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \sqrt[n]{\lvert a_n \rvert} \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing');
                     ?>
                 </table>
             </div>
@@ -146,8 +146,18 @@ MathJax.Hub.Config({
                 <table class="h5 highlight">
                     <?php
                     table("MacLaurin's Formula", 'Let \(f^{(m)}\) be the m<sup>th</sup> derivative of f(x)<br> \(f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} * x^n \)<br>If you stop at m &mdash; 1, \( R_m(x) = \frac{f^{[m]}(c) * x^n}{m!}, 0 \le c \le x\)');
-                    table('Taylor Series', '$$ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n $$');
-                    table('Arc Length', '$$ \int \sqrt{1 + f\'(x)^2} dx \\\\ \int \sqrt{{x\'}^2 + {y\'}^2 + {z\'}^2} dt = \int ||r\'(t)||dt$$');
+                    table('Taylor Series', '\( f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n \)');
+                    table('Arc Length', '\( \int \sqrt{1 + f\'(x)^2} dx \\\\ \int \sqrt{{x\'}^2 + {y\'}^2 + {z\'}^2} dt = \int ||r\'(t)||dt \)');
+                    table_header_full('Vectors', 2);
+                    math_table_left('a \cdot b', 'a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n \\\\ a \cdot b = |a||b|cos\theta');
+                    math_table_left('a \times b \\\\ a = \langle a_1, a_2, a_3\rangle\,and\,b = \langle b_1, b_2, b_3\rangle \\\\ \text{* Only for 3D vectors}', ' \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2, a_2b_1\rangle \\\\ = |a||b|sin\theta');
+                    math_table_left('||\overrightarrow{a}||', '\sqrt{{a_1}^2 + {a_2}^2 + {a_3}^2 + ...}');
+                    math_table_left('proj_ab ', '\dfrac{a \cdot b}{|a|^2} a');
+                    math_table_left('\text{Area of Parallelpiped}', 'V = |a \cdot (b \times c)| \\\\ \text{If V = 0, a, b, and c are coplanar}');
+                    math_table_left('\text{T (unit tangent vector)}', '\dfrac{r\'(t)}{|r\'(t)|}');
+                    math_table_left('\kappa \text{ (Curvature)}', '\left|\dfrac{dT}{ds}\right| \\\\ \kappa(t) = \dfrac{|T\'(t)|}{|r\'(t)|} = \dfrac{|r\'(t) \times r\'\'(t)|}{{|r\'(t)|}^3}');
+                    math_table_left('N(t) \text{ (Normal Vector)}', '\dfrac{T\'(t)}{|T\'(t)|}');
+                    math_table_left('B(t) \text{ (Binormal Vector)}', 'T(t) \times N(t)');
                     ?>
                 </table>
             </div>
