@@ -15,6 +15,12 @@ phpHeader(); ?>
 
 <?php mathJax();
 phpNav(); ?>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "left"
+});
+
+</script>
 
 <main>
 
@@ -40,10 +46,10 @@ phpNav(); ?>
 
 
     <div class="container">
-        <div class="section">
-            <div class="row" id="commons">
-                <div class="col s12 m6">
-                    <h5 class="header center">Common Derivatives</h5>
+        <ul class="collapsible" id="commons" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header click-scroll">Common Derivatives</div>
+                <div class="collapsible-body">
                     <table class="h5 highlight">
                         <?php
                         math_table('f', "f'");
@@ -71,8 +77,10 @@ phpNav(); ?>
                         ?>
                     </table>
                 </div>
-                <div class="col s12 m6">
-                    <h5 class="header center">Common Integrals</h5>
+            </li>
+            <li>
+                <div class="collapsible-header">Common Integrals</div>
+                <div class="collapsible-body click-scroll">
                     <table class="h5 highlight">
                         <?php
                         math_table('f(x)', '\int f(x)\,dx+C');
@@ -89,38 +97,64 @@ phpNav(); ?>
                         ?>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <h1 class="header center white-text text-lighten-2 pad-top-20">Power Series</h1>
-            </div>
-        </div>
-        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="Calculus Power Series"></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Power Series</div>
+                <div class="collapsible-body click-scroll">
+                    <table class="h5 highlight">
+                        <?php
+                        math_table('\frac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
+                        math_table('e^x', '\sum_{n=0}^\infty \frac{x^n}{n!}', '1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}\,+\,...\,+\,\frac{x^n}{n!}');
+                        math_table('ln(1 + x)', '\sum_{n=1}^\infty (-1)^{n+1}\,\frac{x^n}{n}', 'x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\,-\,...\,+\,\frac{x^n}{n}');
+                        math_table('-ln(1 - x)', '\sum_{n=1}^\infty \frac{x^n}{n}', 'x + \frac{x^2}{2} + \frac{x^3}{3} + \frac{x^4}{4} + \frac{x^5}{5}\,+\,...\,+\,\frac{x^n}{n}');
+                        math_table('sin(x)', '\sum_{n=0}^\infty (-1)^{n}\,\frac{x^{2n+1}}{(2n+1)!}', 'x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}\,-\,...\,+\,\frac{x^{2n+1}}{(2n+1)!}');
+                        math_table('cos(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n}}{(2n)!}', '1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}\,-\,...\,+\,\frac{x^{2n}}{(2n)!}');
+                        math_table('arctan(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n+1}}{2n+1}', 'x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \frac{x^9}{9}\,-\,...\,+\,\frac{x^{2n+1}}{2n+1}');
+                        ?>
+                    </table>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <div class="container">
         <div class="section">
-            <div class="row" id="series">
+            <div class="row" id="convergence-tests">
+                <h5 class="header center">Convergence</h5>
                 <table class="h5 highlight">
                     <?php
-                    math_table('\frac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
-                    math_table('e^x', '\sum_{n=0}^\infty \frac{x^n}{n!}', '1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}\,+\,...\,+\,\frac{x^n}{n!}');
-                    math_table('ln(1 + x)', '\sum_{n=1}^\infty (-1)^{n+1}\,\frac{x^n}{n}', 'x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\,-\,...\,+\,\frac{x^n}{n}');
-                    math_table('-ln(1 - x)', '\sum_{n=1}^\infty \frac{x^n}{n}', 'x + \frac{x^2}{2} + \frac{x^3}{3} + \frac{x^4}{4} + \frac{x^5}{5}\,+\,...\,+\,\frac{x^n}{n}');
-                    math_table('sin(x)', '\sum_{n=0}^\infty (-1)^{n}\,\frac{x^{2n+1}}{(2n+1)!}', 'x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}\,-\,...\,+\,\frac{x^{2n+1}}{(2n+1)!}');
-                    math_table('cos(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n}}{(2n)!}', '1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}\,-\,...\,+\,\frac{x^{2n}}{(2n)!}');
-                    math_table('arctan(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n+1}}{2n+1}', 'x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \frac{x^9}{9}\,-\,...\,+\,\frac{x^{2n+1}}{2n+1}');
+                    table('Integral Test', "If f is a continuous function, it converges if and only if it's integral also converges");
+                    table('P-series Test', '\(\sum_{n=1}^\infty n^{-p}\) converges for all p > 1');
+                    table('Comparison Test', 'If a(n) is convergent and is always bigger than b(n) in an appropriate range, b(n) is also convergent.<br>If a(n) is divergent and is always smaller than b(n) in an appropriate range, b(n) is also divergent');
+                    table('Limit Comparison Test', 'For a(n) and b(n), where i and j are their respective limits towards infinity, if i/j = c > 0 and is finite, then both functions converge or diverge (same behaviour).');
+                    table('Alternating Series Test', 'An alternating series is one where the terms switch signs for every adjacent term. The series converges if its sequence in absolute values is decreasing and if it approaches 0 as \(n \rightarrow \infty\)');
+                    table('Ratio Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \lvert \frac{a_{n+1}}{a_n} \rvert \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing<br>Used to find interval of convergence');
+                    table('Root Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \sqrt{n}{\lvert a_n \rvert} \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing');
+                    ?>
+                </table>
+            </div>
+            <div class="row">
+                Finding Power Series <br>
+                <?php
+                bullets('See Power Series List above',
+                    'Use integrals and derivatives to convert from known series',
+                    'Replace x with desired variable'
+                )
+                ?>
+            </div>
+            <div class="row">
+                <table class="h5 highlight">
+                    <?php
+                    table("MacLaurin's Formula", 'Let \(f^{(m)}\) be the m<sup>th</sup> derivative of f(x)<br> \(f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} * x^n \)<br>If you stop at m &mdash; 1, \( R_m(x) = \frac{f^{[m]}(c) * x^n}{m!}, 0 \le c \le x\)');
+                    table('Taylor Series', '$$ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n $$');
+                    table('Arc Length', '$$ \int \sqrt{1 + f\'(x)^2} dx \\\\ \int \sqrt{{x\'}^2 + {y\'}^2 + {z\'}^2} dt = \int ||r\'(t)||dt$$');
                     ?>
                 </table>
             </div>
         </div>
     </div>
 </main>
-<?php phpFooter();?>
+<?php phpFooter(); ?>
 </body>
 
 </html>

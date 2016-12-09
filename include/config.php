@@ -79,6 +79,13 @@ function table(...$items)
     echo '</tr>';
 }
 
+function bullets(...$items)
+{
+    foreach ($items as $item) {
+        echo "&ensp;&bull;&ensp;$item<br>";
+    }
+}
+
 function math_table(...$items)
 {
     echo '<tr>';

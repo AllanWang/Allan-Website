@@ -21,7 +21,6 @@ MathJax.Hub.Config({
   displayAlign: "left",
   displayIndent: "2em"
 });
-
 </script>
 <?php phpNav(); ?>
 
