@@ -5,7 +5,7 @@
 include("../../include/config.php");
 $n_key = "Calculus";
 $page_title = "$n_key Notes";
-$page_description = "Common Derivatives & Integrals";
+$page_description = "Calculus Formulas";
 $navFrom = 'n_calc';
 $navTo = 'commons';
 $theme_color = "#F44336"; //red
@@ -17,7 +17,9 @@ phpHeader(); ?>
 phpNav(); ?>
 <!--<script type="text/x-mathjax-config">-->
 <!--MathJax.Hub.Config({-->
-<!--  displayAlign: "left"-->
+<!--  "HTML-CSS": {-->
+<!--    linebreaks: { automatic: true, width: "75% container" }-->
+<!--  }-->
 <!--});-->
 <!---->
 <!--</script>-->
@@ -151,13 +153,27 @@ phpNav(); ?>
                     table_header_full('Vectors', 2);
                     math_table_left('a \cdot b', 'a_1b_1 + a_2b_2 + a_3b_3 + ... + a_nb_n \\\\ a \cdot b = |a||b|cos\theta');
                     math_table_left('a \times b \\\\ a = \langle a_1, a_2, a_3\rangle\,and\,b = \langle b_1, b_2, b_3\rangle \\\\ \text{* Only for 3D vectors}', ' \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2, a_2b_1\rangle \\\\ = |a||b|sin\theta');
-                    math_table_left('||\overrightarrow{a}||', '\sqrt{{a_1}^2 + {a_2}^2 + {a_3}^2 + ...}');
+                    math_table_left('|\overrightarrow{a}|', '\sqrt{{a_1}^2 + {a_2}^2 + {a_3}^2 + ...}');
                     math_table_left('proj_ab ', '\dfrac{a \cdot b}{|a|^2} a');
                     math_table_left('\text{Area of Parallelpiped}', 'V = |a \cdot (b \times c)| \\\\ \text{If V = 0, a, b, and c are coplanar}');
                     math_table_left('\text{T (unit tangent vector)}', '\dfrac{r\'(t)}{|r\'(t)|}');
-                    math_table_left('\kappa \text{ (Curvature)}', '\left|\dfrac{dT}{ds}\right| \\\\ \kappa(t) = \dfrac{|T\'(t)|}{|r\'(t)|} = \dfrac{|r\'(t) \times r\'\'(t)|}{{|r\'(t)|}^3}');
-                    math_table_left('N(t) \text{ (Normal Vector)}', '\dfrac{T\'(t)}{|T\'(t)|}');
-                    math_table_left('B(t) \text{ (Binormal Vector)}', 'T(t) \times N(t)');
+                    math_table_left('\kappa \text{ (Curvature)}', '\left|\dfrac{dT}{ds}\right| \\\\ \kappa(t) = \dfrac{|T\'(t)|}{|r\'(t)|} = \dfrac{|r\'(t) \times r\'\'(t)|}{{|r\'(t)|}^3} \\\\ \text{When y = f(x)} \quad \kappa(x) = \dfrac{|f\'\'(x)|}{[1 + (f\'(x))^2]^{3/2}}');
+                    math_table_left('N(t) \text{ (Normal Vector)}', '\dfrac{T\'(t)}{|T\'(t)|} = B(t) \times T(t)');
+                    math_table_left('B(t) \text{ (Binormal Vector)}', 'T(t) \times N(t) = \dfrac{r\'(t) \times r\'\'(t)}{|r\'(t) \times r\'\'(t)|}');
+                    math_table_left('v(t)', 'r\'(t)');
+                    math_table_left('a', 'v\'T + \kappa{v}^2N \\\\ a_TT + a_NN \text{ (see below)}');
+                    math_table_left('a_T \text{ (Tangential acceleration)}', '\dfrac{r\'(t) \cdot r\'\'(t)}{|r\'(t)|}');
+                    math_table_left('a_N \text{ (Normal acceleration)}', '\dfrac{r\'(t) \times r\'\'(t)}{|r\'(t)|}');
+                    math_table_left('(f_x)_y \\\\ \text{Higher Derivatives}', 'f_{xy} = \dfrac{\partial}{\partial{y}}\left(\dfrac{\partial}{\partial{x}}\right) = \dfrac{\partial^2f}{\partial{y}\partial{x}} = \dfrac{\partial^2z}{\partial{y}\partial{x}}');
+                    math_table_left('\text{Tangent plane to surface of z}', 'z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)');
+                    math_table_left('\text{Total Differential}', 'd_z = f_x(x, y)dx + f_y(x, y)dy = \dfrac{\partial{z}}{\partial{x}}dx + \dfrac{\partial{z}}{\partial{y}}dy');
+                    math_table_left('\dfrac{\partial{u}}{\partial{t_i}} \\\\ \text{u is a differential function of n variables}', '\dfrac{\partial{u}}{\partial{t_i}} = \dfrac{\partial{u}}{\partial{x_1}}\dfrac{\partial{x_1}}{\partial{t_i}} + \dfrac{\partial{u}}{\partial{x_2}}\dfrac{\partial{x_2}}{\partial{t_i}} + ... + \dfrac{\partial{u}}{\partial{x_n}}\dfrac{\partial{x_n}}{\partial{t_i}}');
+                    math_table_left('\nabla f(x, y) \text{ (gradient of f)}', '\langle f_x(x, y), f_y(x, y) \rangle = \dfrac{\partial f}{\partial x}i + \dfrac{\partial f}{\partial y}j');
+                    math_table_left('D_uf(x, y, z) \text{ (directional derivative)}',  '\nabla f \cdot u \\\\ \text{Maximum value of directional derivative is } |\nabla f|');
+                    math_table_left('\text{Second Derivative Test}', 'D = D(a, b) = f_{xx}(a, b)f_{yy}(a, b) - [f_{xy}(a, b)]^2 \\\\ \text{If D > 0 and $f_{xx}(a, b)$ > 0, then $f(a, b)$ is a local minimum} \\\\ \text{If D > 0 and $f_{xx}(a, b)$ < 0, then $f(a, b)$ is a local maximum} \\\\ \text{If D < 0, then $f(a, b)$ is not a local maximum or minimum (saddle point)}');
+                    math_table_left('\text{Lagrange Multipliers}', '\text{Find all values of x, y, z, and $\lambda$ such that $\nabla f(x, y, z) = \lambda \nabla g(x, y, z)$ and } g(x, y, z) = k \\\\ \text{Evaluate $f$ at all points (x, y, z) from the values above; the largest is the maximum and the smallest is the minimum}');
+                    math_table_left('\text{V of solid above rectangle R and below }');
+                    math_table_left('\int \int_D f(x, y)dA \\\\ f \text{ is continuous on } \\\\ D = \{(x, y) \,|\, a \le x \le b,\, g_1(x) \le y \le g_2(x)\}', '\int^b_a \int^{g_2(x)}_{g_1(x)} f(x, y)dydx = \int^{g_2(x)}_{g_1(x)} \int^b_a f(x, y)dxdy \\\\ \text{When D is a rectangle, $g_1(x)$ and $g_2(x)$ are constants}');
                     ?>
                 </table>
             </div>
