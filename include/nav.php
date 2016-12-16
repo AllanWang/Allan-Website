@@ -1,5 +1,5 @@
 <?php
-global $theme_color, $page_title, $pdf, $table_of_contents;
+global $theme_color, $page_title, $pdf, $side_nav_contents;
 include_once("analytics.php");
 ?>
 
@@ -49,43 +49,41 @@ include_once("analytics.php");
             <div class="search-wrapper card">
                 <input id="search" type="text"
                        placeholder="<?php if ($page_title === '404') echo 'Press the Icon to ' ?>Search"><label
-                    for="search"><i
-                        class="material-icons">search</i></label>
+                        for="search"><i
+                            class="material-icons">search</i></label>
                 <div class="search-results"></div>
             </div>
         </li>
-        <?php if (isset($table_of_contents)) $table_of_contents() ?>
-        <li><a class="animated waves-effect waves-nav" id="nr_proj"
+        <?php if (isset($side_nav_contents)) $side_nav_contents() ?>
+        <li><a class="l" id="nr_proj"
                href="http://allanwang.ca/dev/?scroll_to=projects">Projects</a>
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header waves-effect waves-nav">Notes<i class="material-icons right">arrow_drop_down</i></a>
+                    <a class="collapsible-header l">Notes<i class="material-icons right">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a class="waves-effect waves-nav" id="nr_n_calc"
-                                   href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a></li>
-                            <li><a class="waves-effect waves-nav" id="nr_n_disc_m"
-                                   href="http://allanwang.ca/notes/discrete/">Discrete
+                            <li><a class="l" id="nr_n_calc" href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
+                            </li>
+                            <li><a class="l" id="nr_n_disc_m" href="http://allanwang.ca/notes/discrete/">Discrete
                                     Math</a></li>
-                            <li><a class="waves-effect waves-nav" id="nr_n_linalg"
-                                   href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear Algebra</a></li>
-                            <li><a class="waves-effect waves-nav" id="nr_n_comp"
-                                   href="http://allanwang.ca/notes/comp/">Computer Science</a></li>
+                            <li><a class="l" id="nr_n_linalg" href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear
+                                    Algebra</a></li>
+                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/">Computer Science</a>
+                            </li>
+                            <li><a class="l" id="nr_n_phgy" href="http://allanwang.ca/notes/phgy/">Physiology</a></li>
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="waves-effect waves-nav" id="nr_n_git"
-                                   href="http://allanwang.ca/notes/git/">Git Bash</a></li>
-                            <li><a class="waves-effect waves-nav" id="nr_n_java"
-                                   href="http://allanwang.ca/notes/java/">Java</a></li>
+                            <li><a class="l" id="nr_n_git" href="http://allanwang.ca/notes/git/">Git Bash</a></li>
+                            <li><a class="l" id="nr_n_java" href="http://allanwang.ca/notes/java/">Java</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </li>
-        <li><a class="animated waves-effect waves-nav" id="nr_about"
+        <li><a class="l" id="nr_about"
                href="http://allanwang.ca/about/WIP">About</a>
         </li>
     </ul>

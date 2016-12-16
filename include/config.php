@@ -1,29 +1,30 @@
 <?php
-
 //For my files
 
 $include_url = "http://allanwang.ca/include/";
 
+include_once ('dynamic_notes.php');
+
 function phpHeader()
 {
-    include_once('header.php');
+    require_once('header.php');
 }
 
 function phpNav()
 {
-    include_once('nav.php');
+    require_once('nav.php');
 }
 
 function phpFooter()
 {
-    include_once('footer.php');
+    require_once('footer.php');
 }
 
 function phpPDF($url)
 {
     global $pdf;
     $pdf = $url;
-    include_once('pdf.php');
+    require_once('pdf.php');
 }
 
 function css($name)
@@ -89,6 +90,11 @@ function table(...$items)
 function bullets(...$items)
 {
     foreach ($items as $item) {
+        echo "&ensp;";
+        while ($item[0] == '-') {
+            echo "&ensp;&ensp;";
+            $item = substr($item, 1);
+        }
         echo "&ensp;&bull;&ensp;$item<br>";
     }
 }

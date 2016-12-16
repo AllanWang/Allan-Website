@@ -25,12 +25,12 @@ phpHeader(); ?>
 
 <body>
 <?php
-function toc()
+function snc()
 {
     include_once('240/240_toc.html');
 }
 
-$table_of_contents = 'toc';
+$side_nav_contents = 'snc';
 phpNav(); ?>
 
 <main>

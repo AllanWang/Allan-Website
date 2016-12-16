@@ -58,24 +58,24 @@ phpNav(); ?>
                         math_table('f + g', "f' + g'");
                         math_table('f - g', "f' - g'");
                         math_table('f * g', "f'g + fg'");
-                        math_table('\frac{f}{g}', "\\frac{f'g-fg'}{g^2}");
+                        math_table('\dfrac{f}{g}', "\dfrac{f'g-fg'}{g^2}");
                         math_table('f \circ g', "f'(g) * g'");
                         math_table('x^n', 'nx^{n-1}');
                         math_table('e^x', 'e^x');
                         math_table('a^x', 'a^xln(a)');
-                        math_table('ln(x)', '\frac{1}{x}');
+                        math_table('ln(x)', '\dfrac{1}{x}');
                         math_table('sin(x)', 'cos(x)');
                         math_table('cos(x)', '-sin(x)');
                         math_table('tan(x)', 'sec^2x');
                         math_table('cot(x)', '-csc^2x');
                         math_table('sec(x)', 'sec(x)tan(x)');
                         math_table('csc(x)', '-csc(x)cot(x)');
-                        math_table('sin^{-1}(x)', '\frac{1}{\sqrt{1-x^2}}');
-                        math_table('cos^{-1}(x)', '\frac{-1}{\sqrt{1-x^2}}');
-                        math_table('tan^{-1}(x)', '\frac{1}{1+x^2}');
-                        math_table('cot^{-1}(x)', '\frac{-1}{1+x^2}');
-                        math_table('sec^{-1}(x)', '\frac{1}{|x|\sqrt{x^2-1}}');
-                        math_table('csc^{-1}(x)', '\frac{-1}{|x|\sqrt{x^2-1}}');
+                        math_table('sin^{-1}(x)', '\dfrac{1}{\sqrt{1-x^2}}');
+                        math_table('cos^{-1}(x)', '\dfrac{-1}{\sqrt{1-x^2}}');
+                        math_table('tan^{-1}(x)', '\dfrac{1}{1+x^2}');
+                        math_table('cot^{-1}(x)', '\dfrac{-1}{1+x^2}');
+                        math_table('sec^{-1}(x)', '\dfrac{1}{|x|\sqrt{x^2-1}}');
+                        math_table('csc^{-1}(x)', '\dfrac{-1}{|x|\sqrt{x^2-1}}');
                         ?>
                     </table>
                 </div>
@@ -86,16 +86,16 @@ phpNav(); ?>
                     <table class="h5 highlight">
                         <?php
                         math_table('f(x)', '\int f(x)\,dx+C');
-                        math_table('xe^x', 'xe^x-x');
+                        math_table('xe^x', 'xe^x-e^x');
                         math_table('ln(x)', 'xln(x)-x');
                         math_table('tan(x)', 'ln|sec(x)|');
                         math_table('cot(x)', 'ln|sin(x)|');
                         math_table('sec(x)', 'ln|sec(x)+tan(x)|');
                         math_table('csc(x)', '-ln|csc(x)+cot(x)|');
-                        math_table('sin^2x = \frac{1-cos(2x)}{2}', '\frac{2x-sin(2x)}{4}');
-                        math_table('cos^2x=\frac{1+cos(2x)}{2}', '\frac{2x+sin(2x)}{4}');
-                        math_table('\frac{1}{x^2+a^2}', '\frac{1}{a\,tan^{-1}(x/a)}');
-                        math_table('\frac{1}{\sqrt{a^2-x^2}}', 'sin^{-1}(\frac{x}{a})');
+                        math_table('sin^2x = \dfrac{1-cos(2x)}{2}', '\dfrac{2x-sin(2x)}{4}');
+                        math_table('cos^2x=\dfrac{1+cos(2x)}{2}', '\dfrac{2x+sin(2x)}{4}');
+                        math_table('\dfrac{1}{x^2+a^2}', '\dfrac{1}{a\,tan^{-1}(x/a)}');
+                        math_table('\dfrac{1}{\sqrt{a^2-x^2}}', 'sin^{-1}(\dfrac{x}{a})');
                         ?>
                     </table>
                 </div>
@@ -105,13 +105,13 @@ phpNav(); ?>
                 <div class="collapsible-body">
                     <table class="h5 highlight">
                         <?php
-                        math_table('\frac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
-                        math_table('e^x', '\sum_{n=0}^\infty \frac{x^n}{n!}', '1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}\,+\,...\,+\,\frac{x^n}{n!}');
-                        math_table('ln(1 + x)', '\sum_{n=1}^\infty (-1)^{n+1}\,\frac{x^n}{n}', 'x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}\,-\,...\,+\,\frac{x^n}{n}');
-                        math_table('-ln(1 - x)', '\sum_{n=1}^\infty \frac{x^n}{n}', 'x + \frac{x^2}{2} + \frac{x^3}{3} + \frac{x^4}{4} + \frac{x^5}{5}\,+\,...\,+\,\frac{x^n}{n}');
-                        math_table('sin(x)', '\sum_{n=0}^\infty (-1)^{n}\,\frac{x^{2n+1}}{(2n+1)!}', 'x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!}\,-\,...\,+\,\frac{x^{2n+1}}{(2n+1)!}');
-                        math_table('cos(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n}}{(2n)!}', '1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!}\,-\,...\,+\,\frac{x^{2n}}{(2n)!}');
-                        math_table('arctan(x)', '\sum_{n=0}^\infty (-1)^n\,\frac{x^{2n+1}}{2n+1}', 'x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \frac{x^9}{9}\,-\,...\,+\,\frac{x^{2n+1}}{2n+1}');
+                        math_table('\dfrac{1}{1-x}', '\sum_{n=0}^\infty x^n', '1 + x + x^2 + x^3 + x^4\,+\,...\,+\,x^n');
+                        math_table('e^x', '\sum_{n=0}^\infty \dfrac{x^n}{n!}', '1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \dfrac{x^4}{4!}\,+\,...\,+\,\dfrac{x^n}{n!}');
+                        math_table('ln(1 + x)', '\sum_{n=1}^\infty (-1)^{n+1}\,\dfrac{x^n}{n}', 'x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + \dfrac{x^5}{5}\,-\,...\,+\,\dfrac{x^n}{n}');
+                        math_table('-ln(1 - x)', '\sum_{n=1}^\infty \dfrac{x^n}{n}', 'x + \dfrac{x^2}{2} + \dfrac{x^3}{3} + \dfrac{x^4}{4} + \dfrac{x^5}{5}\,+\,...\,+\,\dfrac{x^n}{n}');
+                        math_table('sin(x)', '\sum_{n=0}^\infty (-1)^{n}\,\dfrac{x^{2n+1}}{(2n+1)!}', 'x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - \dfrac{x^7}{7!} + \dfrac{x^9}{9!}\,-\,...\,+\,\dfrac{x^{2n+1}}{(2n+1)!}');
+                        math_table('cos(x)', '\sum_{n=0}^\infty (-1)^n\,\dfrac{x^{2n}}{(2n)!}', '1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dfrac{x^6}{6!} + \dfrac{x^8}{8!}\,-\,...\,+\,\dfrac{x^{2n}}{(2n)!}');
+                        math_table('arctan(x)', '\sum_{n=0}^\infty (-1)^n\,\dfrac{x^{2n+1}}{2n+1}', 'x - \dfrac{x^3}{3} + \dfrac{x^5}{5} - \dfrac{x^7}{7} + \dfrac{x^9}{9}\,-\,...\,+\,\dfrac{x^{2n+1}}{2n+1}');
                         ?>
                     </table>
                 </div>
@@ -169,7 +169,7 @@ phpNav(); ?>
                     math_table_left('\text{Total Differential}', 'd_z = f_x(x, y)dx + f_y(x, y)dy = \dfrac{\partial{z}}{\partial{x}}dx + \dfrac{\partial{z}}{\partial{y}}dy');
                     math_table_left('\dfrac{\partial{u}}{\partial{t_i}} \\\\ \text{u is a differential function of n variables}', '\dfrac{\partial{u}}{\partial{t_i}} = \dfrac{\partial{u}}{\partial{x_1}}\dfrac{\partial{x_1}}{\partial{t_i}} + \dfrac{\partial{u}}{\partial{x_2}}\dfrac{\partial{x_2}}{\partial{t_i}} + ... + \dfrac{\partial{u}}{\partial{x_n}}\dfrac{\partial{x_n}}{\partial{t_i}}');
                     math_table_left('\nabla f(x, y) \text{ (gradient of f)}', '\langle f_x(x, y), f_y(x, y) \rangle = \dfrac{\partial f}{\partial x}i + \dfrac{\partial f}{\partial y}j');
-                    math_table_left('D_uf(x, y, z) \text{ (directional derivative)}',  '\nabla f \cdot u \\\\ \text{Maximum value of directional derivative is } |\nabla f|');
+                    math_table_left('D_uf(x, y, z) \text{ (directional derivative)}', '\nabla f \cdot u \\\\ \text{Maximum value of directional derivative is } |\nabla f|');
                     math_table_left('\text{Second Derivative Test}', 'D = D(a, b) = f_{xx}(a, b)f_{yy}(a, b) - [f_{xy}(a, b)]^2 \\\\ \text{If D > 0 and $f_{xx}(a, b)$ > 0, then $f(a, b)$ is a local minimum} \\\\ \text{If D > 0 and $f_{xx}(a, b)$ < 0, then $f(a, b)$ is a local maximum} \\\\ \text{If D < 0, then $f(a, b)$ is not a local maximum or minimum (saddle point)}');
                     math_table_left('\text{Lagrange Multipliers}', '\text{Find all values of x, y, z, and $\lambda$ such that $\nabla f(x, y, z) = \lambda \nabla g(x, y, z)$ and } g(x, y, z) = k \\\\ \text{Evaluate $f$ at all points (x, y, z) from the values above; the largest is the maximum and the smallest is the minimum}');
                     math_table_left('\text{V of solid above rectangle R and below }');

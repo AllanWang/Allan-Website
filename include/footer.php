@@ -1,5 +1,5 @@
 <?php
-global $navFrom, $navTo, $table_of_contents;
+global $navFrom, $navTo, $dynamic_notes;
 ?>
 
 <footer class="page-footer"
@@ -12,7 +12,7 @@ global $navFrom, $navTo, $table_of_contents;
             </div>
             <div align="center" class="col l6 s12">
                 <ul class="icon-row">
-                    <li><a href="mailto:me@allanwang.com?Subject=Web Inquiry" target="_blank"><i
+                    <li><a href="mailto:me@allanwang.com?Subject=Web%20Inquiry" target="_blank"><i
                                 class="fa fa-envelope"></i></a></li>
                     <li><a href="https://github.com/AllanWang" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="https://www.paypal.me/Allanw9" target="_blank"><i class="fa fa-paypal"></i></a></li>
@@ -40,11 +40,10 @@ js('init');
 
 <script>
     //script for scroll animations
-
     window.onload = function () {
         <?php
         if (isset($_GET['scroll_to'])) echo "animateTo(\"{$_GET["scroll_to"]}\", 250, true);\n";
-        if (isset($table_of_contents)) echo 'toc()';
+        if (isset($dynamic_notes)) echo "scrollSpy();\n";
         ?>
     };
 

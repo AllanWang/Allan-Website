@@ -10,6 +10,9 @@
             event.preventDefault();
         });
 
+        //add ripples to nav items
+        $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
+
         //workaround for big collapsible accordion
         $('.collapsible .collapsible-header.click-scroll').on('click', function (event) {
             var target = $(this);
@@ -31,14 +34,15 @@
  */
 
 function animateTo(idTo, delay, onlyFromAbove) {
+    if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     if (!delay) delay = 0;
-    var itemTop = $('#' + idTo).offset().top;
-    if (onlyFromAbove) {
-        var top = window.pageYOffset || document.documentElement.scrollTop;
-        if (top > itemTop) return;
-    }
     setTimeout(function () { //animate scroll after page load
+        var itemTop = $('#' + idTo).offset().top;
+        if (onlyFromAbove) {
+            var top = window.pageYOffset || document.documentElement.scrollTop;
+            if (top > itemTop) return;
+        }
         $('html, body').animate({
             scrollTop: itemTop
         }, 700, 'easeInOutExpo');
@@ -46,6 +50,7 @@ function animateTo(idTo, delay, onlyFromAbove) {
 }
 
 function jumpTo(idTo) {
+    if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     // document.getElementById(idTo).scrollIntoView();
     $('html, body').animate({
@@ -54,6 +59,7 @@ function jumpTo(idTo) {
 }
 
 function animateSwitch(idFrom, idTo) {
+    if (idFrom.charAt(0) == '#') idFrom = idFrom.substring(1);
     if (!document.getElementById(idFrom)) return console.log('animateSwitch invalid id', idFrom);
     $('#' + idFrom).bind('click', function (event) {
         if (document.getElementById(idTo)) animateTo(idTo);
@@ -69,6 +75,57 @@ function navAnimOverride(idFrom, idTo) {
     });
 }
 
-function toc() {
-    $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
+function scrollSpy() {
+    $('.scrollspy').scrollSpy();
+}
+
+function dynamicNotes() {
+    $('#bh').on('click', function (event) {
+        $('.dynamic-notes .extra').hide(300);
+        // $('.dynamic-notes .normal').hide(300);
+    });
+    $('#bs').on('click', function (event) {
+        $('.dynamic-notes .extra').show(300);
+        // $('.dynamic-notes .normal').show(300);
+    });
+}
+
+function toggleNoteView(element) {
+    //due to how displaying works, top levels need to be shown prior to mid levels
+    //this is unnecessary for hide, but will be done to stay uniform
+    var duration = 100;
+    var currentlyActive = $('.table-of-contents a.active').attr('href');
+    if (element.checked) {
+        $('.dynamic-notes .extra.top').show(duration, 'swing');
+        setTimeout(function () {
+            $('.dynamic-notes .extra.mid').show(duration, 'swing');
+            setTimeout(function () {
+                $('.dynamic-notes .extra.low').show(duration, 'swing');
+            }, duration);
+        }, duration);
+    }
+    else {
+        $('.dynamic-notes .extra.low').hide(duration, 'swing');
+        setTimeout(function () {
+            $('.dynamic-notes .extra.mid').hide(duration, 'swing');
+            setTimeout(function () {
+                $('.dynamic-notes .extra.top').hide(duration, 'swing');
+            }, duration);
+        }, duration);
+    }
+    animateWithOffset(currentlyActive, duration * 3, 100);
+}
+
+function animateWithOffset(idTo, delay, offset, duration) {
+    if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
+    if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
+    if (!delay) delay = 0;
+    if (!offset) offset = 0;
+    if (!duration) duration = 700;
+    setTimeout(function () { //animate scroll after page load
+        var itemTop = $('#' + idTo).offset().top;
+        $('html, body').animate({
+            scrollTop: (itemTop - offset)
+        }, duration, 'easeInOutExpo');
+    }, delay);
 }

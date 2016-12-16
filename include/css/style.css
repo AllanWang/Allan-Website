@@ -7,7 +7,6 @@
  */
 
 nav ul a,
-
 nav .brand-logo {
     color: #444;
 }
@@ -21,16 +20,16 @@ header, main, footer {
     padding-left: 300px;
 }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
     header, main, footer {
         padding-left: 0;
     }
 }
 
 /*nav svg {*/
-    /*display: block;*/
-    /*height: 56px;*/
-    /*line-height: 56px;*/
+/*display: block;*/
+/*height: 56px;*/
+/*line-height: 56px;*/
 /*}*/
 
 p {
@@ -160,7 +159,7 @@ footer.page-footer {
 /* Icon row */
 
 /*.icon-row {*/
-    /*padding: 8px;*/
+/*padding: 8px;*/
 /*}*/
 
 .icon-row li {
@@ -368,15 +367,18 @@ nav .brand-logo.center {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%)
     }
+
     nav .brand-logo.left,
     nav .brand-logo.right {
         padding: 0;
         -webkit-transform: none;
         transform: none
     }
+
     nav .brand-logo.left {
         left: 0.5rem
     }
+
     nav .brand-logo.right {
         right: 0.5rem;
         left: auto
@@ -396,7 +398,38 @@ nav .brand-logo i.material-icons {
     margin-right: 15px
 }
 
-/*Just for identification*/
-.click-scroll {
+.dynamic-notes strong {
+    font-weight: normal;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    max-width: 500px;
+    width: 50%
+}
 
+/*Modified bullet list; smaller bullet*/
+
+ul.browser-default {
+    padding-left: 20px;
+}
+
+ul.browser-default li {
+    list-style-type: none;
+}
+
+ul.browser-default li:before {
+    content: "\2022";
+    font-size: 100%;
+    padding-right: 5px;
+    margin-left: -10px;
+}
+
+/*red switch*/
+.switch label input[type=checkbox]:checked + .lever.red-tint {
+    background-color: #f98e86;
+}
+
+.switch label input[type=checkbox]:checked + .lever.red-tint:after {
+    background-color: #F44336;
+    left: 24px;
 }
