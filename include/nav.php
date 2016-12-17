@@ -1,5 +1,5 @@
 <?php
-global $theme_color, $page_title, $pdf, $side_nav_contents;
+global $theme_color, $page_title, $hamburger_menu_color, $side_nav_contents;
 include_once("analytics.php");
 ?>
 
@@ -7,11 +7,7 @@ include_once("analytics.php");
     <!--    <div class="container">-->
     <a href="#" data-activates="nav-bar"
        class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
-        <i class="material-icons"
-            <?php
-            if (isset($pdf) || $page_title === '404') echo 'style="color: ' . $theme_color . ';"';
-            ?>
-        >menu</i></a>
+        <i class="material-icons" style="color: <?php echo $hamburger_menu_color; ?>">menu</i></a>
     <!--    </div>-->
 
     <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
@@ -70,7 +66,7 @@ include_once("analytics.php");
                                     Math</a></li>
                             <li><a class="l" id="nr_n_linalg" href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear
                                     Algebra</a></li>
-                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/">Computer Science</a>
+                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer Science</a>
                             </li>
                             <li><a class="l" id="nr_n_phgy" href="http://allanwang.ca/notes/phgy/">Physiology</a></li>
                             <li>

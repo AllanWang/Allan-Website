@@ -9,6 +9,7 @@ $page_description = "$n_key Notes and Code Snippets";
 $navFrom = 'n_comp';
 //$navTo = 'commons';
 $theme_color = "#F44336"; //red
+$hamburger_menu_color = "#ffffff";
 
 phpHeader(); ?>
 
@@ -20,41 +21,11 @@ phpNav(); ?>
 
 <main>
 
-    <div id="index-banner" class="anti-parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20"><?php echo $n_key ?></h1>
-                <div class="row center">
-                    <h5 class="header col s12 light white-text">202 &bull; 206 &bull; 250</h5>
-                </div>
-                <!-- <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
-        </div> -->
-                <br>
-                <br>
-
-            </div>
-        </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
-    </div>
+    <?php
+    banner('calc_header.jpg', 202, 206, 250);
+    ?>
 
     <div class="container">
-        <!--        <table class="light h5 highlight" id="big-O">-->
-        <!--            <tr>-->
-        <!--                <th>a</th>-->
-        <!--                <th>b</th>-->
-        <!--                <th>c</th>-->
-        <!--                <th>d</th>-->
-        <!--                <th>e</th>-->
-        <!--                <th>f</th>-->
-        <!--                <th>g</th>-->
-        <!--                <th>h</th>-->
-        <!--            </tr>-->
-        <!--        </table>-->
-        <!--        <br>-->
-        <!--        <br>-->
         <h5 class="header center" id="pseudocode">Pseudocode</h5>
         <?php
         code_collapsible('Binary Search|binary.java',

@@ -387,6 +387,10 @@ nav .brand-logo i.material-icons {
     margin: 0;
 }
 
+.dynamic-notes .keyword {
+    display: inline;
+}
+
 /*Modified bullet list; smaller bullet*/
 
 ul.browser-default {
@@ -416,8 +420,13 @@ ul.browser-default li:before {
 
 .modal-keys a {
     color: #000;
+    line-height: 200%;
 }
 
 .modal-keys a:hover {
     color: #555;
+}
+
+.microsoft-header-blue {
+    background-color: #2e74b5 !important;
 }

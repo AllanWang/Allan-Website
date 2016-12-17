@@ -6,7 +6,9 @@ $page_title = "Projects";
 $page_description = "Main Page";
 $navFrom = 'proj';
 $navTo = 'projects';
+$n_key = 'Coding Projects';
 $theme_color = '#4CAF50'; //green
+$hamburger_menu_color="#ffffff";
 phpHeader(); ?>
 <body>
 
@@ -14,27 +16,8 @@ phpHeader(); ?>
 
 <main>
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20">Coding Projects</h1>
-                <div class="row center white-text">
-                    <h5 class="header col s12 light">Themes &bull; Android Apps &bull; Open Source</h5>
-                </div>
-                <!-- <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
-        </div> -->
-                <br>
-                <br>
-
-            </div>
-        </div>
-        <div class="parallax blur-darken"><img src="images/android-n.jpg" alt="Unsplashed background img 1"></div>
-    </div>
-
     <?php
+    banner('android-n.jpg', 'Themes', 'Android Apps', 'Open Source');
 
     function card($image, $title, $desc, $full_desc, array $links)
     {

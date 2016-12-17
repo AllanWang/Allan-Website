@@ -8,6 +8,16 @@ const BLANK = ' ';
 const KEY = '!';
 const EXTRA = '#';
 
+/**
+ * Simplified function that will created a nested bullet list with an array of strings
+ * Keywords:
+ * -        indent bullet; use multiple times for multiple indents
+ * !        important, key tag
+ * #        not important, extra tag
+ * ' '      whitespace - or first character will be removed; allows for ! and # to be used normally if necessary
+ * {%s|%s}  keyword - first string is id, second string is word to be displayed; will create an inline keyword div
+ * @param array ...$notes the array of rows
+ */
 function dynamicBullets(...$notes)
 {
     echo MAIN . UL_START;
@@ -78,16 +88,15 @@ function echoItem($item, $level, $close)
             break;
     }
     echo '">';
-    echo $item;
+    echo preg_replace('/{(.+)\|(.+)}/', '<div id="$1" class="keyword">$2</div>', $item);
+//    echo preg_replace('/[^\\]\{(.+)\|(.+)[^\\]\}/g', '<div id="$1" class="keyword">$2</div>', $item);
+//    echo preg_replace('/aaaaa/', 'hello', $item);
+//    echo $item;
     if ($close) echo '</li>';
     echo "\n";
 }
 
-function keyword($key)
-{
-    return '<div id="' . $key . '" class="keyword">' . $key . '</div>';
-}
-
+//echoes br $count times
 function br($count = 1)
 {
     for (; $count > 0; $count--) {
@@ -110,9 +119,9 @@ function keywordPanel(...$items)
     echo '<div class="modal-keys">';
     $first = true;
     foreach ($items as $item) {
-        $pair = array($item, $item);
+        //default id is input in lower case with no spaces
+        $pair = array(strtolower(preg_replace('/ /', '-', $item)), $item);
         if (strpos($item, '|') !== false) $pair = explode('|', $item);
-
         if ($first) $first = false;
         else echo '&ensp;&bull;&ensp;'; //space bullet space
 

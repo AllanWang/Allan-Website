@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color, $pdf, $extend_header;
+global $page_title, $page_description, $theme_color, $hamburger_menu_color, $extend_header;
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -22,7 +22,8 @@ global $page_title, $page_description, $theme_color, $pdf, $extend_header;
         echo "<meta name=\"theme-color\" content=\"$theme_color\">"; //only add theme meta data if it was explicitly defined
     }
 
-    $ripple_rgba = rippleColor($theme_color);
+    if (!isset($hamburger_menu_color)) $hamburger_menu_color = $theme_color;
+    $ripple_rgba = rippleColor($hamburger_menu_color);
 
     function theme_background()
     {
@@ -33,11 +34,10 @@ global $page_title, $page_description, $theme_color, $pdf, $extend_header;
     css("style");
 
     if ($page_title === '404') echo '<link href="http://allanwang.ca/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
-    if (isset($pdf)) css('pdf');
     ?>
 
     <style>
-        .waves-effect.waves-nav .waves-ripple {
+        .waves-effect.waves-nav .waves-ripple{
             background-color: <?php echo $ripple_rgba?>;
         }
 

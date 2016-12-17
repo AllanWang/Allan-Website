@@ -3,10 +3,12 @@
 
 $include_url = "http://allanwang.ca/include/";
 
-include_once ('dynamic_notes.php');
-
-function phpHeader()
+function phpHeader($extend = false)
 {
+    if ($extend) {
+        global $extend_header;
+        $extend_header = true;
+    }
     require_once('header.php');
 }
 
@@ -25,6 +27,13 @@ function phpPDF($url)
     global $pdf;
     $pdf = $url;
     require_once('pdf.php');
+}
+
+function dynamicNotes($key = 'php')
+{
+    global $dynamic_notes;
+    $dynamic_notes = $key;
+    if ($key == 'php') require_once('dynamic_notes.php');
 }
 
 function css($name)
@@ -123,6 +132,23 @@ function rippleColor($hex)
     $g = hexdec(substr($hex, 3, 2));
     $b = hexdec(substr($hex, 5, 2));
     return "rgba($r, $g, $b, 0.2)";
+}
+
+function banner($image, ...$key_codes)
+{
+    global $n_key;
+    if (!isset($n_key)) $n_key = 'Set n_key please';
+    echo '<div id="index-banner" class="parallax-container"><div class="section no-pad-bot"><div class="container"><br><br>';
+    echo '<h1 class="header center white-text text-lighten-2 pad-top-20">' . $n_key . '</h1>';
+    echo '<div class="row center"><h5 class="header col s12 light white-text">';
+    $first = true;
+    foreach ($key_codes as $key_code) {
+        if (!$first) echo ' &bull; ';
+        $first = false;
+        echo $key_code;
+    }
+    echo '</div><br><br></div></div>';
+    echo '<div class="parallax blur-darken" ><img src="images/' . $image . '" alt="' . $n_key . ' Header"></div></div>';
 }
 
 ?>

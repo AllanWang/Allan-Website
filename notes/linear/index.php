@@ -9,7 +9,7 @@ $page_description = "$n_key Notes";
 $navFrom = 'n_linalg';
 $navTo = 'common';
 $theme_color = "#F44336"; //red
-
+$hamburger_menu_color="#ffffff";
 phpHeader(); ?>
 
 <body>
@@ -28,27 +28,8 @@ MathJax.Hub.Config({
 
 <main>
 
-    <div id="index-banner" class="anti-parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20"><?php echo $n_key ?></h1>
-                <div class="row center">
-                    <h5 class="header col s12 light white-text">133</h5>
-                </div>
-                <!-- <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
-        </div> -->
-                <br>
-                <br>
-
-            </div>
-        </div>
-        <div class="anti-parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
-    </div>
-
     <?php
+    banner('calc_header.jpg', 133);
 
     function bullet()
     {

@@ -9,7 +9,7 @@ $page_description = "Calculus Formulas";
 $navFrom = 'n_calc';
 $navTo = 'commons';
 $theme_color = "#F44336"; //red
-
+$hamburger_menu_color="#ffffff";
 phpHeader(); ?>
 <body>
 
@@ -26,26 +26,9 @@ phpNav(); ?>
 
 <main>
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-                <h1 class="header center white-text text-lighten-2 pad-top-20"><?php echo $n_key ?></h1>
-                <div class="row center">
-                    <h5 class="header col s12 light white-text">140 &bull; 141 &bull; 222</h5>
-                </div>
-                <!-- <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light black lighten-1">Get Started</a>
-        </div> -->
-                <br>
-                <br>
-
-            </div>
-        </div>
-        <div class="parallax blur5"><img src="images/calc_header.jpg" alt="<?php echo $n_key ?> Header"></div>
-    </div>
-
+    <?php
+    banner('calc_header.jpg', 140, 141, 222);
+    ?>
 
     <div class="container">
         <ul class="collapsible" id="commons" data-collapsible="expandable">
@@ -58,7 +41,7 @@ phpNav(); ?>
                         math_table('f + g', "f' + g'");
                         math_table('f - g', "f' - g'");
                         math_table('f * g', "f'g + fg'");
-                        math_table('\dfrac{f}{g}', "\dfrac{f'g-fg'}{g^2}");
+                        math_table('\dfrac{f}{g}', '\dfrac{f\'g-fg\'}{g^2}');
                         math_table('f \circ g', "f'(g) * g'");
                         math_table('x^n', 'nx^{n-1}');
                         math_table('e^x', 'e^x');

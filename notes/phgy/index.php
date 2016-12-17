@@ -9,6 +9,7 @@ $page_description = "$n_key Notes";
 $navFrom = 'n_phgy';
 $navTo = 'common';
 $theme_color = "#F44336"; //red
+dynamicNotes();
 phpHeader(); ?>
 
 <body>
@@ -24,7 +25,7 @@ phpHeader(); ?>
                     <h5>H<sub>2</sub>O</h5>
                     <?php
                     dynamicBullets("45% - 75%", "Key solvent; where metabolic reactions take place",
-                        "Variation by body composition",
+                        "Variation by {body-composition|body composition}",
                         "-#<strong>Skin</strong>70%",
                         "-#<strong>Muscle</strong>75%",
                         "-#<strong>Organs - Heart, liver, brain, kidney</strong>70-80%",
@@ -36,13 +37,13 @@ phpHeader(); ?>
                         "-#<strong>Seniors Female : Male</strong>45% : 50%",
                         "-#Body water content is greater in infants and males",
                         "Significant for water-soluble medications (final concentration in body)",
-                        "In <b>dynamic steady state</b> – individual & environment, and amongst internal components",
+                        "In dynamic steady state – individual & environment, and amongst internal components",
                         "Water balance",
                         "-Intake – fluids, foods, oxidative water from metabolism",
                         "--#(C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O + energy)",
                         "-Output – insensible (lungs, skin), kidneys (balancer), stool",
                         "--#Insensible – not noticeable, unavoidable ",
-                        "-Obligatory vs facultative losses",
+                        "-{obl-fac|Obligatory vs facultative} losses",
                         "--Obligatory – 1.5L/day",
                         "---#Insensible: 1.0L",
                         "---#Urine + stool: 0.5L",
@@ -59,15 +60,16 @@ phpHeader(); ?>
                         "--#Sweat glands",
                         "--#Activated by heavy work/high temp",
                         "Volume relatively constant – helps maintain solute concentration & blood volume/pressure",
-                        "Negative water balance",
-                        "-#Reduced intake",
-                        "-#Excessive loss from gut",
-                        "-#Excessive sweating",
-                        "-#Excessive loss of expired air (dry air)",
-                        "-#Excessive loss of urine",
-                        "Water 'intoxication' (positive water balance)",
-                        "-#Excessive intake",
-                        "-#Renal system failure",
+                        "{water-balance|Water Balance}",
+                        "-Negative water balance",
+                        "--#Reduced intake",
+                        "--#Excessive loss from gut",
+                        "--#Excessive sweating",
+                        "--#Excessive loss of expired air (dry air)",
+                        "--#Excessive loss of urine",
+                        "-Water 'intoxication' (positive water balance)",
+                        "--#Excessive intake",
+                        "--#Renal system failure",
                         "#Average male is regarded as 70kg",
                         "Body water compartments – 60% of body mass",
                         "Water is freely moving; compartments are not rigidly isolated chambers"
@@ -76,35 +78,35 @@ phpHeader(); ?>
                 </div>
 
                 <div id="icf" class="section scrollspy">
-                    <h5>Intracellular Fluid (ICF)</h5>
+                    <h5 id="icfh">Intracellular Fluid (ICF)</h5>
                     <?php
                     dynamicBullets("Body water compartments – 60% of body mass", "Aggregate of fluid bound by internal surface of cell membranes")
                     ?>
                 </div>
                 <div id="ecf" class="section scrollspy">
-                    <h5>Extracellular Fluid (ECF)</h5>
+                    <h5 id="ecfh">Extracellular Fluid (ECF)</h5>
                     <?php
                     dynamicBullets("1/3 of body water compartments",
                         "Major subcompartments",
-                        "-Plasma – fluid medium in which blood cells are suspended",
+                        "-{plasma|Plasma} – fluid medium in which blood cells are suspended",
                         "--25% of ECF, 5% of total body water compartments",
-                        "-Interstitial Fluid(ISF)",
+                        "-{isf|Interstitial Fluid (ISF)}",
                         "--75% of ECF, 15% of total body water compartments",
                         "--#True 'Milieu Intérieur'",
                         "--#Percolates between individual cells",
                         "Minor subcompartments",
-                        "-Lymph",
+                        "-{lymph|Lymph}",
                         "--#Lymphatic system – network of blind - ended terminal tubules",
                         "---#Coalesce to form larger lymphatic vessels -> converge to large lymphatic ducts which drain into large veins in chest",
                         "--#1 – 2% of ECF",
                         "-Transcellular fluid",
-                        "--#Aggregate of small fluid volumes secreted by specific cells into a number of body cavities(lined by epithelial cells) & having specialized functions",
+                        "--#Aggregate of small fluid volumes secreted by specific cells into a number of body cavities (lined by epithelial cells) & having specialized functions",
                         "--#<1 – 2% of ECF",
                         "--#Intraocular, cochlear, cerebrospinal, pleural & pericardial, peritoneal, synovial, fluid in ducts of glands, bladder, etc",
                         "--#Does not affect body fluid balance; very local; however, has important functions",
                         "Number recap: Total H2O 60%, ICF 40%, ECF 20%, ISF 15%, Plasma 5% (of total body weight)",
                         "For healthy individuals, total volume & relative distributions between compartments must remain constant (though they are in dynamic equilibrium)",
-                        "<b>Hematocrit</b> (Ht) – percentage of blood volume occupied by Red Blood Cells (erythrocytes)",
+                        "{hematocrit|Hematocrit (Ht)} – percentage of blood volume occupied by Red Blood Cells (erythrocytes)",
                         "-Height of erythrocyte column/height of whole blood column",
                         "-Ht = Packed Cell Volume (PCV)",
                         "-Normal value for males = 45%"
@@ -119,7 +121,7 @@ phpHeader(); ?>
                         "Indirect – indicator dilution method",
                         "-#Know: total quantity of test substance, concentration of substance after dispersion",
                         "-#Add quantity Q of indicator to vein &rarr; allow time to equilibrate &rarr; remove known volume of blood & centrifuge for plasma &rarr; measure concentration (c) of substance in plasma &rarr; calculate V = Q/c",
-                        "-Indicator choice",
+                        "-{indicators|Indicator choice}",
                         "--#Non-toxic, diffuse readily, distribute evenly through compartments to be measured, induce no changes in distribution of water, easy to measure",
                         "--Antipyrine, D<sub>2</sub>O, T<sub>2</sub>O – for total body water measurements",
                         "--Radioactively labeled Inulin, sucrose, mannitol – for ECF (does not pass cell membrane)",
@@ -128,7 +130,7 @@ phpHeader(); ?>
                     ?>
                 </div>
                 <div id="ionic-composition" class="section scrollspy">
-                    <h5>Methods to Determine Compartment Volumes</h5>
+                    <h5 id="ionic-comp">Ionic Compositions</h5>
                     <?php
                     dynamicBullets(
                         "ICF – high in K<sup>+</sup> & Mg<sup>++</sup>, low in Na<sup>+</sup> & Cl<sup>-</sup>",
@@ -143,14 +145,14 @@ phpHeader(); ?>
                     ?>
                 </div>
                 <div id="units-concentration" class="section scrollspy">
-                    <h5>Units of Concentration</h5>
+                    <h5 id="units-concentration-h">Units of Concentration</h5>
                     <?php
                     dynamicBullets(
                         "#<strong>Amount (mass) of solute</strong>1g% = 1g solute in 1dL of water",
                         "#<strong>Number of solute molecules</strong>1mol = gram molecular weight/1L of H<sub>2</sub>O",
                         "-#Molality (m) – number of moles of solute dissolved in 1Kg solvent",
                         "-#Molarity (M) – amount of solute in specific amount of solution",
-                        "#<strong>Number of reactive units</strong>Eq = molarity of ion * valency(ie Na <sup>+</sup> 1Eq/mol, Ca <sup>2+</sup> 2Eq/mol)"
+                        "#<strong>Number of reactive units</strong>Eq = molarity of ion * valency(ie Na<sup>+</sup> 1Eq/mol, Ca<sup>2+</sup> 2Eq/mol)"
                     );
                     br();
                     dynamicBullets(
@@ -175,7 +177,7 @@ phpHeader(); ?>
                         "Proteins",
                         "-Integral – closely associated with phospholipids, mostly cross the membrane (transmembrane)",
                         "-Peripheral – loosely associated, mostly on cytoplasmic side",
-                        "Glycocalyx – carbohydrates & glycoproteins on outer side of membrane; gives distinct identity",
+                        "{glycocalyx|Glycocalyx} – carbohydrates & glycoproteins on outer side of membrane; gives distinct identity",
                         "#Fluid mosaic model",
                         "#Functions of plasma membrane proteins",
                         "-#Selective transport channel",
@@ -183,8 +185,7 @@ phpHeader(); ?>
                         "-#Cell surface receptor",
                         "-#Cell surface identity marker",
                         "-#Cell adhesion",
-                        "-#Attachment to cytoskeleton",
-                        "-".fixedTable("this is", "a test")
+                        "-#Attachment to cytoskeleton"
                     );
                     ?>
                 </div>
@@ -206,7 +207,7 @@ phpHeader(); ?>
                     <div class="switch">
                         <label>
                             Collapse
-                            <input type="checkbox" onchange="toggleNoteView(this)" checked>
+                            <input id="note-toggle" type="checkbox" onchange="toggleNoteView(this)" checked>
                             <span class="lever red-tint"></span>
                             Expand
                         </label>
@@ -226,13 +227,13 @@ phpHeader(); ?>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                     keywordPanel('icf', 'ecf|Extra', 'dcv|Compartment');
+                    keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss', 'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx');
                     ?>
 
                 </div>
-<!--                <div class="modal-footer">-->
-<!--                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>-->
-<!--                </div>-->
+                <!--                <div class="modal-footer">-->
+                <!--                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>-->
+                <!--                </div>-->
             </div>
         </div>
 

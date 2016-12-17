@@ -10,9 +10,6 @@
             event.preventDefault();
         });
 
-        $('.scrollspy').scrollSpy();
-        $('.modal').modal();
-
         //add ripples to nav items
         $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
 
@@ -37,6 +34,7 @@
  */
 
 function animateTo(idTo, delay, onlyFromAbove) {
+    if (typeof idTo === 'undefined') return console.log('Undefined id');
     if (idTo == 'top') return scrollEase(0);
     if (idTo == 'bottom') return scrollEase($(document).height());
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
@@ -55,6 +53,7 @@ function animateTo(idTo, delay, onlyFromAbove) {
 }
 
 function jumpTo(idTo) {
+    if (typeof idTo === 'undefined') return console.log('Undefined id');
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     // document.getElementById(idTo).scrollIntoView();
@@ -72,6 +71,7 @@ function scrollEase(position, duration) {
 }
 
 function animateSwitch(idFrom, idTo) {
+    if (typeof idTo === 'undefined') return console.log('Undefined id');
     if (idFrom.charAt(0) == '#') idFrom = idFrom.substring(1);
     if (!document.getElementById(idFrom)) return console.log('animateSwitch invalid id', idFrom);
     $('#' + idFrom).bind('click', function (event) {
@@ -91,30 +91,44 @@ function navAnimOverride(idFrom, idTo) {
 function toggleNoteView(element) {
     //due to how displaying works, top levels need to be shown prior to mid levels
     //this is unnecessary for hide, but will be done to stay uniform
+    //we also check if the show/hide state will be changed or not
+    //if it isn't, we will not continue and will not auto scroll
     var duration = 100;
-    var currentlyActive = $('.table-of-contents a.active').attr('href');
-    if (element.checked) {
-        $('.dynamic-notes .extra.top').show(duration, 'swing');
-        setTimeout(function () {
-            $('.dynamic-notes .extra.mid').show(duration, 'swing');
+    var changed = false;
+    if (typeof element === 'boolean' || element.checked) {
+        var top = $('.dynamic-notes .extra.top');
+        if (!top.is(':visible')) {
+            changed = true;
+            top.show(duration, 'swing');
             setTimeout(function () {
-                $('.dynamic-notes .extra.low').show(duration, 'swing');
+                $('.dynamic-notes .extra.mid').show(duration, 'swing');
+                setTimeout(function () {
+                    $('.dynamic-notes .extra.low').show(duration, 'swing');
+                }, duration);
             }, duration);
-        }, duration);
+        }
     }
     else {
-        $('.dynamic-notes .extra.low').hide(duration, 'swing');
-        setTimeout(function () {
-            $('.dynamic-notes .extra.mid').hide(duration, 'swing');
+        var low = $('.dynamic-notes .extra.low');
+        if (low.is(':visible')) {
+            changed = true;
+            low.hide(duration, 'swing');
             setTimeout(function () {
-                $('.dynamic-notes .extra.top').hide(duration, 'swing');
+                $('.dynamic-notes .extra.mid').hide(duration, 'swing');
+                setTimeout(function () {
+                    $('.dynamic-notes .extra.top').hide(duration, 'swing');
+                }, duration);
             }, duration);
-        }, duration);
+        }
     }
-    animateWithOffset(currentlyActive, duration * 3, 100);
+    if (changed) {
+        var currentlyActive = $('.table-of-contents a.active').attr('href');
+        animateWithOffset(currentlyActive, duration * 3, 100);
+    }
 }
 
 function animateWithOffset(idTo, delay, offset, duration) {
+    if (typeof idTo === 'undefined') return console.log('Undefined id');
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     if (!delay) delay = 0;
@@ -126,4 +140,35 @@ function animateWithOffset(idTo, delay, offset, duration) {
             scrollTop: (itemTop - offset)
         }, duration, 'easeInOutExpo');
     }, delay);
+}
+
+//Function to initialize dynamic notes
+function dynamicNotes() {
+    $('.scrollspy').scrollSpy();
+    $('.modal').modal({
+        opacity: 0.05, // Opacity of modal background
+        ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+            toggleNoteView(true);
+            $('body').css('overflow', '');
+        },
+        complete: function () {
+            toggleNoteView($('#note-toggle').get(0));
+        } // Callback for Modal close
+    });
+    var keywords = $('.modal-keys a');
+    if (keywords.length > 0) {
+        keywords.bind('click', function (event) {
+            var href = $(this).attr('href');
+            $('.keyword, h5').css('font-weight', ''); //reset all previous key weights
+            var current = $(href);
+            //make current key stand out
+            if (current.hasClass('keyword')) {
+                current.css('font-weight', 'normal');
+            } else if (current.is('h5')) {
+                current.css('font-weight', 'bold');
+            }
+            animateWithOffset(href, 0, 100);
+            event.preventDefault();
+        });
+    }
 }
