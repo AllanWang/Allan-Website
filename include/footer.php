@@ -1,5 +1,5 @@
 <?php
-global $navFrom, $navTo, $dynamic_notes;
+global $navFrom, $navTo;
 ?>
 
 <footer class="page-footer"
@@ -43,7 +43,6 @@ js('init');
     window.onload = function () {
         <?php
         if (isset($_GET['scroll_to'])) echo "animateTo(\"{$_GET["scroll_to"]}\", 250, true);\n";
-        if (isset($dynamic_notes)) echo "scrollSpy();\n";
         ?>
     };
 

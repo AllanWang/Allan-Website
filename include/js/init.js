@@ -10,6 +10,9 @@
             event.preventDefault();
         });
 
+        $('.scrollspy').scrollSpy();
+        $('.modal').modal();
+
         //add ripples to nav items
         $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
 
@@ -34,6 +37,8 @@
  */
 
 function animateTo(idTo, delay, onlyFromAbove) {
+    if (idTo == 'top') return scrollEase(0);
+    if (idTo == 'bottom') return scrollEase($(document).height());
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     if (!delay) delay = 0;
@@ -58,6 +63,14 @@ function jumpTo(idTo) {
     }, 1);
 }
 
+function scrollEase(position, duration) {
+    if (!position) position = 0;
+    if (!duration) duration = 700;
+    $('html, body').animate({
+        scrollTop: position
+    }, duration, 'easeInOutExpo');
+}
+
 function animateSwitch(idFrom, idTo) {
     if (idFrom.charAt(0) == '#') idFrom = idFrom.substring(1);
     if (!document.getElementById(idFrom)) return console.log('animateSwitch invalid id', idFrom);
@@ -72,21 +85,6 @@ function animateSwitch(idFrom, idTo) {
 function navAnimOverride(idFrom, idTo) {
     $(document).ready(function () {
         animateSwitch('nr_' + idFrom, idTo);
-    });
-}
-
-function scrollSpy() {
-    $('.scrollspy').scrollSpy();
-}
-
-function dynamicNotes() {
-    $('#bh').on('click', function (event) {
-        $('.dynamic-notes .extra').hide(300);
-        // $('.dynamic-notes .normal').hide(300);
-    });
-    $('#bs').on('click', function (event) {
-        $('.dynamic-notes .extra').show(300);
-        // $('.dynamic-notes .normal').show(300);
     });
 }
 

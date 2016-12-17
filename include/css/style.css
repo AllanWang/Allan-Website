@@ -1,11 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 nav ul a,
 nav .brand-logo {
     color: #444;
@@ -25,12 +17,6 @@ header, main, footer {
         padding-left: 0;
     }
 }
-
-/*nav svg {*/
-/*display: block;*/
-/*height: 56px;*/
-/*line-height: 56px;*/
-/*}*/
 
 p {
     line-height: 2rem;
@@ -76,24 +62,12 @@ footer.page-footer {
     margin: 0;
 }
 
-/* Styles for slide1 - From Ivon Liu*/
-
-.slide1 {
-    background: #eeeeee;
-    padding-top: 1px;
-}
-
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
     color: #009688;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
     color: #80CBC4;
-}
-
-.slide1-title {
-    color: #333333;
-    text-align: center;
 }
 
 .background-gradient {
@@ -157,10 +131,6 @@ footer.page-footer {
 }
 
 /* Icon row */
-
-/*.icon-row {*/
-/*padding: 8px;*/
-/*}*/
 
 .icon-row li {
     font-size: 150%;
@@ -399,12 +369,22 @@ nav .brand-logo i.material-icons {
 }
 
 .dynamic-notes strong {
-    font-weight: normal;
+    font-weight: inherit;
     display: inline-block;
     *display: inline;
     zoom: 1;
     max-width: 500px;
     width: 50%
+}
+
+.dynamic-notes b {
+    font-weight: normal;
+}
+
+.dynamic-notes table {
+    display: inline;
+    padding: 0;
+    margin: 0;
 }
 
 /*Modified bullet list; smaller bullet*/
@@ -420,7 +400,7 @@ ul.browser-default li {
 ul.browser-default li:before {
     content: "\2022";
     font-size: 100%;
-    padding-right: 5px;
+    padding-right: 7px;
     margin-left: -10px;
 }
 
@@ -432,4 +412,12 @@ ul.browser-default li:before {
 .switch label input[type=checkbox]:checked + .lever.red-tint:after {
     background-color: #F44336;
     left: 24px;
+}
+
+.modal-keys a {
+    color: #000;
+}
+
+.modal-keys a:hover {
+    color: #555;
 }

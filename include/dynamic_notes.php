@@ -1,22 +1,6 @@
 <?php
 
-class Note
-{
-    public $text;
-    public $type;
-    const NORMAL = 0;
-    const KEY = 1;
-    const EXTRA = 2;
-
-    function __construct($text, $type = 0)
-    {
-        $this->text = $text;
-        $this->type = $type;
-    }
-}
-
 const MAIN = '<div class="dynamic-notes">';
-const DIV_FORMAT = '<div class="%s">';
 const DIV_END = '</div>';
 const UL_START = '<ul class="browser-default">' . "\n";
 const UL_END = '</ul>' . "\n";
@@ -26,9 +10,7 @@ const EXTRA = '#';
 
 function dynamicBullets(...$notes)
 {
-    global $dynamic_notes;
-    $dynamic_notes = 'enabled';
-    echo sprintf(DIV_FORMAT, 'dynamic-notes') . UL_START;
+    echo MAIN . UL_START;
     $level = 0;
     $toClose = 0;
     $prev = '';
@@ -44,12 +26,16 @@ function dynamicBullets(...$notes)
             $toClose++;
         } else if ($level > $depth) {
             echoItem($prev, $level, true);
-            echo UL_END . '</li>';
-            $toClose--;
+            while ($level > $depth) {
+                echo UL_END . '</li>';
+                $level--;
+                $toClose--;
+            }
         } else if ($prev != '') {
             echoItem($prev, $level, true);
         }
-        $level = $depth;
+        if ($level < $depth) $level++; //level should always be depth, but since we can only indent one at a time, this is here as a precaution
+        else $level = $depth;
         $prev = $note;
     }
     echoItem($prev, $level, true);
@@ -100,6 +86,39 @@ function echoItem($item, $level, $close)
 function keyword($key)
 {
     return '<div id="' . $key . '" class="keyword">' . $key . '</div>';
+}
+
+function br($count = 1)
+{
+    for (; $count > 0; $count--) {
+        echo '<br>';
+    }
+}
+
+function fixedTable(...$items)
+{
+    $result = '<table><tr>';
+    foreach ($items as $item) {
+        $result = $result . "<td>$item</td>";
+    }
+    $result = $result . '</tr></table>';
+    return $result;
+}
+
+function keywordPanel(...$items)
+{
+    echo '<div class="modal-keys">';
+    $first = true;
+    foreach ($items as $item) {
+        $pair = array($item, $item);
+        if (strpos($item, '|') !== false) $pair = explode('|', $item);
+
+        if ($first) $first = false;
+        else echo '&ensp;&bull;&ensp;'; //space bullet space
+
+        echo '<a href="#' . $pair[0] . '">' . $pair[1] . '</a>';
+    }
+    echo '</div>';
 }
 
 ?>
