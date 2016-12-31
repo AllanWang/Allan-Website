@@ -18,19 +18,20 @@ phpNav(); ?>
 <main>
 
     <div class="container">
-        <div class="section">
-            <div class="row" id="commons">
+        <div class="light row" id="commons">
+            <div class="col s12 m9 l10">
+
                 <h3 class="header center">Intro to Java</h3>
-                <h6 class="light center">A <a href="https://en.wikipedia.org/wiki/Concurrent_computing" target="_blank">concurrent</a>,
+                <h6 class="center">A <a href="https://en.wikipedia.org/wiki/Concurrent_computing" target="_blank">concurrent</a>,
                     <a href="https://en.wikipedia.org/wiki/Class-based_programming" target="_blank">class-based</a>, and
                     <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"
                        target="_blank">object-oriented</a> programming
                     language<br><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
                                        target="_blank">Java
                         SE</a>&emsp;&bull;&emsp;<a
-                        href="https://www.eclipse.org/downloads/" target="_blank">Eclipse</a>&emsp;&bull;&emsp;<a
-                        href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ</a></h6>
-                <div class="light h5">
+                            href="https://www.eclipse.org/downloads/" target="_blank">Eclipse</a>&emsp;&bull;&emsp;<a
+                            href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ</a></h6>
+                <div id="data-types" class="section scrollspy">
                     <table class="highlight">
                         <?php
                         table_header('Primitive Data Type', 'Bit Size', 'Range', 'Default Value');
@@ -45,15 +46,64 @@ phpNav(); ?>
                         ?>
                     </table>
                 </div>
-                <?php
-                code_collapsible('The Basics|basics.java', 'Common Mistakes|common_mistakes.java');
-                ?>
-
+                <div id="basics" class="section scrollspy">
+                    <h5>The Basics</h5>
+                    Here is a sample that shows the structure of a class and how static methods work.
+                    <?php
+                    code_specific('java', 'basics.java');
+                    ?>
+                </div>
+                <div id="common-mistakes" class="section scrollspy">
+                    <h5>Common Mistakes</h5>
+                    //TODO
+                    <!--                    --><?php
+                    //                    code_specific('java', 'basics.java');
+                    //                    ?>
+                </div>
+                <div id="object-references" class="section scrollspy">
+                    <h5>Object References</h5>
+                    It is very important to distinguish the difference between a reference variable and something like a
+                    primitive variable. Objects are accessed through reference variables, which are like a pointers
+                    pointing to the actual objects. A pointer itself can be changed to point to a different object
+                    (unless it is declared final), and can also point to the same object as another reference variable.
+                    <br><br> When you pass an object into a method, a new reference variable is created, pointing to
+                    your
+                    original object. Since both variable point to the same object, modifying x in your method will
+                    modify x in your main method. However, once you reassign your method's reference variable, you no
+                    longer access the same object as your main, and whatever you change to that variable will not be
+                    reflected outside of that method.
+                    <br><br>Reference variable behaviour is different from primitive variable behaviour; you've probably
+                    already
+                    seen swap methods for integers, swap(int x, int y);, where changing the two in the method has no
+                    effect in the main. Primitive variables are passed as a separate variable altogether, so there is no
+                    longer any association between the two.
+                    <br><br>It may also be worth noting the behaviours of Strings when passed through methods. Though
+                    they are
+                    objects, Strings are immutable, so whenever they are modified, a new object is generated and pointed
+                    to be the reference variable. Therefore, the original String passed will never be modified by other
+                    methods. The same behaviour can be seen in class such as BigInteger.
+                    <br><br>Below is a sample class that shows how objects are affected when
+                    passed through other methods and modified. Feel free to copy it and run it to see the results.
+                    <?php
+                    code_specific('java', 'ObjectReferences.java');
+                    ?>
+                </div>
+            </div>
+            <div class="col hide-on-small-only m3 l2">
+                <div class="pinned">
+                    <ul class="section table-of-contents">
+                        <li><a href="#data-types">Data Types</a></li>
+                        <li><a href="#basics">The Basics</a></li>
+                        <li><a href="#common-mistakes">Common Mistakes</a></li>
+                        <li><a href="#object-references">Object References</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </main>
 <?php phpFooter(); ?>
+
 </body>
 
 </html>

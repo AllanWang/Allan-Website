@@ -57,7 +57,7 @@ function mathJax()
 
 function code_highlight()
 {
-    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css">';
+    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github-gist.min.css">';
     echo "\n";
     js('highlight.min');
     echo "<script>hljs.initHighlightingOnLoad();</script>\n";

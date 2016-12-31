@@ -430,3 +430,16 @@ ul.browser-default li:before {
 .microsoft-header-blue {
     background-color: #2e74b5 !important;
 }
+
+/*Wrapping code div*/
+/*pre code {*/
+    /*white-space: pre-wrap;*/
+/*}*/
+
+.hljs-string,
+.hljs-section,
+.hljs-selector-class,
+.hljs-template-variable,
+.hljs-deletion {
+    font-weight: 200;
+}

@@ -104,7 +104,7 @@ phpHeader(); ?>
                         "--#<1 – 2% of ECF",
                         "--#Intraocular, cochlear, cerebrospinal, pleural & pericardial, peritoneal, synovial, fluid in ducts of glands, bladder, etc",
                         "--#Does not affect body fluid balance; very local; however, has important functions",
-                        "Number recap: Total H2O 60%, ICF 40%, ECF 20%, ISF 15%, Plasma 5% (of total body weight)",
+                        "{water-numbers|Number recap}: Total H<sub>2</sub>O 60%, ICF 40%, ECF 20%, ISF 15%, Plasma 5% (of total body weight)",
                         "For healthy individuals, total volume & relative distributions between compartments must remain constant (though they are in dynamic equilibrium)",
                         "{hematocrit|Hematocrit (Ht)} – percentage of blood volume occupied by Red Blood Cells (erythrocytes)",
                         "-Height of erythrocyte column/height of whole blood column",
@@ -227,7 +227,7 @@ phpHeader(); ?>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                    keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss', 'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx');
+                    keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss', 'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph', 'water-numbers|Water Percentages', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx');
                     ?>
 
                 </div>

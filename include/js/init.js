@@ -12,6 +12,7 @@
 
         //add ripples to nav items
         $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
+        $('.scrollspy').scrollSpy();
 
         //workaround for big collapsible accordion
         $('.collapsible .collapsible-header.click-scroll').on('click', function (event) {
@@ -144,7 +145,6 @@ function animateWithOffset(idTo, delay, offset, duration) {
 
 //Function to initialize dynamic notes
 function dynamicNotes() {
-    $('.scrollspy').scrollSpy();
     $('.modal').modal({
         opacity: 0.05, // Opacity of modal background
         ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.

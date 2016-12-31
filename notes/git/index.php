@@ -41,7 +41,8 @@ phpNav(); ?>
                     table('git remote -v', 'view existing remotes');
                     table('git remote add [name] [url] ', 'add new remote with given url');
                     table('git remote rm [name]', 'remove remote');
-                    table('git remote set - url--add--push [name] [url]', 'adds new push url to existing remote (one [name] can have multiple [url]s)');
+                    table('git remote set-url [name] [url]', 'overrides current url for existing remote');
+                    table('git remote set-url --add --push [name] [url]', 'adds new push url to existing remote (one [name] can have multiple [url]s)');
 
                     table_header('Other');
                     table('git clone [url]', 'clones the git url to local');
