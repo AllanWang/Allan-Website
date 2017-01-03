@@ -1,0 +1,15 @@
+<div class="col s12 m6">
+    <div class="card medium sticky-action">
+        <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="images/{{image}}">
+            <span class="card-title activator background-gradient">{{title}}</span>
+        </div>
+        <div class="card-content"><p>{{desc}}</p></div>
+        <div class="card-action" ng-transclude="links"></div>
+        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{card.title}}<i
+                                    class="material-icons right">close</i></span>
+            <div ng-transclude="fullDesc"></div>
+        </div>
+    </div>
+</div>

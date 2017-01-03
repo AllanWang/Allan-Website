@@ -11,8 +11,8 @@ $theme_color = '#4CAF50'; //green
 $hamburger_menu_color = "#ffffff";
 phpHeader(true);
 js('angular/angular.min');
+js('frame-app');
 ?>
-<script src="/ang/main.js"></script>
 </head>
 <body>
 
