@@ -14,33 +14,53 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-    <link href="include/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
     <link href="include/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
     <!--    TODO see if you can add this only in 404 page-->
     <link href="404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>
-    <script src="bower_components/angular/angular.min.js"></script>
     <!--<aw-ng-css theme-color="#ff00ff"></aw-ng-css>-->
 </head>
 <body>
-
-<div class="container-fluid" ng-class="{'has-nav':sessionToken&&navOpen}">
-    <div class="tab-content" ui-view></div>
-    HI
-</div>
+<main>
+    <a ui-sref="dev" ui-sref-active="active">Hello</a>
+    <ui-view></ui-view>
+</main>
+<footer class="page-footer">
+    <!--TODO add background color-->
+    <!--defaults to teal-->
+    <div class="container">
+        <div class="row">
+            <div class="col l3 s12">
+                <p><i class="fa fa-angle-up clickable grey-text text-lighten-4" id="to-top"> TOP</i></p>
+            </div>
+            <div align="center" class="col l6 s12">
+                <ul class="icon-row">
+                    <li><a href="mailto:me@allanwang.com?Subject=Web%20Inquiry" target="_blank"><i
+                            class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/AllanWang" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.paypal.me/Allanw9" target="_blank"><i class="fa fa-paypal"></i></a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <!--                <p class="white-text" align="right">&copy; Allan Wang 2016</p>-->
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <p align="right">&copy; Allan Wang 2016</p>
+        </div>
+    </div>
+</footer>
 </body>
-<!-- bower:js -->
-
+<!-- angular bower:js -->
+<script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<!--<script src="bower_components/moment/moment.js"></script>-->
-<!--<script src="bower_components/angular-ui-grid/ui-grid.js"></script>-->
-<!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
-<!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
-<!--<script src="bower_components/angular-md5/angular-md5.js"></script>-->
-<!--<script src="bower_components/ng-focus-if/focusIf.js"></script>-->
-<!--<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>-->
-<!--<script src="bower_components/pure-uuid/uuid.min.js"></script>-->
 <script src="bower_components/angular-ui-router-title/angular-ui-router-title.js"></script>
-<!-- endbower -->
+<script src="bower_components/angular-css/angular-css.min.js"></script>
+<!--jquery bower:js-->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/materialize/dist/js/materialize.min.js"></script>
 <!--frameApp-->
 <script src="/scripts/app.js"></script>
 <script src="/scripts/directives/inline-styling.js"></script>
