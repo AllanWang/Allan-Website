@@ -12,9 +12,9 @@ angular.module('frameApp')
             restrict: 'E',
             transclude: {
                 links: '?appCardLinks',
-                fullDesc: '?appCardFull'
+                fullDesc: '?awBullets'
             },
-            templateUrl: 'templates/app-card.html',
+            templateUrl: '/scripts/directives/templates/app-card.html',
             scope: {
                 title: '@',
                 image: '@',
