@@ -11,7 +11,7 @@ $theme_color = '#4CAF50'; //green
 $hamburger_menu_color = "#ffffff";
 phpHeader(true);
 ?>
-<script src="/scripts/vendor/angular.min.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
 </head>
 <body>
 
@@ -106,6 +106,11 @@ phpHeader(true);
 </main>
 <?php phpFooter(); ?>
 <!--Angular-->
+<!-- angular bower:js -->
+
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/bower_components/angular-ui-router-title/angular-ui-router-title.js"></script>
+<script src="/bower_components/angular-css/angular-css.min.js"></script>
 <script src="/scripts/app.js"></script>
 <script src="/scripts/directives/app-card.js"></script>
 </body>
