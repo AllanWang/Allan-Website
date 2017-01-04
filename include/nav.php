@@ -1,6 +1,6 @@
 <?php
 global $theme_color, $page_title, $hamburger_menu_color, $side_nav_contents;
-include_once("analytics.php");
+include_once("analytics.html");
 ?>
 
 <header>

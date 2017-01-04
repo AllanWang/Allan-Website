@@ -3,17 +3,21 @@
 
 $include_url = "http://allanwang.ca/include/";
 
-function phpHeader($extend = false)
+function phpHeader($anon_function = '')
 {
-    if ($extend) {
-        global $extend_header;
-        $extend_header = true;
+    if ($anon_function != '') {
+        global $header_function;
+        $header_function = $anon_function;
     }
     require_once('header.php');
 }
 
-function phpNav()
+function phpNav($extra_contents = '')
 {
+    if ($extra_contents != '') {
+        global $side_nav_contents;
+        $side_nav_contents = $extra_contents;
+    }
     require_once('nav.php');
 }
 

@@ -1,4 +1,6 @@
-angular.module('frameApp', ['ui.router', 'angularCSS'])
+'use strict';
+
+angular.module('frameApp', ['ui.router', 'ui.materialize'])
 
     .constant('include_url', 'http://allanwang.ca/include/')
 

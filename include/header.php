@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color, $hamburger_menu_color, $extend_header;
+global $page_title, $page_description, $theme_color, $hamburger_menu_color, $header_function;
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -37,7 +37,7 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $ext
     ?>
 
     <style>
-        .waves-effect.waves-nav .waves-ripple{
+        .waves-effect.waves-nav .waves-ripple {
             background-color: <?php echo $ripple_rgba?>;
         }
 
@@ -96,4 +96,5 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $ext
             color: <?php echo $theme_color?>;
         }
     </style>
-    <?php if (!isset($extend_header)) echo '</head>' ?>
+    <?php if (isset($header_function)) $header_function() ?>
+</head>

@@ -7,9 +7,9 @@ $page_title = "Discrete Notes";
 $page_description = "Discrete Mathematics";
 $navFrom = 'n_disc_m';
 $theme_color = "#2e74b5"; //microsoft blue
-phpHeader(true); ?>
 
-<link rel="stylesheet" href="240/base.min.css"/>
+function mathExtra() {
+    echo '<link rel="stylesheet" href="240/base.min.css"/>
 <link rel="stylesheet" href="240/fancy.min.css"/>
 <link rel="stylesheet" href="240/240.css"/>
 <script src="240/compatibility.min.js"></script>
@@ -19,8 +19,10 @@ phpHeader(true); ?>
         pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
     } catch (e) {
     }
-</script>
-</head>
+</script>';
+}
+
+phpHeader('mathExtra'); ?>
 
 <body>
 <?php
@@ -29,8 +31,7 @@ function snc()
     include_once('240/240_toc.html');
 }
 
-$side_nav_contents = 'snc';
-phpNav(); ?>
+phpNav('snc'); ?>
 
 <main>
     <?php

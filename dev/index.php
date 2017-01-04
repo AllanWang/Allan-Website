@@ -9,6 +9,7 @@ $navTo = 'projects';
 $n_key = 'Coding Projects';
 $theme_color = '#4CAF50'; //green
 $hamburger_menu_color = "#ffffff";
+
 phpHeader(true);
 ?>
 <script src="/bower_components/angular/angular.min.js"></script>

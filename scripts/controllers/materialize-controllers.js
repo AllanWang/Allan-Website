@@ -1,4 +1,4 @@
-var app = angular.module('materializeApp', ['ui.materialize'])
+angular.module('frameApp')
     .controller('BodyController', ["$scope", function ($scope) {
         $scope.select = {
             value1: "Option1",
@@ -29,14 +29,14 @@ var app = angular.module('materializeApp', ['ui.materialize'])
             content: 'Lorem ipsum dolor sit amet.'
         }];
     }]).controller('ToastController', ["$scope", function ($scope) {
-        $scope.callback = function(message) {
-            alert(message);
-        };
-    }]).controller('PaginationController', ["$scope", function ($scope) {
-        $scope.changePage = function (page) {
-            Materialize.toast("Changed to page " + page, 1000);
-        }
-    }])
+    $scope.callback = function(message) {
+        alert(message);
+    };
+}]).controller('PaginationController', ["$scope", function ($scope) {
+    $scope.changePage = function (page) {
+        Materialize.toast("Changed to page " + page, 1000);
+    }
+}])
     .controller('DateController', ["$scope", function ($scope) {
         var currentTime = new Date();
         $scope.currentTime = currentTime;
@@ -70,12 +70,12 @@ var app = angular.module('materializeApp', ['ui.materialize'])
             console.log('onStop');
         };
     }]).controller("ModalController", ["$scope", function (scope) {
-        scope.readyCallback = function () {
-            Materialize.toast("Modal ready", 1000);
-        }
-        scope.completeCallback = function () {
-            Materialize.toast("Modal complete", 1000);
-        }
+    scope.readyCallback = function () {
+        Materialize.toast("Modal ready", 1000);
+    };
+    scope.completeCallback = function () {
+        Materialize.toast("Modal complete", 1000);
+    };
 
-        scope.openModal = false;
-    }]);
+    scope.openModal = false;
+}]);
