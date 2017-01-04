@@ -14,7 +14,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-    <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet"
+          media="screen"/>
     <link href="include/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
     <!--    TODO see if you can add this only in 404 page-->
     <link href="404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>
@@ -22,8 +23,9 @@
 </head>
 <body>
 <main>
+    <div ng-include="'include/nav.html'"></div>
     <a ui-sref="dev" ui-sref-active="active">Hello</a>
-    <ui-view></ui-view>
+    <div ui-view="main"></div>
 </main>
 <footer class="page-footer">
     <!--TODO add background color-->
