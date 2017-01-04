@@ -32,7 +32,7 @@ app.filter('trustedhtml',
                 links: '?appCardLinks',
                 fullDesc: '?appCardFull'
             },
-            templateUrl: '/templates/app-card.html',
+            templateUrl: '/scripts/directives/templates/app-card.html',
             scope: {
                 title: '@',
                 image: '@',

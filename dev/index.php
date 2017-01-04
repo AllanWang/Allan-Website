@@ -10,9 +10,8 @@ $n_key = 'Coding Projects';
 $theme_color = '#4CAF50'; //green
 $hamburger_menu_color = "#ffffff";
 phpHeader(true);
-js('angular/angular.min');
-js('frame-app');
 ?>
+<script src="/scripts/vendor/angular.min.js"></script>
 </head>
 <body>
 
@@ -120,7 +119,9 @@ js('frame-app');
     </div>
 </main>
 <?php phpFooter(); ?>
-
+<!--Angular-->
+<script src="/scripts/app.js"></script>
+<script src="/scripts/directives/app-card.js"></script>
 </body>
 
 </html>
