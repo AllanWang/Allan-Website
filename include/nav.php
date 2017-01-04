@@ -85,12 +85,3 @@ include_once("analytics.php");
     </ul>
 
 </header>
-
-<?php
-
-//if (isset($pdf))
-//    echo '<main>
-//    <div id="pdf"></div>
-//</main>';
-
-?>

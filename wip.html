@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="frameApp">
+<head>
+    <!--    <base href="/tepid/">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title ng-bind="($title ? $title : 'Allan Wang')">Allan Wang</title>
+    <!--    see http://stackoverflow.com/questions/16119398/how-can-i-update-meta-tags-in-angularjs-->
+
+    <meta name="description" content="{{description}}"/>
+    <link rel="icon" href="http://allanwang.ca/favicon.ico">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <link href="include/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="include/css/style.css" type="text/css" rel="stylesheet" media="screen"/>
+    <!--    TODO see if you can add this only in 404 page-->
+    <link href="404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!--<aw-ng-css theme-color="#ff00ff"></aw-ng-css>-->
+</head>
+<body>
+
+<div class="container-fluid" ng-class="{'has-nav':sessionToken&&navOpen}">
+    <div class="tab-content" ui-view></div>
+    HI
+</div>
+</body>
+<!-- bower:js -->
+
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<!--<script src="bower_components/moment/moment.js"></script>-->
+<!--<script src="bower_components/angular-ui-grid/ui-grid.js"></script>-->
+<!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
+<!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+<!--<script src="bower_components/angular-md5/angular-md5.js"></script>-->
+<!--<script src="bower_components/ng-focus-if/focusIf.js"></script>-->
+<!--<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>-->
+<!--<script src="bower_components/pure-uuid/uuid.min.js"></script>-->
+<script src="bower_components/angular-ui-router-title/angular-ui-router-title.js"></script>
+<!-- endbower -->
+<!--frameApp-->
+<script src="/scripts/app.js"></script>
+<script src="/scripts/directives/inline-styling.js"></script>
+<script src="/scripts/directives/app-card.js"></script>
+</html>

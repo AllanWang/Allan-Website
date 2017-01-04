@@ -1,0 +1,4 @@
+*
+!*/
+!*.js
+#only push js to git
