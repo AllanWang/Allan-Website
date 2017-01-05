@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="frameApp">
+<html lang="en">
 <?php
-include("../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Projects";
 $page_description = "Main Page";
 $navFrom = 'proj';

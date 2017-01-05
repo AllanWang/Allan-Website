@@ -1,0 +1,13 @@
+html, body, main {
+    height: 100%;
+    overflow: hidden;
+}
+
+body > main {
+    height: auto;
+    min-height: 100%;
+}
+
+#pdf-container {
+    height: 100vh;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include("../../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $n_key = "Computer Science";
 $page_title = "$n_key Notes";
 $page_description = "$n_key Notes and Code Snippets";

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include("../../../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Comp 251";
 $page_description = "Comp 251 - Winter 2017";
 $navFrom = 'n_comp_251';
@@ -17,7 +17,7 @@ phpNav(); ?>
 
 <main>
 
-    <div class="container">
+    <div class="container light">
         <div class="row" id="header">
             <h3 class="header center">Comp 251</h3>
             <h6 class="center">

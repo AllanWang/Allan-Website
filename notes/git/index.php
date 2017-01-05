@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include("../../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Git Cheat Sheet";
 $page_description = "List of common git commands";
 $navFrom = 'n_git';

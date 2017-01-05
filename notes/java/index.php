@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include("../../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Java";
 $page_description = "An introduction to java";
 $navFrom = 'n_java';

@@ -24,7 +24,7 @@ function phpNav($extra_contents = null)
     require_once('nav.php');
 }
 
-function phpFooter()
+function phpFooter($scriptOnly = false)
 {
     require_once('footer.php');
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("../include/config.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "404";
 $page_description = "You broke it.";
 $theme_color = '#ff0000';

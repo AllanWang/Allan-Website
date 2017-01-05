@@ -60,8 +60,6 @@ include_once("analytics.html");
                         <ul>
                             <li><a class="l" id="nr_n_calc" href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
                             </li>
-                            <li><a class="l" id="nr_n_disc_m" href="http://allanwang.ca/notes/discrete/">Discrete
-                                    Math</a></li>
                             <li><a class="l" id="nr_n_linalg" href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear
                                     Algebra</a></li>
                             <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
@@ -76,7 +74,10 @@ include_once("analytics.html");
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp 251</a></li>
+                            <li><a class="l" id="nr_n_disc_m" href="http://allanwang.ca/notes/mcgill/math240">Math 240</a>
+                            </li>
+                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
+                                    251</a></li>
                         </ul>
                     </div>
                 </li>
