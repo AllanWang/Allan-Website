@@ -64,7 +64,8 @@ include_once("analytics.html");
                                     Math</a></li>
                             <li><a class="l" id="nr_n_linalg" href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear
                                     Algebra</a></li>
-                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer Science</a>
+                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
+                                    Science</a>
                             </li>
                             <li><a class="l" id="nr_n_phgy" href="http://allanwang.ca/notes/phgy/">Physiology</a></li>
                             <li>
@@ -72,6 +73,10 @@ include_once("analytics.html");
                             </li>
                             <li><a class="l" id="nr_n_git" href="http://allanwang.ca/notes/git/">Git Bash</a></li>
                             <li><a class="l" id="nr_n_java" href="http://allanwang.ca/notes/java/">Java</a></li>
+                            <li>
+                                <div class="divider"></div>
+                            </li>
+                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp 251</a></li>
                         </ul>
                     </div>
                 </li>
