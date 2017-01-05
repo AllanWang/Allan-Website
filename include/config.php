@@ -29,10 +29,8 @@ function phpFooter($scriptOnly = false)
     require_once('footer.php');
 }
 
-function phpPDF($url)
+function phpPDF($pdf)
 {
-    global $pdf;
-    $pdf = $url;
     require_once('pdf.php');
 }
 
