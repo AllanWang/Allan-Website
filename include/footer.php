@@ -25,18 +25,16 @@ global $navFrom, $navTo, $dynamic_notes;
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <p align="right">&copy; Allan Wang 2016</p>
+            <p align="right">&copy; Allan Wang 2016 - <?php echo date("Y"); ?></p>
         </div>
     </div>
 </footer>
 
 
 <!--  Scripts-->
-<?php
-js('jquery/jquery-2.4.4.min');
-js('materialize/materialize.min');
-js('init');
-?>
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="/include/js/init.js"></script>
 
 <script>
     //script for scroll animations
@@ -59,8 +57,6 @@ js('init');
 </script>
 
 <!--load last-->
-<?php
-js('jade/lunr.min');
-js('jade/search_data');
-js('jade/search.min');
-?>
+<script type="text/javascript" src="/include/js/jade/lunr.min.js"></script>
+<script type="text/javascript" src="/include/js/jade/search_data.js"></script>
+<script type="text/javascript" src="/include/js/jade/search.min.js"></script>

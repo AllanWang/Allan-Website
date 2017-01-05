@@ -4,13 +4,11 @@ include_once("analytics.html");
 ?>
 
 <header>
-    <!--    <div class="container">-->
     <a href="#" data-activates="nav-bar"
        class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
         <i class="material-icons" style="color: <?php echo $hamburger_menu_color; ?>">menu</i></a>
-    <!--    </div>-->
 
-    <ul id="nav-bar" class="side-nav fixed" style="overflow: auto; transform: translateX(0px);">
+    <ul id="nav-bar" class="side-nav fixed">
         <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="center">
 
                 <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
