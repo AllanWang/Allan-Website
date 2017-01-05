@@ -1,8 +1,7 @@
 <?php
-//For my files
+//Main php
 
-$include_url = "http://allanwang.ca/include/";
-
+//Add view functions
 include_once('views.php');
 
 function phpHeader($anon_function = '')
@@ -49,7 +48,6 @@ function css($name)
 
 function js($name)
 {
-    global $include_url;
     echo "<script src=\"/include/js/${name}.js\"></script>\n";
 }
 
