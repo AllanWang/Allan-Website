@@ -21,9 +21,12 @@ phpNav(); ?>
         <div class="row" id="header">
             <h3 class="header center">Comp 251</h3>
             <h6 class="center">
-                <a href="mailto:jeromew@cs.mcgill.ca?Subject=Comp%20251" target="_blank">Prof's Email</a>&emsp;&bull;&emsp;
-                <a href="http://www.cs.mcgill.ca/~jeromew/comp251.html" target="_blank">Course Outline</a>&emsp;&bull;&emsp;
-                <a href="https://cs251qanda.cs.mcgill.ca" target="_blank">Online Forum</a>
+                <?php
+                inlineBullets(array("Prof's Email" => "mailto:jeromew@cs.mcgill.ca?Subject=Comp%20251",
+                    "Course Online" => "http://www.cs.mcgill.ca/~jeromew/comp251.html",
+                    "Online Form" => "https://cs251qanda.cs.mcgill.ca"
+                ));
+                ?>
             </h6>
         </div>
         <div class="row" id="header">
