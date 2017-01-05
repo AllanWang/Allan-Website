@@ -25,7 +25,7 @@ global $navFrom, $navTo, $dynamic_notes;
     </div>
     <div class="footer-copyright">
         <div class="container">
-            <p align="right">&copy; Allan Wang 2016</p>
+            <p align="right">&copy; Allan Wang 2016 - <?php echo date("Y"); ?></p>
         </div>
     </div>
 </footer>

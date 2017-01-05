@@ -33,7 +33,7 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
         echo "style=\"background-color: $theme_color; !important \" ";
     }
 
-    if ($page_title === '404') echo '<link href="http://allanwang.ca/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
+    if ($page_title === '404') echo '<link href="/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
     ?>
 
     <style>

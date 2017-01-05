@@ -9,7 +9,7 @@ $page_description = "Calculus Formulas";
 $navFrom = 'n_calc';
 $navTo = 'commons';
 $theme_color = "#F44336"; //red
-$hamburger_menu_color="#ffffff";
+$hamburger_menu_color = "#ffffff";
 phpHeader(); ?>
 <body>
 
