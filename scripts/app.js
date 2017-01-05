@@ -4,24 +4,16 @@ angular.module('frameApp', ['ui.router', 'ui.materialize'])
 
     .constant('include_url', 'http://allanwang.ca/include/')
 
-    .config(function ($stateProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider.state('dev', {
             views: {
                 'main': {
                     url: "/dev",
-                    // controller : 'TemCtrl',
                     templateUrl: '/views/dev.html',
                     resolve: {
                         $title: function () {
                             return 'Projects';
-                            // },
-                            // endpoints: function($rootScope, tepidServer) {
-                            //     if (!$rootScope.session || !$rootScope.session.user) return false;
-                            //     return tepidServer.getEndpoints();
                         }
-                        // },
-                        // data: {
-                        //     'rolesAllowed': ['ctfer', 'elder']
                     }
                 }
             }
@@ -29,19 +21,11 @@ angular.module('frameApp', ['ui.router', 'ui.materialize'])
             views: {
                 'main': {
                     url: "/calc",
-                    // controller : 'TemCtrl',
                     templateUrl: '/notes/calc/index.php',
                     resolve: {
                         $title: function () {
                             return 'Calc';
-                            // },
-                            // endpoints: function($rootScope, tepidServer) {
-                            //     if (!$rootScope.session || !$rootScope.session.user) return false;
-                            //     return tepidServer.getEndpoints();
                         }
-                        // },
-                        // data: {
-                        //     'rolesAllowed': ['ctfer', 'elder']
                     }
                 }
             }
@@ -49,19 +33,11 @@ angular.module('frameApp', ['ui.router', 'ui.materialize'])
             views: {
                 'main': {
                     url: "/discrete",
-                    // controller : 'TemCtrl',
                     templateUrl: '/notes/discrete/index.php',
                     resolve: {
                         $title: function () {
-                            return 'Projects';
-                            // },
-                            // endpoints: function($rootScope, tepidServer) {
-                            //     if (!$rootScope.session || !$rootScope.session.user) return false;
-                            //     return tepidServer.getEndpoints();
+                            return 'Discrete';
                         }
-                        // },
-                        // data: {
-                        //     'rolesAllowed': ['ctfer', 'elder']
                     }
                 }
             }
@@ -73,15 +49,8 @@ angular.module('frameApp', ['ui.router', 'ui.materialize'])
                     templateUrl: '/notes/linear/index.php',
                     resolve: {
                         $title: function () {
-                            return 'Projects';
-                            // },
-                            // endpoints: function($rootScope, tepidServer) {
-                            //     if (!$rootScope.session || !$rootScope.session.user) return false;
-                            //     return tepidServer.getEndpoints();
+                            return 'Linear';
                         }
-                        // },
-                        // data: {
-                        //     'rolesAllowed': ['ctfer', 'elder']
                     }
                 }
             }

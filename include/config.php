@@ -3,6 +3,8 @@
 
 $include_url = "http://allanwang.ca/include/";
 
+include_once('views.php');
+
 function phpHeader($anon_function = '')
 {
     if ($anon_function != '') {
@@ -42,14 +44,13 @@ function dynamicNotes($key = 'php')
 
 function css($name)
 {
-    global $include_url;
-    echo "<link href=\"${include_url}css/${name}.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen\"/>\n";
+    echo "<link href=\"/include/css/${name}.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen\"/>\n";
 }
 
 function js($name)
 {
     global $include_url;
-    echo "<script src=\"${include_url}js/${name}.js\"></script>\n";
+    echo "<script src=\"/include/js/${name}.js\"></script>\n";
 }
 
 function mathJax()

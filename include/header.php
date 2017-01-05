@@ -12,9 +12,11 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="/bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet"
+          media="screen"/>
+    <link href="/include/css/style.css" type="text/css" rel="stylesheet"
+          media="screen"/>
     <?php
-
-    css("materialize.min");
 
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';
@@ -30,8 +32,6 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
         global $theme_color;
         echo "style=\"background-color: $theme_color; !important \" ";
     }
-
-    css("style");
 
     if ($page_title === '404') echo '<link href="http://allanwang.ca/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
     ?>
