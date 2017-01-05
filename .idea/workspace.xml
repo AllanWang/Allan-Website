@@ -2,220 +2,209 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7f046cb-9d23-4d09-ace8-be32f540b70e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/views.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/views_helpers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/BaseNodeVisitor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Cache/Filesystem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Cache/Null.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/CacheInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Compiler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/CompilerInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Environment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Error/Loader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Error/Runtime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Error/Syntax.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/ExistsLoaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/ExpressionParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Debug.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Escaper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/GlobalsInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/InitRuntimeInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Optimizer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Profiler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Sandbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/Staging.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Extension/StringLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/ExtensionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FactoryRuntimeLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FileExtensionEscapingStrategy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Filter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Filter/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Filter/Method.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Filter/Node.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FilterCallableInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FilterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Function/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Function/Method.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Function/Node.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FunctionCallableInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/FunctionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Lexer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/LexerInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Loader/Array.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Loader/Chain.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Loader/Filesystem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Loader/String.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/LoaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Markup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/AutoEscape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/BlockReference.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Body.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/CheckSecurity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Do.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Embed.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Array.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/AssignName.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Add.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/And.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseAnd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseOr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseXor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Concat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Div.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/EndsWith.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Equal.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/FloorDiv.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Greater.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/GreaterEqual.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/In.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Less.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/LessEqual.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Matches.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Mod.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Mul.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/NotEqual.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/NotIn.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Or.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Power.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Range.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/StartsWith.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Sub.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/BlockReference.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Call.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Conditional.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Constant.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/ExtensionReference.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Filter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Filter/Default.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/GetAttr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/MethodCall.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Name.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/NullCoalesce.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Parent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/TempName.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Constant.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Defined.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Divisibleby.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Even.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Null.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Odd.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Sameas.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Neg.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Not.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Pos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Flush.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/For.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/ForLoop.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/If.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Import.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Include.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Macro.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Module.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Print.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Sandbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/SandboxedPrint.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Set.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/SetTemp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Spaceless.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Node/With.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeOutputInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeTraverser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Escaper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Optimizer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeVisitor/SafeAnalysis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Sandbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/NodeVisitorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/ParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Blackfire.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Node/EnterProfile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Node/LeaveProfile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/NodeVisitor/Profiler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Profiler/Profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/RuntimeLoaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedFilterError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedFunctionError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedMethodError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedPropertyError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedTagError.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityPolicy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityPolicyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/SimpleFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/SimpleFunction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/SimpleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Source.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/SourceContextLoaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Template.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TemplateInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TemplateWrapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test/IntegrationTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test/Method.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test/Node.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Test/NodeTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TestCallableInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TestInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Token.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/AutoEscape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Do.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Embed.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Extends.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Filter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Flush.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/For.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/From.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/If.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Import.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Include.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Macro.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Sandbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Set.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Spaceless.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/Use.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParser/With.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParserBroker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParserBrokerInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenParserInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/TokenStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Util/DeprecationCollector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Twig/Util/TemplateDirIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/app-card.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/banner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/parallax-banner.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/include/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/include/nav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/twig/base.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/twig/child.html.twig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/index.php" afterPath="$PROJECT_DIR$/dev/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/config.php" afterPath="$PROJECT_DIR$/include/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/footer.php" afterPath="$PROJECT_DIR$/include/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/header.php" afterPath="$PROJECT_DIR$/include/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app.js" afterPath="$PROJECT_DIR$/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.iml" afterPath="$PROJECT_DIR$/web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wip.html" afterPath="$PROJECT_DIR$/wip.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/allanbot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/allanbot_banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/allanbot_official_banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/banners/android-n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/capsule.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/frost_banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/heroimage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon_showcase.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Autoloader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/BaseNodeVisitor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Cache/Filesystem.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Cache/Null.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/CacheInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Compiler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/CompilerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Environment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Error/Loader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Error/Runtime.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Error/Syntax.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/ExistsLoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/ExpressionParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Core.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Debug.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Escaper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/GlobalsInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/InitRuntimeInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Optimizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Profiler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/Staging.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Extension/StringLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/ExtensionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FactoryRuntimeLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FileExtensionEscapingStrategy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Filter/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Filter/Method.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Filter/Node.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FilterCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FilterInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Function/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Function/Method.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Function/Node.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FunctionCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/FunctionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Lexer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/LexerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Loader/Array.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Loader/Chain.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Loader/Filesystem.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Loader/String.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/LoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Markup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/AutoEscape.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Block.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/BlockReference.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Body.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/CheckSecurity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Do.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Embed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Array.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/AssignName.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Add.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/And.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseAnd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseOr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/BitwiseXor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Concat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Div.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/EndsWith.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Equal.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/FloorDiv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Greater.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/GreaterEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/In.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Less.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/LessEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Matches.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Mod.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Mul.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/NotEqual.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/NotIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Or.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Power.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Range.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/StartsWith.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Binary/Sub.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/BlockReference.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Call.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Conditional.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Constant.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/ExtensionReference.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Filter/Default.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/GetAttr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/MethodCall.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Name.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/NullCoalesce.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Parent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/TempName.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Constant.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Defined.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Divisibleby.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Even.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Null.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Odd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Test/Sameas.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Neg.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Not.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Expression/Unary/Pos.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Flush.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/For.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/ForLoop.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/If.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Include.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Macro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Module.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Print.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/SandboxedPrint.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Set.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/SetTemp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Spaceless.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/Text.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Node/With.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeOutputInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeTraverser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Escaper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Optimizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeVisitor/SafeAnalysis.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeVisitor/Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/NodeVisitorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Parser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/ParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Blackfire.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Html.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Dumper/Text.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Node/EnterProfile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Node/LeaveProfile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/NodeVisitor/Profiler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Profiler/Profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/RuntimeLoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedFilterError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedFunctionError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedMethodError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedPropertyError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityNotAllowedTagError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityPolicy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Sandbox/SecurityPolicyInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/SimpleFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/SimpleFunction.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/SimpleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Source.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/SourceContextLoaderInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Template.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TemplateInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TemplateWrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test/IntegrationTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test/Method.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test/Node.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Test/NodeTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TestCallableInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TestInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Token.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/AutoEscape.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Block.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Do.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Embed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Extends.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Filter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Flush.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/For.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/From.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/If.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Import.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Include.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Macro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Sandbox.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Set.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Spaceless.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/Use.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParser/With.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParserBroker.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParserBrokerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/TokenStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Util/DeprecationCollector.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Twig/Util/TemplateDirIterator.php" afterPath="" />
     </list>
     <ignored path="web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -300,8 +289,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2533">
-              <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+            <state relative-caret-position="221">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
                 <marker date="1483575491771" expanded="true" signature="1096:1194" ph="..." />
                 <marker date="1483575491771" expanded="true" signature="2195:2201" ph=" " />
@@ -594,6 +583,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1180,7 +1183,7 @@
       <workItem from="1483563976842" duration="666000" />
       <workItem from="1483567597341" duration="723000" />
       <workItem from="1483569667057" duration="1048000" />
-      <workItem from="1483570755896" duration="4977000" />
+      <workItem from="1483570755896" duration="5023000" />
     </task>
     <task id="LOCAL-00001" summary="Complete revamp to php">
       <created>1474174631273</created>
@@ -1207,7 +1210,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327717000" />
+    <option name="totallyTimeSpent" value="327763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1438,7 +1441,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483575706635" expanded="true" signature="192:214" ph="..." />
+            <marker date="1483575739284" expanded="true" signature="192:214" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1660,8 +1663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
-          <caret line="149" column="39" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+        <state relative-caret-position="221">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
             <marker date="1483575491771" expanded="true" signature="1096:1194" ph="..." />
             <marker date="1483575491771" expanded="true" signature="2195:2201" ph=" " />
