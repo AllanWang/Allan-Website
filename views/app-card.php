@@ -3,7 +3,7 @@
 <div class="col s12 m6">
     <div id="<?php echo getId($cardTitle) ?>" class="card medium sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="/images/<?php echo $cardImage ?>">
+            <img class="activator" src="images/<?php echo $cardImage ?>">
             <span class="card-title activator background-gradient"><?php echo $cardTitle ?></span>
         </div>
         <div class="card-content"><p><?php echo $cardDesc ?></p></div>
