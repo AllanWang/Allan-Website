@@ -35,18 +35,38 @@ phpHeader(); ?>
         <div class="section">
 
             <div class="row">
-                <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>???</h4>
-                    <p class="center-align light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br><br>
-                        Psst you can press an item in the nav bar
-                    </p>
+                <div class="col m3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.79968 118.68008">
+                        <defs>
+                            <filter id="c" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
+                                <feOffset dx="6" dy="6" result="offset"></feOffset>
+                                <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+                            </filter>
+                            <filter id="a" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
+                                <feOffset dx="6" dy="6" result="offset"></feOffset>
+                                <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+                            </filter>
+                            <filter id="b" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
+                                <feOffset dx="6" dy="6" result="offset"></feOffset>
+                                <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+                            </filter>
+                        </defs>
+                        <path fill="#03a9f4" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z" transform="matrix(.09423 0 0 .12894 22.124 31.613)" filter="url(#a)"></path>
+                        <path fill="#b3e5fc" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z" transform="matrix(.09423 0 0 .12894 58.744 32.252)" filter="url(#b)"></path>
+                        <path fill="#0288d1" d="M156.2467 18.94767l109.39443 189.4767H46.85228z" filter="url(#c)" transform="scale(.33206)"></path>
+                    </svg>
+                </div>
+                <div class="col m9 center-align">
+                    <h3></h3>
                 </div>
             </div>
 

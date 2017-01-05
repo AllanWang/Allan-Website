@@ -1,5 +1,3 @@
-
-
 <div class="col s12 m6">
     <div id="<?php echo getId($cardTitle) ?>" class="card medium sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
