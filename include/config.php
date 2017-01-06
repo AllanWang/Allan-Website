@@ -2,7 +2,7 @@
 //Main php
 
 //Add view functions
-global $cssArr;
+global $cssArr; //any php call before the header should append additional css requirements to cssArr; the header will add them all from the /include/css folder
 $cssArr = array();
 include_once('bullets.php');
 include_once('tables.php');

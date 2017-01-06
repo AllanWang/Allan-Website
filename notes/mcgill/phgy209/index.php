@@ -6,8 +6,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $n_key = "Physiology";
 $page_title = "$n_key Notes";
 $page_description = "$n_key Notes";
-$navFrom = 'n_phgy';
-$navTo = 'common';
+$navFrom = 'n_phgy_209';
 $theme_color = "#F44336"; //red
 dynamicNotes();
 phpHeader(); ?>
@@ -205,9 +204,9 @@ phpHeader(); ?>
                     <?php
                     dynamicBullets(
                         "Resulting from random thermal molecular motion",
-                        "Net flux = high  low concentration",
+                        "Net flux = high &rarr; low concentration",
                         "If permeable, can go through membrane",
-                        "J = PA(C0 – Ci)",
+                        "J = PA(C<sub>0</sub> – C<sub>i</sub>)",
                         "-J – net flux across membrane",
                         "-P – permeability/diffusion coefficient of membrane",
                         "-A – surface area of membrane",
@@ -225,7 +224,7 @@ phpHeader(); ?>
                         "Show selectivity based on diameter & distribution of charges",
                         "Movement affected by electrochemical (electrical & concentration) gradient",
                         "Ligand-gated, voltage-gated, mechanically-gated",
-                        "Channels: Na+, K+, Ca+, Cl-",
+                        "Channels: Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>+</sup>, Cl<sup>-</sup>",
                         "Number of ions flowing through channels generating ionic current depends on",
                         "-Channel conductance",
                         "-How often channel opens",
@@ -241,7 +240,7 @@ phpHeader(); ?>
                         "Saturation – rate of transport reaches maximum when all binding sites on all transporters are occupied; limit – transport maximum (Tm) exists",
                         "Competition – structurally similar substances compete for same binding site on carrier",
                         "Facilitated diffusion – carrier enables solute to penetrate more readily – passive",
-                        "-Solute binds to carrier  changes carrier configuration  solute is delivered to other side of membrane  carrier resumes original configuration",
+                        "-Solute binds to carrier &rarr; changes carrier configuration &rarr; solute is delivered to other side of membrane &rarr; carrier resumes original configuration",
                         "-Ie for glucose, insulin increases number of transporters",
                         "Active transport",
                         "-Requires chemical energy (usually ATP)",
@@ -250,18 +249,18 @@ phpHeader(); ?>
                         "-Primary active transport",
                         "--Chemical energy transferred directly from ATP",
                         "--Phosphorylation of transporter changes conformation & affinity of binding site",
-                        "--Ie sodium potassium pump – 3Na+ out, 2K+ in",
+                        "--Ie sodium potassium pump – 3Na<sup>+</sup> out, 2K<sup>+</sup> in",
                         "-osmosis",
                         "Active – energy dependent – carrier-mediated active transport (primary & secondary), pino/phagocytosis",
                         "Sodium potassium pump",
-                        "-Phosphorylation of pump  change in conformation  affinity for Na+ decreases",
+                        "-Phosphorylation of pump &rarr; change in conformation &rarr; affinity for Na<sup>+</sup> decreases",
                         "Other active transporter proteins – Ca-ATPase, H-ATPase, H/K ATPase",
                         "Secondary Active Transport – relies on electrochemical gradient to bring along another solute",
-                        "-Ie glucose transported with Na+",
+                        "-Ie glucose transported with Na<sup>+</sup>",
                         "-Cotransport – both solutes move in the same direction",
-                        "--Na+/glucose, Na+/amino acids",
+                        "--Na<sup>+</sup>/glucose, Na<sup>+</sup>/amino acids",
                         "-Countertransport – solutes move in different directions",
-                        "--Na+/Ca+, Na+/H+, Cl-/HCO3-",
+                        "--Na<sup>+</sup>/Ca<sup>+</sup>, Na<sup>+</sup>/H+, Cl<sup>-</sup>/HCO<sub>3</sub><sup>-</sup>",
                         "Endocytosis – cell membrane invaginates, forming channel, pinching off to form vesicle",
                         "-Pinocytosis (Fluid endocytosis) – ingestion of dissolved materials, liquid contents slowly transferred to the cytosol – not selective",
                         "-Phagocytosis – ingestion of solid particles, particles pinched into phagocytic vacuole (phagosome) – fuses with lysosomes and then degraded",
@@ -288,7 +287,7 @@ phpHeader(); ?>
                         "Hypoosmotic – solutions with lower number of osmotically active particles",
                         "Hyperosmotic – solutions with higher number of osmotically active particles",
                         "Only nonpenetrating particles can exert osmotic pressure",
-                        "-Extracellular Na+ is nonpenetrating as it is pumped out after moving in",
+                        "-Extracellular Na<sup>+</sup> is nonpenetrating as it is pumped out after moving in",
                         "Isotonic – cell retains size",
                         "Hypotonic – cell swells",
                         "Hypertonic – cell shrinks"
@@ -301,7 +300,7 @@ phpHeader(); ?>
                     dynamicBullets(
                         "Single layer of flattened endothelial cells & supporting basement membrane",
                         "Diffusion through water filled channels & across cell membranes",
-                        "Pinocytosis/exocytosis – endocytosis & vesicle formation on luminal side  exocytosis & vesicle release on interstitial side",
+                        "Pinocytosis/exocytosis – endocytosis & vesicle formation on luminal side &rarr; exocytosis & vesicle release on interstitial side",
                         "Bulk flow – flow of molecules due to pressure difference (ultra filtration)",
                         "Filtration – bulk flow across porous membrane (acts like sieve) withholding some particles"
                     );
