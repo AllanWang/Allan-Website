@@ -95,37 +95,37 @@ function toggleNoteView(element) {
     //we also check if the show/hide state will be changed or not
     //if it isn't, we will not continue and will not auto scroll
     var duration = 100;
-    var changed = false;
+    var currentlyActive = $('.table-of-contents a.active').attr('href');
+    console.log("Currently Active", currentlyActive);
+    var extras = $('.dynamic-notes .extra');
+    console.log(currentlyActive);
     if (typeof element === 'boolean' || element.checked) {
         var top = $('.dynamic-notes .extra.top');
-        if (!top.is(':visible')) {
-            changed = true;
-            top.show(duration, 'swing');
+        if (top.is(':visible')) return;
+
+        top.show(duration, 'swing');
+        setTimeout(function () {
+            $('.dynamic-notes .extra.mid').show(duration, 'swing');
             setTimeout(function () {
-                $('.dynamic-notes .extra.mid').show(duration, 'swing');
-                setTimeout(function () {
-                    $('.dynamic-notes .extra.low').show(duration, 'swing');
-                }, duration);
+                $('.dynamic-notes .extra.low').show(duration, 'swing');
             }, duration);
-        }
-    }
-    else {
+        }, duration);
+
+    } else {
         var low = $('.dynamic-notes .extra.low');
-        if (low.is(':visible')) {
-            changed = true;
-            low.hide(duration, 'swing');
+        if (!low.is(':visible')) return;
+        low.hide(duration, 'swing');
+        setTimeout(function () {
+            $('.dynamic-notes .extra.mid').hide(duration, 'swing');
             setTimeout(function () {
-                $('.dynamic-notes .extra.mid').hide(duration, 'swing');
-                setTimeout(function () {
-                    $('.dynamic-notes .extra.top').hide(duration, 'swing');
-                }, duration);
+                $('.dynamic-notes .extra.top').hide(duration, 'swing');
             }, duration);
-        }
+        }, duration);
+
     }
-    if (changed) {
-        var currentlyActive = $('.table-of-contents a.active').attr('href');
-        animateWithOffset(currentlyActive, duration * 3, 100);
-    }
+
+    animateWithOffset(currentlyActive, duration * 5, duration * 2, duration); //jumps to id
+
 }
 
 function animateWithOffset(idTo, delay, offset, duration) {

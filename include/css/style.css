@@ -368,21 +368,20 @@ nav .brand-logo i.material-icons {
     margin-right: 15px
 }
 
-.dynamic-notes strong {
-    font-weight: inherit;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    max-width: 500px;
-    width: 50%
-}
-
 .dynamic-notes b {
     font-weight: normal;
 }
 
 .dynamic-notes table {
-    display: inline;
+    display: inline-table;
+    padding: 0;
+    margin: 0;
+
+}
+
+.dynamic-notes tr, .dynamic-notes td {
+    height: 1px;
+    vertical-align: top;
     padding: 0;
     margin: 0;
 }
@@ -399,12 +398,14 @@ ul.browser-default {
 
 ul.browser-default li {
     list-style-type: none;
+    vertical-align: text-top;
 }
 
 ul.browser-default li:before {
     content: "\2022";
     font-size: 100%;
-    padding-right: 7px;
+    padding-right: 5px;
+    vertical-align: top;
     margin-left: -10px;
 }
 
@@ -433,7 +434,7 @@ ul.browser-default li:before {
 
 /*Wrapping code div*/
 /*pre code {*/
-    /*white-space: pre-wrap;*/
+/*white-space: pre-wrap;*/
 /*}*/
 
 .hljs-string,

@@ -1,0 +1,7 @@
+^•	(.+$)
+"$1",
+
+
+^([^"| |\n| ].+$)
+
+);\n?>\n</div>\n<div id="$1" class="section scrollspy">\n<h5>$1</h5>\n<?php\ndynamicBullets(\n

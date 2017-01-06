@@ -130,4 +130,16 @@ function keywordPanel(...$items)
     echo '</div>';
 }
 
+function bulletTable(...$items)
+{
+    $text = '';
+    $percent = 100 / sizeof($items);
+    $text = $text . '<table><tr>';
+    foreach ($items as $point) {
+        $text = $text . "<td style=\"width:$percent%\">$point</td>";
+    }
+    $text = $text . '</table></tr>';
+    return $text;
+}
+
 ?>
