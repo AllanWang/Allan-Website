@@ -418,7 +418,8 @@ ul.browser-default li:before {
     vertical-align: middle;
 }
 
+/*slight preference for top*/
 .pinned.vertical-center {
-    top: 50%;
+    top: 45%;
     margin-top: -25%;
 }

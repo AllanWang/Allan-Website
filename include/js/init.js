@@ -11,7 +11,7 @@
         });
 
         //add ripples to nav items
-        $('.side-nav .l').addClass("animated waves-effect waves-nav"); //scroll animations didn't work too well
+        $('.side-nav .l').addClass("animated waves-effect"); //scroll animations didn't work too well
         $('.scrollspy').scrollSpy();
 
         //workaround for big collapsible accordion

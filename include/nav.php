@@ -5,7 +5,7 @@ include_once("analytics.html");
 
 <header>
     <a href="#" data-activates="nav-bar"
-       class="button-collapse top-nav waves-effect waves-nav circle hide-on-large-only">
+       class="button-collapse top-nav waves-effect waves-hamburger circle hide-on-large-only">
         <i class="material-icons" style="color: <?php echo $hamburger_menu_color; ?>">menu</i></a>
 
     <ul id="nav-bar" class="side-nav fixed">

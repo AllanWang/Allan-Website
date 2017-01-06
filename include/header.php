@@ -29,7 +29,6 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
     }
 
     if (!isset($hamburger_menu_color)) $hamburger_menu_color = $theme_color;
-    $ripple_rgba = rippleColor($hamburger_menu_color);
 
     if ($page_title === '404') echo '<link href="/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
 

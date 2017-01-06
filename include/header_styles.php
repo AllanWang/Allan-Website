@@ -1,8 +1,15 @@
-<style>
+<!--Styles that are dependent on the theme colors-->
 
+<style>
     /*general*/
-    .waves-effect.waves-nav .waves-ripple {
-        background-color: <?php echo $ripple_rgba?>;
+
+    .waves-effect .waves-ripple {
+        background-color: <?php echo rippleColor($theme_color)?>;
+    }
+
+    /*hamburger color is not necessarily the theme color*/
+    .waves-effect.waves-hamburger .waves-ripple {
+        background-color: <?php echo rippleColor($hamburger_menu_color)?>;
     }
 
     .theme-color {
