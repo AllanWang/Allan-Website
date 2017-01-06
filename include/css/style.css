@@ -368,27 +368,7 @@ nav .brand-logo i.material-icons {
     margin-right: 15px
 }
 
-.dynamic-notes b {
-    font-weight: normal;
-}
 
-.dynamic-notes table {
-    display: inline-table;
-    padding: 0;
-    margin: 0;
-
-}
-
-.dynamic-notes tr, .dynamic-notes td {
-    height: 1px;
-    vertical-align: top;
-    padding: 0;
-    margin: 0;
-}
-
-.dynamic-notes .keyword {
-    display: inline;
-}
 
 /*Modified bullet list; smaller bullet*/
 

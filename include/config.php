@@ -2,6 +2,8 @@
 //Main php
 
 //Add view functions
+global $cssArr;
+$cssArr = array();
 include_once('bullets.php');
 include_once('tables.php');
 include_once('views.php');
@@ -38,6 +40,8 @@ function dynamicNotes($key = 'php')
 {
     global $dynamic_notes;
     $dynamic_notes = $key;
+    global $cssArr;
+    array_push($cssArr, "dynamic_notes");
     if ($key == 'php') require_once('dynamic_notes.php');
 }
 

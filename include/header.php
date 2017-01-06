@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color, $hamburger_menu_color, $header_function;
+global $page_title, $page_description, $theme_color, $hamburger_menu_color, $header_function, $cssArr;
 ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -14,9 +14,13 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href="/bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet"
           media="screen"/>
-    <link href="/include/css/style.css" type="text/css" rel="stylesheet"
-          media="screen"/>
+
     <?php
+
+    css('style');
+    foreach ($cssArr as $css) {
+        css($css);
+    }
 
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
         $theme_color = '#333333';

@@ -1,10 +1,7 @@
 <?php
-function mathExtra()
-{
-    css('pdf');
-}
-
-phpHeader('mathExtra');
+global $cssArr;
+array_push($cssArr, 'pdf');
+phpHeader();
 ?>
 <body>
 

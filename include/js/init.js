@@ -94,7 +94,7 @@ function toggleNoteView(element) {
     //this is unnecessary for hide, but will be done to stay uniform
     //we also check if the show/hide state will be changed or not
     //if it isn't, we will not continue and will not auto scroll
-    var duration = 100;
+    var duration = 150;
     var currentlyActive = $('.table-of-contents a.active').attr('href');
     console.log("Currently Active", currentlyActive);
     var extras = $('.dynamic-notes .extra');
