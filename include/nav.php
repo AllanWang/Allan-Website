@@ -1,6 +1,20 @@
 <?php
-global $theme_color, $page_title, $hamburger_menu_color, $side_nav_contents;
+global $theme_color, $page_title, $hamburger_menu_color, $side_nav_contents, $navFrom;
 include_once("analytics.html");
+
+/**
+ * Add this within the class of any collapsible header along with the desired navFrom prefix key
+ * If prefix matches, the collapsible will be active on load
+ * @param $prefix string prefix for navFrom
+ */
+function addActiveIf($prefix)
+{
+    global $navFrom;
+    if (isset($navFrom) && substr($navFrom, 0, strlen($prefix)) === $prefix) {
+        echo 'active';
+    }
+}
+
 ?>
 
 <header>
@@ -55,7 +69,7 @@ include_once("analytics.html");
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header l">Notes<i class="material-icons right">arrow_drop_down</i></a>
+                    <a class="collapsible-header l <?php addActiveIf('n_') ?>">Notes<i class="material-icons right">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a class="l" id="nr_n_calc" href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
@@ -76,9 +90,11 @@ include_once("analytics.html");
                             </li>
                             <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
                                     251</a></li>
-                            <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math 240</a>
+                            <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math
+                                    240</a>
                             </li>
-                            <li><a class="l" id="nr_n_phgy_209" href="http://allanwang.ca/notes/mcgill/phgy209/">Phgy 209</a></li>
+                            <li><a class="l" id="nr_n_phgy_209" href="http://allanwang.ca/notes/mcgill/phgy209/">Phgy
+                                    209</a></li>
 
                         </ul>
                     </div>

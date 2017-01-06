@@ -2,6 +2,7 @@
     $(function () {
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
+        $('.collapsible').collapsible();
 
         $('#to-top').bind('click', function (event) {
             $('html, body').animate({
@@ -26,6 +27,7 @@
                 }
             }, 300); //wait for accordion to finish
         });
+
     }); // end of document ready
 
 })(jQuery); // end of jQuery name space
