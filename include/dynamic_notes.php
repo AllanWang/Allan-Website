@@ -2,8 +2,8 @@
 
 const MAIN = '<div class="dynamic-notes">';
 const DIV_END = '</div>';
-const UL_START = '<ul class="browser-default">' . "\n";
-const UL_END = '</ul>' . "\n";
+const UL_START = '<ul class="browser-default">';
+const UL_END = '</ul>';
 const BLANK = ' ';
 const KEY = '!';
 const EXTRA = '#';
@@ -88,12 +88,14 @@ function echoItem($item, $level, $close)
             break;
     }
     echo '">';
-    echo preg_replace('/{(.+)\|(.+)}/', '<div id="$1" class="keyword">$2</div>', $item);
+
+    $item = preg_replace('/#{(.+)}/', '<div class="extra inline">$1</div>', $item);
+    $item = preg_replace('/{(.+)\|(.+)}/', '<div id="$1" class="keyword">$2</div>', $item);
+    echo $item;
 //    echo preg_replace('/[^\\]\{(.+)\|(.+)[^\\]\}/g', '<div id="$1" class="keyword">$2</div>', $item);
 //    echo preg_replace('/aaaaa/', 'hello', $item);
 //    echo $item;
     if ($close) echo '</li>';
-    echo "\n";
 }
 
 //echoes br $count times

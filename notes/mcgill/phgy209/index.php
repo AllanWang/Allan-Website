@@ -3,7 +3,7 @@
 
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-$n_key = "Physiology";
+$n_key = "Physiology 209";
 $page_title = "$n_key Notes";
 $page_description = "$n_key Notes";
 $navFrom = 'n_phgy_209';

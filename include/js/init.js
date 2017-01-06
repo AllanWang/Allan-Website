@@ -100,14 +100,12 @@ function toggleNoteView(element) {
     //if it isn't, we will not continue and will not auto scroll
     var duration = 150;
     var currentlyActive = $('.table-of-contents a.active').attr('href');
-    console.log("Currently Active", currentlyActive);
-    var extras = $('.dynamic-notes .extra');
-    console.log(currentlyActive);
-    if (typeof element === 'boolean' || element.checked) {
-        var top = $('.dynamic-notes .extra.top');
-        if (top.is(':visible')) return;
-
+    var top = $('.dynamic-notes .extra.top');
+    var shouldShow = typeof element === 'boolean' || element.checked;
+    if (top.is(':visible') == shouldShow) return; //state is already valid
+    if (shouldShow) {
         top.show(duration, 'swing');
+        $('.extra.inline').show(duration, 'swing');
         setTimeout(function () {
             $('.dynamic-notes .extra.mid').show(duration, 'swing');
             setTimeout(function () {
@@ -116,13 +114,12 @@ function toggleNoteView(element) {
         }, duration);
 
     } else {
-        var low = $('.dynamic-notes .extra.low');
-        if (!low.is(':visible')) return;
-        low.hide(duration, 'swing');
+        $('.dynamic-notes .extra.low').hide(duration, 'swing');
+        $('.extra.inline').hide(duration, 'swing');
         setTimeout(function () {
             $('.dynamic-notes .extra.mid').hide(duration, 'swing');
             setTimeout(function () {
-                $('.dynamic-notes .extra.top').hide(duration, 'swing');
+                top.hide(duration, 'swing');
             }, duration);
         }, duration);
 

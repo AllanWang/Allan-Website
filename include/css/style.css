@@ -423,3 +423,8 @@ ul.browser-default li:before {
     top: 50%;
     display: none;
 }
+
+.inline {
+    display: inline;
+!important;
+}
