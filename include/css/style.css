@@ -418,8 +418,8 @@ ul.browser-default li:before {
     vertical-align: middle;
 }
 
-/*slight preference for top*/
+/*Object will be repositioned with jquery*/
 .pinned.vertical-center {
-    top: 45%;
-    margin-top: -25%;
+    top: 50%;
+    display: none;
 }

@@ -1,36 +1,38 @@
-(function ($) {
-    $(function () {
-        $('.button-collapse').sideNav();
-        $('.parallax').parallax();
-        $('.collapsible').collapsible();
+$(function () {
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+    $('.collapsible').collapsible();
 
-        $('#to-top').bind('click', function (event) {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 700, 'easeInOutExpo');
-            event.preventDefault();
-        });
+    $('#to-top').bind('click', function (event) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700, 'easeInOutExpo');
+        event.preventDefault();
+    });
 
-        //add ripples to nav items
-        $('.side-nav .l').addClass("animated waves-effect"); //scroll animations didn't work too well
-        $('.scrollspy').scrollSpy();
+    //add ripples to nav items
+    $('.side-nav .l').addClass("animated waves-effect"); //scroll animations didn't work too well
+    $('.scrollspy').scrollSpy();
 
-        //workaround for big collapsible accordion
-        $('.collapsible .collapsible-header.click-scroll').on('click', function (event) {
-            var target = $(this);
-            setTimeout(function () {
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 500, 'easeInOutExpo');
-                }
-            }, 300); //wait for accordion to finish
-        });
+    //workaround for big collapsible accordion
+    $('.collapsible .collapsible-header.click-scroll').on('click', function (event) {
+        var target = $(this);
+        setTimeout(function () {
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 500, 'easeInOutExpo');
+            }
+        }, 300); //wait for accordion to finish
+    });
 
-    }); // end of document ready
-
-})(jQuery); // end of jQuery name space
+    $('.pinned.vertical-center').each(function () {
+        $(this).css({
+            marginTop: '-=' + $(this).height() / 2
+        }).show();
+    });
+}); // end of document ready
 
 /*
  * Animation functions

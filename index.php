@@ -40,41 +40,49 @@ phpHeader(); ?>
                         <defs>
                             <filter id="c" color-interpolation-filters="sRGB">
                                 <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
-                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in"
+                                             result="composite1"></feComposite>
                                 <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
                                 <feOffset dx="6" dy="6" result="offset"></feOffset>
                                 <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
                             </filter>
                             <filter id="a" color-interpolation-filters="sRGB">
                                 <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
-                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in"
+                                             result="composite1"></feComposite>
                                 <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
                                 <feOffset dx="6" dy="6" result="offset"></feOffset>
                                 <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
                             </filter>
                             <filter id="b" color-interpolation-filters="sRGB">
                                 <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
-                                <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+                                <feComposite in="flood" in2="SourceGraphic" operator="in"
+                                             result="composite1"></feComposite>
                                 <feGaussianBlur in="composite1" stdDeviation="6" result="blur"></feGaussianBlur>
                                 <feOffset dx="6" dy="6" result="offset"></feOffset>
                                 <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
                             </filter>
                         </defs>
-                        <path fill="#03a9f4" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z" transform="matrix(.09423 0 0 .12894 22.124 31.613)" filter="url(#a)"></path>
-                        <path fill="#b3e5fc" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z" transform="matrix(.09423 0 0 .12894 58.744 32.252)" filter="url(#b)"></path>
-                        <path fill="#0288d1" d="M156.2467 18.94767l109.39443 189.4767H46.85228z" filter="url(#c)" transform="scale(.33206)"></path>
+                        <path fill="#03a9f4" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z"
+                              transform="matrix(.09423 0 0 .12894 22.124 31.613)" filter="url(#a)"></path>
+                        <path fill="#b3e5fc" d="M121.6797 618.83008l-297.06647-514.5342h594.1329z"
+                              transform="matrix(.09423 0 0 .12894 58.744 32.252)" filter="url(#b)"></path>
+                        <path fill="#0288d1" d="M156.2467 18.94767l109.39443 189.4767H46.85228z" filter="url(#c)"
+                              transform="scale(.33206)"></path>
                     </svg>
                 </div>
                 <div class="col m9 center-align">
-                    <h3></h3>
+                    <h6 id="testt" class="vertical-center"></h6>
                 </div>
             </div>
 
         </div>
     </div>
 </main>
-<?php phpFooter(); ?>
-
+<?php
+phpFooter();
+//js('home');
+?>
 </body>
 
 </html>
