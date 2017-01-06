@@ -23,6 +23,10 @@ $(function () {
 });
 
 function setString(word, callback) {
+    if (word === undefined) {
+        console.log('Please set String for word in setString; if you want to clear the text, you may use null');
+        return;
+    }
     target = word;
     if (!running) {
         running = true;
