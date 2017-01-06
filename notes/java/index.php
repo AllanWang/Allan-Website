@@ -62,35 +62,44 @@ phpNav(); ?>
                 </div>
                 <div id="object-references" class="section scrollspy">
                     <h5>Object References</h5>
-                    It is very important to distinguish the difference between a reference variable and something like a
-                    primitive variable. Objects are accessed through reference variables, which are like a pointers
-                    pointing to the actual objects. A pointer itself can be changed to point to a different object
-                    (unless it is declared final), and can also point to the same object as another reference variable.
-                    <br><br> When you pass an object into a method, a new reference variable is created, pointing to
-                    your
-                    original object. Since both variable point to the same object, modifying x in your method will
-                    modify x in your main method. However, once you reassign your method's reference variable, you no
-                    longer access the same object as your main, and whatever you change to that variable will not be
-                    reflected outside of that method.
-                    <br><br>Reference variable behaviour is different from primitive variable behaviour; you've probably
-                    already
-                    seen swap methods for integers, swap(int x, int y);, where changing the two in the method has no
-                    effect in the main. Primitive variables are passed as a separate variable altogether, so there is no
-                    longer any association between the two.
-                    <br><br>It may also be worth noting the behaviours of Strings when passed through methods. Though
-                    they are
-                    objects, Strings are immutable, so whenever they are modified, a new object is generated and pointed
-                    to be the reference variable. Therefore, the original String passed will never be modified by other
-                    methods. The same behaviour can be seen in class such as BigInteger.
-                    <br><br>Below is a sample class that shows how objects are affected when
-                    passed through other methods and modified. Feel free to copy it and run it to see the results.
+                    <p>It is very important to distinguish the difference between a reference variable and something
+                        like a
+                        primitive variable. Objects are accessed through reference variables, which are like a pointers
+                        pointing to the actual objects. A pointer itself can be changed to point to a different object
+                        (unless it is declared final), and can also point to the same object as another reference
+                        variable.</p>
+                    <p>When you pass an object into a method, a new reference variable is created, pointing to
+                        your
+                        original object. Since both variable point to the same object, modifying x in your method will
+                        modify x in your main method. However, once you reassign your method's reference variable, you
+                        no
+                        longer access the same object as your main, and whatever you change to that variable will not be
+                        reflected outside of that method.</p>
+                    <p>Reference variable behaviour is different from primitive variable behaviour; you've probably
+                        already
+                        seen swap methods for integers, swap(int x, int y);, where changing the two in the method has no
+                        effect in the main. Primitive variables are passed as a separate variable altogether, so there
+                        is no
+                        longer any association between the two.
+                    </p>
+                    <p>It may also be worth noting the behaviours of Strings when passed through methods. Though
+                        they are
+                        objects, Strings are immutable, so whenever they are modified, a new object is generated and
+                        pointed
+                        to be the reference variable. Therefore, the original String passed will never be modified by
+                        other
+                        methods. The same behaviour can be seen in class such as BigInteger.
+                    </p>
+                    <p>Below is a sample class that shows how objects are affected when
+                        passed through other methods and modified. Feel free to copy it and run it to see the
+                        results.</p>
                     <?php
                     code_specific('java', 'ObjectReferences.java');
                     ?>
                 </div>
             </div>
             <div class="col hide-on-small-only m3 l2">
-                <div class="pinned">
+                <div class="pinned vertical-center">
                     <ul class="section table-of-contents">
                         <li><a href="#data-types">Data Types</a></li>
                         <li><a href="#basics">The Basics</a></li>

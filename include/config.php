@@ -86,4 +86,15 @@ function rippleColor($hex)
     return "rgba($r, $g, $b, 0.2)";
 }
 
+function lighterColor($hex, $weight = 0.3)
+{
+    $r = hexdec(substr($hex, 1, 2));
+    $g = hexdec(substr($hex, 3, 2));
+    $b = hexdec(substr($hex, 5, 2));
+    $r = (1 - $weight) * $r + 255 * $weight;
+    $g = (1 - $weight) * $g + 255 * $weight;
+    $b = (1 - $weight) * $b + 255 * $weight;
+    return '#' . dechex($r) . dechex($g) . dechex($b);
+}
+
 ?>

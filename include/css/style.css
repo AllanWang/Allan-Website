@@ -368,8 +368,6 @@ nav .brand-logo i.material-icons {
     margin-right: 15px
 }
 
-
-
 /*Modified bullet list; smaller bullet*/
 
 ul.browser-default {
@@ -399,15 +397,6 @@ ul.browser-default li:before {
     left: 24px;
 }
 
-.modal-keys a {
-    color: #000;
-    line-height: 200%;
-}
-
-.modal-keys a:hover {
-    color: #555;
-}
-
 .microsoft-header-blue {
     background-color: #2e74b5 !important;
 }
@@ -423,4 +412,13 @@ ul.browser-default li:before {
 .hljs-template-variable,
 .hljs-deletion {
     font-weight: 200;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}
+
+.pinned.vertical-center {
+    top: 50%;
+    margin-top: -25%;
 }

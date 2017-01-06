@@ -164,7 +164,7 @@ phpHeader(); ?>
                     <h5>Cell Membrane</h5>
                     <?php
                     dynamicBullets(
-                        "Functions – support distinct compositions of ICF & ISF; be selectively permeable",
+                        "#Functions – support distinct compositions of ICF & ISF; be selectively permeable",
                         "Highly permeable to H<sub>2</sub>O, lipid-soluble substances, dissolved gases (O<sub>2</sub>, CO<sub>2</sub>), small uncharged molecules",
                         "Less permeable to larger molecules, charged particles",
                         "Impermeable to very large molecules",
@@ -189,7 +189,7 @@ phpHeader(); ?>
                 </div>
 
                 <div id="transmembrane-transport-pathways" class="section scrollspy">
-                    <h5>Transmembrane Transport Pathways</h5>
+                    <h5 id="ttp">Transmembrane Transport Pathways</h5>
                     <?php
                     dynamicBullets(
                         "Via phospholipid bilayer",
@@ -203,14 +203,14 @@ phpHeader(); ?>
                     <h5>Diffusion</h5>
                     <?php
                     dynamicBullets(
-                        "Resulting from random thermal molecular motion",
+                        "#Resulting from random thermal molecular motion",
                         "Net flux = high &rarr; low concentration",
                         "If permeable, can go through membrane",
-                        "J = PA(C<sub>0</sub> – C<sub>i</sub>)",
-                        "-J – net flux across membrane",
-                        "-P – permeability/diffusion coefficient of membrane",
-                        "-A – surface area of membrane",
-                        "-C0 – Ci – concentration gradient of diffusing molecule",
+                        "#J = PA(C<sub>0</sub> – C<sub>i</sub>)",
+                        "-#J – net flux across membrane",
+                        "-#P – permeability/diffusion coefficient of membrane",
+                        "-#A – surface area of membrane",
+                        "-#C<sub>0</sub> – C<sub>i</sub> – concentration gradient of diffusing molecule",
                         "-Diffusion time increases in proportion to the square of the distance",
                         "Dissolve through lipid components for non-polar molecules and through channels for ions"
                     );
@@ -220,48 +220,47 @@ phpHeader(); ?>
                     <h5>Ion Channels</h5>
                     <?php
                     dynamicBullets(
-                        "Consist of single protein or clusters of proteins",
-                        "Show selectivity based on diameter & distribution of charges",
+                        "#Consist of single protein or clusters of proteins",
+                        "#Show selectivity based on diameter & distribution of charges",
                         "Movement affected by electrochemical (electrical & concentration) gradient",
                         "Ligand-gated, voltage-gated, mechanically-gated",
                         "Channels: Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>+</sup>, Cl<sup>-</sup>",
-                        "Number of ions flowing through channels generating ionic current depends on",
-                        "-Channel conductance",
-                        "-How often channel opens",
-                        "-How long channel stays open"
+                        "#Number of ions flowing through channels generating ionic current depends on",
+                        "-#Channel conductance",
+                        "-#How often channel opens",
+                        "-#How long channel stays open"
                     );
                     ?>
                 </div>
                 <div id="carrier-mediated-transport" class="section scrollspy">
-                    <h5>Carrier-mediated Transport</h5>
+                    <h5>Carrier-Mediated Transport</h5>
                     <?php
                     dynamicBullets(
-                        "Specificity – usually transports one type of molecule only",
-                        "Saturation – rate of transport reaches maximum when all binding sites on all transporters are occupied; limit – transport maximum (Tm) exists",
-                        "Competition – structurally similar substances compete for same binding site on carrier",
-                        "Facilitated diffusion – carrier enables solute to penetrate more readily – passive",
-                        "-Solute binds to carrier &rarr; changes carrier configuration &rarr; solute is delivered to other side of membrane &rarr; carrier resumes original configuration",
-                        "-Ie for glucose, insulin increases number of transporters",
-                        "Active transport",
+                        "#Specificity – usually transports one type of molecule only",
+                        "#Saturation – rate of transport reaches maximum when all binding sites on all transporters are occupied; limit – transport maximum (Tm) exists",
+                        "#Competition – structurally similar substances compete for same binding site on carrier",
+                        "{fac-diff|Facilitated diffusion} – carrier enables solute to penetrate more readily – passive",
+                        "-#Solute binds to carrier &rarr; changes carrier configuration &rarr; solute is delivered to other side of membrane &rarr; carrier resumes original configuration",
+                        "-#Ie for glucose, insulin increases number of transporters",
+                        "{act-trans|Active transport}",
                         "-Requires chemical energy (usually ATP)",
-                        "-Susceptible to metabolic inhibitors",
+                        "-#Susceptible to metabolic inhibitors",
                         "-Can transport against concentration gradient",
                         "-Primary active transport",
                         "--Chemical energy transferred directly from ATP",
                         "--Phosphorylation of transporter changes conformation & affinity of binding site",
-                        "--Ie sodium potassium pump – 3Na<sup>+</sup> out, 2K<sup>+</sup> in",
-                        "-osmosis",
+                        "--#Ie sodium potassium pump – 3Na<sup>+</sup> out, 2K<sup>+</sup> in",
                         "Active – energy dependent – carrier-mediated active transport (primary & secondary), pino/phagocytosis",
-                        "Sodium potassium pump",
+                        "{nak-pump|Sodium potassium pump}",
                         "-Phosphorylation of pump &rarr; change in conformation &rarr; affinity for Na<sup>+</sup> decreases",
-                        "Other active transporter proteins – Ca-ATPase, H-ATPase, H/K ATPase",
-                        "Secondary Active Transport – relies on electrochemical gradient to bring along another solute",
-                        "-Ie glucose transported with Na<sup>+</sup>",
+                        "#Other active transporter proteins – Ca-ATPase, H-ATPase, H/K ATPase",
+                        "{sec-act-tra|Secondary Active Transport} – relies on electrochemical gradient to bring along another solute",
+                        "-#Ie glucose transported with Na<sup>+</sup>",
                         "-Cotransport – both solutes move in the same direction",
-                        "--Na<sup>+</sup>/glucose, Na<sup>+</sup>/amino acids",
+                        "--#Na<sup>+</sup>/glucose, Na<sup>+</sup>/amino acids",
                         "-Countertransport – solutes move in different directions",
-                        "--Na<sup>+</sup>/Ca<sup>+</sup>, Na<sup>+</sup>/H+, Cl<sup>-</sup>/HCO<sub>3</sub><sup>-</sup>",
-                        "Endocytosis – cell membrane invaginates, forming channel, pinching off to form vesicle",
+                        "--#Na<sup>+</sup>/Ca<sup>+</sup>, Na<sup>+</sup>/H+, Cl<sup>-</sup>/HCO<sub>3</sub><sup>-</sup>",
+                        "{endocytosis|Endocytosis} – cell membrane invaginates, forming channel, pinching off to form vesicle",
                         "-Pinocytosis (Fluid endocytosis) – ingestion of dissolved materials, liquid contents slowly transferred to the cytosol – not selective",
                         "-Phagocytosis – ingestion of solid particles, particles pinched into phagocytic vacuole (phagosome) – fuses with lysosomes and then degraded",
                         "-Receptor-mediated",
@@ -276,21 +275,21 @@ phpHeader(); ?>
                     <?php
                     dynamicBullets(
                         "Water diffuses freely across most cell membranes",
-                        "Aquaporins – groups of proteins facilitating osmosis – forms water permeable channels",
+                        "#Aquaporins – groups of proteins facilitating osmosis – forms water permeable channels",
                         "Osmosis – net movement of H2O across semipermeable membrane",
                         "Osmotic pressure – pressure required to oppose the movement of water across a semipermeable membrane",
                         "Osmolarity – total solute concentration of solute – 1 osmol = 1 mol of solute",
-                        "-1 mol glucose = 1 osmol	1 mol NaCl = 2 osmol",
-                        "Osm = osmol/liter",
-                        "Ie saline drip – 0.9% saline = 0.15 NaCl = 300mOsm = same mOsm of body<br>6.7 atm = 5100 mmHg",
-                        "Isosmotic – solutions with same number of osmotically active particles",
+                        "-#" . bulletTable("1 mol glucose = 1 osmol", "1 mol NaCl = 2 osmol"),
+                        "#Osm = osmol/liter",
+                        "#Ie saline drip – 0.9% saline = 0.15 NaCl = 300mOsm = same mOsm of body<br>6.7 atm = 5100 mmHg",
+                        "{isosmotic|Isosmotic} – solutions with same number of osmotically active particles",
                         "Hypoosmotic – solutions with lower number of osmotically active particles",
                         "Hyperosmotic – solutions with higher number of osmotically active particles",
                         "Only nonpenetrating particles can exert osmotic pressure",
-                        "-Extracellular Na<sup>+</sup> is nonpenetrating as it is pumped out after moving in",
-                        "Isotonic – cell retains size",
-                        "Hypotonic – cell swells",
-                        "Hypertonic – cell shrinks"
+                        "-#Extracellular Na<sup>+</sup> is nonpenetrating as it is pumped out after moving in",
+                        "#Isotonic – cell retains size",
+                        "#Hypotonic – cell swells",
+                        "#Hypertonic – cell shrinks"
                     );
                     ?>
                 </div>
@@ -312,11 +311,11 @@ phpHeader(); ?>
                     dynamicBullets(
                         "Transport – nutritive, respiratory, excretory, hormone transport, temperature regulation",
                         "Acid-base balance – normal pH range 7.30-7.45",
-                        "Protective",
+                        "#Protective",
                         "Contains both ECF (plasma) & ICF (inside blood cells)",
-                        "May be studied in vivo & in vitro",
+                        "#May be studied in vivo & in vitro",
                         "Accounts for ~7% of body mass = ~5L",
-                        "Normovolemia – normal blood volume",
+                        "{normovolemia|Normovolemia} – normal blood volume",
                         "Hypovolemia – lower blood volume",
                         "Hypervolemia – higher blood volume",
                         "Centrifuged blood – 55% plasma (yellow), ~0% buffy layer (WBCs, platelets), 45% RBCs",
@@ -369,12 +368,12 @@ phpHeader(); ?>
                 </div>
             </div>
             <div class="col hide-on-small-only m3 l2">
-                <div class="pinned">
+                <div class="pinned vertical-center">
                     <div class="switch">
                         <label>
                             Collapse
                             <input id="note-toggle" type="checkbox" onchange="toggleNoteView(this)" checked>
-                            <span class="lever red-tint"></span>
+                            <span class="lever"></span>
                             Expand
                         </label>
                     </div>
@@ -390,23 +389,24 @@ phpHeader(); ?>
                         <li><a href="#transmembrane-transport-pathways">Transmembrane Transport Pathways</a></li>
                         <li><a href="#diffusion">Diffusion</a></li>
                         <li><a href="#ion-channels">Ion Channels</a></li>
-                        <li><a href="#carrier-mediated-transport">Carrier-mediated Transport</a></li>
+                        <li><a href="#carrier-mediated-transport">Carrier-Mediated Transport</a></li>
                         <li><a href="#osmosis">Osmosis</a></li>
                         <li><a href="#capillaries">Capillaries</a></li>
                         <li><a href="#blood">Blood</a></li>
                         <li><a href="#plasma">Plasma</a></li>
                         <li><a href="#plasma-proteins">Plasma Proteins</a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <!--<li><a href="#"></a></li>-->
                     </ul>
                 </div>
             </div>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                    keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss', 'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph', 'water-numbers|Water Percentages', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx');
+                    keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss',
+                        'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph',
+                        'water-numbers|Water Percentages', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx',
+                        'ttp|Transmembrane Transport Pathways', 'fac-diff|Facilitated Diffusion', 'act-trans|Active Transport',
+                        'nak-pump|Sodium Potassium Pump', 'sec-act-tra|Secondary Active Transport', 'endocytosis|Endocytosis', 'isosmotic|Iso/Hypo/Hyper Osmotic', 'normovolemia|Normo/Hypo/Hyper Volemia');
                     ?>
 
                 </div>

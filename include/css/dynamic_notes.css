@@ -18,3 +18,16 @@
 .dynamic-notes .keyword {
     display: inline;
 }
+
+.modal-keys a {
+    color: #000;
+    line-height: 200%;
+}
+
+.modal-keys a:hover {
+    color: #555;
+}
+
+.pinned {
+    vertical-align: middle;
+}

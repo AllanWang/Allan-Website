@@ -3,8 +3,7 @@ global $navFrom, $navTo, $dynamic_notes;
 
 if (!isset($scriptOnly) || !$scriptOnly):?>
 
-    <footer class="page-footer"
-        <?php theme_background() ?>>
+    <footer class="page-footer theme-color-background">
         <!--defaults to teal-->
         <div class="container">
             <div class="row">
