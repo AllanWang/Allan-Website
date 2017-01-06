@@ -1,0 +1,3 @@
+Options +Indexes
+#DirectoryIndex index.htm index.html index.shtml index.php default.php /listings/index.php
+IndexOptions FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=* SuppressHTMLPreamble HTMLTable

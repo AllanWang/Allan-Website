@@ -34,11 +34,6 @@ var database = {
         'tags': 'Math, 140, 141, 222, derivatives, integrals, series, sum',
         'body': 'Formula Sheet'
     },
-    'notes/math240/MATH%20240.pdf': {
-        'title': 'Discrete Math',
-        'tags': 'Math, discrete, pdf, 240',
-        'body': 'PDF of lectures'
-    },
     'notes/linear?scroll_to=common': {
         'title': 'Linear Algebra',
         'tags': 'math, linalg, 133',
@@ -53,6 +48,22 @@ var database = {
         'title': 'Definite Summations',
         'tags': 'math, sigma, sum, series',
         'body': 'Common definite summations'
+    },
+    'notes/mcgill/math240': {
+        'title': 'Math 240 - Discrete Math',
+        'tags': 'Math, discrete, pdf, 240',
+        'body': 'PDF of lectures, notes'
+    },
+    'notes/mcgill/comp251': {
+        'title': 'Comp 251',
+        'tags': 'computer science, mcgill',
+        'body': 'notes, TODO'
+    },
+    'notes/mcgill/phgy209': {
+        'title': 'Physiology 209',
+        'tags': 'phgy, brain, immune, blood, water, somatosensory, senses',
+        'body': 'notes'
     }
-    
+
+
 };

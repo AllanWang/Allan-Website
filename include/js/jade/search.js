@@ -2,6 +2,7 @@
 
     var inputSearch = $('input#search');
     var focusedSearchResults = $('.search-results .focused');
+    var urlPrefix = "http://allanwang.ca/";
 
     $(document).ready(function () {
         window.index = lunr(function () {
@@ -14,7 +15,7 @@
 
         $.each(database, function (key, fields) {
             var item = jQuery.extend({}, fields); //shallow copy object so that database is not modified
-            item.href = "http://allanwang.ca/" + key;
+            item.href = urlPrefix + key;
             window.index.add(item);
         });
 
@@ -81,7 +82,7 @@
             if (!query) return renderResults(null);
 
             var results = window.index.search(query).slice(0, 6).map(function (result) {
-                var href = result.ref.split('http://allanwang.ca/')[1];
+                var href = result.ref.slice(urlPrefix.length);
                 return [database[href].title, result.ref];
             });
             renderResults(results);

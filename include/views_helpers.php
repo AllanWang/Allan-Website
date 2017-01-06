@@ -7,7 +7,7 @@
  */
 function getId($item)
 {
-    return strtolower(preg_replace('/\s+/g', '-', $item));
+    return strtolower(preg_replace('/\s+/', '-', $item));
 }
 
 
