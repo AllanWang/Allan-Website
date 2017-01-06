@@ -1,6 +1,14 @@
 <?php
 global $page_title, $page_description, $theme_color, $hamburger_menu_color, $header_function, $cssArr;
 ?>
+
+<!--
+    Hello there!
+    If you are here to learn from my source, please note that this page was generated with php and may not be easy to
+    read.
+    Feel free to view the source at https://github.com/AllanWang/Allan-Website
+-->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
