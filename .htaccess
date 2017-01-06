@@ -1,3 +1,22 @@
+ErrorDocument 400 /404/index.php
+ErrorDocument 401 /404/index.php
+ErrorDocument 403 /404/index.php
+ErrorDocument 404 /404/index.php
+ErrorDocument 405 /404/index.php
+ErrorDocument 408 /404/index.php
+ErrorDocument 414 /404/index.php
+ErrorDocument 500 /404/index.php
+ErrorDocument 502 /404/index.php
+ErrorDocument 504 /404/index.php
+
+Options -Indexes
+#DirectoryIndex index.htm index.html index.shtml index.php default.php /listings/index.php
+IndexOptions FancyIndexing FoldersFirst NameWidth=* DescriptionWidth=* SuppressHTMLPreamble HTMLTable
+
+#<Directory "/lecture-dump">
+#    Options +Indexes
+#</Directory>
+
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f

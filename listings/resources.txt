@@ -1,0 +1,4 @@
+https://perishablepress.com/better-default-directory-views-with-htaccess/
+https://wiki.apache.org/httpd/DirectoryListings
+
+https://css-tricks.com/styling-a-server-generated-file-directory/

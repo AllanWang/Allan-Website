@@ -27,7 +27,8 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
 
     css('style');
     foreach ($cssArr as $css) {
-        css($css);
+        if (substr($css, 0, 1) == '<') echo $css;
+        else css($css);
     }
 
     if (!isset($theme_color) || preg_match('/^#[0-9A-F]{6}$/i', $theme_color) == 0) { //check for valid hex color
@@ -37,8 +38,6 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
     }
 
     if (!isset($hamburger_menu_color)) $hamburger_menu_color = $theme_color;
-
-    if ($page_title === '404') echo '<link href="/404/css/404.css" type="text/css" rel="stylesheet" media="screen"/>';
 
     include_once('header_styles.php');
 
