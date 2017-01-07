@@ -111,9 +111,6 @@ Options -Indexes
  deny from all
 </Files>
 
-# ENABLE INDEXING
-Options +Indexes
-
 # INDEX OPTIONS
 IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst -XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
 
