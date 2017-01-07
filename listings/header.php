@@ -2,7 +2,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = 'Index'; //necessary for phpNav
-$theme_color = "#4078c0"; //github blue
+$theme_color = "#555555";
+$hamburger_menu_color = '#000000';
 phpNav();
 
 //Removes any query variables if found
@@ -16,5 +17,5 @@ function getDir()
 
 <main>
     <div class="wrapper">
-        <h3><?php echo 'Index of ' . getDir(); ?></h3><br>
+        <h5><?php echo 'Index of ' . getDir(); ?></h5><br>
 

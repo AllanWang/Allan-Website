@@ -7,7 +7,7 @@
         <div class="card-content"><p><?php echo $cardDesc ?></p></div>
         <div class="card-action">
             <?php foreach ($cardActions as $linkName => $link): ?>
-                <a href="<?php echo $link ?>" target="_blank"><?php echo $linkName ?></a>
+                <a href="<?php echo $link ?>" target="_blank" class="inline-block"><?php echo $linkName ?></a>
             <?php endforeach; ?>
         </div>
         <div class="card-reveal">

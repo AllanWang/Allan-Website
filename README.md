@@ -1,6 +1,6 @@
 # Welcome to my Source Code
 
-I am a big fan of open source projects, so I've uploaded my php files here.
+I am a big supporter of open source projects, so I've uploaded my php files here.
 
 This website would not be possible without the following notable dependencies/articles:
 

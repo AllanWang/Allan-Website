@@ -1,3 +1,5 @@
+@import "single.css";
+
 nav ul a,
 nav .brand-logo {
     color: #444;
@@ -393,44 +395,10 @@ ul.browser-default li:before {
     margin-left: -10px;
 }
 
-/*red switch*/
-.switch label input[type=checkbox]:checked + .lever.red-tint {
-    background-color: #f98e86;
-}
-
-.switch label input[type=checkbox]:checked + .lever.red-tint:after {
-    background-color: #F44336;
-    left: 24px;
-}
-
-.microsoft-header-blue {
-    background-color: #2e74b5 !important;
-}
-
-/*Wrapping code div*/
-/*pre code {*/
-/*white-space: pre-wrap;*/
-/*}*/
-
 .hljs-string,
 .hljs-section,
 .hljs-selector-class,
 .hljs-template-variable,
 .hljs-deletion {
     font-weight: 200;
-}
-
-.vertical-center {
-    vertical-align: middle;
-}
-
-/*Object will be repositioned with jquery*/
-.pinned.vertical-center {
-    top: 50%;
-    display: none;
-}
-
-.inline {
-    display: inline;
-!important;
 }

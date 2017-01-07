@@ -1,0 +1,19 @@
+/*Simple css that gives a style to one attribute*/
+
+.vertical-center {
+    vertical-align: middle;
+}
+
+/*Object will be repositioned with jquery*/
+.pinned.vertical-center {
+    top: 50%;
+    display: none;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
