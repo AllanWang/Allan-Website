@@ -7,6 +7,12 @@ nav .brand-logo {
     width: 300px;
 }
 
+/*easiest way to hide the scrollbar*/
+.side-nav::-webkit-scrollbar {
+    display: none;
+}
+
+
 /* nav now stickied on big screen */
 header, main, footer {
     padding-left: 300px;

@@ -9,11 +9,191 @@ ErrorDocument 500 /404/index.php
 ErrorDocument 502 /404/index.php
 ErrorDocument 504 /404/index.php
 
-Options -Indexes
-
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # Redirect all invalid links to the 404 default
 RewriteRule . /404/?why=%{REQUEST_URI} [L]
+
+# Block bad bots
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Custo [OR]
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR]
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR]
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR]
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR]
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR]
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR]
+RewriteCond %{HTTP_USER_AGENT} ^HMView [OR]
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR]
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR]
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR]
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^larbin [OR]
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR]
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR]
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR]
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR]
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR]
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR]
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR]
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR]
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR]
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Widow [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus
+RewriteRule ^.* - [F,L]
+
+#
+# Custom Indexing
+#
+
+#
+# Security
+#
+
+Options -Indexes
+
+# STRONG HTACCESS PROTECTION
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+ order allow,deny
+ deny from all
+</Files>
+
+# ENABLE INDEXING
+Options +Indexes
+
+# INDEX OPTIONS
+IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst -XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
+
+# META VIEWPORT
+IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+
+# HIDE /theme DIRECTORY
+IndexIgnore .*
+
+#
+# GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
+#
+
+AddIcon /listings/icons/blank.png ^^BLANKICON^^
+AddIcon /listings/icons/folder.png ^^DIRECTORY^^
+AddIcon /listings/icons/folder-home.png ..
+
+AddIconByType (TXT,/listings/icons/text.png) text/*
+AddIconByType (IMG,/listings/icons/image.png) image/*
+AddIconByType (SND,/listings/icons/audio.png) audio/*
+AddIconByType (VID,/listings/icons/video.png) video/*
+
+#
+# EXTENSION SPECIFIC ICONS
+#
+
+AddIcon /listings/icons/archive.png .7z .bz2 .cab .gz .tar
+AddIcon /listings/icons/audio.png .aac .aif .aifc .aiff .ape .au .flac .iff .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg .xm .it .s3m .mod
+AddIcon /listings/icons/bin.png .bin .hex
+AddIcon /listings/icons/bmp.png .bmp
+AddIcon /listings/icons/c.png .c
+AddIcon /listings/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+AddIcon /listings/icons/cd.png .iso
+AddIcon /listings/icons/cpp.png .cpp
+AddIcon /listings/icons/css.png .css .sass .scss
+AddIcon /listings/icons/deb.png .deb
+AddIcon /listings/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+AddIcon /listings/icons/draw.png .svg .svgz
+AddIcon /listings/icons/eps.png .ai .eps
+AddIcon /listings/icons/exe.png .exe
+AddIcon /listings/icons/gif.png .gif
+AddIcon /listings/icons/h.png .h
+AddIcon /listings/icons/html.png .html .xhtml .shtml .htm .URL .url
+AddIcon /listings/icons/ico.png .ico
+AddIcon /listings/icons/java.png .jar
+AddIcon /listings/icons/jpg.png .jpg .jpeg .jpe
+AddIcon /listings/icons/js.png .js .json
+AddIcon /listings/icons/markdown.png .md
+AddIcon /listings/icons/package.png .pkg .dmg
+AddIcon /listings/icons/pdf.png .pdf
+AddIcon /listings/icons/php.png .php .phtml
+AddIcon /listings/icons/playlist.png .m3u .m3u8 .pls .pls8
+AddIcon /listings/icons/png.png .png
+AddIcon /listings/icons/ps.png .ps
+AddIcon /listings/icons/psd.png .psd
+AddIcon /listings/icons/py.png .py
+AddIcon /listings/icons/rar.png .rar
+AddIcon /listings/icons/rb.png .rb
+AddIcon /listings/icons/rpm.png .rpm
+AddIcon /listings/icons/rss.png .rss
+AddIcon /listings/icons/script.png .bat .cmd .sh
+AddIcon /listings/icons/sql.png .sql
+AddIcon /listings/icons/tiff.png .tiff .tif
+AddIcon /listings/icons/text.png .txt .nfo
+AddIcon /listings/icons/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .m4v .f4v .f4p .ogv
+AddIcon /listings/icons/xml.png .xml
+AddIcon /listings/icons/zip.png .zip
+DefaultIcon /listings/icons/default.png
+
+#
+# THEME FILES
+#
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php5
+</FilesMatch>
+
+AddType text/html .php
+#Addhandler application/x-httpd-php .php
+
+HeaderName /listings/header.php
+ReadmeName /listings/footer.html
+IndexStyleSheet /listings/style.css
+
