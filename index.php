@@ -5,6 +5,8 @@ include("include/config.php");
 $page_title = "Home";
 $page_description = "Main Page";
 $theme_color = "#0097A7"; //dark cyan
+global $cssArr;
+array_push($cssArr, 'home');
 phpHeader(); ?>
 <body>
 
@@ -73,6 +75,19 @@ phpHeader(); ?>
                 </div>
                 <div class="col m9 center-align">
                     <h6 id="testt" class="vertical-center"></h6>
+                    <div class='content'>
+                        <div class='visible'>
+                            <div class="il">
+                                Hello
+                            </div>
+                            <ul class="ir">
+                                <li>world !</li>
+                                <li>Bob !</li>
+                                <li>users !</li>
+                                <li>everybody !</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
