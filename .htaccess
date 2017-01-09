@@ -115,7 +115,8 @@ Options -Indexes
 IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst -XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
 
 # META VIEWPORT
-IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+# IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no\"/>"
 
 # HIDE /theme DIRECTORY
 IndexIgnore .*
