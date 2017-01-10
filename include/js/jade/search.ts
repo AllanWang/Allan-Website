@@ -1,117 +1,130 @@
-"use strict";
 /// <reference path="search_data.ts" />
-var search_data_1 = require("./search_data");
+import {database} from "./search_data";
+
 (function ($) {
-    var inputSearch = $('input#search');
-    var focusedSearchResults = $('.search-results .focused');
-    var urlPrefix = "http://allanwang.ca/";
+
+    let inputSearch = $('input#search');
+    let focusedSearchResults = $('.search-results .focused');
+    let urlPrefix = "http://allanwang.ca/";
+
     $(document).ready(function () {
-        window.index = lunr(function () {
-            this.field('title', { boost: 100 });
-            this.field('tags', { boost: 10 });
+        (<any>window).index = lunr(function () {
+            this.field('title', {boost: 100});
+            this.field('tags', {boost: 10});
             this.field('body');
             this.ref('href');
         });
-        window.index.pipeline.reset();
-        $.each(search_data_1.database, function (key, fields) {
-            var item = jQuery.extend({}, fields); //shallow copy object so that database is not modified
+        (<any>window).index.pipeline.reset();
+
+        $.each(database, function (key, fields) {
+            let item = jQuery.extend({}, fields); //shallow copy object so that database is not modified
             item.href = urlPrefix + key;
-            window.index.add(item);
+            (<any>window).index.add(item);
         });
+
         // icon click
         $('ul#nav-bar li.search .search-wrapper i.material-icons').click(function () {
             if (focusedSearchResults.length) {
                 focusedSearchResults.first()[0].click();
-            }
-            else if ($('.search-results').children().length) {
+            } else if ($('.search-results').children().length) {
                 $('.search-results').children().first()[0].click();
             }
         });
-        var renderResults = function (results) {
-            var resultsContainer = $('.search-results');
+
+        let renderResults = function (results: string[]) {
+            let resultsContainer = $('.search-results');
             resultsContainer.empty();
-            if (!results)
-                return; //empty input
-            if (results.length == 0) {
-                var noResultDiv = $('<a>No results found</a>');
+            if (!results) return; //empty input
+            if (results.length == 0) { //input with no match
+                let noResultDiv = $('<a>No results found</a>');
                 resultsContainer.append(noResultDiv);
                 return;
             }
-            Array.prototype.forEach.call(results, function (result) {
-                var resultDiv = $('<a href=' + result[1] + '>' + result[0] + '</a>');
+            Array.prototype.forEach.call(results, function (result: string[]) {
+                let resultDiv = $('<a href=' + result[1] + '>' + result[0] + '</a>');
                 resultsContainer.append(resultDiv);
             });
         };
-        var debounce = function (fn) {
-            var timeout;
+
+        let debounce = function (fn: Function) {
+            let timeout: number;
             return function () {
-                var args = Array.prototype.slice.call(arguments), ctx = this;
+                let args = Array.prototype.slice.call(arguments),
+                    ctx = this;
+
                 clearTimeout(timeout);
                 timeout = setTimeout(function () {
                     fn.apply(ctx, args);
                 }, 100);
             };
         };
+
         inputSearch.focus(function () {
             $(this).parent().addClass('focused');
             $('.search-results').show(250); //same as ease in css for search-wrapper
         });
+
+
         inputSearch.blur(function () {
             $(this).parent().removeClass('focused');
-            setTimeout(function () {
+            setTimeout(function () { //add delay so clicks are still registered (looks nice too)
                 $('.search-results').hide(250);
             }, 100);
         });
-        inputSearch.bind('keyup', debounce(function (e) {
+
+
+        inputSearch.bind('keyup', debounce(function (e: any) {
             if ($(this).val() < 2) {
                 renderResults(null);
                 return;
             }
-            if (e.which === 38 || e.which === 40 || e.keyCode === 13)
-                return;
-            var query = $(this).val();
-            if (!query)
-                return renderResults(null);
-            var results = window.index.search(query).slice(0, 6).map(function (result) {
-                var href = result.ref.slice(urlPrefix.length);
-                return [search_data_1.database[href].title, result.ref];
+
+            if (e.which === 38 || e.which === 40 || e.keyCode === 13) return;
+
+            let query = $(this).val();
+            if (!query) return renderResults(null);
+
+            let results = (<any>window).index.search(query).slice(0, 6).map(function (result: any) {
+                let href = result.ref.slice(urlPrefix.length);
+                return [database[href].title, result.ref];
             });
             renderResults(results);
         }));
-        inputSearch.bind('keydown', debounce(function (e) {
+
+
+        inputSearch.bind('keydown', debounce(function (e: any) {
             // Escape.
             if (e.keyCode === 27) {
                 $(this).val('');
                 $(this).blur();
                 renderResults(null);
                 return;
-            }
-            else if (e.keyCode === 13) {
+            } else if (e.keyCode === 13) {
                 // enter
                 if (focusedSearchResults.length) {
                     focusedSearchResults.first()[0].click();
-                }
-                else if ($('.search-results').children().length) {
+                } else if ($('.search-results').children().length) {
                     $('.search-results').children().first()[0].click();
                 }
                 return;
             }
+
             // Arrow keys.
-            var focused;
+            let focused: any;
             switch (e.which) {
-                case 38:
+                case 38: // up
                     if (focusedSearchResults.length) {
                         focused = focusedSearchResults;
                         focused.removeClass('focused');
                         focused.prev().addClass('focused');
                     }
                     break;
-                case 40:
+
+                case 40: // down
                     if (!focusedSearchResults.length) {
                         focused = $('.search-results').children().first();
                         focused.addClass('focused');
-                    }
-                    else {
+                    } else {
                         focused = focusedSearchResults;
                         if (focused.next().length) {
                             focused.removeClass('focused');
@@ -119,6 +132,7 @@ var search_data_1 = require("./search_data");
                         }
                     }
                     break;
+
                 default:
                     return; // exit this handler for other keys
             }
@@ -126,4 +140,3 @@ var search_data_1 = require("./search_data");
         }));
     });
 }(jQuery));
-//# sourceMappingURL=search.js.map

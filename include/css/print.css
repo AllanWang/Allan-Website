@@ -1,6 +1,2 @@
-/*TODO Hide when printing*/
-@media print {
-    header {
-        display: none !important;
-    }
-}
+@media print{header{display:none !important}}
+/*# sourceMappingURL=print.css.map */
