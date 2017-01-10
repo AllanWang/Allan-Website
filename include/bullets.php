@@ -22,7 +22,7 @@ function bullets(...$items)
             echo "&ensp;&ensp;";
             $item = substr($item, 1);
         }
-        echo "&ensp;&bull;&ensp;$item<br>";
+        echo "&ensp;&bull;&ensp;$item<br/>";
     }
 }
 ?>

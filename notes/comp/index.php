@@ -34,8 +34,8 @@ phpNav(); ?>
             'Heaps|heap.java',
             'Graphs|graph.java');
         ?>
-        <br>
-        <br>
+        <br/>
+        <br/>
         <div class="section">
             <div class="row" id="summations">
                 <h5 class="header center">Summations</h5>
@@ -49,7 +49,7 @@ phpNav(); ?>
                     math_table('\sum_{i=0}^{n-1} i * 2^i', '2 + (n - 2)2^n');
                     ?>
                 </table>
-                <br>
+                <br/>
                 <div class="center">
                     <a href="http://allanwang.ca/notes/calc/?scroll_to=series" target="_blank">More series here</a>
                 </div>

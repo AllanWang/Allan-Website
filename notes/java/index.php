@@ -26,7 +26,7 @@ phpNav(); ?>
                     <a href="https://en.wikipedia.org/wiki/Class-based_programming" target="_blank">class-based</a>, and
                     <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"
                        target="_blank">object-oriented</a> programming
-                    language<br><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+                    language<br/><br/><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
                                        target="_blank">Java
                         SE</a>&emsp;&bull;&emsp;<a
                             href="https://www.eclipse.org/downloads/" target="_blank">Eclipse</a>&emsp;&bull;&emsp;<a

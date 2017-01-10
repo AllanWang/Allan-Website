@@ -191,7 +191,7 @@ DefaultIcon /listings/icons/default.png
 AddType text/html .php
 #Addhandler application/x-httpd-php .php
 
+IndexStyleSheet /listings/style.css
 HeaderName /listings/header.php
 ReadmeName /listings/footer.html
-IndexStyleSheet /listings/style.css
 

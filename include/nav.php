@@ -79,7 +79,6 @@ function addActiveIf($prefix)
                             <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
                                     Science</a>
                             </li>
-                            <li><a class="l" id="nr_n_phgy" href="http://allanwang.ca/notes/phgy/">Physiology</a></li>
                             <li>
                                 <div class="divider"></div>
                             </li>

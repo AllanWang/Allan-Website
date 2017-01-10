@@ -81,7 +81,7 @@
                         "Osmolarity – total solute concentration of solute – 1 osmol = 1 mol of solute",
                         "-1 mol glucose = 1 osmol	1 mol NaCl = 2 osmol",
                         "Osm = osmol/liter",
-                        "Ie saline drip – 0.9% saline = 0.15 NaCl = 300mOsm = same mOsm of body<br>6.7 atm = 5100 mmHg",
+                        "Ie saline drip – 0.9% saline = 0.15 NaCl = 300mOsm = same mOsm of body<br/>6.7 atm = 5100 mmHg",
                         "Isosmotic – solutions with same number of osmotically active particles",
                         "Hypoosmotic – solutions with lower number of osmotically active particles",
                         "Hyperosmotic – solutions with higher number of osmotically active particles",

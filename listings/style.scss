@@ -1,0 +1,87 @@
+@import "/bower_components/materialize/dist/css/materialize.min.css";
+@import "/include/css/style.css";
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+html {
+	min-height: 100%;
+	font-size: 1em;
+	line-height: 2em;
+}
+
+body {
+	padding: 20px;
+}
+a {
+	color: #61666c;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	&:hover {
+		color: #2a2a2a;
+	}
+}
+img {
+	border: none;
+	outline: none;
+}
+.wrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	max-width: 80%;
+}
+.block {
+	font-size: .875em;
+	margin: 20px 0;
+	padding: 20px;
+	color: #9099a3;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: .875em;
+}
+tr {
+	outline: 0;
+	border: 0;
+	&:hover td {
+		background: #f6f6f6;
+	}
+	td:first-of-type {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&.parent a[href^="/"] {
+		color: #9099a3;
+	}
+}
+th {
+	text-align: left;
+	font-size: .75em;
+	padding-right: 20px;
+	+ th {
+		width: 65%;
+		+ th + th {
+			width: 5%;
+		}
+	}
+}
+td {
+	padding: 5px 0;
+	outline: 0;
+	border: 0;
+	border-bottom: 1px solid #edf1f5;
+	vertical-align: middle;
+	text-align: left;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: background 300ms ease;
+	a {
+		display: block;
+	}
+}
+.footer {
+	text-align: center;
+	font-size: .75em;
+}
+.parent a[href^="/"]:hover {
+	color: #2281d0;
+}

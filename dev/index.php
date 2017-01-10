@@ -22,7 +22,7 @@ phpHeader();
     banner('android-n.jpg', 'Themes', 'Android Apps', 'Open Source');
     ?>
 
-    <div class="container" ng-cloak>
+    <div class="container">
         <div class="row" id="projects">
             <?php
 

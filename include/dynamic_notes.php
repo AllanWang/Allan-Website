@@ -20,6 +20,8 @@ const EXTRA = '#';
  */
 function dynamicBullets(...$notes)
 {
+    if (count($notes) == 0) return;
+    if (is_array($notes[0])) $notes = $notes[0]; //if array is passed rather than splat, use array
     echo MAIN . UL_START;
     $level = 0;
     $toClose = 0;
@@ -102,7 +104,7 @@ function echoItem($item, $level, $close)
 function br($count = 1)
 {
     for (; $count > 0; $count--) {
-        echo '<br>';
+        echo '<br/>';
     }
 }
 
@@ -142,6 +144,35 @@ function bulletTable(...$items)
     }
     $text = $text . '</table></tr>';
     return $text;
+}
+
+/**
+ * Prints a spy section with a lecture name
+ * @param $number number for lecture
+ * @param $date string date param
+ * @param array ...$notes the notes
+ */
+
+function lectureSection($number, $date, ...$notes)
+{
+    include($_SERVER['DOCUMENT_ROOT'] . '/views/lecture-notes.php');
+}
+
+function tableOfContentsData(array $links = null)
+{
+    if ($links == null) {
+        global $lectureNoteContents;
+        if (isset($lectureNoteContents)) {
+            foreach ($lectureNoteContents as $number) {
+                echo "<li><a href=\"#lecture-$number\">Lecture $number</a></li>";
+            }
+        } else {
+            echo '<li><a href="#">NO LINKS FOUND</a></li>';
+        }
+    }
+    foreach ($links as $id => $name) {
+        echo "<li><a href=\"#$id\">$name</a></li>";
+    }
 }
 
 ?>

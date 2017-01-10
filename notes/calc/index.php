@@ -110,16 +110,16 @@ phpNav(); ?>
                     <?php
                     table('Integral Test', "If f is a continuous function, it converges if and only if its integral also converges");
                     table('P-series Test', '\(\sum_{n=1}^\infty n^{-p}\) converges for all p > 1');
-                    table('Comparison Test', 'If a(n) is convergent and is always bigger than b(n) in an appropriate range, b(n) is also convergent.<br>If a(n) is divergent and is always smaller than b(n) in an appropriate range, b(n) is also divergent');
+                    table('Comparison Test', 'If a(n) is convergent and is always bigger than b(n) in an appropriate range, b(n) is also convergent.<br/>If a(n) is divergent and is always smaller than b(n) in an appropriate range, b(n) is also divergent');
                     table('Limit Comparison Test', 'For a(n) and b(n), where i and j are their respective limits towards infinity, if i/j = c > 0 and is finite, then both functions converge or diverge (same behaviour).');
                     table('Alternating Series Test', 'An alternating series is one where the terms switch signs for every adjacent term. The series converges if its sequence in absolute values is decreasing and if it approaches 0 as \(n \rightarrow \infty\)');
-                    table('Ratio Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \lvert \frac{a_{n+1}}{a_n} \rvert \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing<br>Used to find interval of convergence');
-                    table('Root Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \sqrt[n]{\lvert a_n \rvert} \)<br>If L < 1: series is absolutely convergent<br>If L > 1: series is divergent<br>If L = 1: need further testing');
+                    table('Ratio Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \lvert \frac{a_{n+1}}{a_n} \rvert \)<br/>If L < 1: series is absolutely convergent<br/>If L > 1: series is divergent<br/>If L = 1: need further testing<br/>Used to find interval of convergence');
+                    table('Root Test', 'For \(\sum a_n\), define \(L = \lim \limits_{n \to \infty} \sqrt[n]{\lvert a_n \rvert} \)<br/>If L < 1: series is absolutely convergent<br/>If L > 1: series is divergent<br/>If L = 1: need further testing');
                     ?>
                 </table>
             </div>
             <div class="row">
-                Finding Power Series <br>
+                Finding Power Series <br/>
                 <?php
                 bullets('See Power Series List above',
                     'Use integrals and derivatives to convert from known series',
@@ -130,7 +130,7 @@ phpNav(); ?>
             <div class="row">
                 <table class="h5 highlight">
                     <?php
-                    table("MacLaurin's Formula", 'Let \(f^{(m)}\) be the m<sup>th</sup> derivative of f(x)<br> \(f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} * x^n \)<br>If you stop at m &mdash; 1, \( R_m(x) = \frac{f^{[m]}(c) * x^n}{m!}, 0 \le c \le x\)');
+                    table("MacLaurin's Formula", 'Let \(f^{(m)}\) be the m<sup>th</sup> derivative of f(x)<br/> \(f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} * x^n \)<br/>If you stop at m &mdash; 1, \( R_m(x) = \frac{f^{[m]}(c) * x^n}{m!}, 0 \le c \le x\)');
                     table('Taylor Series', '\( f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n \)');
                     table('Arc Length', '\( \int \sqrt{1 + f\'(x)^2} dx \\\\ \int \sqrt{{x\'}^2 + {y\'}^2 + {z\'}^2} dt = \int ||r\'(t)||dt \)');
                     table_header_full('Vectors', 2);

@@ -16,7 +16,7 @@ phpHeader(); ?>
 <?php phpNav(); ?>
 
 <main>
-    <div class="container"><br>
+    <div class="container"><br/>
         <h2>Physiology 210</h2>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">

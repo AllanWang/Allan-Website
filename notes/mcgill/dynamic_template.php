@@ -16,7 +16,7 @@ phpHeader(); ?>
 <?php phpNav(); ?>
 
 <main>
-    <div class="container"><br>
+    <div class="container"><br/>
         <h2>Header</h2>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
@@ -49,7 +49,6 @@ phpHeader(); ?>
                     <?php
                     keywordPanel();
                     ?>
-
                 </div>
             </div>
         </div>

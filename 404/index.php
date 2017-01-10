@@ -45,7 +45,7 @@ if (isset($_GET['why'])) {
         //create new gravity item for every word
         $words = preg_split('/[^a-z0-9]/i', $error_tag);
         foreach ($words as $item) {
-            if ($item == 'br') echo '<br>';
+            if ($item == 'br') echo '<br/>';
             else echo "<div class=\"gravity\">${item}</div>";
         }
         ?>

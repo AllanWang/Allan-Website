@@ -4,11 +4,13 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
         <item url="file://$PROJECT_DIR$/include/js/init.min.js" />
+        <item url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
       <root url="file://$PROJECT_DIR$/include/js/init.min.js" />
+      <root url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
     </CLASSES>
     <SOURCES />
   </library>
