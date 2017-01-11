@@ -3,9 +3,9 @@
 
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-$page_title = "Java";
-$page_description = "An introduction to java";
-$navFrom = 'n_java';
+$page_title = "F#";
+$page_description = "An Introduction to " . $page_title;
+$navFrom = 'n_fsharp';
 //$navTo = 'commons';
 $theme_color = "#387FB5"; //java blue
 
@@ -21,13 +21,18 @@ phpNav(); ?>
         <div class="light row" id="commons">
             <div class="col s12 m9 l10">
 
-                <h3 class="header center">Intro to Java</h3>
-                <h6 class="center">A <a href="https://en.wikipedia.org/wiki/Concurrent_computing" target="_blank">concurrent</a>,
-                    <a href="https://en.wikipedia.org/wiki/Class-based_programming" target="_blank">class-based</a>, and
+                <h3 class="header center">Intro to F#</h3>
+                <h6 class="center">A <a href="https://en.wikipedia.org/wiki/Strongly_typed_programming_language"
+                                        target="_blank">strongly typed</a>,
+                    <a href="https://en.wikipedia.org/wiki/Multi-paradigm_programming_language" target="_blank">multi-paradigm</a>
+                    programming language that encompasses
+                    <a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank">functional</a>,
+                    <a href="https://en.wikipedia.org/wiki/Imperative_programming" target="_blank">imperative</a>, and
                     <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"
-                       target="_blank">object-oriented</a> programming
-                    language<br/><br/><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-                                       target="_blank">Java
+                       target="_blank">object-oriented</a>
+                    programming techniques<br/><br/><a
+                            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+                            target="_blank">Java
                         SE</a>&emsp;&bull;&emsp;<a
                             href="https://www.eclipse.org/downloads/" target="_blank">Eclipse</a>&emsp;&bull;&emsp;<a
                             href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ</a></h6>
