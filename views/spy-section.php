@@ -1,7 +1,7 @@
 <?php
 
+//add data to content array
 global $tocData;
-if (!isset($tocData)) $tocData = array();
 $tocData[$id] = $name;
 
 ?>
