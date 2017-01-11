@@ -161,17 +161,16 @@ function lectureSection($number, $date, ...$notes)
 function tableOfContentsData(array $links = null)
 {
     if ($links == null) {
-        global $lectureNoteContents;
-        if (isset($lectureNoteContents)) {
-            foreach ($lectureNoteContents as $number) {
-                echo "<li><a href=\"#lecture-$number\">Lecture $number</a></li>";
-            }
+        global $tocData;
+        if (isset($tocData)) {
+            $links = $tocData;
         } else {
             echo '<li><a href="#">NO LINKS FOUND</a></li>';
+            return;
         }
     }
-    foreach ($links as $id => $name) {
-        echo "<li><a href=\"#$id\">$name</a></li>";
+    foreach ($links as $id => $text) {
+        echo "<li><a href=\"#$id\">$text</a></li>";
     }
 }
 
