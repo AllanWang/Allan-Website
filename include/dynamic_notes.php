@@ -155,7 +155,16 @@ function bulletTable(...$items)
 
 function lectureSection($number, $date, ...$notes)
 {
-    include($_SERVER['DOCUMENT_ROOT'] . '/views/lecture-notes.php');
+    if (count($notes) == 0) return;
+    if (is_array($notes[0])) $notes = $notes[0]; //if array is passed rather than splat, use array
+    scrollSpySection('lecture-' . $number, 'Lecture ' . $number, 'Lecture ' . $number . '&ensp;&bull;&ensp;' . $date, $notes);
+}
+
+function scrollSpySection($id, $name, $header, ...$notes)
+{
+    if (count($notes) == 0) return;
+    if (is_array($notes[0])) $notes = $notes[0]; //if array is passed rather than splat, use array
+    include($_SERVER['DOCUMENT_ROOT'] . '/views/spy-section.php');
 }
 
 function tableOfContentsData(array $links = null)
