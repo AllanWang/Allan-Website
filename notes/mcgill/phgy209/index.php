@@ -21,7 +21,7 @@ phpHeader(); ?>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                scrollSpySection("water", "H<sub>2</sub>O", "H<sub>2</sub>O", "45% - 75%", "Key solvent; where metabolic reactions take place",
+                scrollSpySection("water", "H<sub>2</sub>O", "H<sub>2</sub>O", "45% – 75%", "Key solvent; where metabolic reactions take place",
                     "Variation by {body-composition|body composition}",
                     "-#" . bulletTable("Skin", "70%"),
                     "-#" . bulletTable("Muscle", "75%"),
