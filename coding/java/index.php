@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Java";
 $page_description = "An Introduction to " . $page_title;
-$navFrom = 'n_java';
+$navFrom = 'cn_java';
 //$navTo = 'commons';
 $theme_color = "#387FB5"; //java blue
 

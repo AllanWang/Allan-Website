@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "F#";
 $page_description = "An Introduction to " . $page_title;
-$navFrom = 'n_fsharp';
+$navFrom = 'cn_fsharp';
 //$navTo = 'commons';
 $theme_color = "#387FB5"; //java blue
 

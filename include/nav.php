@@ -82,12 +82,6 @@ function addActiveIf($prefix)
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="l" id="nr_n_git" href="http://allanwang.ca/notes/dev/git/">Git Bash</a></li>
-                            <li><a class="l" id="nr_n_java" href="http://allanwang.ca/notes/dev/java/">Java</a></li>
-                            <li><a class="l" id="nr_n_fsharp" href="http://allanwang.ca/notes/dev/fsharp/">F#</a></li>
-                            <li>
-                                <div class="divider"></div>
-                            </li>
                             <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
                                     251</a></li>
                             <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math
@@ -98,6 +92,16 @@ function addActiveIf($prefix)
                             <li><a class="l" id="nr_n_phgy_210" href="http://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy
                                     210</a></li>
 
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header l <?php addActiveIf('cn_') ?>">Coding Notes<i class="material-icons right">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a class="l" id="nr_cn_git" href="http://allanwang.ca/coding/git/">Git Bash</a></li>
+                            <li><a class="l" id="nr_cn_java" href="http://allanwang.ca/coding/java/">Java</a></li>
+                            <li><a class="l" id="nr_cn_fsharp" href="http://allanwang.ca/coding/fsharp/">F#</a></li>
                         </ul>
                     </div>
                 </li>

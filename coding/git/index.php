@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Git Cheat Sheet";
 $page_description = "List of common git commands";
-$navFrom = 'n_git';
+$navFrom = 'cn_git';
 //$navTo = 'commons';
 $theme_color = "#4078c0"; //github blue
 
