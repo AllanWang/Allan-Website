@@ -310,6 +310,7 @@ phpHeader(); ?>
                         </label>
                     </div>
                     <ul class="section table-of-contents">
+                        <li><a href="#keypanel"><i class="material-icons tiny">vpn_key</i> Key Panel</a></li>
                         <?php
                         tableOfContentsData();
                         ?>

@@ -95,6 +95,8 @@ function addActiveIf($prefix)
                             </li>
                             <li><a class="l" id="nr_n_phgy_209" href="http://allanwang.ca/notes/mcgill/phgy209/">Phgy
                                     209</a></li>
+                            <li><a class="l" id="nr_n_phgy_210" href="http://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy
+                                    210</a></li>
 
                         </ul>
                     </div>

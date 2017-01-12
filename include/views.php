@@ -15,6 +15,10 @@ function appCard($cardTitle, $cardDesc, $cardImage, array $cardPoints, array $ca
     include($_SERVER['DOCUMENT_ROOT'] . '/views/app-card.php');
 }
 
+function tableOfContents($showKeyPanel = false) {
+    include($_SERVER['DOCUMENT_ROOT'] . '/views/table-of-contents.php');
+}
+
 function banner($image, ...$key_codes)
 {
     global $n_key;
