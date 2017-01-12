@@ -96,7 +96,8 @@ function addActiveIf($prefix)
                     </div>
                 </li>
                 <li>
-                    <a class="collapsible-header l <?php addActiveIf('cn_') ?>">Coding Notes<i class="material-icons right">arrow_drop_down</i></a>
+                    <a class="collapsible-header l <?php addActiveIf('cn_') ?>">Coding Notes<i
+                                class="material-icons right">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a class="l" id="nr_cn_git" href="http://allanwang.ca/coding/git/">Git Bash</a></li>
