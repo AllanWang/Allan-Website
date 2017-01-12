@@ -21,7 +21,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date)?>
                 <?php
                 dynamicBullets('Parathyroid glands help maintaing Ca<sup>++</sup> concentrations with negative feedback loops');
 
-                scrollSpySection('piqtuitary-gland', 'Pituitary Gland', 'Pituitary Gland',
+                scrollSpySection('pituitary-gland', 'Pituitary Gland', 'Pituitary Gland',
                     'Two distinctly different tissues',
                     "-Adenohypophysis – aka anterior pituitary, pars distalis",
                     "-Neurohypophysis – aka posterior pituitary, pars nervosa",

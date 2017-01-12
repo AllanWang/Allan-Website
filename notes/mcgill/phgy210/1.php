@@ -18,7 +18,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                lectureSection(1, '2017/01/04',
+                scrollSpySection('lec-1', 'Lecture 1', null,
                     "#Endocrine – long distance",
                     "#Paracrine – short distance, ie neighbouring cell",
                     "#Autocrine – self, eg growth factor",
