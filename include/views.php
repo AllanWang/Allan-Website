@@ -15,7 +15,7 @@ function appCard($cardTitle, $cardDesc, $cardImage, array $cardPoints, array $ca
     include($_SERVER['DOCUMENT_ROOT'] . '/views/app-card.php');
 }
 
-function tableOfContents($showKeyPanel = false) {
+function tableOfContents($showCollapse = false) {
     include($_SERVER['DOCUMENT_ROOT'] . '/views/table-of-contents.php');
 }
 

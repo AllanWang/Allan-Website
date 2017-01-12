@@ -37,7 +37,7 @@ phpNav(); ?>
                     ?>
 
                 </h6>
-                <div id="data-types" class="section scrollspy">
+                <div <?php scrollSpyHeaderData("Data Types") ?>>
                     <table class="highlight">
                         <?php
                         table_header('Primitive Data Type', 'Bit Size', 'Range', 'Default Value');
@@ -104,16 +104,10 @@ phpNav(); ?>
                     ?>
                 </div>
             </div>
-            <div class="col hide-on-small-only m3 l2">
-                <div class="pinned vertical-center">
-                    <ul class="section table-of-contents">
-                        <li><a href="#data-types">Data Types</a></li>
-                        <?php
-                        tableOfContentsData();
-                        ?>
-                    </ul>
-                </div>
-            </div>
+            <?php
+            tableOfContents();
+            ?>
+
         </div>
     </div>
 </main>

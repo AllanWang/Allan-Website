@@ -54,16 +54,9 @@ phpNav(); ?>
                 ?>
 
             </div>
-            <div class="col hide-on-small-only m3 l2">
-                <div class="pinned vertical-center">
-                    <ul class="section table-of-contents">
-                        <!--<li><a href="#keypanel"><i class="material-icons tiny">vpn_key</i> Key Panel</a></li>-->
-                        <?php
-                        tableOfContentsData();
-                        ?>
-                    </ul>
-                </div>
-            </div>
+            <?php
+            tableOfContents();
+            ?>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php

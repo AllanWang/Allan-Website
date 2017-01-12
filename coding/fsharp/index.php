@@ -51,15 +51,9 @@ phpNav(); ?>
                 </div>
 
             </div>
-            <div class="col hide-on-small-only m3 l2">
-                <div class="pinned vertical-center">
-                    <ul class="section table-of-contents">
-                        <?php
-                        tableOfContentsData();
-                        ?>
-                    </ul>
-                </div>
-            </div>
+            <?php
+            tableOfContents();
+            ?>
         </div>
     </div>
 </main>

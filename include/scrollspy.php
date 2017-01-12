@@ -1,18 +1,14 @@
 <?php
 
 
-function tableOfContentsData(array $links = null)
+function tableOfContentsData()
 {
-    if ($links == null) {
-        global $tocData;
-        if (isset($tocData)) {
-            $links = $tocData;
-        } else {
-            echo '<li><a href="#">NO LINKS FOUND</a></li>';
-            return;
-        }
+    global $tocData;
+    if (!isset($tocData)) {
+        echo '<li><a href="#">NO LINKS FOUND</a></li>';
+        return;
     }
-    foreach ($links as $id => $text) {
+    foreach ($tocData as $id => $text) {
         echo "<li><a href=\"#$id\">$text</a></li>";
     }
 }
