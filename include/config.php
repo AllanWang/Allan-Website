@@ -7,6 +7,7 @@ $cssArr = array();
 include_once('bullets.php');
 include_once('tables.php');
 include_once('views.php');
+include_once('scrollspy.php');
 
 function phpHeader($anon_function = null)
 {
@@ -97,4 +98,7 @@ function lighterColor($hex, $weight = 0.3)
     return '#' . dechex($r) . dechex($g) . dechex($b);
 }
 
+function linkNewTab($text, $url) {
+    return '<a href="' . $url . '" target="_blank">' . $text . '</a>';
+}
 ?>

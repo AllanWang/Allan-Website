@@ -21,7 +21,14 @@ phpNav(); ?>
         <div class="section">
             <div class="row" id="commons">
                 <h3 class="header center">Git Cheat Sheet</h3>
-                <h6 class="center">Sample Android .gitignore can be found <a href=".gitignore" target="_blank">here</a></h6>
+                <h6 class="center">
+                    <?php
+                    inlineBullets(array(
+                        "Git Download" => "https://git-scm.com/downloads",
+                        "Sample Android .gitignore" => ".gitignore"
+                    ));
+                    ?>
+                </h6>
                 <table class="light h5 highlight">
                     <?php
 
@@ -52,7 +59,7 @@ phpNav(); ?>
 
                     table_header('Aliases', 'Custom Commands');
                     table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push origin master; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
-                    
+
                     table_header('Pull Issues', 'Solution');
                     table('Your local changes to the following files would be overwritten by merge', 'Add all your files and commit it; you can pull again afterwards');
                     table('# Please enter a commit message to explain why this merge is necessary', 'Press Insert to toggle between insert and replace in the editor<br/>Press esc to exit to a command<br/>While in the command section, type ":wq" and press enter to save and exit.');

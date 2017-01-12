@@ -124,7 +124,7 @@ function keywordPanel(...$items)
     $first = true;
     foreach ($items as $item) {
         //default id is input in lower case with no spaces
-        $pair = array(strtolower(preg_replace('/ /', '-', $item)), $item);
+        $pair = array(strtolower(preg_replace('/\s+/', '-', $item)), $item);
         if (strpos($item, '|') !== false) $pair = explode('|', $item);
         if ($first) $first = false;
         else echo '&ensp;&bull;&ensp;'; //space bullet space
@@ -165,22 +165,6 @@ function scrollSpySection($id, $name, $header, ...$notes)
     if (count($notes) == 0) return;
     if (is_array($notes[0])) $notes = $notes[0]; //if array is passed rather than splat, use array
     include($_SERVER['DOCUMENT_ROOT'] . '/views/spy-section.php');
-}
-
-function tableOfContentsData(array $links = null)
-{
-    if ($links == null) {
-        global $tocData;
-        if (isset($tocData)) {
-            $links = $tocData;
-        } else {
-            echo '<li><a href="#">NO LINKS FOUND</a></li>';
-            return;
-        }
-    }
-    foreach ($links as $id => $text) {
-        echo "<li><a href=\"#$id\">$text</a></li>";
-    }
 }
 
 ?>

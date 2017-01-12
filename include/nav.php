@@ -82,9 +82,9 @@ function addActiveIf($prefix)
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="l" id="nr_n_git" href="http://allanwang.ca/notes/programming/git/">Git Bash</a></li>
-                            <li><a class="l" id="nr_n_java" href="http://allanwang.ca/notes/programming/java/">Java</a></li>
-                            <li><a class="l" id="nr_n_fsharp" href="http://allanwang.ca/notes/programming/fsharp/">F#</a></li>
+                            <li><a class="l" id="nr_n_git" href="http://allanwang.ca/notes/dev/git/">Git Bash</a></li>
+                            <li><a class="l" id="nr_n_java" href="http://allanwang.ca/notes/dev/java/">Java</a></li>
+                            <li><a class="l" id="nr_n_fsharp" href="http://allanwang.ca/notes/dev/fsharp/">F#</a></li>
                             <li>
                                 <div class="divider"></div>
                             </li>

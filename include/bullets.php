@@ -9,7 +9,7 @@ function inlineBullets(array $pairs)
         } else {
             $first = false;
         }
-        echo '<a href="' . $link . '" target="_blank">' . $name . '</a>';
+        echo linkNewTab($name, $link);
     }
 }
 
@@ -25,4 +25,5 @@ function bullets(...$items)
         echo "&ensp;&bull;&ensp;$item<br/>";
     }
 }
+
 ?>
