@@ -2,7 +2,7 @@
 //Before other loads; sets common global vars and functions
 $minLecture = 1;
 $maxLecture = 2;
-$lecture_number=0;
+$lecture_number = 0;
 global $n_key, $navFrom, $theme_color;
 $n_key = "Physiology 210";
 $navFrom = 'n_phgy_210';
@@ -16,7 +16,8 @@ $baseUrl = 'http://allanwang.ca/notes/mcgill/phgy210/';
  * @param $phpServer string from server pointing to php file
  * @param $date string representing lecture date
  */
-function hook($phpServer, $date) {
+function hook($phpServer, $date)
+{
     global $lecture_number, $page_title, $page_description;
     $lecture_number = basename($phpServer, '.php');
     $page_title = "Phgy 210 Lec $lecture_number";
@@ -41,7 +42,7 @@ function chevron($isLeft, $current)
         global $minLecture;
         if ($minLecture >= $current) {
             $class = 'disabled';
-            $url = '#';
+            $url = '#" onclick="return false;';
         } else {
             $class = 'waves-effect';
             $url = getLecture($current - 1);
@@ -51,7 +52,7 @@ function chevron($isLeft, $current)
         global $maxLecture;
         if ($maxLecture <= $current) {
             $class = 'disabled';
-            $url = '#';
+            $url = '#" onclick="return false;';
         } else {
             $class = 'waves-effect';
             $url = getLecture($current + 1);
@@ -71,7 +72,7 @@ function pagination()
 {
     global $minLecture, $maxLecture, $lecture_number;
 
-    echo '<ul class="pagination">';
+    echo '<ul id="pagination" class="pagination">';
     chevron(true, $lecture_number);
     foreach (range($minLecture, $maxLecture) as $lecture) {
         number($lecture, $lecture_number);
