@@ -4,8 +4,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
-
-hook($_SERVER['PHP_SELF'], '2017/01/04') ?>
+$lecture_date = '2017/';
+hook($_SERVER['PHP_SELF'], $lecture_date) ?>
 
 <body>
 
@@ -18,7 +18,9 @@ hook($_SERVER['PHP_SELF'], '2017/01/04') ?>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                scrollSpySection();
+                scrollSpySection(
+
+                );
 
                 pagination();
                 ?>
@@ -29,7 +31,9 @@ hook($_SERVER['PHP_SELF'], '2017/01/04') ?>
             <div id=" keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                    keywordPanel();
+                    keywordPanel(
+
+                    );
                     ?>
 
                 </div>

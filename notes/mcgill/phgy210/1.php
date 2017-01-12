@@ -4,8 +4,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
-
-hook($_SERVER['PHP_SELF'], '2017/01/04')?>
+$lecture_date = '2017/01/04';
+hook($_SERVER['PHP_SELF'], $lecture_date) ?>
 
 <body>
 
@@ -14,6 +14,7 @@ hook($_SERVER['PHP_SELF'], '2017/01/04')?>
 <main>
     <div class="container"><br/>
         <h2>Physiology 210</h2>
+        <h4>Lecture <?php echo $lecture_number . '&ensp;&bull;&ensp;' . $lecture_date ?></h4>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php

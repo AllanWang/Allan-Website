@@ -4,12 +4,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
-$lecture_number = 2;
 $lecture_date = '2017/01/06';
-$page_title = "PHGY210 $lecture_number";
-$page_description = "Physiology 210 Notes - Lecture $lecture_date - $lecture_number";
-dynamicNotes();
-phpHeader(); ?>
+hook($_SERVER['PHP_SELF'], $lecture_date)?>
 
 <body>
 
