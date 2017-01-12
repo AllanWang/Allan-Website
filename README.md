@@ -16,4 +16,6 @@ This website would not be possible without the following notable dependencies/ar
 * [Article by Perishable Press](https://perishablepress.com/better-default-directory-views-with-htaccess/) - Better Default Directory Views with HTAccess
     * Useful info on .htaccess and security
         
+Along with [PHP](http://php.net/), this project makes use of [SCSS](http://sass-lang.com/) and [TypeScript](https://www.typescriptlang.org/).
+
 Typings used are courtesy of the [TypeScript Definition Manager](https://github.com/typings/typings)
