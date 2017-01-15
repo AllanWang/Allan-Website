@@ -57,6 +57,7 @@ phpNav(); ?>
                     table('git diff', 'view merge issues');
                     table('git tag [tag] [commitID]', 'tag a specific commit');
                     table('git reset --soft HEAD~[number]', 'moves the HEAD [number] commits back without changing any files locally; useful for undoing commits or combining multiple commits into one');
+                    table('git branch --set-upstream-to origin/[my branch]', 'sets default pull to go to [my branch]; instead of using git pull origin [my branch], git pull will suffice');
 
                     table_header('Aliases', 'Custom Commands');
                     table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push origin master; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
