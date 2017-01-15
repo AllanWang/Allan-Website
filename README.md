@@ -19,5 +19,3 @@ This website would not be possible without the following notable dependencies/ar
 Along with [PHP](http://php.net/), this project makes use of [SCSS](http://sass-lang.com/) and [TypeScript](https://www.typescriptlang.org/).
 
 Typings used are courtesy of the [TypeScript Definition Manager](https://github.com/typings/typings)
-
-a
