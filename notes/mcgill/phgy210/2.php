@@ -19,11 +19,11 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
             <div id="notes-container" class="col s12 m9 l10">
 
                 <?php
-                dynamicBullets('Parathyroid glands help maintaing Ca<sup>++</sup> concentrations with negative feedback loops');
+                dynamicBullets('#Parathyroid glands help maintaing Ca<sup>++</sup> concentrations with negative feedback loops');
 
                 scrollSpySection('pituitary-gland', 'Pituitary Gland', 'Pituitary Gland',
                     'Two distinctly different tissues',
-                    "-Adenohypophysis – aka anterior pituitary, pars distalis",
+                    "-{adenohypophysis|Adenohypophysis} – aka anterior pituitary, pars distalis",
                     "-Neurohypophysis – aka posterior pituitary, pars nervosa",
                     "--Outgrowth of hypothalamus connected by pituitary stalk",
                     "--Secretes oxytocin & vasopressin (aka ADH – antiduretic hormone)",
@@ -31,7 +31,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
                     "--Prohormones processed in secretory granules during axonal transport",
                     "--Mature hormones liberated from carrier molecules neurophysins",
                     "--Circulating half lives – 1-3 minutes",
-                    "--Oxytocin – involved in reproductive biology",
+                    "--{oxytocin|Oxytocin} – involved in reproductive biology",
                     "---Females",
                     "----Parturition (childbirth) – expresses high levels of receptors for oxytocin at the end of pregnancy",
                     "-----Dilation of uterine cervix by fetal head &rarr; release of oxytocin &rarr; uterine contraction, assisting expulsion of fetus",
@@ -149,7 +149,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                    keywordPanel();
+                    keywordPanel('adenohypophysis|Adeno/Neurohypophysis', 'Oxytocin');
                     ?>
 
                 </div>
