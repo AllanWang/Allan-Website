@@ -1,8 +1,8 @@
 <?php
 //Before other loads; sets common global vars and functions
 $minLecture = 1;
-$maxLecture = 2;
-$lecture_number = 0;
+$maxLecture = 4;
+$lecture_number = -1;
 global $n_key, $navFrom, $theme_color;
 $n_key = "Physiology 210";
 $navFrom = 'n_phgy_210';
