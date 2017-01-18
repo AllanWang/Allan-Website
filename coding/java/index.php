@@ -80,6 +80,13 @@ phpNav(); ?>
                         simply add parantheses:
                         <pre><code class="java"><?php echo "int a = 5, b = 7;\nSystem.out.println(\"a + b = \" + (a + b));" ?></code></pre>
                     </div>
+                    <pre><code class="java"><?php echo "String[] a = new String[3]\nfor (int i = a.length; i > 0; i--)\n\t//do something" ?></code></pre>
+                    <div class="indent">
+                        ArrayIndexOutOfBoundsExceptions are always a common source of errors in intro Java courses. Keep
+                        in mind that valid indices for any array start at 0 and end at one less than their length.
+                        The example above was relatively simple, but there are harder cases:
+                        <pre><code class="java"><?php echo "int[][] a = new int[][]{{1, 2, 3}, {1, 3, 9}, {1}, {0, -1}};\nint b = a[0].length;\nfor (int i = 0; i < a.length; i++) {\n\tfor (int j = 0; j < b; j++) {\n\t\tSystem.out.println(a[i][j]);\n\t}\n}" ?></code></pre>
+                    </div>
 
                 </div>
                 <div <?php scrollSpyHeaderData("Object References") ?>>
