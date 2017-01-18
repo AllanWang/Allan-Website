@@ -97,4 +97,8 @@
         background-color: <?php echo $theme_color?>;
         left: 24px;
     }
+
+    .pagination li.active {
+        background-color: <?php echo $theme_color?>;
+    }
 </style>

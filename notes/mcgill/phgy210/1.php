@@ -46,7 +46,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
                     "-#Transcription of rna from gene",
                     "-#Protein produced is inserted into endoplasmic reticulum",
                     "-#Proteins are transformed from N terminus to C terminus",
-                    "--#Preprosequence – additional sequence on N terminus ",
+                    "--#{preprosequence|Preprosequence} – additional sequence on N terminus ",
                     "---#Not in biologically active hormone",
                     "---#Present in primary translation product of that hormone",
                     "---#Represent molecular barcodes that direct protein to secretory system",
@@ -86,7 +86,7 @@ hook($_SERVER['PHP_SELF'], $lecture_date) ?>
             <div id="keypanel" class="modal bottom-sheet">
                 <div class="modal-content">
                     <?php
-                    keywordPanel('com-b-h|Communication by hormones');
+                    keywordPanel('com-b-h|Communication by hormones', 'Preprosequence');
                     ?>
 
                 </div>

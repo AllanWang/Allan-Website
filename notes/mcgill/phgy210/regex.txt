@@ -10,6 +10,6 @@
 
 Notepad++, multi replace w/ regex   arrows, dash, ion charges
 
-(&u )|(&d )|(&r )|(&l )|(-=)|(Na\+)|(H\+)|(K\+)|(Ca\+\+)|(Cl-)|(H2O)
+(&u )|(&d )|(&r )|(&l )|(-=)|(Na\+)|(H\+)|(K\+)|(Ca\+\+)|(Cl-)|(H2O)|(->)
 
-(?1&uarr; )(?2&darr; )(?3&rarr; )(?4&larr; )(?5–)(?6Na<sup>+</sup>)(?7H<sup>+</sup>)(?8K<sup>+</sup>)(?9Ca<sup>++</sup>)(?10Cl<sup>-</sup>)(?11H<sub>2</sub>O)
+(?1&uarr; )(?2&darr; )(?3&rarr; )(?4&larr; )(?5–)(?6Na<sup>+</sup>)(?7H<sup>+</sup>)(?8K<sup>+</sup>)(?9Ca<sup>++</sup>)(?10Cl<sup>-</sup>)(?11H<sub>2</sub>O)(?12&rarr;)
