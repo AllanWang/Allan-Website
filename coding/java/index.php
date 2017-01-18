@@ -70,7 +70,7 @@ phpNav(); ?>
                     <h5>Object References</h5>
                     <p>It is very important to distinguish the difference between a reference variable and something
                         like a
-                        primitive variable. Objects are accessed through reference variables, which are like a pointers
+                        primitive variable. Objects are accessed through reference variables, which are pointers
                         pointing to the actual objects. A pointer itself can be changed to point to a different object
                         (unless it is declared final), and can also point to the same object as another reference
                         variable.</p>
@@ -92,9 +92,9 @@ phpNav(); ?>
                         they are
                         objects, Strings are immutable, so whenever they are modified, a new object is generated and
                         pointed
-                        to be the reference variable. Therefore, the original String passed will never be modified by
+                        to from the reference variable. Therefore, the original String passed will never be modified by
                         other
-                        methods. The same behaviour can be seen in class such as BigInteger.
+                        methods. The same behaviour can be seen in other classes such as BigInteger.
                     </p>
                     <p>Below is a sample class that shows how objects are affected when
                         passed through other methods and modified. Feel free to copy it and run it to see the
