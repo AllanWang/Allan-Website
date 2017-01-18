@@ -1,4 +1,6 @@
 *.pdf
+*.min.js
+*.min.css
 
 # User-specific stuff:
 .idea/workspace.xml
