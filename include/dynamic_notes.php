@@ -146,6 +146,12 @@ function bulletTable(...$items)
     return $text;
 }
 
+function bulletTablePair($first, $second, $firstWidth = 50) {
+    ob_start();
+    include($_SERVER['DOCUMENT_ROOT'] . "/views/bullet-table-pair.php");
+    return ob_get_clean();
+}
+
 /**
  * Prints a spy section with a lecture name
  * @param $number number for lecture

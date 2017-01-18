@@ -84,6 +84,8 @@ function addActiveIf($prefix)
                             </li>
                             <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
                                     251</a></li>
+                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp273/">Comp
+                                    273</a></li>
                             <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math
                                     240</a>
                             </li>

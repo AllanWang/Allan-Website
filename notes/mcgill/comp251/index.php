@@ -7,7 +7,7 @@ $page_title = "Comp 251";
 $page_description = "Comp 251 - Winter 2017";
 $navFrom = 'n_comp_251';
 //$navTo = 'commons';
-$theme_color = "#4078c0"; //github blue
+$theme_color = "#F44336"; //red
 dynamicNotes('php');
 phpHeader(); ?>
 <body>

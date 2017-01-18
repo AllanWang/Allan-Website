@@ -1,161 +1,28 @@
-<div id="diffusion" class="section scrollspy">
-                    <h5>Diffusion</h5>
-                    <?php
-                    dynamicBullets(
-                        "Resulting from random thermal molecular motion",
-                        "Net flux = high  low concentration",
-                        "If permeable, can go through membrane",
-                        "J = PA(C0 – Ci)",
-                        "-J – net flux across membrane",
-                        "-P – permeability/diffusion coefficient of membrane",
-                        "-A – surface area of membrane",
-                        "-C0 – Ci – concentration gradient of diffusing molecule",
-                        "-Diffusion time increases in proportion to the square of the distance",
-                        "Dissolve through lipid components for non-polar molecules and through channels for ions"
-                    );
-                    ?>
-                </div>
-                <div id="ion-channels" class="section scrollspy">
-                    <h5>Ion channels</h5>
-                    <?php
-                    dynamicBullets(
-                        "Consist of single protein or clusters of proteins",
-                        "Show selectivity based on diameter & distribution of charges",
-                        "Movement affected by electrochemical (electrical & concentration) gradient",
-                        "Ligand-gated, voltage-gated, mechanically-gated",
-                        "Channels: Na+, K+, Ca+, Cl-",
-                        "Number of ions flowing through channels generating ionic current depends on",
-                        "-Channel conductance",
-                        "-How often channel opens",
-                        "-How long channel stays open"
-                    );
-                    ?>
-                </div>
-                <div id="carrier-mediated-transport" class="section scrollspy">
-                    <h5>Carrier-mediated transport</h5>
-                    <?php
-                    dynamicBullets(
-                        "Specificity – usually transports one type of molecule only",
-                        "Saturation – rate of transport reaches maximum when all binding sites on all transporters are occupied; limit – transport maximum (Tm) exists",
-                        "Competition – structurally similar substances compete for same binding site on carrier",
-                        "Facilitated diffusion – carrier enables solute to penetrate more readily – passive",
-                        "-Solute binds to carrier  changes carrier configuration  solute is delivered to other side of membrane  carrier resumes original configuration",
-                        "-Ie for glucose, insulin increases number of transporters",
-                        "Active transport",
-                        "-Requires chemical energy (usually ATP)",
-                        "-Susceptible to metabolic inhibitors",
-                        "-Can transport against concentration gradient",
-                        "-Primary active transport",
-                        "--Chemical energy transferred directly from ATP",
-                        "--Phosphorylation of transporter changes conformation & affinity of binding site",
-                        "--Ie sodium potassium pump – 3Na+ out, 2K+ in",
-                        "-osmosis",
-                        "Active – energy dependent – carrier-mediated active transport (primary & secondary), pino/phagocytosis",
-                        "Sodium potassium pump",
-                        "-Phosphorylation of pump  change in conformation  affinity for Na+ decreases",
-                        "Other active transporter proteins – Ca-ATPase, H-ATPase, H/K ATPase",
-                        "Secondary Active Transport – relies on electrochemical gradient to bring along another solute",
-                        "-Ie glucose transported with Na+",
-                        "-Cotransport – both solutes move in the same direction",
-                        "--Na+/glucose, Na+/amino acids",
-                        "-Countertransport – solutes move in different directions",
-                        "--Na+/Ca+, Na+/H+, Cl-/HCO3-",
-                        "Endocytosis – cell membrane invaginates, forming channel, pinching off to form vesicle",
-                        "-Pinocytosis (Fluid endocytosis) – ingestion of dissolved materials, liquid contents slowly transferred to the cytosol – not selective",
-                        "-Phagocytosis – ingestion of solid particles, particles pinched into phagocytic vacuole (phagosome) – fuses with lysosomes and then degraded",
-                        "-Receptor-mediated",
-                        "--Clathrin-dependent receptor-mediated endocytosis",
-                        "--Potocytosis",
-                        "Exocytosis – diffusion of vesicle, releasing content in ECF"
-                    );
-                    ?>
-                </div>
-                <div id="osmosis" class="section scrollspy">
-                    <h5>Osmosis – diffusion of water</h5>
-                    <?php
-                    dynamicBullets(
-                        "Water diffuses freely across most cell membranes",
-                        "Aquaporins – groups of proteins facilitating osmosis – forms water permeable channels",
-                        "Osmosis – net movement of H2O across semipermeable membrane",
-                        "Osmotic pressure – pressure required to oppose the movement of water across a semipermeable membrane",
-                        "Osmolarity – total solute concentration of solute – 1 osmol = 1 mol of solute",
-                        "-1 mol glucose = 1 osmol	1 mol NaCl = 2 osmol",
-                        "Osm = osmol/liter",
-                        "Ie saline drip – 0.9% saline = 0.15 NaCl = 300mOsm = same mOsm of body<br/>6.7 atm = 5100 mmHg",
-                        "Isosmotic – solutions with same number of osmotically active particles",
-                        "Hypoosmotic – solutions with lower number of osmotically active particles",
-                        "Hyperosmotic – solutions with higher number of osmotically active particles",
-                        "Only nonpenetrating particles can exert osmotic pressure",
-                        "-Extracellular Na+ is nonpenetrating as it is pumped out after moving in",
-                        "Isotonic – cell retains size",
-                        "Hypotonic – cell swells",
-                        "Hypertonic – cell shrinks"
-                    );
-                    ?>
-                </div>
-                <div id="capillaries" class="section scrollspy">
-                    <h5>Capillaries</h5>
-                    <?php
-                    dynamicBullets(
-                        "Single layer of flattened endothelial cells & supporting basement membrane",
-                        "Diffusion through water filled channels & across cell membranes",
-                        "Pinocytosis/exocytosis – endocytosis & vesicle formation on luminal side  exocytosis & vesicle release on interstitial side",
-                        "Bulk flow – flow of molecules due to pressure difference (ultra filtration)",
-                        "Filtration – bulk flow across porous membrane (acts like sieve) withholding some particles"
-                    );
-                    ?>
-                </div>
-                <div id="blood" class="section scrollspy">
-                    <h5>Blood</h5>
-                    <?php
-                    dynamicBullets(
-
-                        "Transport – nutritive, respiratory, excretory, hormone transport, temperature regulation",
-                        "Acid-base balance – normal pH range 7.30-7.45",
-                        "Protective",
-                        "Contains both ECF (plasma) & ICF (inside blood cells)",
-                        "May be studied in vivo & in vitro",
-                        "Accounts for ~7% of body mass = ~5L",
-                        "Normovolemia – normal blood volume",
-                        "Hypovolemia – lower blood volume",
-                        "Hypervolemia – higher blood volume",
-                        "Centrifuged blood – 55% plasma (yellow), ~0% buffy layer (WBCs, platelets), 45% RBCs",
-                        "Hematocrit"
-
-                    );
-                    ?>
-                </div>
-                <div id="plasma" class="section scrollspy">
-                    <h5>Plasma</h5>
-                    <?php
-                    dynamicBullets(
-
-                        "Similar to ISF",
-                        "> 90% water",
-                        "<strong>-0.9g/dl NaCl	Na<sup>+</sup>, K<sup>+</sup>, (Ca<sup>++</sup>, Mg<sup>++</sup>)</strong>Cl<sup>-</sup>, HCO<sub>3</sub><sup>-</sup>, (PO<sub>4</sub><sup>--</sup>)",
-                        "Glucose, amino acids, lipids, O2, CO2"
-
-                    );
-                    ?>
-                </div>
-                <div id="plasma-proteins" class="section scrollspy">
-                    <h5>Plasma Proteins (Colloids)</h5>
-                    <?php
-                    dynamicBullets(
-
-                        "(unlike ISF) Proteins (colloids) = 7g% - albumins, globulins, fibrinogen",
-                        "-Separating plasma proteins",
-                        "--Differential precipitation by salts",
-                        "--Sedimentation in ultracentrifuge",
-                        "--Electrophoretic mobility",
-                        "--Immunological characteristics",
-                        "Electrophoresis – fraction method based on movement of charged particles along voltage gradient",
-                        "-Influenced by number, distribution of charges, & MW of each protein",
-                        "-Stained and scanned – area under graph peaks shows amount",
-                        "-In renal disease – albumin (big left peak) gets significantly smaller",
-                        "-In bacterial infection – γ globulins increases due to presence of antibodies",
-                        "Majority produced in liver",
-                        "-Albumin, fibrinogen, α<sub>1</sub>, α<sub>2</sub>, β globulins",
-                        "γ globulins produced in lymphoid tissue"
-                    );
-                    ?>
+"Bit		machine 5V ≡ 1, 3V ≡ 0, 0V ≡ OFF",
+"Pathway	voltages can be passed through wire; whole wire becomes given voltage",
+"Bus ≡ n-wires ≡ one “unit” of Data",
+"-Also a pathway (of n going in the same direction)",
+"Gate",
+"-Has in and out direction",
+"-Freezes if other direction used",
+"-Computer freezes because of infinite loops or electricity going the opposite direction",
+"CPU",
+"-Fast bus, fast clock",
+"-IP – instruction pointer – keeps track of where we are in a program",
+"-IR – instruction register – sends instruction to sequencer",
+"--Eg application opened &rarr; instructions sent to RAM &rarr; instructions sent one at a time to CPU",
+"-Seq – sequencer – opens all gates",
+"CPU Loop",
+"-IR &harr; RAM[IP]",
+"-IR &rarr; Seq, IP++		//couldn’t see this",
+"Data – information",
+"-Eg characters, symbols, numbers",
+"Real data translated to code using properties of medium",
+"-Which medium should we pick?",
+"Real Data &rarr; Numbers		Encoded Data &rarr; everything else",
+"-INT ≡ Binary",
+"ISO IEEE",
+"RAM = ADDR + DATA",
+"-Zero page – like a sourcebook table, where data should not be written into?",
+"--Bigger zero page &rarr; more stuff pluggable into machine",
+"CPU Boundary Register – keeps track of addresses used; addresses requested must never be greater than boundary address",
