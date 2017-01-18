@@ -20,19 +20,18 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
                     </ul>
                 </div>
                 <div class="col l3 s12">
-                    <!--                <p class="white-text" align="right">&copy; Allan Wang 2016</p>-->
+                    <!--for alignment-->
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p align="right">&copy; Allan Wang 2016 - <?php echo date("Y"); ?></p>
+                <p align="right">&copy; Allan Wang 2016 &mdash; <?php echo date("Y"); ?></p>
             </div>
         </div>
     </footer>
 
 <?php endif; ?>
-
 
 <!--  Scripts-->
 <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -47,7 +46,6 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
         if (isset($dynamic_notes)) echo "dynamicNotes();\n";
         ?>
     };
-
 
     //check for nav override vars
     <?php
