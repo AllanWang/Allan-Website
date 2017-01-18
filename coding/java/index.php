@@ -61,10 +61,26 @@ phpNav(); ?>
                 </div>
                 <div <?php scrollSpyHeaderData("Common Mistakes") ?>>
                     <h5>Common Mistakes</h5>
-                    //TODO
-                    <!--                    --><?php
-                    //                    code_specific('java', 'basics.java');
-                    //                    ?>
+                    <pre><code class="java">if (a = b)</code></pre>
+                    <div class="indent">
+                        Comparisons within an if statement is done with two equal signs rather than one:
+                        <pre><code class="java">if (a == b)</code></pre>
+                        Using a single equal sign within an if statement is still valid when you are using
+                        it for variable assignment, so long as you are not initializing a variable within the statement.
+                        For example, you may do the following:
+                        <pre><code class="java"><?php echo "int c;\nif ((c = a) == b)" ?></code></pre>
+                    </div>
+                    <pre><code class="java"><?php echo "int a = 5, b = 7;\nSystem.out.println(\"a + b = \" + a + b);" ?></code></pre>
+                    <div class="indent">
+                        Though this is perfectly valid, it likely does not do what you expect it to. When we call
+                        println (with a parameter of a single String), the String is created from left to right. Had it
+                        started with a + b, the two integers would first be added before proceeding with the String. In
+                        this case, we start with a String, so once we hit a + b, the two values are concatenated instead
+                        of numerically added, resulting in 57 rather than 12. Order matters, so in this case, we may
+                        simply add parantheses:
+                        <pre><code class="java"><?php echo "int a = 5, b = 7;\nSystem.out.println(\"a + b = \" + (a + b));" ?></code></pre>
+                    </div>
+
                 </div>
                 <div <?php scrollSpyHeaderData("Object References") ?>>
                     <h5>Object References</h5>

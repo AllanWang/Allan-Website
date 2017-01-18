@@ -3,375 +3,383 @@
 $navbar-width: 300px;
 
 nav {
-    .brand-logo {
-        position: absolute;
-        color: #fff;
-        display: inline-block;
-        font-size: 2.1rem;
-        padding: 0;
-        white-space: nowrap;
-        &.center {
-            left: 50%;
-            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-            transform: translateX(-50%);
-        }
-        &.right {
-            right: 0.5rem;
-            padding: 0;
-        }
-        i {
-            float: left;
-            margin-right: 15px;
-            &.material-icons {
-                float: left;
-                margin-right: 15px;
-            }
-        }
-        [class^="mdi-"] {
-            float: left;
-            margin-right: 15px;
-        }
-        [class*="mdi-"] {
-            float: left;
-            margin-right: 15px;
-        }
+  .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+    &.center {
+      left: 50%;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateX(-50%);
     }
-    &.top-nav {
-        height: 122px;
-        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-        box-shadow: none;
-        a.page-title {
-            line-height: 122px;
-            font-size: 48px;
-        }
+    &.right {
+      right: 0.5rem;
+      padding: 0;
     }
+    i {
+      float: left;
+      margin-right: 15px;
+      &.material-icons {
+        float: left;
+        margin-right: 15px;
+      }
+    }
+    [class^="mdi-"] {
+      float: left;
+      margin-right: 15px;
+    }
+    [class*="mdi-"] {
+      float: left;
+      margin-right: 15px;
+    }
+  }
+  &.top-nav {
+    height: 122px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    a.page-title {
+      line-height: 122px;
+      font-size: 48px;
+    }
+  }
 }
 
 .side-nav {
-    width: $navbar-width;
+  width: $navbar-width;
 }
 
 .side-nav::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 header {
-    padding-left: $navbar-width;
+  padding-left: $navbar-width;
 }
 
 main {
-    padding-left: $navbar-width;
+  padding-left: $navbar-width;
 }
 
 footer {
-    padding-left: $navbar-width;
-    &.page-footer {
-        margin: 0;
-    }
+  padding-left: $navbar-width;
+  &.page-footer {
+    margin: 0;
+  }
 }
 
 @media only screen and(max-width: 992px) {
-    header {
-        padding-left: 0;
+  header {
+    padding-left: 0;
+  }
+  main {
+    padding-left: 0;
+  }
+  footer {
+    padding-left: 0;
+  }
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  nav .brand-logo {
+    left: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-50%);
+    &.left {
+      padding: 0;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none;
+      left: 0.5rem;
     }
-    main {
-        padding-left: 0;
+    &.right {
+      padding: 0;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: none;
+      right: 0.5rem;
+      left: auto;
     }
-    footer {
-        padding-left: 0;
-    }
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-    #index-banner .section {
-        top: 10%;
-    }
-    nav .brand-logo {
-        left: 50%;
-        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translateX(-50%);
-        &.left {
-            padding: 0;
-            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-            transform: none;
-            left: 0.5rem;
-        }
-        &.right {
-            padding: 0;
-            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-            transform: none;
-            right: 0.5rem;
-            left: auto;
-        }
-    }
+  }
 }
 
 p {
-    line-height: 2rem;
+  line-height: 2rem;
+}
+
+.indent {
+  margin-left: 2em;
+  pre, code {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .parallax-container {
-    min-height: 380px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255, 255, 255, .9);
-    .section {
-        width: 100%;
-    }
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+  .section {
+    width: 100%;
+  }
 }
 
 @media only screen and(max-width: 600px) {
-    #index-banner .section {
-        top: 0;
-    }
-    a.button-collapse.top-nav {
-        left: 5%;
-    }
+  #index-banner .section {
+    top: 0;
+  }
+  a.button-collapse.top-nav {
+    left: 5%;
+  }
 }
 
 .icon-block {
-    padding: 0 15px;
-    .material-icons {
-        font-size: inherit;
-    }
+  padding: 0 15px;
+  .material-icons {
+    font-size: inherit;
+  }
 }
 
 .background-gradient {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
-    width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+  width: 100%;
 }
 
 .pad-top-20 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .animated {
 }
 
 .blur-darken {
-    filter: blur(10px) brightness(80%);
+  filter: blur(10px) brightness(80%);
 }
 
 .blur5 {
-    filter: blur(5px);
+  filter: blur(5px);
 }
 
 .anti-parallax-container {
-    position: relative;
-    overflow: hidden;
-    height: 350px;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
 }
 
 .anti-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  img {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    img {
-        position: absolute;
-        object-fit: cover;
-        min-width: 100%;
-        min-height: 100%;
-    }
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .icon-row {
-    li {
-        font-size: 150%;
-        line-height: 150%;
-        display: inline-block;
-        margin-left: 6px;
-        margin-right: 6px;
+  li {
+    font-size: 150%;
+    line-height: 150%;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  i {
+    color: white;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
     }
-    i {
-        color: white;
-        opacity: 0.75;
-        &:hover {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .clickable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 ul {
-    &.browser-default {
-        padding-left: 20px;
-        li {
-            list-style-type: none;
-            vertical-align: text-top;
-            &:before {
-                content: "\2022";
-                font-size: 100%;
-                padding-right: 5px;
-                vertical-align: top;
-                margin-left: -10px;
-            }
-        }
+  &.browser-default {
+    padding-left: 20px;
+    li {
+      list-style-type: none;
+      vertical-align: text-top;
+      &:before {
+        content: "\2022";
+        font-size: 100%;
+        padding-right: 5px;
+        vertical-align: top;
+        margin-left: -10px;
+      }
     }
-    &.side-nav.fixed {
-        overflow: hidden;
-        li {
-            line-height: 44px;
-            &.logo {
-                text-align: center;
-                margin-top: 16px;
-                margin-bottom: 80px;
-                &:hover {
-                    background-color: transparent;
-                }
-                #logo-container:hover {
-                    background-color: transparent;
-                }
-            }
-            &.active {
-                background-color: rgba(0, 0, 0, 0.05);
-            }
-            a {
-                font-size: 13px;
-                line-height: 44px;
-                height: 44px;
-                padding: 0 30px;
-            }
-        }
+  }
+  &.side-nav.fixed {
+    overflow: hidden;
+    li {
+      line-height: 44px;
+      &.logo {
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 80px;
         &:hover {
-            overflow-y: auto;
+          background-color: transparent;
         }
-        ul.collapsible-accordion {
-            background-color: #fff;
-            a.collapsible-header {
-                padding: 0 30px;
-            }
-            .collapsible-body li a {
-                font-weight: 400;
-                padding: 0 37.5px 0 45px;
-            }
+        #logo-container:hover {
+          background-color: transparent;
         }
+      }
+      &.active {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      a {
+        font-size: 13px;
+        line-height: 44px;
+        height: 44px;
+        padding: 0 30px;
+      }
     }
+    &:hover {
+      overflow-y: auto;
+    }
+    ul.collapsible-accordion {
+      background-color: #fff;
+      a.collapsible-header {
+        padding: 0 30px;
+      }
+      .collapsible-body li a {
+        font-weight: 400;
+        padding: 0 37.5px 0 45px;
+      }
+    }
+  }
 }
 
 #logo-container {
-    height: 80px;
-    margin-bottom: 32px;
+  height: 80px;
+  margin-bottom: 32px;
 }
 
 #front-page-logo {
-    display: inline-block;
-    height: 100%;
-    pointer-events: none;
+  display: inline-block;
+  height: 100%;
+  pointer-events: none;
 }
 
 .hljs-string {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .hljs-section {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .hljs-selector-class {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .hljs-template-variable {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .hljs-deletion {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 nav ul a {
-    color: #444;
+  color: #444;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    color: #009688;
-    &:hover {
-        color: #80cbc4;
-    }
+  color: #009688;
+  &:hover {
+    color: #80cbc4;
+  }
 }
 
 #nav-bar li.search {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 120px;
-    margin-top: 1px;
-    padding: 1px 0 0;
-    z-index: 2;
-    &:hover {
-        background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 120px;
+  margin-top: 1px;
+  padding: 1px 0 0;
+  z-index: 2;
+  &:hover {
+    background-color: #fff;
+  }
+  .search-wrapper {
+    margin: 0 12px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: margin .25s ease;
+    background-color: #fff;
+    &.focused {
+      margin: 0;
+      background-color: #fff;
     }
-    .search-wrapper {
-        margin: 0 12px;
-        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-        transition: margin .25s ease;
-        background-color: #fff;
-        &.focused {
-            margin: 0;
-            background-color: #fff;
-        }
-        input#search {
-            display: block;
-            font-size: 16px;
-            font-weight: 300;
-            width: 100%;
-            height: 45px;
-            margin: 0;
-            padding: 0 45px 0 15px;
-            border: 0;
-            &:focus {
-                outline: none;
-            }
-        }
-        i.material-icons {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
+    input#search {
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      width: 100%;
+      height: 45px;
+      margin: 0;
+      padding: 0 45px 0 15px;
+      border: 0;
+      &:focus {
+        outline: none;
+      }
     }
-    .search-results {
-        margin: 0;
-        border-top: 1px solid #e9e9e9;
-        background-color: #fff;
-        a {
-            font-size: 12px;
-            white-space: nowrap;
-            &:hover {
-                background-color: #eee;
-                outline: none;
-            }
-            &.focused {
-                background-color: #eee;
-                outline: none;
-            }
-        }
+    i.material-icons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
     }
+  }
+  .search-results {
+    margin: 0;
+    border-top: 1px solid #e9e9e9;
+    background-color: #fff;
+    a {
+      font-size: 12px;
+      white-space: nowrap;
+      &:hover {
+        background-color: #eee;
+        outline: none;
+      }
+      &.focused {
+        background-color: #eee;
+        outline: none;
+      }
+    }
+  }
 }
 
 a.button-collapse.top-nav {
-    position: absolute;
-    text-align: center;
-    height: 48px;
-    width: 48px;
-    left: 7.5%;
-    top: 0;
-    float: none;
-    margin-left: 1.5rem;
-    color: #fff;
-    font-size: 36px;
-    z-index: 2;
-    &.full {
-        line-height: 122px;
-    }
-    i {
-        font-size: 32px;
-    }
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  left: 7.5%;
+  top: 0;
+  float: none;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 36px;
+  z-index: 2;
+  &.full {
+    line-height: 122px;
+  }
+  i {
+    font-size: 32px;
+  }
 }
