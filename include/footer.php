@@ -26,7 +26,7 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p align="right">&copy; Allan Wang 2016 &mdash; <?php echo date("Y"); ?></p>
+                <p align="left">&copy; 2016 &mdash; <?php echo date("Y"); ?> Allan Wang, All rights reserved.</p>
             </div>
         </div>
     </footer>

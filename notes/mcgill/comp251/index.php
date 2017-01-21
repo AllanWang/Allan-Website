@@ -32,6 +32,7 @@ phpNav(); ?>
         <div class="row" id="header">
             <div class="col s12 m9 l10">
                 <?php
+
                 lectureSection(1, '2017/01/05',
                     'Office Hours Tues/Thu 1-2pm',
                     '40% for 5 assignments, 15% for midterm, 45% for final exam',
@@ -41,7 +42,8 @@ phpNav(); ?>
                 );
 
                 lectureSection(2, '2017/01/10',
-                    'f(n) is O(g(n)) iff there exists a point n0 beyond which f(n) is less than some fixed constant times g(n) &rarr; for all n ≥ n0, f(n) ≤ c * g(n) (for some c > 0)',
+                    ' *** A significant portion of the lecture overlaps with comp 250, so I did not add much about it here ***',
+                    'f(n) is O(g(n)) iff there exists a point n<sub>0</sub> beyond which f(n) is less than some fixed constant times g(n) &rarr; for all n ≥ n0, f(n) ≤ c * g(n) (for some c > 0)',
                     'Let T1(n) = O(f(n)) & T2(n) = O(f(n))',
                     '-T1(n) + T2(n) = O(f(n))',
                     '-T1(n) / T2(n) is not necessarily O(1); big O is not necessarily the tightest upper bound.<br/>T1(n) = 3<sup>n</sup> & T2(n) = 2<sup>n</sup> is an example.',

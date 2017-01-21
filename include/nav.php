@@ -84,15 +84,15 @@ function addActiveIf($prefix)
                             </li>
                             <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
                                     251</a></li>
-                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp273/">Comp
+                            <li><a class="l" id="nr_n_comp_273" href="http://allanwang.ca/notes/mcgill/comp273/">Comp
                                     273</a></li>
                             <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math
                                     240</a>
                             </li>
                             <li><a class="l" id="nr_n_phgy_209" href="http://allanwang.ca/notes/mcgill/phgy209/">Phgy
                                     209</a></li>
-                            <li><a class="l" id="nr_n_phgy_210" href="http://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy
-                                    210</a></li>
+<!--                            <li><a class="l" id="nr_n_phgy_210" href="http://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy-->
+<!--                                    210</a></li>-->
 
                         </ul>
                     </div>
