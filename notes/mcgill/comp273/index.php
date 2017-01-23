@@ -42,7 +42,7 @@ phpNav(); ?>
                     "-PCI, ISA",
                     "CLK – clock – one controls bus, one controls CPU (min 2 CLKs per device)",
                     "-CLK for bus is one or two orders of magnitude slower than CPU CLK",
-                    "PCI can run at higher clock speeds?",
+                    "PCI can run at higher clock speeds",
                     "Data bus – connects CPU to Cache",
                     "Addressing – every component on system board has a unique integer number that identifies it",
                     "-Eg opening & closing of gates towards various components that control data passage.",
@@ -67,8 +67,8 @@ phpNav(); ?>
                     "Cannot distinguish variables, addresses, operations",
                     "-Instructions usually have different OP-codes depending on data types",
                     "CPU loop",
-                    "-Get instruction: IR RAM (slow bus, no cache)",
-                    "-Sequencer  IR[OP-CODE]",
+                    "-Get instruction: IR &larr; RAM (slow bus, no cache)",
+                    "-Sequencer &larr; IR[OP-CODE]",
                     "-Selected gates open",
                     "-Clock ticks",
                     "-All gates close",
@@ -104,6 +104,40 @@ phpNav(); ?>
                     "-Zero page – like a sourcebook table, where data should not be written into?",
                     "--Bigger zero page &rarr; more stuff pluggable into machine",
                     "CPU Boundary Register – keeps track of addresses used; addresses requested must never be greater than boundary address"
+                );
+
+                lectureSection(4, '2017/01/16',
+                    "RAM",
+                    "-Usually, register size = address size",
+                    "Two types of basic information",
+                    "-Table encode – address/variable name on one side, data on the other (in bytes)",
+                    "-Natural binary number",
+                    "ROM – read only memory – often sits between RAM and another part of the machine",
+                    "C – char a = ‘b’		compiler → w/ ASCII table → to byte",
+                    "Binary – size – register, RAM",
+                    "-Register – left most significant, right least significant",
+                    "Data = choice = cost",
+                    "-Having the leftmost bit hold the sign reduces the space for the actual numbers by two",
+                    "-A way to “double” the max integer would be to keep it unsigned"
+                );
+
+                lectureSection(5, '2017/01/18',
+                    "ASCII/UNICODE – unsigned bit (no sign bit), 8-bits long",
+                    "Char x = ‘A’	00100001",
+                    "Strings – contiguous sequence of characters terminated by NULL or contiguous sequence of chars proceeded (example had count in the front?) by a byte count",
+                    "-Composed of char",
+                    "-Char is built in property of CPU, not strings",
+                    "-Strings supported through software",
+                    "Integer",
+                    "-Number is represented in raw signed binary or 2’s complement for the bit size",
+                    "-5 	signed 00000101	2’s comp 00000101",
+                    "- -5	signed 10000101	2’s comp 10 – 5 ≡ 10 + (-5)",
+                    "-Start	00000101",
+                    "-Flip 	11111010",
+                    "-Add 1	11111011 &larr; -5",
+                    "Fixed Point – sign | exponent | mantissa (not two’s complement)",
+                    "-Bias is the 0, offsets up for positive, down for negative",
+                    "-∵ all fixed point numbers are written as 1.xxx, “1.” May be deleted &rarr; extra bit &rarr; double the range"
                 );
                 ?>
 
