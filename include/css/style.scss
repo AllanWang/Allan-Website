@@ -384,3 +384,10 @@ a.button-collapse.top-nav {
     font-size: 32px;
   }
 }
+
+.black-link a {
+  color: #000;
+  &:hover {
+    color: #555;
+  }
+}

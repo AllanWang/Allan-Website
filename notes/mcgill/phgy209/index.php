@@ -288,16 +288,6 @@ phpHeader(); ?>
                 );
                 ?>
 
-                <!--
-
-                <div id="" class="section scrollspy">
-                    <h5></h5>
-                    <?php
-                //dynamicBullets( );
-                ?>
-                </div>
-
-                -->
             </div>
            <?php
            tableOfContents(true);

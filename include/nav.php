@@ -111,7 +111,7 @@ function addActiveIf($prefix)
             </ul>
         </li>
         <li><a class="l" id="nr_about"
-               href="https://allanwang.ca/about/WIP">About</a>
+               href="https://allanwang.ca/about/">About</a>
         </li>
     </ul>
 

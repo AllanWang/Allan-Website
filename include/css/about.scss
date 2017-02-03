@@ -1,0 +1,20 @@
+#dev {
+  padding: 5px;
+}
+
+.dev-icon {
+  margin: 5px;
+  display: inline;
+  &.big {
+    height: 200px;
+    width: 200px;
+  }
+  &.medium {
+    height: 120px;
+    width: 120px;
+  }
+  &.small {
+    height: 80px;
+    width: 80px;
+  }
+}

@@ -13,17 +13,13 @@ function inlineBullets(array $pairs)
     }
 }
 
-//TODO does not work as well for multilined text (no indent)
 function bullets(...$items)
 {
+    echo '<ul class="browser-default">';
     foreach ($items as $item) {
-        echo "&ensp;";
-        while ($item[0] == '-') {
-            echo "&ensp;&ensp;";
-            $item = substr($item, 1);
-        }
-        echo "&ensp;&bull;&ensp;$item<br/>";
+        echo "<li>" . $item . "</li>";
     }
+    echo '</ul>';
 }
 
 ?>

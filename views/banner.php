@@ -10,7 +10,7 @@
                         $first = false;
                         echo $key_code;
                     } ?>
-            </div>
+                </h5></div>
             <br/><br/></div>
     </div>
     <div class="parallax blur-darken"><img src="images/<?php echo $image ?>" alt="Coding Projects Header"></div>
