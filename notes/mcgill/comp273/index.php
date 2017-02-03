@@ -24,13 +24,14 @@ phpNav(); ?>
                 <?php
                 inlineBullets(array("cs.mcgill.ca/~jvybihal/" => "http://cs.mcgill.ca/~jvybihal/",
                     "TA Information" => "https://docs.google.com/spreadsheets/d/1mKpXd_7QHxUuO6tqi3UbeZmuEPN3Lk-W68MPcIN-gkQ/edit?usp=sharing",
-                    "Textbook (Right click to save)" => "http://nsec.sjtu.edu.cn/data/MK.Computer.Organization.and.Design.4th.Edition.Oct.2011.pdf"
+                    "Textbook (4<sup>th</sup> ed, Right click to save)" => "http://nsec.sjtu.edu.cn/data/MK.Computer.Organization.and.Design.4th.Edition.Oct.2011.pdf"
                 ));
                 ?>
             </h6>
         </div>
         <div class="row" id="header">
             <div class="col s12 m9 l10">
+
                 <?php
                 lectureSection(1, '2017/01/06',
                     "System board parts",
@@ -174,6 +175,32 @@ phpNav(); ?>
                     "Fixed Point – sign | exponent | mantissa (not two’s complement)",
                     "-Bias is the 0, offsets up for positive, down for negative",
                     "-∵ all fixed point numbers are written as 1.xxx, “1.” May be deleted &rarr; extra bit &rarr; double the range"
+                );
+
+                lectureSection(6, '2017/01/23',
+                    "Logic circuits",
+                    "-Circle &rarr; not",
+                    "-Extra line &rarr; exclusive",
+                    "nand &rarr; not and, nor &rarr; not or, xor &rarr; exlusive or",
+                    "For two overlapping but disconnected wires, draw a small bump at the intersection",
+                    "And gate is like a door with a lock – putting 0 on one end will stop the other end from passing through",
+                    "Or gates can pass data as soon as one side has 1",
+                    "Bit set reset, 1 &rarr; set &rarr; write 1, 0 &rarr; reset &rarr; write 0",
+                    "RS Flip-Flop",
+                    "-R &rarr; reset, S &rarr; set",
+                    "-Constructed by feeding outputs of two NOR gates back to each other's input",
+                    '-' . bulletTable('R = 0', 'S = 0', 'Q = Q', "Q' = Q'", "No change"),
+                    '-' . bulletTable('R = 0', 'S = 1', 'Q = 1', "Q' = 0", "Set"),
+                    '-' . bulletTable('R = 1', 'S = 0', 'Q = 0', "Q' = 1", "Reset"),
+                    '-' . bulletTable('R = 1', 'S = 1', 'Q = ?', "Q' = ?", "Avoid"),
+                    "D Latch",
+                    "D &rarr; data",
+                    "RS Flip-flop with preceeding and gates and one inverter",
+                    "-Requires only one data input",
+                    "-Input from D results in that value as output for Q",
+                    "-Also includes clock input C",
+                    "--When C is 0, and gates used to pass inputs are 0, so no change occurs and Q holds its values",
+                    "--When C is 1, D value is passed through and set"
                 );
                 ?>
 
