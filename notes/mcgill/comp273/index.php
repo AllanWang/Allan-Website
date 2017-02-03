@@ -23,7 +23,8 @@ phpNav(); ?>
             <h6 class="center">
                 <?php
                 inlineBullets(array("cs.mcgill.ca/~jvybihal/" => "http://cs.mcgill.ca/~jvybihal/",
-                    "TA Information" => "https://docs.google.com/spreadsheets/d/1mKpXd_7QHxUuO6tqi3UbeZmuEPN3Lk-W68MPcIN-gkQ/edit?usp=sharing"
+                    "TA Information" => "https://docs.google.com/spreadsheets/d/1mKpXd_7QHxUuO6tqi3UbeZmuEPN3Lk-W68MPcIN-gkQ/edit?usp=sharing",
+                    "Textbook (Right click to save)" => "http://nsec.sjtu.edu.cn/data/MK.Computer.Organization.and.Design.4th.Edition.Oct.2011.pdf"
                 ));
                 ?>
             </h6>
@@ -32,11 +33,21 @@ phpNav(); ?>
             <div class="col s12 m9 l10">
                 <?php
                 lectureSection(1, '2017/01/06',
-                    'idk'
+                    "System board parts",
+                    "-Power Supply – Converts AC/DC from home into steady current needed in PC",
+                    "-CPU – Central Processing Unit – Math, logic, data, movement, loops",
+                    "-CMOS – complementary metal-oxide semiconductor – stores BIOS (basic input/output system) settings of computer",
+                    "-ROM – Read Only Memory – Stores built-in instructions (eg CMOS) & additional instructionss for CPU",
+                    "-Battery – Helps keep CMOS parameters, including time",
+                    "-RAM – Random Access Memory – Volatile main memory bank, large & slow",
+                    "-Cache – fast memory (pipeline) connected to RAM",
+                    "-Bus – Common road for data that interconnects all devices on motherboard",
+                    "-CLK – Clock – Beats the processing cycle (2 of them)",
+                    "-Slot – Connects devices external to motherboard through cards"
                 );
 
                 lectureSection(2, '2017/01/09',
-                    "Traditional system board schematic has one bus connecting cache, CPU, ROM to RAM",
+                    "Traditional system board schematic has one bus connecting cache, CLK, CPU, ROM to RAM",
                     "Having more buses allows for multithreading",
                     "Slots allow connections to external devices",
                     "-PCI, ISA",
@@ -49,7 +60,7 @@ phpNav(); ?>
                     "Communication Pathways",
                     "-Composed of multiple wires, each wire for 1 bit",
                     "-In parallel, independent execution",
-                    "-One byte/bus/tick",
+                    "-One byte per bus per tick",
                     "Bus",
                     "-8 wires",
                     "-Grounded on both sides",
@@ -64,6 +75,19 @@ phpNav(); ?>
                     "-Not possible; one bus can only carry one process at a time",
                     "In traditional system board, what would happen if the CPU & slot need to save a single byte into RAM at the same time?",
                     "-Like before, we only have one bus. We’ll either lose data or one of the processes has to wait",
+                    "CPU",
+                    "-ALU – Arithmetic logic unit: + – > < == etc",
+                    "--L, R, A-out & status are specific purpose registers",
+                    "---L & R – inputs to ALU",
+                    "---A-out – result of operation",
+                    "---Status – input & output flag bits",
+                    "----input to tell what operation to perform",
+                    "----output to report errors (eg overflow, divide by zero)",
+                    "-Registers – Fast live memory locations",
+                    "--N general purpose registers 8, 64, or 128 bits long",
+                    "--Temp variables for CPU",
+                    "-IP – Instruction pointer, aka IC (Instruction counter) – points to next instruction",
+                    "-IR – Instruction register – stores current instruction",
                     "Cannot distinguish variables, addresses, operations",
                     "-Instructions usually have different OP-codes depending on data types",
                     "CPU loop",
@@ -87,21 +111,33 @@ phpNav(); ?>
                     "CPU",
                     "-Fast bus, fast clock",
                     "-IP – instruction pointer – keeps track of where we are in a program",
+                    "--Loaded into/used with address register",
                     "-IR – instruction register – sends instruction to sequencer",
+                    "--Received from data register",
                     "--Eg application opened &rarr; instructions sent to RAM &rarr; instructions sent one at a time to CPU",
                     "-Seq – sequencer – opens all gates",
+                    "-CPU Clock",
+                    "--Beats to move data across CPU bus or move code from IP to sequencer",
+                    "-Sequencer",
+                    "--Table of codes with circuits",
+                    "--Each circuit is system of gated triggers",
+                    "--Triggers permit data to flow in predetermined order",
                     "CPU Loop",
                     "-IR &harr; RAM[IP]",
-                    "-IR &rarr; Seq, IP++		//couldn’t see this",
+                    "-IR &rarr; Seq, IP+",
                     "Data – information",
                     "-Eg characters, symbols, numbers",
                     "Real data translated to code using properties of medium",
                     "-Which medium should we pick?",
-                    "Real Data &rarr; Numbers		Encoded Data &rarr; everything else",
+                    bulletTablePair("Real Data &rarr; Numbers", "Encoded Data &rarr; everything else", 20),
                     "-INT ≡ Binary",
                     "ISO IEEE",
-                    "RAM = ADDR + DATA",
-                    "-Zero page – like a sourcebook table, where data should not be written into?",
+                    "RAM access register system",
+                    "-Allows communication between CPU & RAM",
+                    "-Address register – where to get/put data",
+                    "-Data register – where to put the data, or the data to put elsewhere",
+                    "-Mode register – flag for get or put",
+                    "-Zero page – like a sourcebook table; data should not overwrite things here",
                     "--Bigger zero page &rarr; more stuff pluggable into machine",
                     "CPU Boundary Register – keeps track of addresses used; addresses requested must never be greater than boundary address"
                 );

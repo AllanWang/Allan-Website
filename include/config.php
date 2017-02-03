@@ -98,7 +98,16 @@ function lighterColor($hex, $weight = 0.3)
     return '#' . dechex($r) . dechex($g) . dechex($b);
 }
 
-function linkNewTab($text, $url) {
+function linkNewTab($text, $url)
+{
     return '<a href="' . $url . '" target="_blank">' . $text . '</a>';
 }
+
+function activeIfScrollTo($id)
+{
+    echo "id=\"$id\"";
+    if (isset($_GET['scroll_to']) && $_GET['scroll_to'] == $id) echo ' active';
+
+}
+
 ?>

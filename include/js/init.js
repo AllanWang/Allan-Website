@@ -45,13 +45,16 @@ function animateTo(idTo, delay, onlyFromAbove) {
         idTo = idTo.substring(1);
     if (!document.getElementById(idTo))
         return console.log(idTo, 'is not a real elementId');
+    var element = $('#' + idTo);
     setTimeout(function () {
-        var itemTop = $('#' + idTo).offset().top;
+        var itemTop = element.offset().top;
         if (onlyFromAbove) {
             var top_1 = window.pageYOffset || document.documentElement.scrollTop;
             if (top_1 > itemTop)
                 return;
         }
+        if (element.hasClass('collapsible-header') && element.hasClass('click-scroll'))
+            return element.click(); //clicking will scroll it
         $('html, body').animate({
             scrollTop: itemTop
         }, 700, 'easeInOutExpo');

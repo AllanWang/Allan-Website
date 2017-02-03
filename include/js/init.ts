@@ -44,12 +44,15 @@ function animateTo(idTo: string, delay = 0, onlyFromAbove = false) {
     if (idTo == 'bottom') return scrollEase($(document).height());
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
+    let element = $('#' + idTo);
     setTimeout(function () { //animate scroll after page load
-        let itemTop = $('#' + idTo).offset().top;
+        let itemTop = element.offset().top;
         if (onlyFromAbove) {
             let top = window.pageYOffset || document.documentElement.scrollTop;
             if (top > itemTop) return;
         }
+        if (element.hasClass('collapsible-header') && element.hasClass('click-scroll')) return element.click(); //clicking will scroll it
+
         $('html, body').animate({
             scrollTop: itemTop
         }, 700, 'easeInOutExpo');

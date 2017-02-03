@@ -84,7 +84,7 @@ phpNav(); ?>
                 </div>
             </li>
             <li>
-                <div class="collapsible-header click-scroll">Power Series</div>
+                <div class="collapsible-header click-scroll" id="series">Power Series</div>
                 <div class="collapsible-body">
                     <table class="h5 highlight">
                         <?php
