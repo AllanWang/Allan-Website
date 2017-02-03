@@ -5,7 +5,7 @@ import {database} from "./search_data";
 
     let inputSearch = $('input#search');
     let focusedSearchResults = $('.search-results .focused');
-    let urlPrefix = "http://allanwang.ca/";
+    let urlPrefix = "https://allanwang.ca/";
 
     $(document).ready(function () {
         (<any>window).index = lunr(function () {

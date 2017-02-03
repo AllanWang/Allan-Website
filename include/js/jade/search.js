@@ -4,7 +4,7 @@ var search_data_1 = require("./search_data");
 (function ($) {
     var inputSearch = $('input#search');
     var focusedSearchResults = $('.search-results .focused');
-    var urlPrefix = "http://allanwang.ca/";
+    var urlPrefix = "https://allanwang.ca/";
     $(document).ready(function () {
         window.index = lunr(function () {
             this.field('title', { boost: 100 });

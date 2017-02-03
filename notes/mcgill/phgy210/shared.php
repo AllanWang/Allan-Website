@@ -8,7 +8,7 @@ $n_key = "Physiology 210";
 $navFrom = 'n_phgy_210';
 $theme_color = "#F44336"; //red
 
-$baseUrl = 'http://allanwang.ca/notes/mcgill/phgy210/';
+$baseUrl = 'https://allanwang.ca/notes/mcgill/phgy210/';
 
 /**
  * Sets config for the page

@@ -8,7 +8,7 @@ $page_description = "Discrete Mathematics";
 $navFrom = 'n_math_240';
 $theme_color = "#F44336"; //red
 
-phpPDF("http://allanwang.ca/pdf/MATH%20240.pdf");
+phpPDF("https://allanwang.ca/pdf/MATH%20240.pdf");
 ?>
 
 </html>

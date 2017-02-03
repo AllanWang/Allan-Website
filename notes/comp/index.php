@@ -51,7 +51,7 @@ phpNav(); ?>
                 </table>
                 <br/>
                 <div class="center">
-                    <a href="http://allanwang.ca/notes/calc/?scroll_to=series" target="_blank">More series here</a>
+                    <a href="https://allanwang.ca/notes/calc/?scroll_to=series" target="_blank">More series here</a>
                 </div>
             </div>
         </div>

@@ -23,7 +23,7 @@ function addActiveIf($prefix)
         <i class="material-icons" style="color: <?php echo $hamburger_menu_color; ?>">menu</i></a>
 
     <ul id="nav-bar" class="side-nav fixed">
-        <li class="logo"><a id="logo-container" href="http://allanwang.ca/" class="center">
+        <li class="logo"><a id="logo-container" href="https://allanwang.ca/" class="center">
 
                 <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                      viewBox="0 0 112.91718 114.07033">
@@ -64,7 +64,7 @@ function addActiveIf($prefix)
         </li>
         <?php if (isset($side_nav_contents)) $side_nav_contents() ?>
         <li><a class="l" id="nr_proj"
-               href="http://allanwang.ca/dev/?scroll_to=projects">Projects</a>
+               href="https://allanwang.ca/dev/?scroll_to=projects">Projects</a>
         </li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
@@ -72,26 +72,26 @@ function addActiveIf($prefix)
                     <a class="collapsible-header l <?php addActiveIf('n_') ?>">Notes<i class="material-icons right">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a class="l" id="nr_n_calc" href="http://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
+                            <li><a class="l" id="nr_n_calc" href="https://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
                             </li>
-                            <li><a class="l" id="nr_n_linalg" href="http://allanwang.ca/notes/linear/?scroll_to=common">Linear
+                            <li><a class="l" id="nr_n_linalg" href="https://allanwang.ca/notes/linear/?scroll_to=common">Linear
                                     Algebra</a></li>
-                            <li><a class="l" id="nr_n_comp" href="http://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
+                            <li><a class="l" id="nr_n_comp" href="https://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
                                     Science</a>
                             </li>
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="l" id="nr_n_comp_251" href="http://allanwang.ca/notes/mcgill/comp251/">Comp
+                            <li><a class="l" id="nr_n_comp_251" href="https://allanwang.ca/notes/mcgill/comp251/">Comp
                                     251</a></li>
-                            <li><a class="l" id="nr_n_comp_273" href="http://allanwang.ca/notes/mcgill/comp273/">Comp
+                            <li><a class="l" id="nr_n_comp_273" href="https://allanwang.ca/notes/mcgill/comp273/">Comp
                                     273</a></li>
-                            <li><a class="l" id="nr_n_math_240" href="http://allanwang.ca/notes/mcgill/math240">Math
+                            <li><a class="l" id="nr_n_math_240" href="https://allanwang.ca/notes/mcgill/math240">Math
                                     240</a>
                             </li>
-                            <li><a class="l" id="nr_n_phgy_209" href="http://allanwang.ca/notes/mcgill/phgy209/">Phgy
+                            <li><a class="l" id="nr_n_phgy_209" href="https://allanwang.ca/notes/mcgill/phgy209/">Phgy
                                     209</a></li>
-<!--                            <li><a class="l" id="nr_n_phgy_210" href="http://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy-->
+<!--                            <li><a class="l" id="nr_n_phgy_210" href="https://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy-->
 <!--                                    210</a></li>-->
 
                         </ul>
@@ -102,16 +102,16 @@ function addActiveIf($prefix)
                                 class="material-icons right">arrow_drop_down</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a class="l" id="nr_cn_git" href="http://allanwang.ca/coding/git/">Git Bash</a></li>
-                            <li><a class="l" id="nr_cn_java" href="http://allanwang.ca/coding/java/">Java</a></li>
-                            <li><a class="l" id="nr_cn_fsharp" href="http://allanwang.ca/coding/fsharp/">F#</a></li>
+                            <li><a class="l" id="nr_cn_git" href="https://allanwang.ca/coding/git/">Git Bash</a></li>
+                            <li><a class="l" id="nr_cn_java" href="https://allanwang.ca/coding/java/">Java</a></li>
+                            <li><a class="l" id="nr_cn_fsharp" href="https://allanwang.ca/coding/fsharp/">F#</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </li>
         <li><a class="l" id="nr_about"
-               href="http://allanwang.ca/about/WIP">About</a>
+               href="https://allanwang.ca/about/WIP">About</a>
         </li>
     </ul>
 

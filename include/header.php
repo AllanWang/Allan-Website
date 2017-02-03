@@ -15,7 +15,7 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
     <title><?php echo(isset($page_title) ? $page_title : 'Allan Wang'); ?></title>
     <meta name="description"
           content="<?php echo(isset($page_description) ? $page_description : 'Allan Wang\'s page'); ?>"/>
-    <link rel="icon" href="http://allanwang.ca/favicon.ico">
+    <link rel="icon" href="https://allanwang.ca/favicon.ico">
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
