@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "authors": [
+    "Allan Wang <me@allanwang.ca>"
+  ],
+  "description": "allanwang.ca",
+  "license": "none",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "materialize": "^0.97.8",
+    "typed.js": "^1.1.4"
+  }
+}

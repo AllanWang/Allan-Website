@@ -3,17 +3,22 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
-        <item url="file://$PROJECT_DIR$/sudo.min.js" />
-        <item url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/typed.js/js/typed.min.js" />
         <item url="file://$PROJECT_DIR$/include/js/init.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/typed.js/dist/typed.min.min.js" />
+        <item url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+        <item url="file://$PROJECT_DIR$/bower_components/typed.js/gulpfile.min.js" />
         <item url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
       <root url="file://$PROJECT_DIR$/sudo.min.js" />
-      <root url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+      <root url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/typed.js/js/typed.min.js" />
       <root url="file://$PROJECT_DIR$/include/js/init.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/typed.js/dist/typed.min.min.js" />
+      <root url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+      <root url="file://$PROJECT_DIR$/bower_components/typed.js/gulpfile.min.js" />
       <root url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
     </CLASSES>
     <SOURCES />

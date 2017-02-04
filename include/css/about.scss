@@ -2,6 +2,10 @@
   padding: 5px;
 }
 
+#about-logo-container {
+  padding: 50px;
+}
+
 .dev-icon {
   margin: 5px;
   display: inline;
@@ -16,5 +20,105 @@
   &.small {
     height: 80px;
     width: 80px;
+  }
+}
+
+//logo animation
+
+@mixin animation-sticky($args) {
+  -webkit-animation: $args;
+  -moz-animation: $args;
+  -o-animation: $args;
+  animation: $args;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+}
+
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@keyframes w {
+  0% {
+    stroke-dashoffset: 95;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+//using id's to avoid future conflicts
+
+#w-1, #w-2, #w-3, #w-4 {
+  stroke-dasharray: 95;
+  @include animation-sticky(w 0.5s)
+}
+
+#w-2 {
+  @include animation-delay(0.25s);
+}
+
+#w-3 {
+  @include animation-delay(0.5s);
+}
+
+#w-4 {
+  @include animation-delay(0.75s);
+}
+
+#w-drop {
+  @include animation-sticky(fade-in 1s);
+  @include animation-delay(2s);
+}
+
+//Word animation
+$textDelay: 2;
+$nextTextDelay: 0.1;
+
+#s-themer, #s-developer, #s-student {
+  @include animation-sticky(slideFadeIn 0.5s);
+  top: 5em;
+  position: relative;
+  opacity: 0;
+}
+
+#s-themer {
+  animation-delay: #{$textDelay}s;
+  -webkit-animation-delay: #{$textDelay}s;
+}
+
+#s-developer {
+  animation-delay: #{$textDelay+$nextTextDelay}s;
+  -webkit-animation-delay: #{$textDelay+$nextTextDelay}s;
+}
+
+#s-student {
+  animation-delay: #{$textDelay+2*$nextTextDelay}s;
+  -webkit-animation-delay: #{$textDelay+2*$nextTextDelay}s;
+}
+
+@keyframes slideFadeIn {
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
