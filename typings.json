@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "snapsvg": "registry:dt/snapsvg#0.4.1+20160510002910"
+  }
+}
