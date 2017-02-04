@@ -31,6 +31,11 @@ phpNav(); ?>
                         <img class="dev-icon medium" src="dev/node-js.svg">
                     </div>
                     <div id="temp" style="height: 300px;"></div>
+                    <div id="analyics">
+                        <section id="auth-button"></section>
+                        <section id="view-selector"></section>
+                        <section id="timeline"></section>
+                    </div>
                 </div>
                 <div class="col hide-on-small-only m3 l2">
                     <div class="pinned vertical-center black-link">
