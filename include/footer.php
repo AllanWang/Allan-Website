@@ -1,5 +1,5 @@
 <?php
-global $navFrom, $navTo, $dynamic_notes;
+global $navFrom, $navTo, $dynamic_notes, $theme_color;
 
 if (!isset($scriptOnly) || !$scriptOnly):?>
 
@@ -32,11 +32,15 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
     </footer>
 
 <?php endif; ?>
-
+<script type="text/javascript">
+    const themeColor = "<?php echo $theme_color?>";
+</script>
 <!--  Scripts-->
 <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/bower_components/materialize/dist/js/materialize.min.js"></script>
 <script type="text/javascript" src="/include/js/init.js"></script><!--do not minify-->
+<script type="text/javascript" src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+<script type="text/javascript" src="/include/js/logo.js"></script><!--do not minify-->
 
 <script>
     //script for scroll animations

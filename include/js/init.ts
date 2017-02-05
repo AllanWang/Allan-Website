@@ -1,3 +1,4 @@
+declare const themeColor: string;
 $(function () {
     $('.button-collapse').sideNav();
     $('.parallax').parallax();

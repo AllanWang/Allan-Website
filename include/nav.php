@@ -24,33 +24,7 @@ function addActiveIf($prefix)
 
     <ul id="nav-bar" class="side-nav fixed">
         <li class="logo"><a id="logo-container" href="https://allanwang.ca/" class="center">
-
-                <svg id="front-page-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                     viewBox="0 0 112.91718 114.07033">
-                    <defs>
-                        <linearGradient id="a">
-                            <stop offset="0"></stop>
-                            <stop offset="1" stop-opacity="0"></stop>
-                        </linearGradient>
-                        <linearGradient id="b" x1="39.49448" x2="128.20517" y1="56.78526" y2="129.69815"
-                                        gradientTransform="translate(9.41 9.506) scale(.9375)"
-                                        gradientUnits="userSpaceOnUse" xlink:href="#a"></linearGradient>
-                        <filter id="c" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity=".49804" flood-color="#000" result="flood"></feFlood>
-                            <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
-                            <feGaussianBlur in="composite1" stdDeviation="3" result="blur"></feGaussianBlur>
-                            <feOffset dx="5" dy="5" result="offset"></feOffset>
-                            <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
-                        </filter>
-                    </defs>
-                    <path fill="url(#b)" d="M133.51503 46.224l.19225-.45044h-.19225v.45044z" opacity=".207"></path>
-                    <g transform="translate(9.41 9.506)" filter="url(#c)">
-                        <path fill="#222"
-                              d="M3.0371 23.08008L17.67384 55.2832l2.7129-6.11523-11.8594-26.0879H3.03712zM88.66406 3.21094L60.08398 70.1953 45.0879 35.20704l-15.06642 35.1582-6.86914-15.11328-2.7246 6.08985 9.7285 21.4004L45.0879 47.89846 60.09374 82.9121l34.0039-79.70116h-5.43358z"></path>
-                        <path fill="<?php echo $theme_color; ?>"
-                              d="M69.19726 61.5957l-2.6914 6.31446L74.0332 85.1172h5.45508L69.19726 61.5957zM42.24806 0L0 95.0586h5.4414l36.7715-82.66602 21.52343 49.1914 2.709-6.27734L42.24803 0z"></path>
-                    </g>
-                </svg>
+                <svg id="nav-logo" height="100" width="250"></svg>
 
             </a></li>
         <li class="search">
@@ -74,9 +48,11 @@ function addActiveIf($prefix)
                         <ul>
                             <li><a class="l" id="nr_n_calc" href="https://allanwang.ca/notes/calc/?scroll_to=commons">Calculus</a>
                             </li>
-                            <li><a class="l" id="nr_n_linalg" href="https://allanwang.ca/notes/linear/?scroll_to=common">Linear
+                            <li><a class="l" id="nr_n_linalg"
+                                   href="https://allanwang.ca/notes/linear/?scroll_to=common">Linear
                                     Algebra</a></li>
-                            <li><a class="l" id="nr_n_comp" href="https://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
+                            <li><a class="l" id="nr_n_comp"
+                                   href="https://allanwang.ca/notes/comp/?scroll_to=pseudocode">Computer
                                     Science</a>
                             </li>
                             <li>
@@ -91,8 +67,8 @@ function addActiveIf($prefix)
                             </li>
                             <li><a class="l" id="nr_n_phgy_209" href="https://allanwang.ca/notes/mcgill/phgy209/">Phgy
                                     209</a></li>
-<!--                            <li><a class="l" id="nr_n_phgy_210" href="https://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy-->
-<!--                                    210</a></li>-->
+                            <!--                            <li><a class="l" id="nr_n_phgy_210" href="https://allanwang.ca/notes/mcgill/phgy210/1.php">Phgy-->
+                            <!--                                    210</a></li>-->
 
                         </ul>
                     </div>
