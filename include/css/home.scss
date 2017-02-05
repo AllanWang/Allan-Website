@@ -1,142 +1,145 @@
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 35px;
-    line-height: 40px;
-    font-family: 'Lato', sans-serif;
-    color: #ecf0f1;
-    height: 160px;
-    overflow: hidden
+$themeColor: rgba(0, 151, 167, 0.2);
+
+#w-logo-container {
+    padding: 50px;
 }
 
-.visible {
-    font-weight: 600;
-    overflow: hidden;
-    height: 40px;
-    padding: 0 40px;
+#w-content-container {
+    min-height: 300px;
 }
 
-.visible:before {
-    content: '[';
-    left: 0;
-    line-height: 40px;
-}
-
-.visible:after {
-    content: ']';
-    position: absolute;
-    right: 0;
-    line-height: 40px;
-}
-
-.visible:after, .visible:before {
-    position: absolute;
-    top: 0;
-    color: #16a085;
-    font-size: 42px;
-    -webkit-animation-name: opacity;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: opacity;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.il {
+.dev-icon {
+    margin: 5px;
     display: inline;
-    float: left;
-    margin: 0;
+    &.big {
+        height: 200px;
+        width: 200px;
+    }
+    &.medium {
+        height: 120px;
+        width: 120px;
+    }
+    &.small {
+        height: 80px;
+        width: 80px;
+    }
 }
 
-ul.ir {
-    margin-top: 0;
-    padding-left: 110px;
-    text-align: left;
-    list-style: none;
-    -webkit-animation-name: change;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: change;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+//logo animation
+
+@mixin animation-sticky($args) {
+    -webkit-animation: $args;
+    -moz-animation: $args;
+    -o-animation: $args;
+    animation: $args;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
 }
 
-ul.ir li {
-    line-height: 40px;
-    margin: 0;
+@mixin animation-delay($delay) {
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
 }
 
-@-webkit-keyframes opacity {
-    0%, 100% {
+@mixin transition($duration) {
+    -webkit-transition: all $duration;
+    -moz-transition: all $duration;
+    -o-transition: all $duration;
+    transition: all $duration;
+}
+
+@keyframes w {
+    0% {
+        stroke-dashoffset: 95;
         opacity: 0;
     }
-    50% {
+    100% {
+        opacity: 0.8;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+//using id's to avoid future conflicts
+
+$wDelay: 0.5;
+$wDuration: 0.75;
+$wTextDelay: 0.2;
+
+#w-1, #w-2, #w-3, #w-4 {
+    stroke-dasharray: 95;
+    @include animation-sticky(w #{$wDuration}s)
+}
+
+#w-1 {
+    @include animation-delay(#{$wDelay}s);
+}
+
+#w-2 {
+    @include animation-delay(#{$wDelay+$wTextDelay}s);
+}
+
+#w-3 {
+    @include animation-delay(#{$wDelay+2*$wTextDelay}s);
+}
+
+#w-4 {
+    @include animation-delay(#{$wDelay+3*$wTextDelay}s);
+}
+
+//Word animation
+$textDelay: 2;
+$nextTextDelay: 0.1;
+
+#w-drop {
+    @include animation-sticky(fade-in 0.5s);
+    @include animation-delay(#{$wDelay+$textDelay}s);
+}
+
+#b-themer, #b-developer, #b-student {
+    @include animation-sticky(slideFadeIn 0.5s);
+    top: 5em;
+    color: dimgrey;
+    position: relative;
+    opacity: 0;
+    display: inline-block;
+}
+
+#b-themer {
+    animation-delay: #{$wDelay+$textDelay}s;
+    -webkit-animation-delay: #{$wDelay+$textDelay}s;
+}
+
+#b-developer {
+    animation-delay: #{$wDelay+$textDelay+$nextTextDelay}s;
+    -webkit-animation-delay: #{$wDelay+$textDelay+$nextTextDelay}s;
+}
+
+#b-student {
+    animation-delay: #{$wDelay+$textDelay+2*$nextTextDelay}s;
+    -webkit-animation-delay: #{$wDelay+$textDelay+2*$nextTextDelay}s;
+}
+
+@keyframes slideFadeIn {
+    100% {
+        top: 0;
         opacity: 1;
     }
 }
 
-@-webkit-keyframes change {
-    0%, 12%, 100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    17%, 29% {
-        -webkit-transform: translateY(-25%);
-        transform: translateY(-25%);
-    }
-    34%, 46% {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-    51%, 63% {
-        -webkit-transform: translateY(-75%);
-        transform: translateY(-75%);
-    }
-    68%, 80% {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-    85%, 97% {
-        -webkit-transform: translateY(-25%);
-        transform: translateY(-25%);
-    }
-}
-
-@keyframes opacity {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-@keyframes change {
-    0%, 12%, 100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    17%, 29% {
-        -webkit-transform: translateY(-25%);
-        transform: translateY(-25%);
-    }
-    34%, 46% {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-    51%, 63% {
-        -webkit-transform: translateY(-75%);
-        transform: translateY(-75%);
-    }
-    68%, 80% {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-    85%, 97% {
-        -webkit-transform: translateY(-25%);
-        transform: translateY(-25%);
-    }
+.btn-flat.selected {
+    background-color: $themeColor;
+    @include transition(0.2s);
 }
