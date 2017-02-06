@@ -21,7 +21,7 @@ function getHouseData(width: number, height: number, padding: number = -1): numb
         [middle - 1.4 * lineWidth, split, middle - 1.4 * lineWidth, maxHeight],
         [middle - 2 * lineWidth, split, middle, minHeight],
         [middle, minHeight, middle + 2 * lineWidth, split],
-        [middle + 1.4 * lineWidth, split, middle + 1.4 * lineWidth, maxHeight]
+        [middle + 1.4 * lineWidth, maxHeight, middle + 1.4 * lineWidth, split]
     ];
 }
 
