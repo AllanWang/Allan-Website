@@ -29,6 +29,7 @@ function circuitSVG($filename, $classes = '')
 
 function circuitHeader($title, $filename)
 {
+    echo '<div class="divider"></div>';
     echo '<h6 id="' . getId($title) . '">' . $title . '</h6>';
     echo circuitSVG($filename);
 }
@@ -59,19 +60,67 @@ function circuitHeader($title, $filename)
                         download it to test
                         the <?php echo linkNewTab('circuits', 'https://www.allanwang.ca/notes/mcgill/comp273/circuits/') ?>
                         directly.</p>
+                    <div class="divider"></div>
                     <h6 id="gates">Gates</h6>
                     <table class="center-text h5 highlight">
                         <?php
                         table_header('', '', 'NOT', 'AND', 'OR', 'XOR', 'NAND', 'NOR');
                         table('A', 'B', circuitSVG('gates/invert'), circuitSVG('gates/and'), circuitSVG('gates/or'), circuitSVG('gates/xor'), circuitSVG('gates/nand'), circuitSVG('gates/nor'));
-                        table('0', '0', '1', '0', '0', '0', '1', '1');
-                        table('0', '1', '', '0', '1', '1', '1', '0');
-                        table('1', '0', '0', '0', '1', '1', '1', '0');
-                        table('1', '1', '', '1', '1', '0', '0', '0');
+                        table(0, 0, 1, 0, 0, 0, 1, 1);
+                        table(0, 1, 'X', 0, 1, 1, 1, 0);
+                        table(1, 0, 0, 0, 1, 1, 1, 0);
+                        table(1, 1, 'X', 1, 1, 0, 0, 0);
                         ?>
                     </table>
 
                     <?php circuitHeader('RS Flip Flops', 'sr-flipflop'); ?>
+                    <p>Basic reset set flip flop to save bit data; a clock can be connected to the inputs of both nor
+                        gates for synchronization</p>
+                    <table class="h5 highlight">
+                        <?php
+                        table_header('R', 'S', 'Q', 'Q\'', 'Result');
+                        table(0, 0, 'Q', 'Q\'', 'No Change');
+                        table(0, 1, 1, 0, 'Set');
+                        table(1, 0, 0, 1, 'Reset');
+                        table(1, 1, 1, 1, 'Avoid');
+                        ?>
+                    </table>
+
+                    <?php circuitHeader('D latch', 'd-latch') ?>
+                    <p>An addition to the RS flip flop to accept a single input. Together with the clock (E), the input
+                        (D)
+                        directly changes the output of the latch. This also eliminates the Reset = 1 & Set = 1
+                        issue.</p>
+                    <table class="h5 highlight">
+                        <?php
+                        table_header('E', 'D', 'Q', 'Q\'', 'Result');
+                        table(0, 0, 'Q', 'Q\'', 'Latch');
+                        table(0, 1, 'Q', 'Q\'', 'Latch');
+                        table(1, 0, 0, 1, 'Reset');
+                        table(1, 1, 1, 1, 'Set');
+                        ?>
+                    </table>
+
+                    <?php circuitHeader('JK Flip Flop', 'jk-flipflop') ?>
+                    <p>JK flip flops cycle at half the speed of its input, as only one SR flip flop is enabled at a time
+                        and it takes two clicks to pass data to the output.</p>
+                    <table class="h5 highlight">
+                        <?php
+                        table_header('J', 'K', 'Q', 'Q\'', 'Result');
+                        table(0, 0, 'Q', 'Q\'', 'Unchanged');
+                        table(0, 1, 0, 1, 'Reset');
+                        table(1, 0, 1, 0, 'Set');
+                        table(1, 1, 'Q\'', 'Q', 'Toggle');
+                        ?>
+                    </table>
+
+                    <?php circuitHeader('Half Adder', 'halfadder') ?>
+                    <p>Adds two bits and returns the sum and carry; used for the least significant digit of numerical
+                        additions</p>
+
+                    <?php circuitHeader('Full Adder', 'fulladder') ?>
+                    <p>Adds three bits (includes carry) together and produces a sum and carry; can be strung together to
+                        add numbers with many digits.</p>
                 </div>
 
                 <?php
@@ -212,11 +261,11 @@ function circuitHeader($title, $filename)
                     "-Strings supported through software",
                     "Integer",
                     "-Number is represented in raw signed binary or 2’s complement for the bit size",
-                    "-5 	signed 00000101	2’s comp 00000101",
-                    "- -5	signed 10000101	2’s comp 10 – 5 ≡ 10 + (-5)",
-                    "-Start	00000101",
-                    "-Flip 	11111010",
-                    "-Add 1	11111011 &larr; -5",
+                    '-' . bulletTablePair('-5', 'signed 00000101	2’s comp 00000101', 20),
+                    '-' . bulletTablePair('-5', 'signed 10000101	2’s comp 10 – 5 ≡ 10 + (-5)', 20),
+                    '-' . bulletTablePair('Start', '00000101', 20),
+                    '-' . bulletTablePair('Flip', '11111010', 20),
+                    '-' . bulletTablePair('Add 1', '11111011 &larr; -5', 20),
                     "Fixed Point – sign | exponent | mantissa (not two’s complement)",
                     "-Bias is the 0, offsets up for positive, down for negative",
                     "-∵ all fixed point numbers are written as 1.xxx, “1.” May be deleted &rarr; extra bit &rarr; double the range"
@@ -231,14 +280,10 @@ function circuitHeader($title, $filename)
                     "And gate is like a door with a lock – putting 0 on one end will stop the other end from passing through",
                     "Or gates can pass data as soon as one side has 1",
                     "Bit set reset, 1 &rarr; set &rarr; write 1, 0 &rarr; reset &rarr; write 0",
-                    "RS Flip-Flop",
+                    linkToId("RS Flip-Flop", 'rs-flip-flops'),
                     "-R &rarr; reset, S &rarr; set",
                     "-Constructed by feeding outputs of two NOR gates back to each other's input",
-                    '-' . bulletTable('R = 0', 'S = 0', 'Q = Q', "Q' = Q'", "No change"),
-                    '-' . bulletTable('R = 0', 'S = 1', 'Q = 1', "Q' = 0", "Set"),
-                    '-' . bulletTable('R = 1', 'S = 0', 'Q = 0', "Q' = 1", "Reset"),
-                    '-' . bulletTable('R = 1', 'S = 1', 'Q = ?', "Q' = ?", "Avoid"),
-                    "D Latch",
+                    linkToId("D Latch", 'd-latch'),
                     "D &rarr; data",
                     "RS Flip-flop with preceeding and gates and one inverter",
                     "-Requires only one data input",

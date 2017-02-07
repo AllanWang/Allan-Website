@@ -116,6 +116,11 @@ function linkNewTab($text, $url)
     return '<a href="' . $url . '" target="_blank">' . $text . '</a>';
 }
 
+function linkToId($text, $id)
+{
+    return '<a class="click-scroll" href="#' . $id . '">' . $text . '</a>';
+}
+
 function activeIfScrollTo($id)
 {
     echo "id=\"$id\"";
