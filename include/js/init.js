@@ -8,6 +8,14 @@ $(function () {
         }, 700, 'easeInOutExpo');
         event.preventDefault();
     });
+    var linkClickScroll = $('a.click-scroll');
+    if (linkClickScroll.length) {
+        linkClickScroll.bind('click', function (event) {
+            var href = $(this).attr('href');
+            animateWithOffset(href, 0, 100);
+            event.preventDefault();
+        });
+    }
     //add ripples to nav items
     $('.side-nav .l').addClass("animated waves-effect"); //scroll animations didn't work too well
     $('.scrollspy').scrollSpy();
