@@ -98,6 +98,19 @@ function lighterColor($hex, $weight = 0.3)
     return '#' . dechex($r) . dechex($g) . dechex($b);
 }
 
+function getFavIcon()
+{
+    global $theme_color;
+    if (isset($theme_color)) {
+        $suffix = strtolower(substr($theme_color, 1));
+        $path = '/favicons/favicon-' . $suffix . '.ico';
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . $path)) {
+            return 'https://allanwang.ca' . $path;
+        }
+    }
+    return 'https://allanwang.ca/favicon.ico'; //fallback icon
+}
+
 function linkNewTab($text, $url)
 {
     return '<a href="' . $url . '" target="_blank">' . $text . '</a>';
