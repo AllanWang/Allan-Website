@@ -29,7 +29,7 @@ MathJax.Hub.Config({
 <main>
 
     <?php
-    banner('calc_header.jpg', 133);
+    banner('algebra-matrix.jpg', 133);
 
     function bullet()
     {

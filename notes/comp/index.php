@@ -22,7 +22,7 @@ phpNav(); ?>
 <main>
 
     <?php
-    banner('calc_header.jpg', 202, 206, 250);
+    banner('computer-chip.jpg', 202, 206, 250);
     ?>
 
     <div class="container">

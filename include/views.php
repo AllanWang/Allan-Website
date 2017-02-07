@@ -15,7 +15,8 @@ function appCard($cardTitle, $cardDesc, $cardImage, array $cardPoints, array $ca
     include($_SERVER['DOCUMENT_ROOT'] . '/views/app-card.php');
 }
 
-function tableOfContents($showCollapse = false) {
+function tableOfContents($showCollapse = false)
+{
     include($_SERVER['DOCUMENT_ROOT'] . '/views/table-of-contents.php');
 }
 
@@ -33,7 +34,7 @@ function banner($image, ...$key_codes)
         echo $key_code;
     }
     echo '</div><br/><br/></div></div>';
-    echo '<div class="parallax blur-darken" ><img src="images/' . $image . '" alt="' . $n_key . ' Header"></div></div>';
+    echo '<div class="parallax" ><img src="images/' . $image . '" alt="' . $n_key . ' Header"></div></div>';
 }
 
 ?>
