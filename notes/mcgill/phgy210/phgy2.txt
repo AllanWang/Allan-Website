@@ -1,10 +1,4 @@
-"--Very short half-life – 3-18min",
-"-Functions of PTH",
-"--Increase concentration of plasma calcium",
-"---Bone resorption – increases bone demineralization – increases Ca++ in body fluids",
-"---Kidney – increase reabsorption of Ca++ in proximal convoluted tubule",
-"---Vitamin D synthesis – stimulates conversion of 25-hydroxyvitamin D3 to 1,25-dihydroxyvitamin D3 (1,25D3; biologically active form of vitamin D) primarily in kidney",
-"---Gut: PTH & 1,25D3 facilitate absorption of Ca++ from gut",
-"--Control of PTH release",
-"---Controlled directly by circulating concentration of calcium",
-"--Mechanism of PTH activity – binds to cognate receptor on target cells exert",
+(?1"•	PLA – programmable logic array",)(?2-"•	PLA – programmable logic array",)(?3--"•	PLA – programmable logic array",)(?4–)
+o	Individual lines and or gates forming a hash
+o	Both arrays programmable
+	1:15

@@ -8,12 +8,32 @@ $page_description = "Comp 273 - Winter 2017";
 $navFrom = 'n_comp_273';
 //$navTo = 'commons';
 $theme_color = "#F44336"; //red
+global $cssArr;
+array_push($cssArr, 'comp273');
 dynamicNotes('php');
 phpHeader(); ?>
 <body>
 
 <?php
-phpNav(); ?>
+phpNav();
+
+function circuitSVG($filename, $classes = '')
+{
+    $text = '<img';
+    if ($classes != '') {
+        $text = $text . ' class="' . $classes . '"';
+    }
+    $text = $text . ' src="circuits/' . $filename . '.svg">';
+    return $text;
+}
+
+function circuitHeader($title, $filename)
+{
+    echo '<h6 id="' . getId($title) . '">' . $title . '</h6>';
+    echo circuitSVG($filename);
+}
+
+?>
 
 <main>
 
@@ -32,7 +52,32 @@ phpNav(); ?>
         <div class="row" id="header">
             <div class="col s12 m9 l10">
 
+                <div id="circuits" class="section scrollspy">
+                    <h5 id="circuitsh">Circuits</h5>
+                    <p>The following diagrams were drawn
+                        with <?php echo linkNewTab('Digital', 'https://github.com/hneemann/Digital') ?>. Feel free to
+                        download it to test
+                        the <?php echo linkNewTab('circuits', 'https://www.allanwang.ca/notes/mcgill/comp273/circuits/') ?>
+                        directly.</p>
+                    <h6 id="gates">Gates</h6>
+                    <table class="center-text h5 highlight">
+                        <?php
+                        table_header('', '', 'NOT', 'AND', 'OR', 'XOR', 'NAND', 'NOR');
+                        table('A', 'B', circuitSVG('gates/invert'), circuitSVG('gates/and'), circuitSVG('gates/or'), circuitSVG('gates/xor'), circuitSVG('gates/nand'), circuitSVG('gates/nor'));
+                        table('0', '0', '1', '0', '0', '0', '1', '1');
+                        table('0', '1', '', '0', '1', '1', '1', '0');
+                        table('1', '0', '0', '0', '1', '1', '1', '0');
+                        table('1', '1', '', '1', '1', '0', '0', '0');
+                        ?>
+                    </table>
+
+                    <?php circuitHeader('RS Flip Flops', 'sr-flipflop'); ?>
+                </div>
+
                 <?php
+                global $tocData;
+                $tocData['circuits'] = 'Circuits';
+
                 lectureSection(1, '2017/01/06',
                     "System board parts",
                     "-Power Supply – Converts AC/DC from home into steady current needed in PC",

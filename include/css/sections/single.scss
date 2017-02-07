@@ -1,19 +1,26 @@
 /*Simple css that gives a style to one attribute*/
 
 .vertical-center {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*Object will be repositioned with jquery*/
 .pinned.vertical-center {
-    top: 50%;
-    display: none;
+  top: 50%;
+  display: none;
 }
 
 .inline {
-    display: inline !important;
+  display: inline !important;
 }
 
 .inline-block {
-    display: inline-block !important;
+  display: inline-block !important;
+}
+
+.center-text {
+  text-align: center;
+  td, th {
+    text-align: center;
+  }
 }
