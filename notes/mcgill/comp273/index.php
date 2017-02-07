@@ -284,7 +284,7 @@ function circuitHeader($title, $filename)
                     "-R &rarr; reset, S &rarr; set",
                     "-Constructed by feeding outputs of two NOR gates back to each other's input",
                     linkToId("D Latch", 'd-latch'),
-                    "D &rarr; data",
+                    "-D &rarr; data",
                     "RS Flip-flop with preceeding and gates and one inverter",
                     "-Requires only one data input",
                     "-Input from D results in that value as output for Q",
@@ -294,22 +294,22 @@ function circuitHeader($title, $filename)
                 );
 
                 lectureSection(7, '2017/01/25',
-                    "End goal is addr, read/write, sync",
-                    "-Solution is gate/lock		eg and gates around SR flip flop",
+                    "End goal is addres &harr; read/write &harr; sync",
+                    "-" . bulletTablePair("Solution is gate/lock", "eg and gates around SR flip flop", 40),
                     "To retrieve/send to correct address, use and gates with negations to check for matches.",
                     "JK flip flop – two RS flip flops w/ clock and other gates",
                     "-Adds a delay to output (first flip flop changes when clock is 1, other one outputs when clock is 0 &rarr; half the outputs as input)",
-                    "Half adder only contains A and B inputs",
+                    linkToId("Half adder", 'half-adder') . " only contains A and B inputs",
                     "-When doing addition, only least significant digit is half adder, others are full adders as there are carries",
-                    "Full adder = two half adders glued with or ",
+                    linkToId("Full adder", 'full-adder') . " = two half adders glued with or gates",
                     "Status register has a few bits for unusual situations &rarr; overflow, dividing by 0, sign change",
                     "To build an ALU, we need to know size of inputs and outputs, format, etc",
                     "How would ALU design change when upgrading?",
-                    "-4 → 8, adding 4 more full adders",
+                    "- 4 &rarr; 8, adding 4 more full adders",
                     "Subtraction – need to decide how we are doing the operation",
-                    "-5 – 3, 5 + (-3), 5 + (3 * -1)",
+                    "- 5 – 3, 5 + (-3), 5 + (3 * -1)",
                     "ALU has its V like shape because there are 2’s complement holders for L & R followed by operation section",
-                    "Reminder: 2’s complement – invert all bits and add 1 "
+                    "Reminder: 2’s complement – invert all bits and add 1"
                 );
                 ?>
 
