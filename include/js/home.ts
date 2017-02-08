@@ -3,7 +3,6 @@ const THEMER = 'themer', DEVELOPER = 'developer', STUDENT = 'student', BASE = 'b
 const wData = getLogoData(300, 200, 50);
 let last = '', current = '';
 let svg: Snap.Paper;
-let hasThemer = false, hasDeveloper = false, hasStudent = false;
 const developerData = [
     [20, 100, 43, 31],
     [43, 169, 20, 100],
@@ -11,26 +10,16 @@ const developerData = [
     [280, 100, 257, 169]
 ];
 
-const developerSpeed = 200, studentSpeed = 300;
+const speed = 300;
 const sData = getM(300, 200, 50);
-function getGraduationHat(width: number, height: number, padding: number = -1): number[][] {
-    if (padding < 5) padding = width / 10;
-    const middleWidth = width / 2;
-    const axis = padding;
-    const sizeWidth = width / 6;
-    const widthTilt = sizeWidth / 20;
-    const sizeHeight = axis / 4;
-    const heightTilt = sizeHeight / 10;
-    return [
-        [middleWidth - sizeWidth, axis + heightTilt,
-            middleWidth - widthTilt, axis - sizeHeight,
-            middleWidth + sizeWidth, axis - heightTilt,
-            middleWidth + widthTilt, axis + sizeHeight
-            //since there's filling, don't need to reconnect
-        ],
-    ];
-}
 
+/**
+ * Minimalistic difference from W
+ * @param width
+ * @param height
+ * @param padding
+ * @returns {[number[],number[],number[],number[]]}
+ */
 function getM(width: number, height: number, padding: number = -1): number[][] {
     if (padding < 5) padding = width / 10;
     const minHeight = padding, maxHeight = height - padding, middleHeight = (minHeight + maxHeight) * 2 / 3;
@@ -48,7 +37,7 @@ $(function () {
     const bItems = $("#b-row").find(".btn-flat");
     const cContainer = $('#w-content-container');
     showW(0, function () {
-        svg.append(Snap('#w-2')); //bring \ above last /
+        // svg.append(Snap('#w-2')); //bring \ above last /
         setTimeout(function () {
             finalW();
             //bring buttons into view
@@ -70,7 +59,7 @@ $(function () {
             }
             bItems.not($(this)).removeClass('selected');
             $(this).addClass('selected');
-            cContainer.removeClass().addClass(id);
+            cContainer.removeClass().addClass(current);
             restore();
             switch (current) {
                 case BASE:
@@ -130,54 +119,56 @@ function setOpacity(element: Snap.Element, opacity: number, duration: number = 3
     }, duration);
 }
 
+/**
+ * Set svg back to the correct state before current is applied
+ */
 function restore(): void {
-    setOpacity(Snap('#w-0'), baseOpacity);
-    setOpacity(Snap('#w-1'), baseOpacity);
-    setOpacity(Snap('#w-2'), baseOpacity);
-    setOpacity(Snap('#w-3'), baseOpacity);
-    if (hasDeveloper) {
-        hasDeveloper = false;
-        for (const i in developerData) {
-            let path = Snap('#dev-' + i);
-            let data = developerData[i];
-            path.animate({
-                d: `M${data[2]},${data[3]} L${data[2]},${data[3]}`,
-                opacity: 0
-            }, developerSpeed, mina.easein, function () {
-                path.remove();
-            });
-        }
-        if (current != STUDENT) {
+    // setOpacity(Snap('#w-0'), baseOpacity);
+    // setOpacity(Snap('#w-1'), baseOpacity);
+    // setOpacity(Snap('#w-2'), baseOpacity);
+    // setOpacity(Snap('#w-3'), baseOpacity);
+    switch (last) {
+        case DEVELOPER:
+            for (const i in developerData) {
+                let path = Snap('#dev-' + i);
+                let data = developerData[i];
+                path.animate({
+                    d: `M${data[2]},${data[3]} L${data[2]},${data[3]}`,
+                    opacity: 0
+                }, speed, mina.easein, function () {
+                    path.remove();
+                });
+            }
+            setOpacity(Snap('#w-0'), baseOpacity);
+            setOpacity(Snap('#w-1'), baseOpacity);
+            setOpacity(Snap('#w-2'), baseOpacity);
+            if (current != STUDENT) {
+                const w3 = wData[3];
+                Snap('#w-3').animate({
+                    d: `M${w3[0]},${w3[1]} L${w3[2]},${w3[3]}`,
+                    opacity: baseOpacity,
+                    strokeWidth: 8
+                }, speed, mina.easein);
+            }
+            break;
+        case STUDENT:
             const w3 = wData[3];
-            Snap('#w-3').animate({
-                d: `M${w3[0]},${w3[1]} L${w3[2]},${w3[3]}`,
-                opacity: 0.7,
-                strokeWidth: 8
-            }, developerSpeed, mina.easein);
-        }
-    }
-    if (hasStudent) {
-        hasStudent = false;
-        const w3 = wData[3];
-        const max = (current == DEVELOPER) ? sData.length - 1 : sData.length;
-        for (let i = 0; i < max; i++) {
-            Snap('#w-' + i).animate({
-                d: getPath(wData[i])
-            }, studentSpeed, mina.easein);
-        }
+            const max = (current == DEVELOPER) ? sData.length - 1 : sData.length;
+            for (let i = 0; i < max; i++) {
+                Snap('#w-' + i).animate({
+                    d: getPath(wData[i])
+                }, speed, mina.easein);
+            }
+            break;
     }
 }
 
 function showThemer(): void {
-    if (hasThemer) return;
-    console.log(THEMER);
-    hasThemer = true;
+
 }
 
 
 function showDeveloper(): void {
-    if (hasDeveloper) return;
-    hasDeveloper = true;
     setOpacity(Snap('#w-0'), 0.3);
     setOpacity(Snap('#w-1'), 0.3);
     setOpacity(Snap('#w-2'), 0.3);
@@ -188,7 +179,7 @@ function showDeveloper(): void {
         line.animate({
             d: getPath(data),
             opacity: 1,
-        }, developerSpeed, mina.easein);
+        }, speed, mina.easein);
     }
     const data = wData[3].slice(0);
     const extra = 15;
@@ -198,25 +189,16 @@ function showDeveloper(): void {
     data[3] -= 3 * extra;
     Snap('#w-3').animate({
         d: getPath(data),
-        opacity: baseOpacity,
-        strokeWidth: 8
-    }, developerSpeed, mina.easein);
+        opacity: 1
+    }, speed, mina.easein);
 }
 
 function showStudent(): void {
-    if (hasStudent) return;
-    hasStudent = true;
-    // svg.append(Snap('#w-3')); //bring hat to front
-    // Snap('#w-3').animate({
-    //     d: getPath(sData[0]),
-    //     strokeWidth: 0,
-    //     opacity: 1,
-    //     fill: '#000' //precaution; here by default
-    // }, studentSpeed);
     for (let i = 0; i < sData.length; i++) {
         Snap('#w-' + i).animate({
-            d: getPath(sData[i])
-        }, studentSpeed, mina.easein);
+            d: getPath(sData[i]),
+            opacity: baseOpacity
+        }, speed, mina.easein);
     }
 
 }
