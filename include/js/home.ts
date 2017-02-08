@@ -54,11 +54,12 @@ $(function () {
             last = current;
             if (current == id) {
                 current = BASE;
+                bItems.removeClass('selected');
             } else {
                 current = id;
+                bItems.not($(this)).removeClass('selected');
+                $(this).addClass('selected');
             }
-            bItems.not($(this)).removeClass('selected');
-            $(this).addClass('selected');
             cContainer.removeClass().addClass(current);
             restore();
             switch (current) {
