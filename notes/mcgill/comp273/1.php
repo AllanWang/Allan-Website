@@ -3,44 +3,21 @@
 
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
-$page_title = "Comp 273";
-$page_description = "Comp 273 - Winter 2017";
-$navFrom = 'n_comp_273';
-//$navTo = 'commons';
-$theme_color = "#F44336"; //red
-global $cssArr;
-array_push($cssArr, 'comp273');
-dynamicNotes('php');
-phpHeader(); ?>
-<body>
-
-<?php
-phpNav();
-
-function circuitSVG($filename, $classes = '')
-{
-    $text = '<img';
-    if ($classes != '') {
-        $text = $text . ' class="' . $classes . '"';
-    }
-    $text = $text . ' src="circuits/' . $filename . '.svg">';
-    return $text;
-}
-
-function circuitHeader($title, $filename)
-{
-    echo '<div class="divider"></div>';
-    echo '<h6 id="' . getId($title) . '">' . $title . '</h6>';
-    echo circuitSVG($filename);
-}
-
+include('shared.php');
+hook($_SERVER['PHP_SELF']);
+$subHeader = 'Lectures 0 - 5';
 ?>
 
-<main>
+<body>
 
-    <div class="container light">
+<?php phpNav(); ?>
+
+<main>
+    <div class="container"><br/>
         <div class="row" id="header">
             <h3 class="header center">Comp 273</h3>
+            <h6 class="center"><?php echo $subHeader ?></h6>
+            <div class="divider"></div>
             <h6 class="center">
                 <?php
                 inlineBullets(array("cs.mcgill.ca/~jvybihal/" => "http://cs.mcgill.ca/~jvybihal/",
@@ -50,84 +27,10 @@ function circuitHeader($title, $filename)
                 ?>
             </h6>
         </div>
-        <div class="row" id="header">
-            <div class="col s12 m9 l10">
-
-                <div id="circuits" class="section scrollspy">
-                    <h5 id="circuitsh">Circuits</h5>
-                    <p>The following diagrams were drawn
-                        with <?php echo linkNewTab('Digital', 'https://github.com/hneemann/Digital') ?>. Feel free to
-                        download it to test
-                        the <?php echo linkNewTab('circuits', 'https://www.allanwang.ca/notes/mcgill/comp273/circuits/') ?>
-                        directly.</p>
-                    <div class="divider"></div>
-                    <h6 id="gates">Gates</h6>
-                    <table class="center-text h5 highlight">
-                        <?php
-                        table_header('', '', 'NOT', 'AND', 'OR', 'XOR', 'NAND', 'NOR');
-                        table('A', 'B', circuitSVG('gates/invert'), circuitSVG('gates/and'), circuitSVG('gates/or'), circuitSVG('gates/xor'), circuitSVG('gates/nand'), circuitSVG('gates/nor'));
-                        table(0, 0, 1, 0, 0, 0, 1, 1);
-                        table(0, 1, 'X', 0, 1, 1, 1, 0);
-                        table(1, 0, 0, 0, 1, 1, 1, 0);
-                        table(1, 1, 'X', 1, 1, 0, 0, 0);
-                        ?>
-                    </table>
-
-                    <?php circuitHeader('RS Flip Flops', 'sr-flipflop'); ?>
-                    <p>Basic reset set flip flop to save bit data; a clock can be connected to the inputs of both nor
-                        gates for synchronization</p>
-                    <table class="h5 highlight">
-                        <?php
-                        table_header('R', 'S', 'Q', 'Q\'', 'Result');
-                        table(0, 0, 'Q', 'Q\'', 'No Change');
-                        table(0, 1, 1, 0, 'Set');
-                        table(1, 0, 0, 1, 'Reset');
-                        table(1, 1, 1, 1, 'Avoid');
-                        ?>
-                    </table>
-
-                    <?php circuitHeader('D latch', 'd-latch') ?>
-                    <p>An addition to the RS flip flop to accept a single input. Together with the clock (E), the input
-                        (D)
-                        directly changes the output of the latch. This also eliminates the Reset = 1 & Set = 1
-                        issue.</p>
-                    <table class="h5 highlight">
-                        <?php
-                        table_header('E', 'D', 'Q', 'Q\'', 'Result');
-                        table(0, 0, 'Q', 'Q\'', 'Latch');
-                        table(0, 1, 'Q', 'Q\'', 'Latch');
-                        table(1, 0, 0, 1, 'Reset');
-                        table(1, 1, 1, 1, 'Set');
-                        ?>
-                    </table>
-
-                    <?php circuitHeader('JK Flip Flop', 'jk-flipflop') ?>
-                    <p>JK flip flops cycle at half the speed of its input, as only one SR flip flop is enabled at a time
-                        and it takes two clicks to pass data to the output.</p>
-                    <table class="h5 highlight">
-                        <?php
-                        table_header('J', 'K', 'Q', 'Q\'', 'Result');
-                        table(0, 0, 'Q', 'Q\'', 'Unchanged');
-                        table(0, 1, 0, 1, 'Reset');
-                        table(1, 0, 1, 0, 'Set');
-                        table(1, 1, 'Q\'', 'Q', 'Toggle');
-                        ?>
-                    </table>
-
-                    <?php circuitHeader('Half Adder', 'halfadder') ?>
-                    <p>Adds two bits and returns the sum and carry; used for the least significant digit of numerical
-                        additions</p>
-
-                    <?php circuitHeader('Full Adder', 'fulladder') ?>
-                    <p>Adds three bits (includes carry) together and produces a sum and carry; can be strung together to
-                        add numbers with many digits.</p>
-                </div>
-
+        <div class="row light">
+            <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                global $tocData;
-                $tocData['circuits'] = 'Circuits';
-
-                lectureSection(1, '2017/01/06',
+                lectureSection(0, '2017/01/06',
                     "System board parts",
                     "-Power Supply – Converts AC/DC from home into steady current needed in PC",
                     "-CPU – Central Processing Unit – Math, logic, data, movement, loops",
@@ -141,7 +44,7 @@ function circuitHeader($title, $filename)
                     "-Slot – Connects devices external to motherboard through cards"
                 );
 
-                lectureSection(2, '2017/01/09',
+                lectureSection(1, '2017/01/09',
                     "Traditional system board schematic has one bus connecting cache, CLK, CPU, ROM to RAM",
                     "Having more buses allows for multithreading",
                     "Slots allow connections to external devices",
@@ -194,7 +97,7 @@ function circuitHeader($title, $filename)
                     "-Increment to next instruction"
                 );
 
-                lectureSection(3, '2017/01/11',
+                lectureSection(2, '2017/01/11',
                     bulletTablePair('Bit', 'machine 5V ≡ 1, 3V ≡ 0, 0V ≡ OFF', 20),
                     bulletTablePair('Pathway', 'voltages can be passed through wire; whole wire becomes given voltage', 20),
                     "Bus ≡ n-wires ≡ one “unit” of Data",
@@ -237,7 +140,7 @@ function circuitHeader($title, $filename)
                     "CPU Boundary Register – keeps track of addresses used; addresses requested must never be greater than boundary address"
                 );
 
-                lectureSection(4, '2017/01/16',
+                lectureSection(3, '2017/01/16',
                     "RAM",
                     "-Usually, register size = address size",
                     "Two types of basic information",
@@ -252,7 +155,7 @@ function circuitHeader($title, $filename)
                     "-A way to “double” the max integer would be to keep it unsigned"
                 );
 
-                lectureSection(5, '2017/01/18',
+                lectureSection(4, '2017/01/18',
                     "ASCII/UNICODE – unsigned bit (no sign bit), 8-bits long",
                     "Char x = ‘A’	00100001",
                     "Strings – contiguous sequence of characters terminated by NULL or contiguous sequence of chars proceeded (example had count in the front?) by a byte count",
@@ -271,7 +174,7 @@ function circuitHeader($title, $filename)
                     "-∵ all fixed point numbers are written as 1.xxx, “1.” May be deleted &rarr; extra bit &rarr; double the range"
                 );
 
-                lectureSection(6, '2017/01/23',
+                lectureSection(5, '2017/01/23',
                     "Logic circuits",
                     "-Circle &rarr; not",
                     "-Extra line &rarr; exclusive",
@@ -293,40 +196,20 @@ function circuitHeader($title, $filename)
                     "--When C is 1, D value is passed through and set"
                 );
 
-                lectureSection(7, '2017/01/25',
-                    "End goal is addres &harr; read/write &harr; sync",
-                    "-" . bulletTablePair("Solution is gate/lock", "eg and gates around SR flip flop", 40),
-                    "To retrieve/send to correct address, use and gates with negations to check for matches.",
-                    "JK flip flop – two RS flip flops w/ clock and other gates",
-                    "-Adds a delay to output (first flip flop changes when clock is 1, other one outputs when clock is 0 &rarr; half the outputs as input)",
-                    linkToId("Half adder", 'half-adder') . " only contains A and B inputs",
-                    "-When doing addition, only least significant digit is half adder, others are full adders as there are carries",
-                    linkToId("Full adder", 'full-adder') . " = two half adders glued with or gates",
-                    "Status register has a few bits for unusual situations &rarr; overflow, dividing by 0, sign change",
-                    "To build an ALU, we need to know size of inputs and outputs, format, etc",
-                    "How would ALU design change when upgrading?",
-                    "- 4 &rarr; 8, adding 4 more full adders",
-                    "Subtraction – need to decide how we are doing the operation",
-                    "- 5 – 3, 5 + (-3), 5 + (3 * -1)",
-                    "ALU has its V like shape because there are 2’s complement holders for L & R followed by operation section",
-                    "Reminder: 2’s complement – invert all bits and add 1"
-                );
+                pagination();
                 ?>
-
             </div>
             <?php
             tableOfContents();
             ?>
-            <div id="keypanel" class="modal bottom-sheet">
-                <div class="modal-content">
-                    <?php
-                    //keywordPanel('Body Composition', 'obl-fac|Obligatory/Facultative Loss', 'Water Balance', 'icfh|ICF', 'ecfh|ECF', 'Plasma', 'ISF', 'Lymph', 'water-numbers|Water Percentages', 'Hematocrit', 'Indicators', 'ionic-comp|Ionic Composition', 'Glycocalyx');
-                    ?>
-                </div>
-            </div>
         </div>
     </div>
+
 </main>
+<script>
+
+</script>
+
 <?php phpFooter(); ?>
 </body>
 
