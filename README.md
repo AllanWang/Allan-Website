@@ -13,6 +13,8 @@ This website would not be possible without the following notable dependencies/ar
     * Added a few fixes in [my repo](https://github.com/AllanWang/jGravity)
 * [Apaxy](http://adamwhitcroft.com/apaxy/) - A simple, customisable theme for your Apache directory listing.
     * Used to style the default index view
+* [Snap.svg](http://snapsvg.io/) - The JavaScript SVG library for the modern web
+    * Used for the vector animations on the home page and the W & home logo in the nav bar
 * [Article by Perishable Press](https://perishablepress.com/better-default-directory-views-with-htaccess/) - Better Default Directory Views with HTAccess
     * Useful info on .htaccess and security
         
