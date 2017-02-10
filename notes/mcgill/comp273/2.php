@@ -101,6 +101,45 @@ $subHeader = 'Lecture 6 - 10';
                     "-1 bit/wire, bottle neck, duality of operation (modes)"
                 );
 
+                lectureSection(9, '2017/02/06',
+                    "An instruction can be any size (ie 8, 16, 32 bits) depending on the CPU",
+                    "Bite – flip flop",
+                    "Byte – 8 flip flops – standard size for RAM",
+                    "Word – standard size for CPU",
+                    "Address – standard size for bus",
+                    "Registers – either Byte, Word, or specialty sizes",
+                    "Ports, slots, other important registers – Often \"accessible\" but not \"addressable\"",
+                    "At least now, sizes should agree with each other",
+                    "BUS – conduit for bytes to travel from one location to another (pathway)",
+                    "-In buses, address and R/W signals are only 1 way; data however is 2 ways, and is sometimes designed as 2 buses",
+                    "- 1 bit per wire",
+                    "-Bottle neck; 1 byte of data per movement",
+                    "-Duality of opertion: byte & word modes",
+                    "Program (assume 8 bit instruction set)",
+                    '-' . bulletTablePair('MOV D0, D1', 'D0 &larr; D1', 20),
+                    '-' . bulletTablePair('Add D1, D0, 5', 'D1 = D0 + 5', 20),
+                    '-' . bulletTablePair('MOV D0, X', 'D0 gets x from RAM', 20),
+                    "Run Program",
+                    "-OS – double click, load to RAM at free space, PC &larr; 50",
+                    "Program Runs (OS is sleeping; number on top right denotes address)",
+                    "-MAR<sup>50</sup> &larr; PC<sup>50</sup> <br> PC<sup>51</sup> &larr; PC + 1<sup>51</sup>",
+                    "-AR<sup>50</sup> &larr; MAR<sup>56</sup> <br> DR &larr; RAM[AR]",
+                    "-MBR &larr; DR <br> IR &larr; MBR <br> CU &larr; IR (op code)",
+                    "OP code &rArr; code # represents instruction",
+                    "Bottom left wires go down to CU",
+                    "Args is complicated; sometimes have one, two, three, etc",
+                    "-For our example, there is always 3 arguments",
+                    "Comment: no real difference b/t integers and addresses; just how we use it",
+                    "Need code for all instructions?",
+                    "Each instruction from set is mode of micro-instructions",
+                    "-ADD, D1, D0, 5 &rArr; D1 = D0 + 5",
+                    "-Micro",
+                    "--L &larr; D0",
+                    "--R &larr; 5",
+                    "--A &larr; ALU(L,R)",
+                    "--D1 &larr; A"
+                );
+
                 pagination();
                 ?>
             </div>
