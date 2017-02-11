@@ -98,7 +98,7 @@ $subHeader = 'Lectures 0 - 5';
                 );
 
                 lectureSection(2, '2017/01/11',
-                    bulletTablePair('Bit', 'machine 5V ≡ 1, 3V ≡ 0, 0V ≡ OFF', 20),
+                    bulletTablePair('Bit', 'machine 5V ≡ 1, 2V ≡ 0, 0V ≡ OFF', 20),
                     bulletTablePair('Pathway', 'voltages can be passed through wire; whole wire becomes given voltage', 20),
                     "Bus ≡ n-wires ≡ one “unit” of Data",
                     "-Also a pathway (of n going in the same direction)",
