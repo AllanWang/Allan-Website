@@ -110,6 +110,18 @@ function circuitHeader($title, $filename)
                         ?>
                     </table>
 
+                    <?php circuitHeader('Multiplexer', 'multiplexer') ?>
+                    <p>Takes many input signals and a selector address with its own signals. Selector address chooses which of the input signals to output (by index).</p>
+                    <table class="h5 highlight">
+                        <?php
+                        table_header('A', 'B', 'Y');
+                        table(0, 0, 'D0');
+                        table(0, 1, 'D1');
+                        table(1, 0, 'D2');
+                        table(1, 1, 'D3');
+                        ?>
+                    </table>
+
                     <?php circuitHeader('Half Adder', 'halfadder') ?>
                     <p>Adds two bits and returns the sum and carry; used for the least significant digit of numerical
                         additions</p>
