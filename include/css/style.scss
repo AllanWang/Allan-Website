@@ -56,6 +56,16 @@ nav {
   display: none;
 }
 
+//if page doesn't have enough info; footer should align to the bottom
+html, body, main {
+  height: 100%;
+}
+
+body > main {
+  height: auto;
+  min-height: 100%;
+}
+
 header {
   padding-left: $navbar-width;
 }

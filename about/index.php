@@ -24,7 +24,7 @@ phpNav(); ?>
             <div class="row">
                 <div class="col s12 m9 l10">
                     <h3 class="header center">About Allan Wang</h3>
-                    <span>I'm just a student who loves to share. I am currently in my second year at <a
+                    <span>//TODO ¯\_(ツ)_/¯ I am currently in my second year at <a
                                 href="http://mcgill.ca/">McGill University</a> studying Pharmacology and Computer Science</span>
 
                     <div id="dev">

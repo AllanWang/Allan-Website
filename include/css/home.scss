@@ -1,15 +1,5 @@
 $themeColor: rgba(0, 151, 167, 0.2);
 
-//bring footer down to bottom
-html, body, main {
-  height: 100%;
-}
-
-body > main {
-  height: auto;
-  min-height: 100%;
-}
-
 #w-logo-container {
   padding: 50px;
 }
