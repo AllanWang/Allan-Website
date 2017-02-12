@@ -114,7 +114,7 @@ $subHeader = 'Lecture 6 - 10';
                     "-In buses, address and R/W signals are only 1 way; data however is 2 ways, and is sometimes designed as 2 buses",
                     "- 1 bit per wire",
                     "-Bottle neck; 1 byte of data per movement",
-                    "-Duality of opertion: byte & word modes",
+                    "-Duality of operation: byte & word modes",
                     "Program (assume 8 bit instruction set)",
                     '-' . bulletTablePair('MOV D0, D1', 'D0 &larr; D1', 20),
                     '-' . bulletTablePair('Add D1, D0, 5', 'D1 = D0 + 5', 20),
@@ -128,7 +128,7 @@ $subHeader = 'Lecture 6 - 10';
                     "OP code &rArr; code # represents instruction",
                     "Bottom left wires go down to CU",
                     "Args is complicated; sometimes have one, two, three, etc",
-                    "-For our example, there is always 3 arguments",
+                    "-For our example, there are always 3 arguments",
                     "Comment: no real difference b/t integers and addresses; just how we use it",
                     "Need code for all instructions?",
                     "Each instruction from set is mode of micro-instructions",
@@ -138,6 +138,27 @@ $subHeader = 'Lecture 6 - 10';
                     "--R &larr; 5",
                     "--A &larr; ALU(L,R)",
                     "--D1 &larr; A"
+                );
+
+                lectureSection(10, '2017/02/08',
+                    "Midterm – definitions, circuit drawing/interpreting, data conversions & representation, RAM, adder, addressing, bus, IR, IP, classical & pipeline CPU, off the shelf circuits, mathematical problems as seen in assignment",
+                    "Pipeline as optimized architecture – clock tick sharing",
+                    "-CU needs to make sure it goes through all the right loops",
+                    "In pipeline, cache<sub>input</sub> &rarr; … &rarr; cache<sub>data</sub> at 2GHz. It is connected to RAM via a slow bus, but to make use of the speed, there are private fast buses going from the RAM to the cache input and data. They operate at 2Ghz + dump, meaning they collect data and send a bunch at once.",
+                    "-Code/load prediction – dumb vs smart (looking one instruction ahead to see when to dump)",
+                    "Fetch portion of CPU",
+                    "-PC goes to read address &rarr; instruction comes out",
+                    "-Instruction R-format",
+                    "--OP – op-code (two; one for each CU)",
+                    "--RS – register source",
+                    "--RT – second register source (optional)",
+                    "--RD – register destination",
+                    "--SHAMT – shift amount (jump)",
+                    "--FUNCT – function-code (ie sub-op-code)",
+                    "-Add portion is always connected to 4, as instruction is 32-bit",
+                    "Load portion of CPU",
+                    "-OP code goes to CU, other parts of instruction go to registers, some portions skip register altogether",
+                    "-Multiple address registers exist so you can fetch and load from multiple addresses at the same time (unlike in RAM where it’s synchronous)"
                 );
 
                 pagination();
