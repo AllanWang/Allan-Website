@@ -41,14 +41,15 @@ $subHeader = 'Lectures 0 - 5';
                     "-Cache – fast memory (pipeline) connected to RAM",
                     "-Bus – Common road for data that interconnects all devices on motherboard",
                     "-CLK – Clock – Beats the processing cycle (2 of them)",
-                    "-Slot – Connects devices external to motherboard through cards"
+                    "-Slot – Connects devices external to motherboard through cards",
+                    "-ISA – Instruction Set Architecture – provides commands to processor to tell it what it needs to do (eg ADD, COMPARE, LOAD, OUT)"
                 );
 
                 lectureSection(1, '2017/01/09',
                     "Traditional system board schematic has one bus connecting cache, CLK, CPU, ROM to RAM",
                     "Having more buses allows for multithreading",
                     "Slots allow connections to external devices",
-                    "-PCI, ISA",
+                    "-PCI (peripheral component interconnect), ISA (instruction set architecture)",
                     "CLK – clock – one controls bus, one controls CPU (min 2 CLKs per device)",
                     "-CLK for bus is one or two orders of magnitude slower than CPU CLK",
                     "PCI can run at higher clock speeds",
@@ -141,11 +142,22 @@ $subHeader = 'Lectures 0 - 5';
                 );
 
                 lectureSection(3, '2017/01/16',
+                    "Claude E. Shannon",
+                    "-Entropy – how much work does it take to communicate one letter to someone?",
+                    "-Medium – how can we transmit that single letter?",
+                    "-Realization – the medium is the message",
+                    "-In computers",
+                    "--Entropy – how many bits do we need to represent a single character?",
+                    "--Medium – Light (optics), sound (WiFi), signals(wire)",
+                    "--Realization – message is characterized by medium",
                     "RAM",
                     "-Usually, register size = address size",
                     "Two types of basic information",
                     "-Table encode – address/variable name on one side, data on the other (in bytes)",
                     "-Natural binary number",
+                    "-Addressing schematic",
+                    "--Address column (32 bits) with cell addresses",
+                    "--Data column (8 bits) with OS, video buffer, program space, zero page",
                     "ROM – read only memory – often sits between RAM and another part of the machine",
                     "C – char a = ‘b’		compiler → w/ ASCII table → to byte",
                     "Binary – size – register, RAM",
@@ -171,7 +183,12 @@ $subHeader = 'Lectures 0 - 5';
                     '-' . bulletTablePair('Add 1', '11111011 &larr; -5', 20),
                     "Fixed Point – sign | exponent | mantissa (not two’s complement)",
                     "-Bias is the 0, offsets up for positive, down for negative",
-                    "-∵ all fixed point numbers are written as 1.xxx, “1.” May be deleted &rarr; extra bit &rarr; double the range"
+                    "-∵ all fixed point numbers are written as 1.xxx, \"1.\" May be deleted &rarr; extra bit &rarr; double the range",
+                    "-IEEE format",
+                    "--" . bulletTable('Precision', 'Sign', 'Exponent', 'Fractional Mantissa', 'Total', 'Bias'),
+                    "--" . bulletTable('Single', 1, 8, 23, 32, 127),
+                    "--" . bulletTable('Double', 1, 11, 52, 64, 1023),
+                    "--" . bulletTable('Quad', 1, 15, 111, 128, 16383)
                 );
 
                 lectureSection(5, '2017/01/23',
