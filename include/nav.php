@@ -58,7 +58,7 @@ function addActiveIf($prefix)
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="l" id="nr_n_comp_251" href="https://allanwang.ca/notes/mcgill/comp251/">Comp
+                            <li><a class="l" id="nr_n_comp_251" href="https://allanwang.ca/notes/mcgill/comp251/0.php">Comp
                                     251</a></li>
                             <li><a class="l" id="nr_n_comp_273" href="https://allanwang.ca/notes/mcgill/comp273/0.php">Comp
                                     273</a></li>
