@@ -29,11 +29,13 @@ function addActiveIf($prefix)
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
-                <input id="search" type="text"
-                       placeholder="<?php if ($page_title === 'Uh oh') echo 'Press the Icon to ' ?>Search"><label
-                        for="search"><i
-                            class="material-icons">search</i></label>
-                <div class="search-results"></div>
+                <form autocomplete="off">
+                    <input id="search" type="text"
+                           placeholder="<?php if ($page_title === 'Uh oh') echo 'Press the Icon to ' ?>Search"><label
+                            for="search"><i
+                                class="material-icons">search</i></label>
+                    <div class="search-results"></div>
+                </form>
             </div>
         </li>
         <?php if (isset($side_nav_contents)) $side_nav_contents() ?>
