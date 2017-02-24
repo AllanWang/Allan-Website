@@ -5,12 +5,14 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 1-5';
+$subHeader = 'Lectures 1-10';
 ?>
 
 <body>
 
-<?php phpNav(); ?>
+<?php
+code_highlight();
+phpNav(); ?>
 
 <main>
     <div class="container"><br/>
@@ -83,6 +85,34 @@ $subHeader = 'Lectures 1-5';
                     "-1/m probability of collision – after finding x have been inserted in hash table before x (ie we insert at head)",
                     "-1 + α/2 + α/(2n)"
                 );
+
+                lectureSection(6, '2017/01/26',
+                    "Disjoint Sets",
+                    "Connected components – set of nodes connected by a path",
+                    "-Every node in the set can be reached by every other node (path itself is irrelevant)",
+                    "Partition – set of objects split into disjoint subsets",
+                    "-The union of all sets will produce the original set",
+                    "-No two sets share a common node unless those sets are the same set; every set is <i>disjoint</i> from all the other sets",
+                    "Map vs Relation",
+                    "-Maps lay out a unidirectional property from elements in one set to the other",
+                    "-Relation defines a bidirectional connection (ie boolean matrix)",
+                    "Equivalence – i is equivalent to j if they belong to the same set (are connected)",
+                    "-" . bulletTablePair("Reflexivity", "&forall; a &isin; S, (a, a) &isin; R", 30),
+                    "--For all u &isin; V, there is a path of length 0 from u to u",
+                    "-" . bulletTablePair("Symmetry", "&forall; a, b &isin; S, (a, b) &isin; R &rArr; (b, a) &isin; R", 30),
+                    "--For al u, v &isin; V, there is a path from u to v iff there is a path from v to u",
+                    "-" . bulletTablePair("Transitivity", "&forall; a, b, c &isin; S, (a, b) &isin; R &cap; (b, c) &isin; R &rArr; (a, c) &isin; R", 30),
+                    "--For all u, v, w &isin; V, if there is a path from u to v and a path from v to w, there is a path from u to w",
+                    "ADT (abstract data type)",
+                    "-" . bulletTablePair("find(i)", "returns representative of set that contains i", 30),
+                    "-" . bulletTablePair("sameset(i, j)", "returns find(i) == find(j)", 30),
+                    "-" . bulletTablePair("union (i, j)", "merges sets containing I and j", 30),
+                    "--Does nothing if they are already in the same set",
+                    "When merging trees, smaller tree should be merged below root of larger tree to minimize height; height will therefore only increase when the trees initially have the same height",
+                    "-Rank – upper bound on height of nodes",
+                    "Path Compression – make all nodes in find path direct children of root".code_specific('java', 'Disjoint.java')
+                );
+
 
                 pagination();
                 ?>

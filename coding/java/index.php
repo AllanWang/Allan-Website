@@ -56,7 +56,7 @@ phpNav(); ?>
                     <h5>The Basics</h5>
                     Here is a sample that shows the structure of a class and how static methods work.
                     <?php
-                    code_specific('java', 'basics.java');
+                    echo code_specific('java', 'basics.java');
                     ?>
                 </div>
                 <div <?php scrollSpyHeaderData("Common Mistakes") ?>>
@@ -123,7 +123,7 @@ phpNav(); ?>
                         passed through other methods and modified. Feel free to copy it and run it to see the
                         results.</p>
                     <?php
-                    code_specific('java', 'ObjectReferences.java');
+                    echo code_specific('java', 'ObjectReferences.java');
                     ?>
                 </div>
             </div>
