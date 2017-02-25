@@ -86,6 +86,28 @@ phpNav(); ?>
                     "-1 + α/2 + α/(2n)"
                 );
 
+                lectureSection(5, '2017/01/24',
+                    "Recursive equation for best case running time of function heapify on heap size of n? &Omega;(1)",
+                    "Red Black Trees",
+                    "-Always balanced	height is O(logn)	worst case operations are O(logn)",
+                    "-+1 bit per node for attribute color: red or black",
+                    "-Empty trees are black and will be referenced as <i>nil</i>",
+                    "-Properties",
+                    "--Every node is red or black",
+                    "--The root and every leaf is black",
+                    "--If a node is red, its children are black",
+                    "--For each node, all paths from the node to descendant leaves contain same number of black nodes (same black height)",
+                    "-Let",
+                    "--h(x) = # of edges in longest path to leaf",
+                    "--bh(x) = # of black nodes from x to leaf, not counting x and counting the leaf",
+                    "--Black height of RBT = bh(root)",
+                    "-Note",
+                    "--h(x)/2 &le; bh(x) &le; h(x) &le; 2bh(x) ",
+                    "--A subtree rooted at any node x has &ge; 2<sup>bh(x)</sup> -= 1 internal nodes",
+                    "--A RBT with n internal nodes has height &le; 2lg(n+1) (proof by previous point)",
+                    "Pseudocode" . code_specific('java', 'RedBlackTree.java')
+                );
+
                 lectureSection(6, '2017/01/26',
                     "Disjoint Sets",
                     "Connected components – set of nodes connected by a path",
@@ -110,7 +132,7 @@ phpNav(); ?>
                     "--Does nothing if they are already in the same set",
                     "When merging trees, smaller tree should be merged below root of larger tree to minimize height; height will therefore only increase when the trees initially have the same height",
                     "-Rank – upper bound on height of nodes",
-                    "Path Compression – make all nodes in find path direct children of root".code_specific('java', 'Disjoint.java')
+                    "Path Compression – make all nodes in find path direct children of root" . code_specific('java', 'Disjoint.java')
                 );
 
 
