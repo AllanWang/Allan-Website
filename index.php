@@ -4,6 +4,7 @@
 include("include/config.php");
 $page_title = "Home";
 $page_description = "Main Page";
+$page_keywords = ['Main', 'Allan', 'Wang'];
 $theme_color = "#0097A7"; //dark cyan
 global $cssArr;
 array_push($cssArr, 'home');

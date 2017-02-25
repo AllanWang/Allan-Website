@@ -4,6 +4,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Projects";
 $page_description = "Main Page";
+$page_keywords = ['Dev', 'Projects', 'Coding'];
 $navFrom = 'proj';
 $navTo = 'projects';
 $n_key = 'Coding Projects';

@@ -5,6 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "About Allan";
 $page_description = "About Allan";
+$page_keywords = ['About'];
 $navFrom = 'about';
 //$navTo = 'commons';
 $theme_color = "#4078c0"; //github blue

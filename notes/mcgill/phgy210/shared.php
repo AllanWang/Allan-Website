@@ -18,10 +18,11 @@ $baseUrl = 'https://allanwang.ca/notes/mcgill/phgy210/';
  */
 function hook($phpServer, $date)
 {
-    global $lecture_number, $page_title, $page_description;
+    global $lecture_number, $page_title, $page_description, $page_keywords;
     $lecture_number = basename($phpServer, '.php');
     $page_title = "Phgy 210 Lec $lecture_number";
     $page_description = "Physiology 210 Notes - Lecture $date - $lecture_number";
+    $page_keywords = ['Phgy', 'Physiology', '210', 'Notes', 'McGill'];
     dynamicNotes();
     phpHeader();
 }

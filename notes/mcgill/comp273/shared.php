@@ -17,10 +17,11 @@ $baseUrl = 'https://allanwang.ca/notes/mcgill/comp273/';
  */
 function hook($phpServer)
 {
-    global $page_number, $page_title, $page_description;
+    global $page_number, $page_title, $page_description, $page_keywords;
     $page_number = basename($phpServer, '.php');
     $page_title = "Comp 273 - $page_number";
     $page_description = "Comp 273 - Winter 2017 - $page_number";
+    $page_keywords = ['Comp', 'Computer', 'Computer Science', '273', 'Notes', 'McGill'];
     dynamicNotes();
     phpHeader();
 }

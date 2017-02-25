@@ -1,5 +1,5 @@
 <?php
-global $page_title, $page_description, $theme_color, $hamburger_menu_color, $header_function, $cssArr;
+global $page_title, $page_description, $page_keywords, $theme_color, $hamburger_menu_color, $header_function, $cssArr;
 ?>
 
 <!--
@@ -15,7 +15,11 @@ global $page_title, $page_description, $theme_color, $hamburger_menu_color, $hea
     <title><?php echo(isset($page_title) ? $page_title : 'Allan Wang'); ?></title>
     <meta name="description"
           content="<?php echo(isset($page_description) ? $page_description : 'Allan Wang\'s page'); ?>"/>
+    <meta name="author" content="Allan Wang"/>
     <link rel="icon" href="<?php echo getFavIcon() ?>">
+    <?php if (isset($page_keywords) && is_array($page_keywords)): ?>
+        <meta name="keywords" content="<?php echo implode($page_keywords, ', ') ?>"/>
+    <?php endif; ?>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
