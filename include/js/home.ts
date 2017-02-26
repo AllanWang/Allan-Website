@@ -33,6 +33,12 @@ function getM(width: number, height: number, padding: number = -1): number[][] {
 }
 
 $(function () {
+    setTimeout(function () {
+        loadLogo();
+    }, 1000);
+});
+
+function loadLogo() {
     svg = Snap('#aw-svg');
     const bItems = $("#b-row").find(".btn-flat");
     const cContainer = $('#w-content-container');
@@ -80,7 +86,7 @@ $(function () {
             }
         });
     })
-});
+}
 
 /**
  * Show W logo line by line
