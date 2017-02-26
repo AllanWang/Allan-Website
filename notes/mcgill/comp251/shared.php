@@ -1,7 +1,7 @@
 <?php
 //Before other loads; sets common global vars and functions
 $minPage = 0;
-$maxPage = 0;
+$maxPage = 1;
 $page_number = -1;
 global $n_key, $navFrom, $theme_color;
 $n_key = "Comp 251";
@@ -24,6 +24,7 @@ function hook($phpServer)
     $page_keywords = ['Comp', 'Computer', 'Computer Science', '251', 'Notes', 'McGill'];
     dynamicNotes();
     phpHeader();
+    code_highlight();
 }
 
 function getPage($number)

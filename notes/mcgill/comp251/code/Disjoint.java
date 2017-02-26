@@ -16,7 +16,6 @@ public class Disjoint {
      */
     Node find(i) {
         if (i.parent == i) return i //i is the root
-        i.parent = find(i.parent) //set parent of i to root
-        return i.parent //return root found
+        return i.parent = find(i.parent) //set parent of i to root & return the root
     }
 }
