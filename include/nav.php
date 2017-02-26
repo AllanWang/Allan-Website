@@ -29,7 +29,7 @@ function addActiveIf($prefix)
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
-                <form autocomplete="off">
+                <form action="javascript:void(0);" autocomplete="off">
                     <input id="search" type="text"
                            placeholder="<?php if ($page_title === 'Uh oh') echo 'Press the Icon to ' ?>Search"><label
                             for="search"><i
