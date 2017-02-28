@@ -25,6 +25,18 @@ function table(...$items)
     echo '</tr>';
 }
 
+function table_contents($columns, ...$items)
+{
+    $result = '';
+    for ($item = 0; $item <= sizeof($items) - $columns; $item += $columns) {
+        $result .= '<tr>';
+        for ($row = 0; $row < $columns; $row++) {
+            $result .= "<td>" . $items[$item + $row] . "</td>";
+        }
+        $result .= '</tr>';
+    }
+    return $result;
+}
 
 function math_table(...$items)
 {
