@@ -146,6 +146,7 @@ $subHeader = 'Lectures 6 - 10';
                     "--Space is &Theta;(V<sup>2</sup>) – not efficient for sparse graphs",
                     "--Time to list all vertices adjacent to u: &Theta;(V)",
                     "--//bigo",
+                    '<a href="https://www.allanwang.ca/notes/comp/?scroll_to=tree-traversal">BFS DFS Pseudocode (Comp 250)</a>',
                     "BFS – breadth-first search",
                     "-Find all vertices on level n before proceeding to n + 1",
                     "-Vertex is <i>discovered</i> the first time it is encountered during search",
@@ -154,7 +155,7 @@ $subHeader = 'Lectures 6 - 10';
                     "--White – undiscovered	Gray – discovered & not finished	Black – finished",
                     "-Result (given the graph G = (V, E) and source vertex s &isin; V)",
                     "--d[v] = smallest # of edges from s to v for all v &isin; V",
-                    "= &infty; if v is not reachable from S",
+                    "--&infin; if v is not reachable from S",
                     "--&pi;[v]  = u such that (u, v) is last edge on shortest path s to v",
                     "u is v’s predecessor",
                     "--breadth first tree with root s containing all reachable vertices",
@@ -178,6 +179,17 @@ $subHeader = 'Lectures 6 - 10';
                     "--d[v] < d[u] < f[u] < f[v]",
                     "And u is a descendant of v",
                     "-d[u] < d[v] < f[u] < f[v] cannot happen"
+                );
+
+                lectureSection(9, '2017/02/07',
+                    "White-path Theorem",
+                    "-Theorem 2 – v is a descendant of u iff at time d[u], there is a path u &rarr; v consisting of only white vertices (except for u, which was just colored gray)",
+                    "-<table>" . table_contents(2, 'Classification of Edges',
+                        'Tree Edge', 'In depth-first forest (paths taken in DFS); found by exploring (u, v)',
+                        'Back Edge', '(u, v), where u is descendant of v (in depth-first tree)',
+                        'Forward Edge', '(u, v), where v is descendant of u, but not tree edge',
+                        'Cross Edge', 'Any other edge; can go between vertices in same or different depth-first tree(s)') . "</table>",
+                    "-Theorem 3 – in DFS of undirected graph, we get only tree & back edges; no forward or cross edges <b>26</b>"
                 );
 
                 pagination();
