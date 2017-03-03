@@ -159,7 +159,7 @@ $subHeader = 'Lectures 6 - 10';
                     "--&pi;[v]  = u such that (u, v) is last edge on shortest path s to v",
                     "u is v’s predecessor",
                     "--breadth first tree with root s containing all reachable vertices",
-                    "-<table>" . table_contents(2, 'Time Complexity', '', 'Initialization', '&Theta;(V)', 'Enqueue/Dequeue', 'O(1)', 'Total Runtime', 'O(V + E)') . "</table>",
+                    "-" . table_tags(table_contents(2, 'Time Complexity', '', 'Initialization', '&Theta;(V)', 'Enqueue/Dequeue', 'O(1)', 'Total Runtime', 'O(V + E)'), 'table-f-20c'),
                     "DFS – depth-first search",
                     "-Explore all edges out of most recent vertex v before backtracking and exploring other vertices",
                     "-Continue until all reachable vertices from original source are discovered",
@@ -169,7 +169,7 @@ $subHeader = 'Lectures 6 - 10';
                     "--d[v] = discovery tie (v turns from white to gray)",
                     "--f[v] = finishing time (v turns from gray to black)",
                     "--&pi;[v] = predecessor of v = u, such that v was discovered during scan of u’s adjacency list ",
-                    "-<table>" . table_contents(2, 'Time Complexity', '', 'Loops', '&Theta;(V)', 'Total Runtime', '&Theta;(V + E)') . "</table>",
+                    "-" . table_tags(table_contents(-2, 'Time Complexity', 'Loops', '&Theta;(V)', 'Total Runtime', '&Theta;(V + E)'), 'table-f-20c'),
                     "Parenthesis Theorem",
                     "-Theorem 1 – for all u, v, exactly one of the following holds",
                     "--d[u] < f[u] < d[v] < f[v] or d[v] < f[v] < d[u] < f[u]",
@@ -184,12 +184,12 @@ $subHeader = 'Lectures 6 - 10';
                 lectureSection(9, '2017/02/07',
                     "White-path Theorem",
                     "-Theorem 2 – v is a descendant of u iff at time d[u], there is a path u &rarr; v consisting of only white vertices (except for u, which was just colored gray)",
-                    "-<table>" . table_contents(2, 'Classification of Edges',
+                    "-" . table_tags(table_contents(-2, 'Classification of Edges',
                         'Tree Edge', 'In depth-first forest (paths taken in DFS); found by exploring (u, v)',
-                        'Back Edge', '(u, v), where u is descendant of v (in depth-first tree)',
+                        'Back Edge', '(u, v), where u is descendant of v (in depth-first tree); forms cycles w/ tree edges; self loops are back edges',
                         'Forward Edge', '(u, v), where v is descendant of u, but not tree edge',
-                        'Cross Edge', 'Any other edge; can go between vertices in same or different depth-first tree(s)') . "</table>",
-                    "-Theorem 3 – in DFS of undirected graph, we get only tree & back edges; no forward or cross edges <b>26</b>"
+                        'Cross Edge', 'Any other edge; can go between vertices in same or different depth-first tree(s)'), 'table-f-20c'),
+                    "-Theorem 3 – in DFS of undirected graph, we get only tree & back edges; no forward or cross edges"
                 );
 
                 pagination();

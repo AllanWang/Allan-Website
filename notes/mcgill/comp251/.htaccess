@@ -1,1 +1,1 @@
-IndexIgnore *.txt base.php shared.php
+IndexIgnore *.txt /css base.php shared.php
