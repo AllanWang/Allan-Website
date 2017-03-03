@@ -20,12 +20,7 @@ phpNav(); ?>
             <h6 class="center"><?php echo $subHeader ?></h6>
             <div class="divider"></div>
             <h6 class="center">
-                <?php
-                inlineBullets(array("Prof's Email" => "mailto:jeromew@cs.mcgill.ca?Subject=Comp%20251",
-                    "Course Online" => "http://www.cs.mcgill.ca/~jeromew/comp251.html#schedule",
-                    "Online Forum" => "https://cs251qanda.cs.mcgill.ca"
-                ));
-                ?>
+                <?php headerBullets(); ?>
             </h6>
         </div>
         <div class="row light">
