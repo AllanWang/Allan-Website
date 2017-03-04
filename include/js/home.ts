@@ -159,12 +159,13 @@ function restore(): void {
             }
             break;
         case STUDENT:
-            const w3 = wData[3];
             const max = (current == DEVELOPER) ? sData.length - 1 : sData.length;
             for (let i = 0; i < max; i++) {
-                Snap('#w-' + i).animate({
+                const params = {
                     d: getPath(wData[i])
-                }, speed, mina.easein);
+                };
+                if (i == 1 || i == 2) params['stroke'] = themeColor;
+                Snap('#w-' + i).animate(params, speed, mina.easein);
             }
             break;
     }
@@ -202,10 +203,12 @@ function showDeveloper(): void {
 
 function showStudent(): void {
     for (let i = 0; i < sData.length; i++) {
-        Snap('#w-' + i).animate({
+        const params = {
             d: getPath(sData[i]),
             opacity: baseOpacity
-        }, speed, mina.easein);
+        };
+        if (i == 1 || i == 2) params['stroke'] = "#E8002D";
+        Snap('#w-' + i).animate(params, speed, mina.easein);
     }
-
 }
+
