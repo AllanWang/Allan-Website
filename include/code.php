@@ -26,7 +26,7 @@ function code_collapsible(...$boxes)
     echo '<ul class="collapsible" data-collapsible="accordion">';
     foreach ($boxes as $box) {
         $items = explode("|", $box);
-        echo '<li><div class="collapsible-header click-scroll">';
+        echo '<li><div id="' . getId($items[0]) . '" class="collapsible-header click-scroll">';
         echo $items[0];
         echo '</div><div class="collapsible-body">';
         if (sizeof($items) == 3) {

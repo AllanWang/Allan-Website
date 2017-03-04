@@ -1,7 +1,7 @@
 <?php
 //Before other loads; sets common global vars and functions
 $minPage = 0;
-$maxPage = 1;
+$maxPage = 2;
 $page_number = -1;
 global $n_key, $navFrom, $theme_color;
 $n_key = "Comp 251";
@@ -25,6 +25,15 @@ function hook($phpServer)
     dynamicNotes();
     phpHeader();
     code_highlight();
+}
+
+function headerBullets()
+{
+    inlineBullets(array("Prof's Email" => "mailto:jeromew@cs.mcgill.ca?Subject=Comp%20251",
+        "Course Online" => "http://www.cs.mcgill.ca/~jeromew/comp251.html#schedule",
+        "Online Forum" => "https://osqa.cs.mcgill.ca/",
+        "McGill VPN" => "http://kb.mcgill.ca/it/vpn"
+    ));
 }
 
 function getPage($number)

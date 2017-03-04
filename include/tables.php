@@ -28,14 +28,30 @@ function table(...$items)
 function table_contents($columns, ...$items)
 {
     $result = '';
-    for ($item = 0; $item <= sizeof($items) - $columns; $item += $columns) {
+    $item = 0;
+    if ($columns < 0) { //first row is just one cell
+        $item = 1;
+        $columns = -$columns;
+        $result .= '<td colspan="' . $columns . '">' . $items[0] . "</td>";
+    }
+    for (; $item <= sizeof($items) - $columns; $item += $columns) {
         $result .= '<tr>';
         for ($row = 0; $row < $columns; $row++) {
-            $result .= "<td>" . $items[$item + $row] . "</td>";
+            $point = $items[$item + $row];
+            $result .= "<td>" . $point . "</td>";
         }
         $result .= '</tr>';
     }
     return $result;
+}
+
+function table_tags($content, $class = '', $id = '')
+{
+    $text = '<table';
+    if ($class != '') $text .= ' class="' . $class . '"';
+    if ($id != '') $text .= ' id="' . $id . '"';
+    $text .= '>' . $content . '</table>';
+    return $text;
 }
 
 function math_table(...$items)
