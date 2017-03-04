@@ -4,6 +4,7 @@
 
 # User-specific stuff:
 .idea/workspace.xml
+.idea/watcherTasks.xml
 .idea/tasks.xml
 
 # Sensitive or high-churn files:
