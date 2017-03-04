@@ -1,5 +1,6 @@
 /// <reference path="search_data.ts" />
 import {database} from "./search_data";
+//note require is not supported in browsers
 
 (function ($) {
 
@@ -31,19 +32,19 @@ import {database} from "./search_data";
             }
         });
 
-        let renderResults = function (results: string[]) {
+        let renderResults = function (results: string[], query: string) {
             let resultsContainer = $('.search-results');
             resultsContainer.empty();
             if (!results) return; //empty input
             if (results.length == 0) { //input with no match
-                let noResultDiv = $('<a>No results found</a>');
-                resultsContainer.append(noResultDiv);
+                bindCSE(query, resultsContainer);
                 return;
             }
             Array.prototype.forEach.call(results, function (result: string[]) {
                 let resultDiv = $('<a href=' + result[1] + '>' + result[0] + '</a>');
                 resultsContainer.append(resultDiv);
             });
+            bindCSE(query, resultsContainer);
         };
 
         let debounce = function (fn: Function) {
@@ -74,30 +75,31 @@ import {database} from "./search_data";
 
 
         inputSearch.bind('keyup', debounce(function (e: any) {
-            if ($(this).val() < 2) {
-                renderResults(null);
+            let query = $(this).val();
+            if (query < 2) {
+                renderResults(null, query);
                 return;
             }
 
             if (e.which === 38 || e.which === 40 || e.keyCode === 13) return;
 
-            let query = $(this).val();
-            if (!query) return renderResults(null);
+            if (!query) return renderResults(null, query);
 
             let results = (<any>window).index.search(query).slice(0, 6).map(function (result: any) {
                 let href = result.ref.slice(urlPrefix.length);
                 return [database[href].title, result.ref];
             });
-            renderResults(results);
+            renderResults(results, query);
         }));
 
 
         inputSearch.bind('keydown', debounce(function (e: any) {
             // Escape.
+            let query = $(this).val();
             if (e.keyCode === 27) {
                 $(this).val('');
                 $(this).blur();
-                renderResults(null);
+                renderResults(null, query);
                 return;
             } else if (e.keyCode === 13) {
                 // enter
@@ -140,3 +142,21 @@ import {database} from "./search_data";
         }));
     });
 }(jQuery));
+
+function hasCSE(): boolean {
+    return typeof google !== 'undefined';
+}
+
+function bindCSE(query: string, container: JQuery) {
+    if (!hasCSE()) return;
+    let text = container.length <= 0 ? 'No results; Full Search' : 'Full Google Search';
+    const cse = $('<a class="clickable">' + text + '</a>').on('click', function () {
+        googleSearch(query)
+    });
+    container.append(cse);
+}
+
+function googleSearch(query: string) {
+    if (!hasCSE()) return;
+    google.search.cse.element.getElement('g-results').execute(query);
+}

@@ -16,8 +16,9 @@ function addActiveIf($prefix)
 }
 
 ?>
-
 <header>
+
+
     <a href="#" data-activates="nav-bar"
        class="button-collapse top-nav waves-effect waves-hamburger circle hide-on-large-only">
         <i class="material-icons" style="color: <?php echo $hamburger_menu_color; ?>">menu</i></a>
@@ -25,7 +26,6 @@ function addActiveIf($prefix)
     <ul id="nav-bar" class="side-nav fixed">
         <li class="logo"><a id="logo-container" href="https://allanwang.ca/" class="center">
                 <svg id="nav-logo" height="100" width="250"></svg>
-
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
@@ -94,3 +94,4 @@ function addActiveIf($prefix)
     </ul>
 
 </header>
+<gcse:searchresults-only gname="g-results"></gcse:searchresults-only>

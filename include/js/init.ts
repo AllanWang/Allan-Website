@@ -42,7 +42,20 @@ $(function () {
             marginTop: '-=' + $(this).height() / 2
         }).show();
     });
+
+    googleCSE();
 }); // end of document ready
+
+function googleCSE() {
+    const cx = '008927596377771777826:b2wtqncgaxq';
+    let gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    let s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+}
 
 /*
  * Animation functions
