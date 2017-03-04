@@ -1,3 +1,4 @@
+<gcse:searchresults-only gname="g-results"></gcse:searchresults-only>
 <?php
 global $navFrom, $navTo, $dynamic_notes, $theme_color;
 

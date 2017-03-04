@@ -1,4 +1,6 @@
 "use strict";
+/// <reference path="search_data.ts" />
+var search_data_1 = require("./search_data");
 //note require is not supported in browsers
 (function ($) {
     var inputSearch = $('input#search');

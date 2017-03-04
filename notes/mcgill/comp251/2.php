@@ -76,6 +76,21 @@ $subHeader = 'Lectures 11 - 15';
                     "-Pseudocode" . code_specific('java', 'ShortestPath.java')
                 );
 
+                lectureSection(12, '2017/02/16',
+                    "Bipartite graph – graph where vertices can be partitioned into 2 sets (A & B), where all edges cross the sets (no edges are from one set to the same set)",
+                    "-If made into a DFS tree, can be coloured in 2 colours where every edge spans from one colour to the other colour",
+                    "-Is bipartite iff it does not contain an odd cycle",
+                    "-" . linkNewTab('From Math 240', 'https://www.allanwang.ca/pdf/MATH%20240.pdf#page=36'),
+                    "Matching – subset of edges such that no two edges share a vertex",
+                    "Perfect matching – every vertex in subset A has a matching in subset B and vice versa",
+                    "Complete bipartite graph – every vertex in A is connected to every vertex in B and vice versa",
+                    "Stable marriage problem",
+                    "-Goal is to find perfect matching",
+                    "-Pair is unstable if for an unmatched pair &alpha;-&beta;, &alpha; prefers &beta; to current match, or &beta; prefers &alpha; to current match",
+                    "-Matchings are stable if there are no unstable pairs",
+                    "-Pseudocode" . code_specific('java', 'GaleShapley.java')
+                );
+
                 pagination();
                 ?>
             </div>

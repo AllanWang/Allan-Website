@@ -94,4 +94,3 @@ function addActiveIf($prefix)
     </ul>
 
 </header>
-<gcse:searchresults-only gname="g-results"></gcse:searchresults-only>

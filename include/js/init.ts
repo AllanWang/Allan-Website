@@ -47,6 +47,7 @@ $(function () {
 }); // end of document ready
 
 function googleCSE() {
+    // $('.container').prepend('<gcse:searchresults-only gname="g-results"></gcse:searchresults-only>');
     const cx = '008927596377771777826:b2wtqncgaxq';
     let gcse = document.createElement('script');
     gcse.type = 'text/javascript';
