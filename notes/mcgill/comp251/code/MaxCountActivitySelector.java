@@ -14,7 +14,7 @@ public class MaxCountActivitySelector {
      * @return set containing the activities in our solution
      */
     Set<Activity> recursiveSelector(S, i) {
-        m = i + 1
+        m = i + 1 //get index of next activity
         while (m < S.size && S[m].start < S[i].finish)
             m++ //find first activity in S with an index within (i, n+1]
         if (m < S.size) return S[m] + recursiveSelector(S, m) //got first element; find rest

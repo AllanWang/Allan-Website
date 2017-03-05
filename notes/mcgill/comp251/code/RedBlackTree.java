@@ -27,6 +27,8 @@ public class RedBlackTree {
          * Node is now added
          * Proceed to check the three cases below
          * and continue "fixing" until the root is reached
+         * Grandparent of x is x.parent.parent
+         * Uncle of x is sibling of x.parent (other child of grandparent)
          */
     }
 
