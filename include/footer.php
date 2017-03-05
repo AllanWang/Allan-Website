@@ -64,5 +64,5 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
 
 <!--load last-->
 <script type="text/javascript" src="/include/js/jade/lunr.min.js"></script>
-<script type="text/javascript" src="/include/js/jade/search_data.min.js"></script>
+<script type="text/javascript" src="/include/js/jade/search-data.js"></script>
 <script type="text/javascript" src="/include/js/jade/search.min.js"></script>

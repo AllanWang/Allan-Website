@@ -1,5 +1,4 @@
-"use strict";
-exports.database = {
+const database = {
     'dev/?scroll_to=projects': {
         'title': 'Dev Projects',
         'tags': 'Android, Material Glass, Capsule, Butler, Icon Showcase, Allanbot, Facebook, Firebase, Bot, Coding, hello world',
@@ -65,5 +64,5 @@ exports.database = {
         'tags': 'phgy, brain, immune, blood, water, somatosensory, senses',
         'body': 'notes'
     }
+
 };
-//# sourceMappingURL=search_data.js.map

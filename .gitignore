@@ -1,4 +1,5 @@
 *.pdf
+*.js.map
 *.min.js
 *.min.css
 

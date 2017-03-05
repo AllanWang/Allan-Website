@@ -1,7 +1,3 @@
-/// <reference path="search_data.ts" />
-import {database} from "./search_data";
-//note require is not supported in browsers
-
 (function ($) {
 
     let inputSearch = $('input#search');
@@ -94,6 +90,7 @@ import {database} from "./search_data";
 
 
         inputSearch.bind('keydown', debounce(function (e: any) {
+            focusedSearchResults = $('.search-results .focused'); //get agaub
             // Escape.
             let query = $(this).val();
             if (e.keyCode === 27) {
@@ -123,6 +120,7 @@ import {database} from "./search_data";
                     break;
 
                 case 40: // down
+                    console.log('down');
                     if (!focusedSearchResults.length) {
                         focused = $('.search-results').children().first();
                         focused.addClass('focused');
