@@ -9,6 +9,7 @@ public class GaleShapley {
      * for the items in the other set
      *
      * O(n^2)
+     * Best case Omega(n)
      *
      * @param A set A
      * @param B set B

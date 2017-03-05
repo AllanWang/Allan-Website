@@ -154,7 +154,7 @@ $subHeader = 'Lectures 6 - 10';
                     "--&pi;[v]  = u such that (u, v) is last edge on shortest path s to v",
                     "u is v’s predecessor",
                     "--breadth first tree with root s containing all reachable vertices",
-                    "-" . table_tags(table_contents(2, 'Time Complexity', '', 'Initialization', '&Theta;(V)', 'Enqueue/Dequeue', 'O(1)', 'Total Runtime', 'O(V + E)'), 'table-f-20c'),
+                    "-" . table_tags(table_contents(-2, 'Time Complexity', 'Initialization', '&Theta;(V)', 'Enqueue/Dequeue', 'O(1)', 'Total Runtime', 'O(V + E)'), 'table-f-20c'),
                     "DFS – depth-first search",
                     "-Explore all edges out of most recent vertex v before backtracking and exploring other vertices",
                     "-Continue until all reachable vertices from original source are discovered",

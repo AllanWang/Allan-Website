@@ -29,7 +29,7 @@ phpNav(); ?>
                 lectureSection(1, '2017/01/05',
                     'Office Hours Tues/Thu 1-2pm',
                     '40% for 5 assignments, 15% for midterm, 45% for final exam',
-                    'Midterm March 7 (one crib sheet permitted), during class time',
+                    'Midterm March 9 (one crib sheet permitted), during class time',
                     'End of class April 11',
                     'Final exam TBD'
                 );
