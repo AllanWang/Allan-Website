@@ -16,6 +16,13 @@ function table_header_full($item, $colspan)
     echo '</th></tr>';
 }
 
+function table_body_full($item, $colspan)
+{
+    echo '<tr><td colspan="' . $colspan . '">';
+    echo $item;
+    echo '</td></tr>';
+}
+
 function table(...$items)
 {
     echo '<tr>';
