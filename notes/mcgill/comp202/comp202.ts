@@ -40,10 +40,15 @@ $(function () {
         currentQuestion = $(arrQuestions[count]);
         currentAnswer = $(arrAnswers[count]);
         currentQuestion.parent().addClass('selected');
-        jAnimateTo(currentQuestion.parent(), 0, 200); //offset 200
+        const scrollY = currentQuestion.parent().offset().top - 100;
+        console.log(scrollY);
+        //scroll
+        // currentQuestion.parent()[0].scrollIntoView();
+        jAnimateTo(currentQuestion, 0, 100);
     }
 
     getCurrent(0);
+    animateTo('test');
 
     $(window).bind('keydown', function (e: any) {
 

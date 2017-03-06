@@ -83,7 +83,7 @@ function animateWithOffset(idTo: string, delay = 0, offset = 0, duration = 700) 
 
 
 function jAnimateTo(item: JQuery, delay = 0, offset = 0, duration = 700, onlyFromAbove = false) {
-    if (!item) return;
+    if (!item) return console.log('invalid JQuery element');
     setTimeout(function () { //animate scroll after page load
         let itemTop = item.offset().top;
         if (onlyFromAbove) {
@@ -91,7 +91,6 @@ function jAnimateTo(item: JQuery, delay = 0, offset = 0, duration = 700, onlyFro
             if (top > itemTop) return;
         }
         if (item.hasClass('collapsible-header') && item.hasClass('click-scroll')) return item.click(); //clicking will scroll it
-
         $('html, body').animate({
             scrollTop: (itemTop - offset)
         }, duration, 'easeInOutExpo');

@@ -1,10 +1,15 @@
 $answer-offset: 150;
 $question-offset: 50;
+$anim-duration: 0.5s;
 
 //prevent horizontal scrolling
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+html, body, main {
+  height: inherit;
 }
 
 .row {
@@ -25,12 +30,12 @@ html, body {
   padding: 0.75rem !important;
   @include translateX($question-offset);
   &.q-left {
-    animation: q-slide-in 0.5s forwards;
-    -webkit-animation: q-slide-in 0.5s forwards;
+    animation: q-slide-in #{$anim-duration} forwards;
+    -webkit-animation: q-slide-in #{$anim-duration} forwards;
   }
   &.q-center {
-    animation: q-slide-out 0.5s forwards;
-    -webkit-animation: q-slide-out 0.5s forwards;
+    animation: q-slide-out #{$anim-duration} forwards;
+    -webkit-animation: q-slide-out #{$anim-duration} forwards;
   }
 }
 
@@ -40,12 +45,12 @@ html, body {
   width: 50%;
   @include translateX($answer-offset);
   &.a-show {
-    animation: a-slide-in 0.5s forwards;
-    -webkit-animation: a-slide-in 0.5s forwards;
+    animation: a-slide-in #{$anim-duration} forwards;
+    -webkit-animation: a-slide-in #{$anim-duration} forwards;
   }
   &.a-hide {
-    animation: a-slide-out 0.5s forwards;
-    -webkit-animation: a-slide-out 0.5s forwards;
+    animation: a-slide-out #{$anim-duration} forwards;
+    -webkit-animation: a-slide-out #{$anim-duration} forwards;
   }
 }
 
