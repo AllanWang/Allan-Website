@@ -49,10 +49,6 @@ phpNav(); ?>
                 );
 
                 lectureSection(2, '2017/01/12',
-                    "Open addressing",
-                    "-Collisions exist; resolved by adding another slot",
-                    "-We can delete elements in open address tables ",
-                    "-Cannot store more records than total number of slots in table",
                     "Table S with n records of x",
                     "-X is key, key[x] &rarr; satellite data",
                     "-Insert(S, x): S &larr; S ∪ {x}",
@@ -78,7 +74,33 @@ phpNav(); ?>
                     "Proof – unsuccessful vs successful",
                     "Successful search",
                     "-1/m probability of collision – after finding x have been inserted in hash table before x (ie we insert at head)",
-                    "-1 + α/2 + α/(2n)"
+                    "-1 + α/2 + α/(2n)",
+                    "Hash functions",
+                    "-A good hash function should uniformly distribute the keys into slots, and should not be affected by patterns in keys",
+                    "-Division method – h(k) = kmod d",
+                    "--D must be d chosen carefully, usually 2<sup>r</sup> where r is a prime not too close to a power of 2 or 10",
+                    "--Easy to implement, but division is slow",
+                    "-Multiplication method – h(k) = (A kmod2<sup>w</sup>) >> (w – r)",
+                    "--Extracted bits are in the middle of the binary key",
+                    "Open addressing",
+                    "-No chaining; if slot is not empty, try another has function",
+                    "-Collisions exist; resolved by adding another slot",
+                    "-We can delete elements in open address tables",
+                    "-Cannot store more records than total number of slots in table",
+                    "-Deletion is difficult",
+                    "Goal is uniform hashing – each key is equally likely to have any permutation as its probe sequence",
+                    "Theorems",
+                    "-Expected # of probes in unsuccessful search is at most 1/(1 - &alpha;)",
+                    "-Expected # of probes in successful search is at most 1/&alpha; * log(1/(1 - &alpha;))",
+                    "Probing",
+                    "-Linear – h(k, i) = (h’(k) + i)mod m",
+                    "--If slot is full, check next slot; tendency to create clusters",
+                    "-Quadratic probing – h(k, i) = (h’(k) + c<sub>1</sub>i + c<sub>2</sub>i<sup>2</sup>)mod m",
+                    "--Must ensure we have full permutation of <0, …, m – 1>",
+                    "--Secondary clustering – 2 distinct keys have same h’ value if they have same probe sequence",
+                    "Double hashing – h(k, i) = (h<sub>1</sub>(k) + i * h<sub>2</sub>(k)) mod m",
+                    "-h<sub>2</sub>(k) should be “relatively” prime to m to guarantee full permutation"
+
                 );
 
                 lectureSection(3, '2017/01/17',
