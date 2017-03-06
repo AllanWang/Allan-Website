@@ -5,12 +5,13 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 1 - 5';
+$subHeader = 'Lectures 0 - 5';
 ?>
 
 <body>
 
 <?php
+mathJax();
 phpNav(); ?>
 
 <main>
@@ -26,7 +27,7 @@ phpNav(); ?>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                lectureSection(1, '2017/01/05',
+                lectureSection(0, '2017/01/05',
                     'Office Hours Tues/Thu 1-2pm',
                     '40% for 5 assignments, 15% for midterm, 45% for final exam',
                     'Midterm March 9 (one crib sheet permitted), during class time',
@@ -34,7 +35,7 @@ phpNav(); ?>
                     'Final exam TBD'
                 );
 
-                lectureSection(2, '2017/01/10',
+                lectureSection(1, '2017/01/10',
                     ' *** A significant portion of the lecture overlaps with comp 250, so I did not add much about it here ***',
                     'f(n) is O(g(n)) iff there exists a point n<sub>0</sub> beyond which f(n) is less than some fixed constant times g(n) &rarr; for all n ≥ n0, f(n) ≤ c * g(n) (for some c > 0)',
                     'Let T1(n) = O(f(n)) & T2(n) = O(f(n))',
@@ -47,7 +48,7 @@ phpNav(); ?>
                     '--	At depth h, leaves are packed on the left side of the tree'
                 );
 
-                lectureSection(4, '2017/01/17',
+                lectureSection(2, '2017/01/12',
                     "Open addressing",
                     "-Collisions exist; resolved by adding another slot",
                     "-We can delete elements in open address tables ",
@@ -78,6 +79,41 @@ phpNav(); ?>
                     "Successful search",
                     "-1/m probability of collision – after finding x have been inserted in hash table before x (ie we insert at head)",
                     "-1 + α/2 + α/(2n)"
+                );
+
+                lectureSection(3, '2017/01/17',
+                    "Max heap – largest element stored at root; all children are smaller",
+                    "Min heap – smallest element stored at root; all children are bigger",
+                    "Heaps as array – root = A[1], left[i] = A[2i], right[i] = A[2i + 1], parent[i] = A[i/2]",
+                    "Height - # of edges on longest simple path from node to leaf",
+                    "Height of heap = height of root = &Theta;(log n)",
+                    "Basic operations are O(log n)",
+                    linkNewTab('Heap Pseudocode (Comp 250)', 'https://www.allanwang.ca/notes/comp/?scroll_to=heaps'),
+                    "Maintaining heap property",
+                    "-Fix offending node by exchanging value at node with larger of the values at its children",
+                    "-Recursively fix until there are no more offenses",
+                    "Running time of buildMaxHeap is O(n)",
+                    '-maxHeapify = O(log n); heap height = log n;<br>\( O \left( n \sum_{h=0}^{\lfloor log n \rfloor}\dfrac{h}{2^h} \right) \)',
+                    "HeapSort is O(n logn)"
+                );
+
+                lectureSection(4, '2017/01/19',
+                    "BST search, insert, delete are &Theta;(h); h = height of BST ",
+                    "Height(x) = 1 + max(height(x.left), height(x.right))",
+                    "A good BST is balanced, height = &Theta;(log n)",
+                    "A bad BST is unbalanced, height = &Theta;(n)",
+                    "AVL – self balancing BST – Adelson-Velsky & Landis",
+                    "-Height of one child is at most one greater than the other",
+                    "-Each node contains data to indicate which child is bigger, or if they have the same height",
+                    "-Rotations are used to maintain balanced properties",
+                    "Rotations",
+                    "-Remove zigzags",
+                    "--If a.left = b and b.right = c, rotate b leftwards",
+                    "--Result: a.left = c and c.left = b",
+                    "-Reattach children properly",
+                    "--If a.left = b, b.left = c, b.right = d, a.right = e, rotate b rightwards",
+                    "--Result: b.right = a, a.right = e, b.left = c",
+                    "--Reattach middle child (d) to right child or local root &rarr; a.left = d"
                 );
 
                 lectureSection(5, '2017/01/24',

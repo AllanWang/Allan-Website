@@ -257,7 +257,7 @@ $subHeader = 'Lectures 6 - 10';
                     "Prim’s Algorithm",
                     "-Builds one tree, so A is always a tree",
                     "-Start from arbitrary “root” r",
-                    "-For each step, add light edge crossing cut (V<sub>A</sub>, V – V<sub>A</sub> to A",
+                    "-For each step, add light edge crossing cut (V<sub>A</sub>, V – V<sub>A</sub>) to A",
                     "--V<sub>A</sub> = vertices A is incident on",
                     "Finding light edge",
                     "-Use priority queue Q (which supports the following in O(log n)",

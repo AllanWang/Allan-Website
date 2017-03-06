@@ -32,5 +32,4 @@ public class Prim {
         }
         return mst
     }
-
 }
