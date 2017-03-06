@@ -1,0 +1,98 @@
+$answer-offset: 150;
+$question-offset: 50;
+
+//prevent horizontal scrolling
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.row {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+  &.selected {
+    background-color: #eee;
+  }
+}
+
+@mixin translateX($val) {
+  transform: translateX($val * 1%);
+  -webkit-transform: translateX($val * 1%);
+}
+
+.question {
+  padding: 0.75rem !important;
+  @include translateX($question-offset);
+  &.q-left {
+    animation: q-slide-in 0.5s forwards;
+    -webkit-animation: q-slide-in 0.5s forwards;
+  }
+  &.q-center {
+    animation: q-slide-out 0.5s forwards;
+    -webkit-animation: q-slide-out 0.5s forwards;
+  }
+}
+
+.answer {
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem !important;
+  display: inline-block;
+  width: 50%;
+  @include translateX($answer-offset);
+  &.a-show {
+    animation: a-slide-in 0.5s forwards;
+    -webkit-animation: a-slide-in 0.5s forwards;
+  }
+  &.a-hide {
+    animation: a-slide-out 0.5s forwards;
+    -webkit-animation: a-slide-out 0.5s forwards;
+  }
+}
+
+@mixin key-translateX($animationName, $value) {
+  @-webkit-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -webkit-transform: translateX(0%);
+      }
+    }
+    100% {
+      -webkit-transform: translateX($value);
+    }
+  }
+  @-moz-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -moz-transform: translateX(0%);
+      }
+    }
+    100% {
+      -moz-transform: translateX($value);
+    }
+  }
+  @-o-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -o-transform: translateX(0%);
+      }
+    }
+    100% {
+      -o-transform: translateX($value);
+    }
+  }
+  @keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        transform: translateX(0%);
+      }
+    }
+    100% {
+      transform: translateX($value);
+    }
+  }
+}
+
+@include key-translateX(a-slide-in, 0);
+@include key-translateX(q-slide-in, 0);
+@include key-translateX(a-slide-out, $answer-offset);
+@include key-translateX(q-slide-out, $question-offset);

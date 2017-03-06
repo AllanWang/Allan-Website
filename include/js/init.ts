@@ -69,17 +69,32 @@ function animateTo(idTo: string, delay = 0, onlyFromAbove = false) {
     if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
     if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
     let element = $('#' + idTo);
+    jAnimateTo(element, delay, 0, 700, onlyFromAbove);
+}
+
+
+function animateWithOffset(idTo: string, delay = 0, offset = 0, duration = 700) {
+    if (typeof idTo === 'undefined') return console.log('Undefined id');
+    if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
+    if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
+    let element = $('#' + idTo);
+    jAnimateTo(element, delay, offset, duration, false);
+}
+
+
+function jAnimateTo(item: JQuery, delay = 0, offset = 0, duration = 700, onlyFromAbove = false) {
+    if (!item) return;
     setTimeout(function () { //animate scroll after page load
-        let itemTop = element.offset().top;
+        let itemTop = item.offset().top;
         if (onlyFromAbove) {
             let top = window.pageYOffset || document.documentElement.scrollTop;
             if (top > itemTop) return;
         }
-        if (element.hasClass('collapsible-header') && element.hasClass('click-scroll')) return element.click(); //clicking will scroll it
+        if (item.hasClass('collapsible-header') && item.hasClass('click-scroll')) return item.click(); //clicking will scroll it
 
         $('html, body').animate({
-            scrollTop: itemTop
-        }, 700, 'easeInOutExpo');
+            scrollTop: (itemTop - offset)
+        }, duration, 'easeInOutExpo');
     }, delay);
 }
 
@@ -149,18 +164,6 @@ function toggleNoteView(element: any) {
     }
     animateWithOffset(currentlyActive, duration * 5, duration * 2, duration); //jumps to id
 
-}
-
-function animateWithOffset(idTo: string, delay = 0, offset = 0, duration = 700) {
-    if (typeof idTo === 'undefined') return console.log('Undefined id');
-    if (idTo.charAt(0) == '#') idTo = idTo.substring(1);
-    if (!document.getElementById(idTo)) return console.log(idTo, 'is not a real elementId');
-    setTimeout(function () { //animate scroll after page load
-        let itemTop = $('#' + idTo).offset().top;
-        $('html, body').animate({
-            scrollTop: (itemTop - offset)
-        }, duration, 'easeInOutExpo');
-    }, delay);
 }
 
 //Function to initialize dynamic notes
