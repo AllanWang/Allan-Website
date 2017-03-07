@@ -89,6 +89,19 @@ phpNav(); ?>
                         differences, but you can accomplish any loop with any implementation.
                     </div>
                 </div>
+                <div class="row">
+                    <div class="question">
+                        * The following loop is invalid
+                        <pre><code class="java">int i = 0;<br>for (; i < 10; i++)<br>//do something in the loop</code></pre>
+                    </div>
+                    <div class="answer">
+                        <b>False</b><br>
+                        To compile a for loop, you must have three components in the statement, separated by semicolons.
+                        However, those components may be blank. The code is equivalent to how you might write a while
+                        loop
+                        <pre><code class="java">int i = 0;<br>while (i < 15) ... i++;</code></pre>
+                    </div>
+                </div>
                 <h5>Multiple Choice Section</h5>
                 <h6 class="grey-text">More than one choice may be valid per question</h6>
                 <div class="divider"></div>
