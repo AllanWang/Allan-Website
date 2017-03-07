@@ -4,11 +4,11 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/bower_components/Snap.svg/doc/js/prism.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/Snap.svg/Gruntfile.min.js" />
-        <item url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/typed.js/js/typed.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/typed.js/dist/typed.min.min.js" />
-        <item url="file://$PROJECT_DIR$/include/js/init.min.js" />
         <item url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+        <item url="file://$PROJECT_DIR$/notes/mcgill/comp202/comp202.min.js" />
+        <item url="file://$PROJECT_DIR$/include/js/init.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/typed.js/gulpfile.min.js" />
         <item url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
         <item url="file://$PROJECT_DIR$/bower_components/Snap.svg/dist/snap.svg.min.js" />
@@ -16,13 +16,14 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/sudo.min.js" />
+      <root url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/Snap.svg/doc/js/prism.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/Snap.svg/Gruntfile.min.js" />
-      <root url="file://$PROJECT_DIR$/include/js/jade/search_data.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/typed.js/js/typed.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/typed.js/dist/typed.min.min.js" />
-      <root url="file://$PROJECT_DIR$/include/js/init.min.js" />
       <root url="file://$PROJECT_DIR$/include/js/jade/search.min.min.js" />
+      <root url="file://$PROJECT_DIR$/notes/mcgill/comp202/comp202.min.js" />
+      <root url="file://$PROJECT_DIR$/include/js/init.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/typed.js/gulpfile.min.js" />
       <root url="file://$PROJECT_DIR$/include/js/highlight.min.min.js" />
       <root url="file://$PROJECT_DIR$/bower_components/Snap.svg/dist/snap.svg.min.js" />

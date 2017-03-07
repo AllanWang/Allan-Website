@@ -12,6 +12,25 @@ $(function () {
     //add proper classes
     allQuestions.addClass('col s6');
     allAnswers.addClass('col s6');
+    allQuestions.each(function (i) {
+        $(this).prepend((i + 1) + '.'); //add numbering
+    });
+    $('.row').each(function (i) {
+        $(this).attr('id', 'q-' + i); //set id for marker
+        $(this).addClass('clickable');
+        $(this).on('click', function () {
+            var index = parseInt($(this).attr('id').substr(2)) - 1;
+            var question = $(arrQuestions[index]);
+            if ($(this).hasClass('selected')) {
+                var e = jQuery.Event("keydown");
+                e.which = question.hasClass('q-left') ? 39 : 37; //show or hide
+                $(window).trigger(e);
+            }
+            else {
+                getCurrent(index);
+            }
+        });
+    });
     //done with main handler
     allQuestions = null;
     allAnswers = null;
@@ -37,11 +56,8 @@ $(function () {
         currentQuestion = $(arrQuestions[count]);
         currentAnswer = $(arrAnswers[count]);
         currentQuestion.parent().addClass('selected');
-        var scrollY = currentQuestion.parent().offset().top - 100;
-        console.log(scrollY);
         //scroll
-        // currentQuestion.parent()[0].scrollIntoView();
-        jAnimateTo(currentQuestion, 0, 100);
+        jAnimateTo(currentQuestion, 0, 100, 200);
     }
     getCurrent(0);
     animateTo('test');
