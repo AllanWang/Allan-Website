@@ -22,19 +22,23 @@ phpNav(); ?>
         <div class="light row" id="commons">
 
             <h3 class="header center">Comp 202 Midterm Practice</h3>
-            <h6 class="center">Melanie Lyman-Abramovitch &bull; Kaleem Siddiqi &bull; Dan Pomerantz &bull;</h6>
+            <h6 class="center">Melanie Lyman-Abramovitch &bull; Kaleem Siddiqi &bull; Dan Pomerantz</h6>
+            <div class="divider"></div>
             <h6 class="center grey-text">Use &uarr; &darr; to navigate through questions; use &larr; &rarr; to
-                show/hide answers<br>Click a question to select it; click again to show/hide the answer</h6>
+                show/hide answers<br>Click a question to jump to it and show/hide the answer</h6>
+            <h6 class="center grey-text">Questions marked with * are added by me, and were not a part of the original
+                practice</h6>
         </div>
         <div id="shell">
             <div id="q-and-a" style="display:none;">
                 <h5>True/False Section</h5>
+                <div class="divider"></div>
                 <div class="row">
                     <div class="question">
                         If you only expect numbers as command line arguments, you can change
                         <pre><code class="java">public static void main(String[] args)</code></pre>
                         to
-                        <pre><code class="java">public static void main(double[] args) </code></pre>
+                        <pre><code class="java">public static void main(double[] args)</code></pre>
                         and run the program.
                     </div>
                     <div class="answer">
@@ -59,7 +63,7 @@ phpNav(); ?>
                     </div>
                     <div class="answer">
                         <b>True</b><br> Example
-                        <?php echo code_specific('java', 'ifblock.txt') ?>
+                        <?php echo code_specific('java', 'IfBlock.java') ?>
                     </div>
                 </div>
                 <div class="row">
@@ -72,7 +76,7 @@ phpNav(); ?>
                         This also removes the need for if statements, since the method will no longer continue once a
                         return
                         is issued
-                        <?php echo code_specific('java', 'multireturn.txt') ?>
+                        <?php echo code_specific('java', 'MultiReturn.java') ?>
                     </div>
                 </div>
                 <div class="row">
@@ -85,7 +89,34 @@ phpNav(); ?>
                         differences, but you can accomplish any loop with any implementation.
                     </div>
                 </div>
+                <h5>Multiple Choice Section</h5>
+                <h6 class="grey-text">More than one choice may be valid per question</h6>
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="question">
+                        Which of the following are examples of compile-time errors?
+                        <ol type="a">
+                            <li>Accessing an array at index -1</li>
+                            <li>Dividing an integer by 0</li>
+                            <li>Passing an int value as input to a method that expects a double input argument</li>
+                            <li>Accessing a variable outside of its scope.</li>
+                            <li>Omitting a semi-colon at the end of a statement.</li>
+                        </ol>
+                    </div>
+                    <div class="answer">
+                        <b>D, E</b><br>Compile-time errors are errors that can be found prior to evaluating a statement.
+                        They mostly contain syntax errors, or passing incorrect types into methods.<br>
+                        <ol type="a">
+                            <li>is a runtime error, producing an ArrayIndexOutOfBoundsException</li>
+                            <li>is a runtime error, producing an ArithmeticException</li>
+                            <li>is not an error, as integers can be automatically casted into a double; the opposite is
+                                not true
+                            </li>
+                        </ol>
+                    </div>
+                </div>
                 <h5>Short Answer Section</h5>
+                <div class="divider"></div>
                 <div class="row">
                     <div class="question">
                         What is the value of x?
@@ -103,7 +134,7 @@ phpNav(); ?>
                     <div class="question">
                         The following method contains five variables. Which variables (if any) exist on the line marked
                         ****HERE****?
-                        <?php echo code_specific('java', 'varlife.txt') ?>
+                        <?php echo code_specific('java', 'VarLife.java') ?>
                     </div>
                     <div class="answer">
                         <b>input, x, y</b><br> Variables exist within their closest surrounding braces {}. Both s and t
@@ -114,7 +145,7 @@ phpNav(); ?>
                 <div class="row">
                     <div class="question">
                         What prints when the following code executes?
-                        <?php echo code_specific('java', 'intswap.txt') ?>
+                        <?php echo code_specific('java', 'IntSwap.java') ?>
                     </div>
                     <div class="answer">
                         <b>x is 4 y is 5</b><br> Note that the swapping only affects the values within the swap method,
@@ -129,14 +160,56 @@ phpNav(); ?>
                 <div class="row">
                     <div class="question">
                         What prints when the following code executes?
-                        <?php echo code_specific('java', 'ifelseprint.txt') ?>
+                        <?php echo code_specific('java', 'IfElsePrint.java') ?>
                     </div>
                     <div class="answer">
                         <b>one two</b><br>n > 0 so "one" prints and n becomes 0.<br>The next if statement is not nested,
                         so it still executes; n &le; 0, so "two" prints, and the else is skipped.
                     </div>
                 </div>
-                <div id="test"></div>
+                <div class="row">
+                    <div class="question">
+                        For the code below,
+                        <ol type="1">
+                            <li>How many times is the condition in the <i>inner</i> loop evaluated?</li>
+                            <li>How many times does the text "Hello" get printed?</li>
+                        </ol>
+                        <?php echo code_specific('java', 'NestedIf.java') ?>
+                    </div>
+                    <div class="answer">
+                        <b>12 evaluations, 9 prints</b><br>
+                        We may first look at the print statement. There are three values for i: 0, 2, 4, which are then
+                        passed to the inner loop.
+                        When i = 0, the print statement is called once. When i = 2, Hello prints 3 times, and when i =
+                        4, Hello prints 5 times, totalling 9.<br>
+                        In regards to evaluation, keep in mind that the loop needs to evaluate until the middle
+                        condition is not met.
+                        If we look at i = 0, the inner condition is still evaluated when j = 1, where it knows that j >
+                        0 and stops. As a result, you will have 2, 4, and 6 evaluations when i is 0, 2, and 4
+                        respectively, totalling 12 evaluations.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question">
+                        * What prints?
+                        <?php echo code_specific('java', 'ArrayShift.java') ?>
+                    </div>
+                    <div class="answer">
+                        <b>[2, 3, 4, 5, 6, 2]</b><br>
+                        The numbers are shifted left, so every number at index i is the original value at index (i + 1).
+                        However, notice that at the end, the last index takes the value at a[0], which is now 2, not 1.
+                    </div>
+                </div>
+                <!--
+                    <div class="row">
+                        <div class="question">
+
+                        </div>
+                        <div class="answer">
+
+                        </div>
+                    </div>
+               -->
             </div>
         </div>
     </div>

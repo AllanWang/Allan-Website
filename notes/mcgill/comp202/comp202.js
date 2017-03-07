@@ -21,14 +21,10 @@ $(function () {
         $(this).on('click', function () {
             var index = parseInt($(this).attr('id').substr(2)) - 1;
             var question = $(arrQuestions[index]);
-            if ($(this).hasClass('selected')) {
-                var e = jQuery.Event("keydown");
-                e.which = question.hasClass('q-left') ? 39 : 37; //show or hide
-                $(window).trigger(e);
-            }
-            else {
-                getCurrent(index);
-            }
+            getCurrent(index, false);
+            var e = jQuery.Event("keydown");
+            e.which = question.hasClass('q-left') ? 39 : 37; //show or hide
+            $(window).trigger(e);
         });
     });
     //done with main handler
@@ -47,17 +43,22 @@ $(function () {
             }, 100);
         };
     };
-    function getCurrent(count) {
+    function getCurrent(count, scrollTo) {
+        if (scrollTo === void 0) { scrollTo = true; }
         if (count < 0 || count >= totalCount)
             return;
-        if (currentQuestion)
-            currentQuestion.parent().removeClass('selected');
-        current = count;
-        currentQuestion = $(arrQuestions[count]);
-        currentAnswer = $(arrAnswers[count]);
-        currentQuestion.parent().addClass('selected');
+        //if question is already selected, just scroll to it
+        if (current != count) {
+            if (currentQuestion)
+                currentQuestion.parent().removeClass('selected');
+            current = count;
+            currentQuestion = $(arrQuestions[count]);
+            currentAnswer = $(arrAnswers[count]);
+            currentQuestion.parent().addClass('selected');
+        }
         //scroll
-        jAnimateTo(currentQuestion, 0, 100, 200);
+        if (scrollTo)
+            jAnimateTo(currentQuestion, 0, 100, 200);
     }
     getCurrent(0);
     animateTo('test');
