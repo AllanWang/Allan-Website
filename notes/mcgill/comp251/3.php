@@ -174,6 +174,38 @@ $subHeader = 'Lectures 11 - 15';
                     "-Given m > n, O(n * (m + 2n)) = O(nm)"
                 );
 
+                lectureSection(15, '2017/03/07',
+                    "Midterm Review",
+                    "Focus on direct application of concepts",
+                    "1 proof in the midterm",
+                    "Nothing on probability",
+                    "Be comfortable with running time",
+                    "Proofs",
+                    "-Contradiction – assume opposite and prove that it is false",
+                    "-Cut & paste – used with graphs & greedy algorithms",
+                    "--Assume sub-problem is not optimal, and replace with optimal solution to show contradiction",
+                    "-Loop invariants – prove that loop structure is doing what it is intended to do",
+                    "--Must specify loop invariant property, initialization, maintenance (conserving property), termination (loop stops)",
+                    "Hashing",
+                    "-Different types",
+                    "-Conflict resolution",
+                    "-Open addressing",
+                    "-Linear & quadratic probing",
+                    "BST",
+                    "-Rotation",
+                    "-Self-balanced trees (AVL, RBT)",
+                    "--How to do operations (insertion)",
+                    "Greedy algorithms",
+                    "-Activity-selection problem",
+                    "Graph algorithms",
+                    "-Topological sort – get total order from partial order",
+                    "--Can be found from DAG",
+                    "-BFS, DFS",
+                    "-<b>MST, Kruskal, Ford-Fulkerson, Dijkstra</b>",
+                    "-Cut (respect, light, cross)",
+                    "-Safe edge"
+                );
+
                 pagination();
                 ?>
             </div>
