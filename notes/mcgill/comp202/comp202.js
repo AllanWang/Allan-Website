@@ -13,7 +13,7 @@ $(function () {
     allQuestions.addClass('col s6');
     allAnswers.addClass('col s6');
     allQuestions.each(function (i) {
-        $(this).prepend((i + 1) + '.'); //add numbering
+        $(this).prepend((i + 1) + '. '); //add numbering
     });
     $('.row').each(function (i) {
         $(this).attr('id', 'q-' + i); //set id for marker
@@ -33,16 +33,6 @@ $(function () {
     setTimeout(function () {
         $('#q-and-a').fadeIn('slow');
     }, 500);
-    var debounce = function (fn) {
-        var timeout;
-        return function () {
-            var args = Array.prototype.slice.call(arguments), ctx = this;
-            clearTimeout(timeout);
-            timeout = setTimeout(function () {
-                fn.apply(ctx, args);
-            }, 100);
-        };
-    };
     function getCurrent(count, scrollTo) {
         if (scrollTo === void 0) { scrollTo = true; }
         if (count < 0 || count >= totalCount)
@@ -61,7 +51,6 @@ $(function () {
             jAnimateTo(currentQuestion, 0, 100, 200);
     }
     getCurrent(0);
-    animateTo('test');
     $(window).bind('keydown', function (e) {
         // Arrow keys.
         switch (e.which) {

@@ -14,7 +14,7 @@ $(function () {
     allQuestions.addClass('col s6');
     allAnswers.addClass('col s6');
     allQuestions.each(function (i) {
-        $(this).prepend((i + 1) + '.'); //add numbering
+        $(this).prepend((i + 1) + '. '); //add numbering
     });
     $('.row').each(function (i) {
         $(this).attr('id', 'q-' + i); //set id for marker
@@ -34,19 +34,7 @@ $(function () {
     setTimeout(function () {
         $('#q-and-a').fadeIn('slow');
     }, 500);
-
-    let debounce = function (fn: Function) {
-        let timeout: number;
-        return function () {
-            let args = Array.prototype.slice.call(arguments),
-                ctx = this;
-            clearTimeout(timeout);
-            timeout = setTimeout(function () {
-                fn.apply(ctx, args);
-            }, 100);
-        };
-    };
-
+    
     function getCurrent(count: number, scrollTo = true) {
         if (count < 0 || count >= totalCount) return;
         //if question is already selected, just scroll to it
@@ -62,7 +50,6 @@ $(function () {
     }
 
     getCurrent(0);
-    animateTo('test');
 
     $(window).bind('keydown', function (e: any) {
 
