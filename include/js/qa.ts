@@ -9,10 +9,8 @@
 $(function () {
     let allQuestions = $('.question');
     let allAnswers = $('.answer');
-    let arrQuestions = allQuestions.toArray();
-    let arrAnswers = allAnswers.toArray();
-    const qCount = arrQuestions.length;
-    const aCount = arrAnswers.length;
+    const qCount = allQuestions.length;
+    const aCount = allQuestions.length;
     const totalCount: number = qCount > aCount ? aCount : qCount; //getmin
     let current: number;
     let currentQuestion: JQuery;
@@ -29,16 +27,14 @@ $(function () {
         $(this).addClass('clickable row');
         $(this).on('click', function () {
             const index = parseInt($(this).attr('id').substr(2)) - 1;
-            let question = $(arrQuestions[index]);
+            let question = $(allQuestions[index]);
             getCurrent(index, false);
             let e = jQuery.Event("keydown");
             e.which = question.hasClass('q-left') ? 39 : 37; //show or hide
             $(window).trigger(e);
         })
     });
-    //done with main handler
-    allQuestions = null;
-    allAnswers = null;
+
     setTimeout(function () {
         $('#q-and-a').fadeIn('slow');
     }, 500);
@@ -49,8 +45,8 @@ $(function () {
         if (current != count) {
             if (currentQuestion) currentQuestion.parent().removeClass('selected');
             current = count;
-            currentQuestion = $(arrQuestions[count]);
-            currentAnswer = $(arrAnswers[count]);
+            currentQuestion = $(allQuestions[count]);
+            currentAnswer = $(allAnswers[count]);
             currentQuestion.parent().addClass('selected');
         }
         //scroll
@@ -65,21 +61,33 @@ $(function () {
         switch (e.which) {
             case 37: //left
                 //show
+                if (e.shiftKey) { //show all
+                    allAnswers.addClass('a-show').removeClass('a-hide');
+                    allQuestions.removeClass('q-center').addClass('q-left');
+                    break;
+                }
                 if (currentAnswer.hasClass('a-show')) break;
                 currentAnswer.addClass('a-show').removeClass('a-hide');
                 currentQuestion.removeClass('q-center').addClass('q-left');
                 break;
             case 38: // up
-                getCurrent(current - 1);
+                if (e.shiftKey) getCurrent(0);
+                else getCurrent(current - 1);
                 break;
             case 39: //right
                 //hide
+                if (e.shiftKey) { //show all
+                    allAnswers.removeClass('a-show').addClass('a-hide');
+                    allQuestions.addClass('q-center').removeClass('q-left');
+                    break;
+                }
                 if (!currentAnswer.hasClass('a-show')) break;
                 currentAnswer.removeClass('a-show').addClass('a-hide');
                 currentQuestion.addClass('q-center').removeClass('q-left');
                 break;
             case 40: // down
-                getCurrent(current + 1);
+                if (e.shiftKey) getCurrent(totalCount - 1);
+                else getCurrent(current + 1);
                 break;
             default:
                 return; // exit this handler for other keys

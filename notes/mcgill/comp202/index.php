@@ -23,8 +23,7 @@ phpNav(); ?>
             <h3 class="header center">Comp 202 Midterm Practice</h3>
             <h6 class="center">Melanie Lyman-Abramovitch &bull; Kaleem Siddiqi &bull; Dan Pomerantz</h6>
             <div class="divider"></div>
-            <h6 class="center grey-text">Use &uarr; &darr; to navigate through questions; use &larr; &rarr; to
-                show/hide answers<br>Click a question to jump to it and show/hide the answer</h6>
+            <h6 class="center grey-text"><?php echo instructionText() ?></h6>
             <h6 class="center grey-text">Questions marked with * are added by me, and were not a part of the original
                 practice</h6>
         </div>
