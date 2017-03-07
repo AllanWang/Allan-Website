@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 $page_title = "Comp 202";
 $page_description = "Comp 202 Practice";
-$navFrom = 'n_comp202';
+$navFrom = 'n_comp_202';
 //$navTo = 'commons';
 $theme_color = "#F44336"; //red
 global $cssArr;
