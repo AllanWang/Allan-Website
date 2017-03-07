@@ -8,22 +8,26 @@ html, body {
   overflow-x: hidden;
 }
 
+.qa-row {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+  margin-bottom: 0 !important;
+  &.selected {
+    background-color: #eee;
+  }
+}
+
 #shell {
   min-height: 100vh;
+}
+
+#q-and-a {
+  display: none;
 }
 
 //allow for jquery scroll animations
 html, body, main {
   height: inherit;
-}
-
-.row {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  margin-bottom: 0;
-  &.selected {
-    background-color: #eee;
-  }
 }
 
 @mixin translateX($val) {

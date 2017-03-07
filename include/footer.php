@@ -1,6 +1,6 @@
 <gcse:searchresults-only gname="g-results"></gcse:searchresults-only>
 <?php
-global $navFrom, $navTo, $dynamic_notes, $theme_color;
+global $navFrom, $navTo, $dynamic_notes, $theme_color, $jsArr;
 
 if (!isset($scriptOnly) || !$scriptOnly):?>
 
@@ -61,6 +61,13 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
     ?>
 
 </script>
+
+<?php
+foreach ($jsArr as $js) {
+    if (substr($js, 0, 1) == '<') echo $js;
+    else js($js);
+}
+?>
 
 <!--load last-->
 <script type="text/javascript" src="/include/js/jade/lunr.min.js"></script>

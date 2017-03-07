@@ -1,3 +1,11 @@
+/*
+ * Script for qa page
+ * Formatting:
+ * #shell       to keep footer down on load
+ * #q-and-a     to hold all the items
+ * items with .qa-row {.question .answer}
+ */
+
 $(function () {
     let allQuestions = $('.question');
     let allAnswers = $('.answer');
@@ -16,9 +24,9 @@ $(function () {
     allQuestions.each(function (i) {
         $(this).prepend((i + 1) + '. '); //add numbering
     });
-    $('.row').each(function (i) {
-        $(this).attr('id', 'q-' + i); //set id for marker
-        $(this).addClass('clickable');
+    $('.qa-row').each(function (i) {
+        $(this).attr('id', 'q-' + (i + 1)); //set id for marker
+        $(this).addClass('clickable row');
         $(this).on('click', function () {
             const index = parseInt($(this).attr('id').substr(2)) - 1;
             let question = $(arrQuestions[index]);
@@ -34,7 +42,7 @@ $(function () {
     setTimeout(function () {
         $('#q-and-a').fadeIn('slow');
     }, 500);
-    
+
     function getCurrent(count: number, scrollTo = true) {
         if (count < 0 || count >= totalCount) return;
         //if question is already selected, just scroll to it
@@ -79,43 +87,3 @@ $(function () {
         e.preventDefault();
     });
 }); // end of document ready
-
-//from http://stackoverflow.com/a/11560428
-function nextInDOM(_selector: string, _subject: JQuery): JQuery {
-    let next = getNext(_subject);
-    while (next.length != 0) {
-        let found = searchFor(_selector, next);
-        if (found != null) return found;
-        next = getNext(next);
-    }
-    return null;
-}
-function getNext(_subject: JQuery): JQuery {
-    if (_subject.next().length > 0) return _subject.next();
-    return getNext(_subject.parent());
-}
-function searchFor(_selector: string, _subject: JQuery): JQuery {
-    if (_subject.is(_selector)) return _subject;
-    else {
-        let found: JQuery = null;
-        _subject.children().each(function () {
-            found = searchFor(_selector, $(this));
-            if (found != null) return false;
-        });
-        return found;
-    }
-}
-
-function prevInDOM(_selector: string, _subject: JQuery): JQuery {
-    let prev = getPrev(_subject);
-    while (prev.length != 0) {
-        let found = searchFor(_selector, prev);
-        if (found != null) return found;
-        prev = getPrev(prev);
-    }
-    return null;
-}
-function getPrev(_subject: JQuery): JQuery {
-    if (_subject.prev().length > 0) return _subject.prev();
-    return getPrev(_subject.parent());
-}

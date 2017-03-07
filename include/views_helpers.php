@@ -9,6 +9,3 @@ function getId($item)
 {
     return strtolower(preg_replace('/\s+/', '-', $item));
 }
-
-
-?>

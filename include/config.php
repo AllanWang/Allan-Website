@@ -2,8 +2,9 @@
 //Main php
 
 //Add view functions
-global $cssArr; //any php call before the header should append additional css requirements to cssArr; the header will add them all from the /include/css folder
+global $cssArr, $jsArr; //any php call before the header should append additional css requirements to cssArr; the header will add them all from the /include/css folder
 $cssArr = array();
+$jsArr = array();
 include_once('bullets.php');
 include_once('tables.php');
 include_once('views.php');
@@ -16,6 +17,11 @@ function phpHeader($anon_function = null)
         $header_function = $anon_function;
     }
     require_once('header.php');
+}
+
+function phpQA()
+{
+    require_once('qa.php');
 }
 
 function phpNav($extra_contents = null)
@@ -127,5 +133,3 @@ function activeIfScrollTo($id)
     if (isset($_GET['scroll_to']) && $_GET['scroll_to'] == $id) echo ' active';
 
 }
-
-?>

@@ -8,8 +8,7 @@ $page_description = "Comp 202 Practice";
 $navFrom = 'n_comp_202';
 //$navTo = 'commons';
 $theme_color = "#F44336"; //red
-global $cssArr;
-array_push($cssArr, '<link href="comp202.css" type="text/css" rel="stylesheet" media="screen"/>');
+phpQA();
 phpHeader(); ?>
 <body>
 
@@ -30,10 +29,10 @@ phpNav(); ?>
                 practice</h6>
         </div>
         <div id="shell">
-            <div id="q-and-a" style="display:none;">
+            <div id="q-and-a">
                 <h5>True/False Section</h5>
                 <div class="divider"></div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         If you only expect numbers as command line arguments, you can change
                         <pre><code class="java">public static void main(String[] args)</code></pre>
@@ -46,7 +45,7 @@ phpNav(); ?>
                         argument at index i, use Double.parseDouble(args[i])
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         The following is a valid header for a main method. (Valid &rarr; will compile and run).
                         <pre><code class="java">public static void main(String[] commandArguments)</code></pre>
@@ -57,7 +56,7 @@ phpNav(); ?>
                         of args[0]
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         You can put an if-block inside of another if-block.
                     </div>
@@ -66,7 +65,7 @@ phpNav(); ?>
                         <?php echo code_specific('java', 'IfBlock.java') ?>
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         A method can contain more than one return statement.
                     </div>
@@ -79,7 +78,7 @@ phpNav(); ?>
                         <?php echo code_specific('java', 'MultiReturn.java') ?>
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         When iterating through the elements of array via its index, you must use a <i>for</i> loop as
                         opposed to a <i>while</i> loop.
@@ -89,7 +88,7 @@ phpNav(); ?>
                         differences, but you can accomplish any loop with any implementation.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         * The following loop is invalid
                         <pre><code class="java">int i = 0;<br>for (; i < 10; i++)<br>//do something in the loop</code></pre>
@@ -105,7 +104,7 @@ phpNav(); ?>
                 <h5>Multiple Choice Section</h5>
                 <h6 class="grey-text">More than one choice may be valid per question</h6>
                 <div class="divider"></div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         Which of the following are examples of compile-time errors?
                         <ol type="a">
@@ -130,7 +129,7 @@ phpNav(); ?>
                 </div>
                 <h5>Short Answer Section</h5>
                 <div class="divider"></div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         What is the value of x?
                         <pre><code class="java">double x = (double) (1/2) + (1/2) + (double)(1/2);</code></pre>
@@ -143,7 +142,7 @@ phpNav(); ?>
                         0.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         The following method contains five variables. Which variables (if any) exist on the line marked
                         ****HERE****?
@@ -155,7 +154,7 @@ phpNav(); ?>
                         only within the if else statements.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         What prints when the following code executes?
                         <?php echo code_specific('java', 'IntSwap.java') ?>
@@ -170,7 +169,7 @@ phpNav(); ?>
                         method is 5, y's value does not change.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         What prints when the following code executes?
                         <?php echo code_specific('java', 'IfElsePrint.java') ?>
@@ -180,7 +179,7 @@ phpNav(); ?>
                         so it still executes; n &le; 0, so "two" prints, and the else is skipped.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         For the code below,
                         <ol type="1">
@@ -202,7 +201,7 @@ phpNav(); ?>
                         respectively, totalling 12 evaluations.
                     </div>
                 </div>
-                <div class="row">
+                <div class="qa-row">
                     <div class="question">
                         * What prints?
                         <?php echo code_specific('java', 'ArrayShift.java') ?>
@@ -214,7 +213,7 @@ phpNav(); ?>
                     </div>
                 </div>
                 <!--
-                    <div class="row">
+                    <div class="qa-row">
                         <div class="question">
 
                         </div>
@@ -228,7 +227,6 @@ phpNav(); ?>
     </div>
 </main>
 <?php phpFooter(); ?>
-<script type="text/javascript" src="comp202.js"></script>
 </body>
 
 </html>

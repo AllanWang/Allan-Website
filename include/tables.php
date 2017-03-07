@@ -78,5 +78,3 @@ function math_table_left(...$items)
     }
     echo '</tr>';
 }
-
-?>

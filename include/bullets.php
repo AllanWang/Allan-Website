@@ -21,5 +21,3 @@ function bullets(...$items)
     }
     echo '</ul>';
 }
-
-?>

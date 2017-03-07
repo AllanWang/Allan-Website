@@ -38,5 +38,3 @@ function code_collapsible(...$boxes)
     }
     echo '</ul>';
 }
-
-?>

@@ -23,5 +23,3 @@ function scrollSpyHeaderData($id, $name = '')
     $tocData[$id] = $name;
     echo "id=\"$id\" class=\"section scrollspy\"";
 }
-
-?>

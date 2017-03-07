@@ -26,5 +26,3 @@ function banner($image, ...$key_codes)
     if (!isset($n_key)) $n_key = 'Set n_key please';
     include($_SERVER['DOCUMENT_ROOT'] . '/views/banner.php');
 }
-
-?>

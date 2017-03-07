@@ -172,5 +172,3 @@ function scrollSpySection($id, $name, $header, ...$notes)
     if (is_array($notes[0])) $notes = $notes[0]; //if array is passed rather than splat, use array
     include($_SERVER['DOCUMENT_ROOT'] . '/views/spy-section.php');
 }
-
-?>
