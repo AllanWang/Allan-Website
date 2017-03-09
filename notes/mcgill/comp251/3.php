@@ -203,7 +203,11 @@ $subHeader = 'Lectures 11 - 15';
                     "-BFS, DFS",
                     "-<b>MST, Kruskal, Ford-Fulkerson, Dijkstra</b>",
                     "-Cut (respect, light, cross)",
-                    "-Safe edge"
+                    "-Safe edge",
+                    "Bipartite graphs",
+                    "-Stable pairs",
+                    "Network flow",
+                    "-Positive flow, capacity constraint, flow conservation"
                 );
 
                 pagination();

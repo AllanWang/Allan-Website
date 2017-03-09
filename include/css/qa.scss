@@ -12,6 +12,7 @@ html, body {
   padding-top: 0.5em !important;
   padding-bottom: 0.5em !important;
   margin-bottom: 0 !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
   &.selected {
     background-color: #eee;
   }
