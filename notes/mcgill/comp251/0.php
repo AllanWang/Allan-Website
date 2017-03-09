@@ -37,12 +37,13 @@ $subHeader = 'Summary';
                         table('Red Black Trees', 'Typical', 'O(log n)', 'Balanced height is at most log n');
                         table_body_full('Adjacency Representation', 4);
                         table('&emsp;List', 'Search', 'Worst: &Theta;(V)', '');
+                        table('', 'Storage', '&Theta;(V + E)', '');
                         table('&emsp;Matrix', 'Storage Space', '&Theta;(V<sup>2</sup>)', '');
                         table('BFS, DFS, SCC', 'Total Runtime', '&Theta;(V + E)', 'V = vertex set, E = edge set');
                         table('Kruskal\'s Algorithm', 'Total', 'O(E logV) &rarr; O(logV)', 'Notice |E| &le; |V|<sup>2</sup>sup>');
                         table('Prim\'s Algorithm', 'Total', 'O(E logV)', 'with binary heaps<br>O(E + V logV) with Fibonacci heaps');
-                        table('Dijkstra\'s Alrogithm', 'Total', 'O(E logV)', 'with binary heaps<br>O(E + V logV) with Fibonacci heaps');
-                        table('Gale Shapley', 'Total', 'O(n<sup>2</sup>sup>)', 'Best case &Omega;(n)');
+                        table('Dijkstra\'s Algorithm', 'Total', 'O(E logV)', 'with binary heaps<br>O(E + V logV) with Fibonacci heaps');
+                        table('Gale Shapley', 'Total', 'O(n<sup>2</sup>)', 'Best case &Omega;(n)');
                         table('Bipartite Matching', 'Runtime', 'O(nm)', '');
                         ?>
                     </table>
