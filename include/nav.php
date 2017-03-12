@@ -25,7 +25,9 @@ function addActiveIf($prefix)
 
     <ul id="nav-bar" class="side-nav fixed">
         <li class="logo"><a id="logo-container" href="https://allanwang.ca/" class="center">
-                <svg id="nav-logo" height="100" width="250"></svg>
+                <svg id="nav-logo" height="100" width="250">
+                    <desc>AW Nav Logo</desc>
+                </svg>
             </a></li>
         <li class="search">
             <div class="search-wrapper card">
