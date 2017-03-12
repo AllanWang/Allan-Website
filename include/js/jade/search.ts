@@ -120,7 +120,6 @@
                     break;
 
                 case 40: // down
-                    console.log('down');
                     if (!focusedSearchResults.length) {
                         focused = $('.search-results').children().first();
                         focused.addClass('focused');
