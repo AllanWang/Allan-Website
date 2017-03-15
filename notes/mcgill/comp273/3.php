@@ -71,6 +71,7 @@ $subHeader = 'Lectures 11 - 15';
                     "CU components",
                     "-Each bit in OP in IR is connected to an OP register in the CU",
                     "-Also has a counter and an incrementer to loop through all the needed data<br><img style='margin-top: 2em;margin-bottom: 2em' src='circuits/CU.svg'>",
+                    "-Simple pipeline: PC &rarr; A &rarr; C<sub>I</sub> &rarr; B &rarr; Reg &rarr; C &rarr; ALU &rarr; D &rarr; C<sub>D</sub>",
                     "-Instructions often need many ticks to execute (ie ADD needs 4 ticks in classical CPUs)",
                     "--Ie ADD needs 4 ticks in classical CPU",
                     table_tags(table_contents(2,
@@ -80,7 +81,15 @@ $subHeader = 'Lectures 11 - 15';
                         "R3 &larr; A", "11"),
                         "table-f-10c"),
                     "--Works really well if all instructions have 4 ticks",
-                    "-Wires from OP and count come down"
+                    "-Wires from OP and count come down",
+                    "Datapaths – wires of CPU needed to be engaged during an instruction",
+                    "-Includes path connecting registers, gates, ALU, etc",
+                    "Control – portion of CPU – aka CU/sequencer – responsible for timing & triggering of datapath",
+                    "Instruction Format – organization of bits in IR",
+                    "Micro-programming – datapaths that implement the instruction",
+                    "-Flat – one instruction executes at a time",
+                    "-Pipeline – 1+ instruction at a time",
+                    "-Cores – parallel execution"
                 );
 
                 lectureSection(13, '2017/02/22',
