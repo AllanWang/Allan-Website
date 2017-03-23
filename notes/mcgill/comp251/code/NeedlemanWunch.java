@@ -9,7 +9,7 @@ public class NeedlemanWunch {
 
     //get cost for two characters
     int delta(m, n) {
-        return m == n && m != '-' ? 0 : 1
+        return m == n ? 0 : 1
     }
 
     int getLowestDistance() {

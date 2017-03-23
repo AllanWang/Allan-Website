@@ -65,6 +65,45 @@ $subHeader = 'Lectures 15 - 20';
                     "-Reconstruction yields a<sub>2</sub> & a<sub>4</sub>"
                 );
 
+                lectureSection(16, '2017/03/16',
+                    "Pairwise Sequence Alignment",
+                    "-Goal: Map letters between two strings (a & b) such that the “distance” (see below) between the strings are minimized",
+                    "-Letters must remain in order, but spaces can be added between them",
+                    "Definitions",
+                    "-Match – letters are identical",
+                    "-Substitution – letters are different",
+                    "-Insertion – letter of b is mapped to empty character",
+                    "-Deletion – letter of a is mapped to empty character",
+                    "-Indels – group covering insertions & deletions",
+                    "Can be used to find similarities in amino acid sequences",
+                    "Counting alignments",
+                    "-We may observe that the alignments of a and b must end by (a, -), (a, b), or (-, b) (deletion, match/substitution, insertion)",
+                    "-If we define c(m, n) as the # of alignments formed between them, we see that c(m, n) = min(c(m – 1, n), c(m – 1, n – 1), c(m, n – 1))",
+                    "-Base case – f(0, n) = f(m, 0) = f(0, 0) = 1",
+                    "Levenshtein Distance",
+                    "-Minimal # of substitutions, insertions & deletions to transform one into the other",
+                    "-Each of those actions adds one to the total distance",
+                    "Edit distance",
+                    "-If every edit operation has a positive cost & an inverse operation with equal cost, the edit distance is metric",
+                    "-d(x, y) &ge; 0 (separate axiom)",
+                    "-d(x, y) = 0 iff x = y (coincidence axiom)",
+                    "-d(x, y) = d(y, x) (symmetry)",
+                    "-d(x, y) &le; d(x, z) + d(z, y) (triangle inequality)",
+                    "Optimal sub-structure – sub-alignment of optimal alignments are also optimal",
+                    "-Cut-and-paste proof",
+                    "Backtracking ",
+                    "-Each move associated with one edit operation",
+                    "--Vertical – insertion ",
+                    "--Diagonal – match/substitution",
+                    "--Horizontal –deletion",
+                    "-Find move that was used to find the value of the cell",
+                    "-Apply recursively",
+                    "Analysis",
+                    "-Comparing two strings of length m & n is &Omega;(mn) time and &Omega;(mn) space",
+                    "-It’s easy to save space and compute values in &Omega(m + n) space by computing OPT(i, *) from OPT(i – 1, *); however, recovering alignment is harder",
+                    "Pseudocode" . code_specific('java', 'NeedlemanWunch.java')
+                );
+
                 pagination();
                 ?>
             </div>
