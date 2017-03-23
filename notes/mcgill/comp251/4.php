@@ -63,7 +63,6 @@ $subHeader = 'Lectures 15 - 20';
                         'M[j - 1]', 0, 2, 3, 4, 9), 'table-f-15c') .
                     '<br><br><img src="images/dynamic-activity.svg"><br><br>',
                     "-Reconstruction yields a<sub>2</sub> & a<sub>4</sub>"
-
                 );
 
                 pagination();
