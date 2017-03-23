@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 11 - 15';
+$subHeader = 'Lectures 11 - Midterm Review';
 ?>
 
 <body>
@@ -174,8 +174,7 @@ $subHeader = 'Lectures 11 - 15';
                     "-Given m > n, O(n * (m + 2n)) = O(nm)"
                 );
 
-                lectureSection(15, '2017/03/07',
-                    "Midterm Review",
+                scrollSpySection('midterm-review', 'Midterm Review', 'Midterm Review &bull; 2017/03/07',
                     "Focus on direct application of concepts",
                     "1 proof in the midterm",
                     "Nothing on probability",
