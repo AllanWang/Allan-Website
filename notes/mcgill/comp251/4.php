@@ -36,9 +36,9 @@ $subHeader = 'Lectures 15 - 20';
                     "--Let OPT(j) denote the best solution for activities 1 to j",
                     "--Let p(j) denote the largest index i < j such that activity i is compatible with activity j",
                     "--Case 1: j is in the optimal solution",
-                    "Compute weight<sub>j</sub> + OPT(p(j))",
+                    "---Compute weight<sub>j</sub> + OPT(p(j))",
                     "--Case 2: j is not in optimal solution",
-                    "Compute OPT(j – 1)",
+                    "---Compute OPT(j – 1)",
                     "--The maximum of the two cases denotes the optimal solution up to j",
                     "--If we draw out the recursive calls, we’ll notice that we often compute values of OPT(i), where i < j, multiple times. Instead, we can compute those values once, store them, and reuse them next time.",
                     "--Also notice that every OPT(j) depends only on OPT values at indices < j",
@@ -101,6 +101,11 @@ $subHeader = 'Lectures 15 - 20';
                     "Analysis",
                     "-Comparing two strings of length m & n is &Omega;(mn) time and &Omega;(mn) space",
                     "-It’s easy to save space and compute values in &Omega(m + n) space by computing OPT(i, *) from OPT(i – 1, *); however, recovering alignment is harder",
+                    "Example" .
+                    table_tags(table_contents(6, '*', '-', 'A', 'T', 'T', 'G',
+                        '-', 0, 1, 2, 3, 4,
+                        'C', 1, 1, 2, 3, 4,
+                        'T', 2, 2, 1, 2, '<b>3</b>')),
                     "Pseudocode" . code_specific('java', 'NeedlemanWunch.java')
                 );
 

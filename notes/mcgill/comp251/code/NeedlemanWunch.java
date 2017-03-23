@@ -12,6 +12,9 @@ public class NeedlemanWunch {
         return m == n ? 0 : 1
     }
 
+    /*
+     * Compute lowest distance and store values for backtracking
+     */
     int getLowestDistance() {
         //map the borders (base case; assumption that one of the strings is empty)
         //therefore, distances will increase by one each time
@@ -25,5 +28,18 @@ public class NeedlemanWunch {
                         d[i - 1][j - 1] + delta(a[i], b[j]), //match/substitution
                         d[i][j - 1] + delta('-', b[j])) //insertion
         return d[a.length() - 1][b.length() - 1]
+    }
+
+    /*
+     * Find match pairs between the two strings; set i & j to last index initially
+     */
+    Pair[] getSolution(i, j) {
+        if (i == 0 || j == 0) return []
+        delta = delta(a[i], b[j])
+        if (d[i - 1][j] + delta(a[i], '-') == d[i][j])
+            return [Pair(a[i], '-')] + getSolution(i - 1, j) //deletion occurred
+        if (d[i - 1][j - 1] + delta(a[i], b[j] == d[i][j])
+            return [Pair(a[i], b[j])] + getSolution(i - 1, j - 1) //match/substitution occurred
+        return [Pair('-', b[j])] + getSolution(i, j - 1) //insertion occurred
     }
 }

@@ -33,8 +33,7 @@ public class DynamicProgramming {
      */
     int[] findSolution(j) {
         if (j == 0) return []
-        if (w[j] + M[p[j]] > M[j - 1]) return [j]+findSolution(p[j])
+        if (w[j] + M[p[j]] > M[j - 1]) return findSolution(p[j]) + [j]
         return findSolution(p[j - 1]) //j is not in solution set
-
     }
 }
