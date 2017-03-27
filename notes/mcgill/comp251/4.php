@@ -30,7 +30,7 @@ $subHeader = 'Lectures 15 - 20';
                     "-Greedy – decompose & reduce problem – top-down approach",
                     "-Dynamic programming – solve all possible sub-problems and use solutions to solve larger problems – bottom-up approach",
                     "Going back to the activity selection problem: given activities, find subset with greatest total activity duration, where no two activity intervals overlap",
-                    "-Greedy algorithm (Lecture #) doesn’t always work, eg activities (0, 2), (1, 8), (7, 9)",
+                    "-Greedy algorithm (" . linkNewTab('Lecture 7', 'https://www.allanwang.ca/notes/mcgill/comp251/2.php?scroll_to=lecture-7h') . ") doesn’t always work, eg activities (0, 2), (1, 8), (7, 9)",
                     "--Greedy would pick (0, 2) & (7, 9) whereas the best solution is (1, 8)",
                     "-Binary choice",
                     "--Let OPT(j) denote the best solution for activities 1 to j",
@@ -129,6 +129,20 @@ $subHeader = 'Lectures 15 - 20';
                     "--" . bulletTablePair("i = s & j = 0", "0", 20),
                     "--" . bulletTablePair("i &ne; s & j = 0", "&infin;", 20),
                     "--" . bulletTablePair("j > 0", "min(d(k, j – 1) + w(k, i): i &isin; Adj(k), d(i, j – 1))<br>Either a valid predecessor's weight + current weight, or no change (achieved with fewer hops)", 20)
+                );
+
+                lectureSection(18, '2017/03/23',
+                    "Divide & Conquer",
+                    "-Divide – split problems into smaller sub-problems",
+                    "-Conquer – solve sub-problems recursively, or use base cases",
+                    "-Combine – merge two sub-problems and eventually reach the original problem again",
+                    "Example – Merge Sort",
+                    "-Divide – split n-elements to subsequences of n/2 elements",
+                    "-Conquer – sort recursively using merge sort; once array has size 1, simply return that array",
+                    "-Combine – merge two sorted subsequences to produce sorted answer",
+                    "Multiplication – Divide & Conquer",
+                    "-For value x with n digits, let x<sub>L</sub> = x / 2<sup>n/2</sup>, and let x<sub>R</sub> = x % 2<sup>n/2</sup>",
+                    "-Instead of using grade school multiplication (O(n<sup>2</sup>)), we may compute x * y through their components<br>x * y = 2<sup>n</sup>x<sub>L</sub>y<sub>L</sub> + 2<sup>n/2</sup>(x<sub>L</sub>y<sub>R</sub> + x<sub>R</sub>y<sub>L</sub>) + x<sub>R</sub>y<sub>R</sub>"
                 );
 
                 pagination();
