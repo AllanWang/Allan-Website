@@ -26,6 +26,7 @@ global $page_title, $page_description, $page_keywords, $theme_color, $hamburger_
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href="/bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet"
           media="screen"/>
+    <link href="/include/css/print.css" media="print" rel="stylesheet" type="text/css"/>
 
     <?php
 
