@@ -1,6 +1,5 @@
-/*TODO Hide when printing*/
 @media print {
-    header {
-        display: none !important;
-    }
+  .hidden-print, header, footer, .table-of-contents {
+    display: none !important;
+  }
 }
