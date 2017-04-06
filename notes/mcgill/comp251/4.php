@@ -150,7 +150,7 @@ $subHeader = 'Lectures 15 - 20';
                     "-T(n) = execution time for size n = 2 * T(n/2) + n (2 sub calls + merge time)",
                     "-Binary Search T(n) = T(n/2) + 1",
                     "-Karatsuba T(n) = 3 * T(n/2) + n",
-                    "Master Theorem - solves commond divide and conquer runtimes",
+                    "Master Theorem – solves commond divide and conquer runtimes",
                     "-General: T(n) = a(Tn/b) + f(n)",
                     "-a &ge; 1: # of subproblems",
                     "-b > 0: factor by which the subproblem size decreases",
