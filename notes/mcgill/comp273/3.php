@@ -145,6 +145,46 @@ $subHeader = 'Lectures 11 - 15';
                     "-In other words, # instr/program * # ticks/instr * # s/tick"
                 );
 
+                lectureSection(14, '2017/03/06',
+                    "Sending address",
+                    "-Tick from PC to MAR",
+                    "-Tick from MAR to AR",
+                    "Retrieving data",
+                    "-Tick from RAM to DR",
+                    "-Tick from DR to MBR",
+                    "-Tick from MBR to IR",
+                    "During 5 ticks, PC is incremented; it’s always ahead",
+                    "CU has copy of OP code & count",
+                    "-Count increments & clears itself",
+                    "Chip Set",
+                    "-“on die” – on CPU die",
+                    "-“on board” – on system board, commonly near CPU",
+                    "CPU System supports OS Registers, System-board registers, and Chip-sets",
+                    "-Co-processors – eg math, matrix, graphics GPUs",
+                    "-ROMS – built-in support for video & basic graphics, ASCII support, communication ports, basic peripheral support",
+                    "Chip sets have private buses connecting to CPU",
+                    "-Multiple co-processors may exist to deal with crashes",
+                    "-May have special assembler instructions",
+                    "CPU constraints",
+                    "-Operating system – secure environment; programs should not interfere",
+                    "--Have an upper and lower bound for valid pointers",
+                    "OS Boundary Register – prevents process’s PC from addressing into OS space",
+                    "Internal CPU exception handling",
+                    "-Reasons",
+                    "--Incorrect machine language binary",
+                    "--Arithmetic – overflow, divide by zero",
+                    "--Incorrect address reference",
+                    "-Supporting registers",
+                    "--EPC – exception program counter register – address of bad instruction",
+                    "--Cause – error code",
+                    "--Jump to reserved internal cache memory address for exception assembler code",
+                    "Interrupt – signal sent to overwrite/swap PC with trap’s pointer",
+                    "Multiplication",
+                    "-CPU’s ALU – integer operations: + – * /",
+                    "-Co-processor’s ALU – floating point operations: + – * /",
+                    "Grade school multiplication – multiply first number by each digit in the second number, and shifting them and adding them (just like how you normally multiply)"
+                );
+
                 pagination();
                 ?>
             </div>
