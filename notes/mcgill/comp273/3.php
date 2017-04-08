@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 11 - 15';
+$subHeader = 'Lectures 11 – 15';
 ?>
 
 <body>
@@ -197,7 +197,7 @@ $subHeader = 'Lectures 11 - 15';
                     "--Eg 0b1101 * 0b1100 = <s>0b1101</s> + <s>0b11010</s> + 0b110100 + 0b1101000 = 0b10011100",
                     "-Multiplication procedure for a * b; let p = product",
                     "--If (smallest bit in a == 1) p += b",
-                    "--b ≪ 1, a ≫ 1",
+                    "--b << 1, a >> 1",
                     "--repeat for each new smallest bit ‘a’",
                     "-Hardware improvement",
                     "--Multiplicand & multiplier are 32 bit registers, and product is 64 bit register",

@@ -1,7 +1,7 @@
 <?php
 //Before other loads; sets common global vars and functions
 $minPage = 0;
-$maxPage = 3;
+$maxPage = 4;
 $page_number = -1;
 global $n_key, $navFrom, $theme_color;
 $n_key = "Comp 273";
