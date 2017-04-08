@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 15 - 20';
+$subHeader = 'Lectures 15 - 19';
 ?>
 
 <body>
