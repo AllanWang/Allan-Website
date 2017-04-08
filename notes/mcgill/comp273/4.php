@@ -72,6 +72,38 @@ $subHeader = 'Lectures 16 – 19';
                     "-Jump instruction – 2, address"
                     );
 
+                lectureSection(17, '2017/03/20',
+                    "Virtual memory usage",
+                    "-MIPS uses byte addresses",
+                    "-Words are 4 bytes",
+                    "-Memory holds data structures, spilled (saved) registers, instructions, variables, & constants",
+                    "-Bottom of stack is 7fffffff<sub>hex</sub>",
+                    "-Programs start at 400000<sub>hex</sub>",
+                    "-Ascending, contains text segment, data segment, stack segment",
+                    "-Stack & data segments are shared space and can crash (overlap)",
+                    "MIPS format is RISC – reduced instruction set computer",
+                    "-Use series of simpler instructions rather than complex ones that take more ticks",
+                    "Addressing modes",
+                    "-Register addressing",
+                    "--Operand is register",
+                    '--Eg add $s1, $s2, $s3',
+                    "-Base/displacement addressing",
+                    "--Operant is memory location",
+                    "--Register + offset &larr; constant",
+                    '--Eg lw $s1, 100($s2)',
+                    '---AR &larr; 100 + $s2',
+                    "-Immediate addressing",
+                    "--Operand is constant (16-bit)",
+                    '--Eg addi $s1, $s2, 100',
+                    "-PC-relative addressing",
+                    "--Mem location = PC + offset &larr; constant",
+                    "--Eg j 2500 or j label",
+                    "-Pseudo-direct addressing",
+                    "--Mem location = PC (top 6 bits) concat with 26-bit offset",
+                    "--Assume 32-bit addressing",
+                    "--Eg jal 2500 or jal label"
+                );
+
                 pagination();
                 ?>
             </div>
