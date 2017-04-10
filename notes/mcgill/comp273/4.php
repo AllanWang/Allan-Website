@@ -116,6 +116,25 @@ $subHeader = 'Lectures 16 – 19';
                     "-bne for conditions"
                 );
 
+                lectureSection(19, '2017/03/27',
+                    "Register based",
+                    "-Fast & easy, but limited # of registers & no local variable simulation",
+                    "Run-time stack",
+                    "-Very large & fits many parameters & can protect local variables, but it’s slower",
+                    '-Create room for the stack	subi $sp, $sp, 16',
+                    '-Save variables starting from the back and moving inwards	sw $t0, 12($sp), … sw $t4, 0($sp)',
+                    "-Call subroutine & return values assumed in v0/v1",
+                    '-Can protect registers by saving previous results in a stack (ie $t0) and then pop them afterwards',
+                    '-After we are done, move stack position back (eg addi $sp, $sp, 28)',
+                    "Global – no scope",
+                    "-Registers are loaded at run-time",
+                    "-Data is compiled &rarr; static",
+                    "Parameters & local variables don’t exist physically and are simulated in a runtime stack",
+                    "-Stack is global",
+                    '$fp refers to where $sp was before',
+                    '-Do not let variables refer past $f0'
+                );
+
                 pagination();
                 ?>
             </div>
