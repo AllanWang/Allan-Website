@@ -70,7 +70,7 @@ $subHeader = 'Lectures 16 – 19';
                     "-Load/store – 35 for load, 43 for store (31-26), rs (25-21), rt 43 for source, 35 for dest (20-16), address (15 – 0)",
                     "-Branch – breq 4 (31-26), rs (25-21), rt (20-16), address (15-0)",
                     "-Jump instruction – 2, address"
-                    );
+                );
 
                 lectureSection(17, '2017/03/20',
                     "Virtual memory usage",
@@ -102,6 +102,18 @@ $subHeader = 'Lectures 16 – 19';
                     "--Mem location = PC (top 6 bits) concat with 26-bit offset",
                     "--Assume 32-bit addressing",
                     "--Eg jal 2500 or jal label"
+                );
+
+                lectureSection(18, '2017/03/22',
+                    "# Much of this lecture was talked about in the previous lecture",
+                    "While(save[i] == k) i += j",
+                    "-Need to compute index i each time; use temp reg and add; for integers, go 4 bytes forward, or add to itself and do it again.",
+                    "Case/switch",
+                    "-Lots of branches with breaks each time.",
+                    "-Break not necessary for last case as it jumps to the same location",
+                    "Set less than",
+                    '-slt $t0, $s0, $s1 – $s0 < $s1 ? $t0 = 1 : $t0 = 0',
+                    "-bne for conditions"
                 );
 
                 pagination();
