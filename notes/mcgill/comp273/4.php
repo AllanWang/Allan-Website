@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 16 – 19';
+$subHeader = 'Lectures 16 – 20';
 ?>
 
 <body>
@@ -133,6 +133,39 @@ $subHeader = 'Lectures 16 – 19';
                     "-Stack is global",
                     '$fp refers to where $sp was before',
                     '-Do not let variables refer past $f0'
+                );
+
+                lectureSection(20, '2017/03/29',
+                    "Floating point instructions",
+                    "-Add.s (single precision), add.d (double precision)",
+                    "Buffers",
+                    "-Eg Buffer: .space 2000",
+                    '-La $s0, Buffer',
+                    '-Proceed to use $s0 reference',
+                    "Syscall values",
+                    '-Load code instruction into $v0',
+                    "-For arguments, preload them and the call will retrieve the values",
+                    "-" . table_tags(table_contents(4,
+                        'Service', 'System Call Code', 'Arguments', 'Result',
+                        'print_int', 1, '$a0 = integer', '',
+                        'print_float', 2, '$f12 = float', '',
+                        'print_double', 3, '$f12 = double', '',
+                        'print_string', 4, '$a0 = string', '',
+                        'read_int', 5, '', 'integer(in $v0)',
+                        'read_float', 6, '', 'float(in $f0)',
+                        'read_double', 7, '', 'double(in $f0)',
+                        'read_string', 8, '$a0 = buffer, $a1 = length', '',
+                        'sbrk', 9, '$a0 = amount', 'address(in $v0)',
+                        'exit', 10, '', '')),
+                    "Elements",
+                    "-MIPS CPU support consists of",
+                    '--$gp, used like $fp to point to beginning of heap frame',
+                    "--System call, sbrk (syscall code 9)",
+                    "---Ask OS for n-bytes of data (like malloc)",
+                    "---Return address of first byte",
+                    "-Can simulate own heap with fixed memory block in data area",
+                    "Polling code",
+                    "-Continue checking for a condition and branching to recheck until that condition is met before continuing. Stalls the program"
                 );
 
                 pagination();
