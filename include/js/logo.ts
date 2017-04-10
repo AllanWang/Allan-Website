@@ -95,5 +95,5 @@ $(function () {
                 data['strokeWidth'] = 8;
             });
         }
-    )
+    );
 });
