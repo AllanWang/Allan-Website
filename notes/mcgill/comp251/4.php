@@ -100,7 +100,7 @@ $subHeader = 'Lectures 15 – 19';
                     "-Apply recursively",
                     "Analysis",
                     "-Comparing two strings of length m & n is &Omega;(mn) time and &Omega;(mn) space",
-                    "-It’s easy to save space and compute values in &Omega(m + n) space by computing OPT(i, *) from OPT(i – 1, *); however, recovering alignment is harder",
+                    "-It’s easy to save space and compute values in &Omega;(m + n) space by computing OPT(i, *) from OPT(i – 1, *); however, recovering alignment is harder",
                     "Example" .
                     table_tags(table_contents(6, '*', '-', 'A', 'T', 'T', 'G',
                         '-', 0, 1, 2, 3, 4,
