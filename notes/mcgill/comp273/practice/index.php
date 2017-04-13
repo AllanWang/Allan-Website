@@ -273,7 +273,7 @@ phpNav(); ?>
                         MIPS – Push & Pop
                     </div>
                     <div class="answer">
-                        # Push
+                        # Push<br>
                         subi $sp, $sp, 8<br>
                         sw $s0, ($sp)<br>
                         sw $s1, 4($sp)<br>
