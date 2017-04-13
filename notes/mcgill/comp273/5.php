@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures 20 – 24';
+$subHeader = 'Lectures 20 – 23 (End)';
 ?>
 
 <body>
@@ -96,6 +96,40 @@ $subHeader = 'Lectures 20 – 24';
                     "-How much CPU time is used for a hard disk transfer at 4-word chunks at 4MB/s",
                     "-Polling = 4MB/16bytes = 250K times &rarr; 250K * 400 = 100 000 000",
                     "-Processor = 100 000 000/500 000 000 = 20%"
+                );
+
+                lectureSection(23, '2017/04/10',
+                    "Independent device with clock & rom – waits for signal and executes instruction depending on input",
+                    "Connected to a register/buffer (with cmd, status, data, port)",
+                    "Connected to RAM which is connected to CPU",
+                    "To run: cmd passed to device, device runs &delta;t, status & data/buffer updated",
+                    "After polling is finished, data still has to be transferred from buffer to RAM",
+                    "Polling example: load 100 bytes, pass to device, wait",
+                    "Interrupt example: load 100 bytes, device handles the rest (no time taken in CPU), status received, bring data in",
+                    "Two ways of doing polling",
+                    "-Busy loop – while loop with condition",
+                    "-Intermittent loop – have checker in a function and check it with a timer (eg every 0.5s)",
+                    "--Can be useful for getting constant slow data, like keyboard input. Check at a time faster than the fastest typist",
+                    "Use interrupts for data that cannot be missed and data that comes at random times (eg internet data) – network card as a clock and does not need to use the CPU",
+                    "MIPS convention – a (params) & v (return) registers used for passing information; no stack",
+                    "ANSI C standard – stack based – push saved & local variables and pop later when needed",
+                    '-Note that popping doesn’t clear the stack; we just move $sp so that we may reuse the “cleared” addresses',
+                    "-Return values are still added to the v registers",
+                    "Final exam format",
+                    "-Closed book, <b>scientific calculator allowed</b>, part marks given, teacher supplied help sheets (op codes, syscalls)",
+                    "-Questions",
+                    "--Definitions (~4)",
+                    "--MIPS programming (2)",
+                    "--Circuit drawing (~2)",
+                    "--Calculations (~4)",
+                    "--Bonus (2)",
+                    "-Topics",
+                    "--MIPS assembly",
+                    "--Circuit interpretation & building",
+                    "--MIPS features – caches, virtual & dynamic memory, recursion/stacks, interrupts & exceptions, memory mapped I/O, buses, synchronous vs asynchronous",
+                    "--Conventions for passing args & using peripherals",
+                    "-Things to know but aren’t tested – digital math & data formats",
+                    "-Things to know – Amdahl’s law, polling & interrupt overhead, cache performance"
                 );
 
                 pagination();

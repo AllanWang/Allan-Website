@@ -130,9 +130,7 @@ phpNav(); ?>
                             "Encoder – single bit vals 0 to n to a index value",
                             "Decoder – index val to n branches of single bits",
                             "Multiplexer – many inputs & index, outputs input at index",
-                            "Demultiplexer – one input & index with many outputs; only outputs input at index; rest 0
-                                or x
-                            "); ?>
+                            "Demultiplexer – one input & index with many outputs; only outputs input at index; rest 0 or x"); ?>
                     </div>
                 </div>
 
@@ -158,7 +156,7 @@ phpNav(); ?>
                     </div>
                     <div class="answer">
                         <?php
-                        bullets("Fetch &rarr; Load &rarr; ALU & rarr; Store",
+                        bullets("Fetch &rarr; Load &rarr; ALU &rarr; Store",
                             "Each can execute at own time, allowing for multiple instructions at a time"); ?>
                     </div>
                 </div>
@@ -169,11 +167,9 @@ phpNav(); ?>
                     <div class="answer">
                         <?php
                         bullets(
-
                             "Flat – one instruction at a time ",
-                            " Pipeline – assembly execution of multiple instructions ",
-                            " Cores – parallel executions ");
-                        ?>
+                            "Pipeline – assembly execution of multiple instructions ",
+                            "Cores – parallel executions "); ?>
                     </div>
                 </div>
                 <div class="qa-row">
@@ -205,9 +201,7 @@ phpNav(); ?>
                             "Multiplicand data (32 bits)",
                             "Product data (64 bits) with multiplier value in leftmost 32 bits",
                             "Calculate multiplicand & leftmost 32 bits of product, then shift product right",
-                            "Repeat until everything is shifted; note that those after the first 32 bits no longer
-                                need to be touched (eg only one multiplication is done for the unit digit)
-                            "); ?>
+                            "Repeat until everything is shifted; note that those after the first 32 bits no longer need to be touched (eg only one multiplication is done for the unit digit)"); ?>
                     </div>
                 </div>
                 <div class="qa-row">
@@ -296,7 +290,7 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        I/O (Polling, Interrupt, DMA, Synchronous, Asychronous)
+                        I/O (Polling, Interrupt, DMA, Synchronous, Asynchronous)
                     </div>
                     <div class="answer">
                         <?php bullets(
@@ -308,7 +302,18 @@ phpNav(); ?>
                         ); ?>
                     </div>
                 </div>
-
+                <div class="qa-row">
+                    <div class="question">
+                        Amdahl's Law
+                    </div>
+                    <div class="answer">
+                        <?php
+                        bullets(
+                            "Speedup in performance is proportional to new component & actual fraction of work it carries out",
+                            "s = 1/[(1 – f) + f/k]&emsp;&emsp;Where s is speedup, f is fraction of work by component, k is advertised speedup"
+                        ); ?>
+                    </div>
+                </div>
                 <!--
                     <div class="qa-row">
                         <div class="question">
