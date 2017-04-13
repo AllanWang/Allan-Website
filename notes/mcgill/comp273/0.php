@@ -49,6 +49,7 @@ function circuitHeader($title, $filename)
         </div>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
+                <?php echo linkNewTab('Terms & Concept Cards Here', 'https://www.allanwang.ca/notes/mcgill/comp273/practice/')?>
                 <div id="circuits" class="section scrollspy">
                     <h5 id="circuitsh">Circuits</h5>
                     <p>The following diagrams were drawn
