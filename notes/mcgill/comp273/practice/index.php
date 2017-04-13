@@ -85,9 +85,9 @@ phpNav(); ?>
                         <?php
                         echo table_tags(table_contents(6,
                             'Name', 'Sign', 'Exponent', 'Mantissa', 'Total', 'Bias',
-                            'Single', 1, 8, 23, 32, '2<sup>8</sup>-1',
-                            'Double', 1, 11, 52, 64, '2<sup>10</sup>-1',
-                            'Quad', 1, 15, 111, 128, '2<sup>14</sup>-1'
+                            'Single', 1, 8, 23, 32, '2<sup>8</sup> – 1',
+                            'Double', 1, 11, 52, 64, '2<sup>10</sup> – 1',
+                            'Quad', 1, 15, 111, 128, '2<sup>14</sup> – 1'
                         ));
                         ?>
                         * Note that mantissa excludes the starting 1, and bias is used to define exponent for 0
@@ -101,9 +101,7 @@ phpNav(); ?>
                         Eg 2.625
                         <?php bullets(
                             "Convert integer (2 &rarr; 10)",
-                            "Repeatedly multiply decimal portion, take unit digit, and repeat (0.625 &rarr; <b>1</b>.25,
-                                0.25 &rarr; <b>0</b>.5, 0.5 &rarr; <b>1</b>.0)
-                            ",
+                            "Repeatedly multiply decimal portion, take unit digit, and repeat (0.625 &rarr; <b>1</b>.25, 0.25 &rarr; <b>0</b>.5, 0.5 &rarr; <b>1</b>.0)",
                             "Combine (2.625 &rarr; 10.101",
                             "Realign exponent and remove 1 when writing mantissa"); ?>
                     </div>
@@ -117,7 +115,7 @@ phpNav(); ?>
                             "D flip flops – direct",
                             "RS flip flops – reset/set",
                             "JK flip flops – set/toggle/reset");
-                        echo linkNewTab('More Info', 'https://www.allanwang.ca/notes/mcgill/comp273/0.php?scroll_to=circuits');
+                        echo linkNewTab('More Info', 'https://www.allanwang.ca/notes/mcgill/comp273/0.php?scroll_to=rs-flip-flops');
                         ?>
                     </div>
                 </div>
