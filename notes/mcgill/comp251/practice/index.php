@@ -135,18 +135,39 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-
+                        Use Kruskal's algorithm to find the MST of the following graph:<br>
+                        <img src="images/Kruskal.svg">
                     </div>
                     <div class="answer">
-
+                        Pick the lightest edge that doesn't connect two already connected nodes until all nodes are
+                        connected.<br>
+                        <img src="images/KruskalA.svg">
                     </div>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-
+                        What is the triangle inequality?
                     </div>
                     <div class="answer">
-
+                        For all (u, v) &isin; E, &delta;(u, v) &le; &delta;(u, x) + &delta;(x, v)<br>//TODO
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        What are some similarities and differences in Prim's algorithm & Dijkstra's algorithm?
+                    </div>
+                    <div class="answer">
+                        Both algorithms involve adding an edge with the smallest weight to a vertex V, and start off
+                        with a source vertex S of weight 0 and all other vertices with weight &infin;. At each stage of
+                        Prim, we choose the lightest adjacent edge joining a vertex that isn't
+                        already connected to our tree. The end result is a MST. <br> At each stage of Dijkstra, we
+                        update weights for vertices adjacent to the one we're working with by summing the weight of the
+                        current vertex with the weight of the edge connecting a given adjacent vertex. If the existing
+                        weight for that vertex is already smaller, we keep the original weighting; otherwise we save our
+                        new summed weighting. After all new weightings are calculated, we connect the vertex with the
+                        smallest weight to our
+                        graph. The end result is a shortest-path tree, meaning that the path from source vertex S to any
+                        vertex in our graph is the shortest path connecting those two vertices.
                     </div>
                 </div>
                 <div class="qa-row">
