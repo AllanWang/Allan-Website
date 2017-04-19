@@ -29,7 +29,7 @@ phpNav(); ?>
             <div id="q-and-a">
                 <div class="qa-row">
                     <div class="question">
-                        Hash the following values using linear probing into a table of size 5: 3, 11, 14, 23, 8
+                        Hash the following values using linear probing into a table of size 5: 3, 11, 14, 23, 8.
                     </div>
                     <div class="answer">
                         <b>23, 11, 8, 3, 14</b><br>
@@ -39,7 +39,7 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        Execute MaxHeapify on the following array: [24, 21, 23, 22, 36, 29]
+                        Execute MaxHeapify on the following array: [24, 21, 23, 22, 36, 29].
                     </div>
                     <div class="answer">
                         At each stage, the value in bold at index i is being compared to the values at index 2i and 2i +
@@ -54,7 +54,7 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        Create an AVL tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6
+                        Create an AVL tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6.
                     </div>
                     <div class="answer">
                         <img style="max-width: 50%" src="images/AVL.svg">
@@ -64,7 +64,7 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        Create a red black tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6
+                        Create a red black tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6.
                     </div>
                     <div class="answer">
                         <img style="max-width: 50%" src="images/RedBlack.svg">
@@ -76,7 +76,7 @@ phpNav(); ?>
                 <div class="qa-row">
                     <div class="question">
                         Using the greedy algorithm in class, find the biggest set of non overlapping activities from the
-                        graph below<br><br>
+                        graph below.<br><br>
                         <img style="max-height: 200px" src="images/GreedyActivity.svg">
                     </div>
                     <div class="answer">
@@ -85,13 +85,67 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        Find the Huffman encoding for "abracadabra"
+                        Find the Huffman encoding for "abracadabra".
                     </div>
                     <div class="answer">
                         <?php
                         echo table_tags(table_contents(-5, 'Frequencies', 'a', 'b', 'c', 'd', 'r', 5, 2, 1, 1, 2));
                         echo table_tags(table_contents(-5, 'Encodings', 'a', 'b', 'c', 'd', 'r', '0', '110', '100', '101', '111'));
                         ?>
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        Given the graph below, find the depths of each vertex with respect to vertex s.<br>
+                        <img style="max-width: 350px" src="images/BFS.svg">
+                    </div>
+                    <div class="answer">
+                        <img style="max-width: 350px" src="images/BFSA.svg">
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        With the same graph, compute the DFS start/finish times; assume each edge is bidirectional.
+                    </div>
+                    <div class="answer">
+                        <img style="max-width: 350px" src="images/DFSA.svg">
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        How is topological sort performed?
+                    </div>
+                    <div class="answer">
+                        Start with an empty list that will represent the order. Pick any starting point in the graph and
+                        compute DFS at that point. Once a node is finished, insert it in the front of the list. Once the
+                        DFS cannot reach any more nodes, pick any of the remaining nodes as a starting point and repeat.
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        Find the strongly connected components of the following graph:
+                    </div>
+                    <div class="answer">
+                        <b>{a, b, e}, {f, g}, {c, d}, {h}</b><br><br>
+                        SCCs are found as follows: Call DFS(G) to find f[u] for all u. Call DFS(G<sup>T</sup>), but
+                        start with the vertices in order of decreasing f[u] (from DFS(G)). Output the vertices in each
+                        tree from DFS(G<sup>T</sup>) as a separate SCC).
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+
+                    </div>
+                    <div class="answer">
+
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+
+                    </div>
+                    <div class="answer">
+
                     </div>
                 </div>
                 <div class="qa-row">
