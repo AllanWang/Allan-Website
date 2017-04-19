@@ -75,7 +75,9 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-
+                        Using the greedy algorithm in class, find the biggest set of non overlapping activities from the
+                        graph below<br>
+                        <img src="image/GreedyActivity.svg"
                     </div>
                     <div class="answer">
 

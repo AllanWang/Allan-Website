@@ -35,6 +35,8 @@ $subHeader = 'Summary';
                         table('Heaps', 'Typical', 'O(log n)', '');
                         table('', 'buildMaxHeap', 'O(n)', '');
                         table('Red Black Trees', 'Typical', 'O(log n)', 'Balanced height is at most log n');
+                        table('Find/Union', 'Quick Find', 'O(1)', '');
+                        table('', 'Union', 'O(log n)', '');
                         table_body_full('Adjacency Representation', 4);
                         table('&emsp;List', 'Search', 'Worst: &Theta;(V)', '');
                         table('', 'Storage', '&Theta;(V + E)', '');
