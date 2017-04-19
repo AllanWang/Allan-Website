@@ -76,19 +76,22 @@ phpNav(); ?>
                 <div class="qa-row">
                     <div class="question">
                         Using the greedy algorithm in class, find the biggest set of non overlapping activities from the
-                        graph below<br>
-                        <img src="image/GreedyActivity.svg"
+                        graph below<br><br>
+                        <img style="max-height: 200px" src="images/GreedyActivity.svg">
                     </div>
                     <div class="answer">
-
+                        a<sub>1</sub>, a<sub>4</sub>, a<sub>7</sub>
                     </div>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-
+                        Find the Huffman encoding for "abracadabra"
                     </div>
                     <div class="answer">
-
+                        <?php
+                        echo table_tags(table_contents(-5, 'Frequencies', 'a', 'b', 'c', 'd', 'r', 5, 2, 1, 1, 2));
+                        echo table_tags(table_contents(-5, 'Encodings', 'a', 'b', 'c', 'd', 'r', '0', '110', '100', '101', '111'));
+                        ?>
                     </div>
                 </div>
                 <div class="qa-row">
