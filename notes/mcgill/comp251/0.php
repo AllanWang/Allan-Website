@@ -24,6 +24,7 @@ $subHeader = 'Summary';
         </div>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
+                <?php echo linkNewTab('Algorithm Questions Here', 'https://www.allanwang.ca/notes/mcgill/comp251/practice/')?>
                 <div id="big-o" class="section scrollspy">
                     <h5 id="big-oh">Big O</h5>
                     <table class="h5 highlight">

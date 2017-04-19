@@ -57,7 +57,7 @@ phpNav(); ?>
                         Create an AVL tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6.
                     </div>
                     <div class="answer">
-                        <img style="max-width: 50%" src="images/AVL.svg">
+                        <img src="images/AVL.svg">
                         <p>root &larr; 3, 3.right &larr; 5, 5.right &larr; 7, 3.rotateLeft, 3.left &larr; 1, 7.left
                             &larr; 5, 5.right &larr; 6, 5.rotateLeft, 7.rotateRight</p>
                     </div>
@@ -67,7 +67,7 @@ phpNav(); ?>
                         Create a red black tree by inserting the following keys in the given order: 3, 5, 7, 1, 5, 6.
                     </div>
                     <div class="answer">
-                        <img style="max-width: 50%" src="images/RedBlack.svg">
+                        <img src="images/RedBlack.svg">
                         <p>root &larr; 3.black(), 3.right &larr; 5.red(), 5.right &larr; 7.red(), 3.rotateLeft (3.red(),
                             5.black()), 3.left &larr; 1.red(), 3.black(), 7.left &larr; 5.red(), 5.right &larr; 6.red(),
                             5.rotateLeft, 7.rotateRight (6.black())</p>
@@ -77,7 +77,7 @@ phpNav(); ?>
                     <div class="question">
                         Using the greedy algorithm in class, find the biggest set of non overlapping activities from the
                         graph below.<br><br>
-                        <img style="max-height: 200px" src="images/GreedyActivity.svg">
+                        <img src="images/GreedyActivity.svg">
                     </div>
                     <div class="answer">
                         a<sub>1</sub>, a<sub>4</sub>, a<sub>7</sub>
@@ -97,10 +97,10 @@ phpNav(); ?>
                 <div class="qa-row">
                     <div class="question">
                         Given the graph below, find the depths of each vertex with respect to vertex s.<br>
-                        <img style="max-width: 350px" src="images/BFS.svg">
+                        <img src="images/BFS.svg">
                     </div>
                     <div class="answer">
-                        <img style="max-width: 350px" src="images/BFSA.svg">
+                        <br><br><img src="images/BFSA.svg">
                     </div>
                 </div>
                 <div class="qa-row">
@@ -108,7 +108,7 @@ phpNav(); ?>
                         With the same graph, compute the DFS start/finish times; assume each edge is bidirectional.
                     </div>
                     <div class="answer">
-                        <img style="max-width: 350px" src="images/DFSA.svg">
+                        <img src="images/DFSA.svg">
                     </div>
                 </div>
                 <div class="qa-row">
@@ -123,7 +123,8 @@ phpNav(); ?>
                 </div>
                 <div class="qa-row">
                     <div class="question">
-                        Find the strongly connected components of the following graph:
+                        Find the strongly connected components of the following graph:<br>
+                        <img src="images/SCC.svg">
                     </div>
                     <div class="answer">
                         <b>{a, b, e}, {f, g}, {c, d}, {h}</b><br><br>
