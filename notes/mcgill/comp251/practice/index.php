@@ -108,6 +108,8 @@ phpNav(); ?>
                         With the same graph, compute the DFS start/finish times; assume each edge is bidirectional.
                     </div>
                     <div class="answer">
+                        There is more than one possible answer, depending on which child you choose when you start
+                        off.<br><br>
                         <img src="images/DFSA.svg">
                     </div>
                 </div>
