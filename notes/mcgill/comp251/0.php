@@ -24,7 +24,7 @@ $subHeader = 'Summary';
         </div>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
-                <?php echo linkNewTab('Algorithm Questions Here', 'https://www.allanwang.ca/notes/mcgill/comp251/practice/')?>
+                <?php echo linkNewTab('Algorithm Questions Here', 'https://www.allanwang.ca/notes/mcgill/comp251/practice/') ?>
                 <div id="big-o" class="section scrollspy">
                     <h5 id="big-oh">Big O</h5>
                     <table class="h5 highlight">
@@ -48,6 +48,14 @@ $subHeader = 'Summary';
                         table('Dijkstra\'s Algorithm', 'Total', 'O(E logV)', 'with binary heaps<br>O(E + V logV) with Fibonacci heaps');
                         table('Gale Shapley', 'Total', 'O(n<sup>2</sup>)', 'Best case &Omega;(n)');
                         table('Bipartite Matching', 'Runtime', 'O(nm)', '');
+                        table('Weighted Interval Scheduling', 'Memoization', 'O(n logn)', 'O(n) if presorted');
+                        table('Dynamic Programming', 'Backtracking', 'O(n)', 'Usually, given each backtrack has constant time.');
+                        table('Needleman-Wunsch', 'Total', '&Theta;(mn)', 'm, n are sequence lengths');
+                        table('', 'Space', '&Theta;(mn)', '');
+                        table('', 'Optimal Value Space', '&Theta;(m + n)', 'Still with &Theta;(mn) runtime, but we cannot recover optimal alignment');
+                        table('Bellman-Ford', 'Total', 'O(VE)', '');
+                        table('Knapsack Problem', 'Possible', '&Theta;(nW)', 'W is integer weight');
+                        table('', 'Space', '&Theta;(nW)', '');
                         ?>
                     </table>
                 </div>

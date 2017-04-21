@@ -1,7 +1,7 @@
 /*
  * Algorithm for finding the optimal sequence alignment for two strings
  */
-public class NeedlemanWunch {
+public class NeedlemanWunsch {
 
     String a, b //two strings to compare; for our sake, both string start with '-'
     //and the first real letter is at index 1

@@ -106,7 +106,7 @@ $subHeader = 'Lectures 15 – 19';
                         '-', 0, 1, 2, 3, 4,
                         'C', 1, 1, 2, 3, 4,
                         'T', 2, 2, 1, 2, '<b>3</b>')),
-                    "Pseudocode" . code_specific('java', 'NeedlemanWunch.java')
+                    "Pseudocode" . code_specific('java', 'NeedlemanWunsch.java')
                 );
 
                 lectureSection(17, '2017/03/21',
