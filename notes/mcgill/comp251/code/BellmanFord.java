@@ -14,14 +14,11 @@ public class BellmanFord {
      * @return true if path exists, false otherwise (negative cycle)
      */
     boolean initialize(G, s) {
-        for (int i = 0; i < G.size() - 1; i++) {
-            for (u, v in G.edges){
+        for (int i = 0; i < G.size() - 1; i++)
+            for (u, v in G.edges)
                 relax(u, v, w(u, v)) //set d[v] as min(d[v], d[u] + w(u, v))
-            }
-        }
-        for (u, v in G.edges){
+        for (u, v in G.edges)
             if (d[v] > d[u] + w(u, v)) return false //mismatch found
-        }
         return true
     }
 }
