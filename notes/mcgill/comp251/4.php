@@ -169,7 +169,7 @@ $subHeader = 'Lectures 15 – 19';
                     "-T(n) = &Theta;(n<sup>k</sup>log<sup>p + 1</sup>n)",
                     "-Eg T(n) = 2T(n/2) + &Theta;(n logn) &rarr; T(n) = &Theta;(n log<sup>2</sup>n)",
                     "Case 3 – cost dominated by cost of root",
-                    "-If f(n) = &Omega;(n<sup>k + &epsilon;</sup>) for some &epsilon; > 0) and if a * f(n/b) &le; c * f(n) for some c < 1 & all sufficiently large n (holds if f(n) = &Theta; (n<sup>k + &epsilon;</sup>))",
+                    "-If f(n) = &Omega;(n<sup>k + &epsilon;</sup>) for some &epsilon; > 0) and if a * f(n/b) &le; c * f(n) for some c < 1 &forall; sufficiently large n (holds if f(n) = &Theta; (n<sup>k + &epsilon;</sup>))",
                     "-T(n) = &Theta;(f(n))",
                     "-Eg T(n) = 3T(n/4) + n<sup>5</sup> &rarr; T(n) = &Theta;(n<sup>5</sup>)"
                 );
