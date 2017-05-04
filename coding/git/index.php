@@ -52,6 +52,16 @@ phpNav(); ?>
                     table('git remote set-url [name] [url]', 'overrides current url for existing remote');
                     table('git remote set-url --add --push [name] [url]', 'adds new push url to existing remote (one [name] can have multiple [url]s)');
 
+                    table_header('Branches');
+                    table('git checkout [branch]', 'switch to [branch]; add -b before it if you are making a new branch as well as switching to it');
+                    table('git branch -d [branch]', 'deletes [branch]');
+                    table('git merge [other branch]', 'merges different branch to active branch');
+
+                    table_header('Tags');
+                    table('git push --tags', 'push local tags to remote');
+                    table('git tag -d [tag]', 'delete local tag named [tag]');
+                    table('git push origin :refs/tags/[tag]', 'after local deletion, deletes the remote tag');
+
                     table_header('Other');
                     table('git clone [url]', 'clones the git url to local');
                     table('git status', 'get some info on the file changes');

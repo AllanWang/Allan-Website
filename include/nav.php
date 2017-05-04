@@ -86,6 +86,7 @@ function addActiveIf($prefix)
                         <ul>
                             <li><a class="l" id="nr_cn_git" href="https://allanwang.ca/coding/git/">Git Bash</a></li>
                             <li><a class="l" id="nr_cn_java" href="https://allanwang.ca/coding/java/">Java</a></li>
+                            <li><a class="l" id="nr_cn_cpp" href="https://allanwang.ca/coding/cpp/">C++</a></li>
                             <li><a class="l" id="nr_cn_fsharp" href="https://allanwang.ca/coding/fsharp/">F#</a></li>
                         </ul>
                     </div>

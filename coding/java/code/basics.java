@@ -1,12 +1,13 @@
 public class Basics { //this is a class; the name should match the name of your file (Basics.java in this case)
 
     /*
-     * As the name implies, this is your main method
-     * It will always start with 'public static void main(String[] args)' (Though you can change the args to any variable name)
-     * Though it is not required in every file, it must exist for you to run that class
+     * As the name implies, this is your main method.
+     * It will always start with 'public static void main(String[] args)'
+     *     (Though you can change the args to any variable name).
+     * Though it is not required in every file, it must exist for you to run that class.
      */
     public static void main(String[] args) {
-        String text = "hi"; //creating a primitive variable is done by [type] [variable name] = [value]; <-- don't forget the semicolon
+        String text = "hi"; //creating a variable is done by [type] [variable name] = [value]; <-- don't forget the semicolon
         print(text); //pass the variable text into the print method, which will print "hi"
         print("I am Bob"); //pass the String "I am Bob" to the print method, which will print "I am Bob"
         print(join("How", "are you")); //this first calls join, which combines the two Strings, then prints it with the print method
@@ -16,9 +17,9 @@ public class Basics { //this is a class; the name should match the name of your 
 
     /*
      * This is a separate method in this class; the method name is "print" and it returns void (nothing)
-     * It will not be called unless it is executed in main or by another method called by main
-     * In this particular case, the parameter is a String name s; the naming is only important within this method
-     * and is independent of whatever naming you have in other methods or in the variable you pass to this method
+     * It will not be called unless it is executed in main or by another method called by main.
+     * In this particular case, the parameter is a String named s; the naming is only important within this method
+     * and is independent of whatever naming you have in other methods or in the variable you pass to this method.
      * The order in which you write methods also doesn't matter; you always start your program with main and go line by line,
      * jumping to whatever method you call in the process
      */

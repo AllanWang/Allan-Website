@@ -42,6 +42,10 @@ html, body, main {
   -webkit-transform: translateX($val * 1%);
 }
 
+ol.bold > li {
+  font-weight: bold;
+}
+
 .question {
   padding: 0.75rem 1rem !important;
   @include translateX($question-offset);
