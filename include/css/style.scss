@@ -68,6 +68,10 @@ body > main {
   min-height: 100%;
 }
 
+table.top-align td {
+  vertical-align: top;
+}
+
 header {
   padding-left: $navbar-width;
 }

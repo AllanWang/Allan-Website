@@ -23,7 +23,8 @@ phpNav(); ?>
 
                 <h3 class="header center">Intro to C++</h3>
                 <h6 class="center">An <a href="https://en.wikipedia.org/wiki/Imperative_programming" target="_blank">imperative</a>,
-                    <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">object-oriented</a>,
+                    <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"
+                       target="_blank">object-oriented</a>,
                     and <a href="https://en.wikipedia.org/wiki/Generic_programming" target="_blank">generic</a>
                     programming language<br/><br/>
 
@@ -39,15 +40,35 @@ phpNav(); ?>
                 <div <?php scrollSpyHeaderData("Data Types") ?>>
                     <table class="highlight">
                         <?php
-                        table_header('Primitive Data Type', 'Bit Size', 'Range', 'Default Value');
-                        table('byte', '8', '-128 to 127', '0');
-                        table('short', '16', '-32,768 to 32,767', '0');
-                        table('int', '32', '-2<sup>31</sup> to 2<sup>31</sup> - 1', '0');
-                        table('long', '64', '-2<sup>63</sup> to 2<sup>63</sup> - 1', '0L');
-                        table('float', '32', '???', '0.0f');
-                        table('double', '64', '???', '0.0d');
-                        table('boolean', 'varies', 'true/false', 'false');
-                        table('char', '16', '0 to 65,535', '\u0000 (0)');
+                        table_header('Group', 'Type names', 'Size/precision');
+                        table('Character types', 'char', '1 byte, at least 8 bits');
+                        table('', 'char16_t', 'at least 16 bits');
+                        table('', 'char32_t', 'at least 32 bits');
+                        table('', 'wchar_t', 'can represent largest supported character set');
+                        table('Integer types (signed/unsigned)', 'char', 'at least 8 bits');
+                        table('', 'short', 'at least 16 bits');
+                        table('', 'int', 'at least 16 bits; no smaller than short');
+                        table('', 'long', 'at least 32 bits');
+                        table('', 'long long', 'at least 64 bits');
+                        table('Floating-point types', 'float', '');
+                        table('', 'double', 'precision not less than float');
+                        table('', 'long double', 'precision not less than double');
+                        table('Boolean type', 'bool', '');
+                        table('Null pointer', 'decltype(nullptr)', '');
+                        ?>
+                    </table>
+
+                    * In C++, type deduction also exists. The auto type will try to match the variable type with its
+                    value
+                    accordingly, and decltype(foo) bar will create 'bar' with the same type as 'foo'.
+                </div>
+                <div <?php scrollSpyHeaderData('Syntax') ?>>
+                    <h5>Syntax</h5>
+                    <table class="highlight top-align">
+                        <?php
+                        table_header('Keyword', 'Meaning');
+                        table('std<b>::</b>cout', 'scope operator; shows that the method on the right side is under the namespace on the left.<br>Note that if we want to use a default namespace, we may define "using namespace std" to avoid it for all std methods.');
+                        table('std::cout <b><<</b> "Hello World!"', 'insertion; sends string to cout');
                         ?>
                     </table>
                 </div>
