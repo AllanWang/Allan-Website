@@ -54,7 +54,8 @@ phpNav(); ?>
 
                     table_header('Branches');
                     table('git checkout [branch]', 'switch to [branch]; add -b before it if you are making a new branch as well as switching to it');
-                    table('git branch -d [branch]', 'deletes [branch]');
+                    table('git branch -d [branch]', 'deletes local [branch]');
+                    table('git push origin --delete [branch]', 'deletes remote [branch]');
                     table('git merge [other branch]', 'merges different branch to active branch');
 
                     table_header('Tags');
