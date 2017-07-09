@@ -40,8 +40,8 @@ phpHeader();
             appCard("Frost for Facebook", "A comprehensive third party Facebook app, made with design and functionality in mind.",
                 "frost_banner.jpg",
                 array("Fully themeable", "Battery friendly", "Uses the graph API"),
-                array("Github" => "https://github.com/AllanWang/Facebook-Frost",
-                    "Play Store" => "https://play.google.com/store/apps/details?id=com.pitchedapps.facebook.frost"));
+                array("Github" => "https://github.com/AllanWang/Frost-for-Facebook",
+                    "Play Store" => "https://play.google.com/store/apps/details?id=com.pitchedapps.frost"));
 
             ?>
 
