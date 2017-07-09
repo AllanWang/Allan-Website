@@ -50,16 +50,32 @@ phpHeader();
 
             <?php
 
-            appCard("Icon Showcase", "An extensive UI library for icon packs.", "icon_showcase.jpg",
-                array("Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.",
-                    "Created with Jahir Fiquitiva"),
-                array("Github" => "https://github.com/jahirfiquitiva/IconShowcase"));
+            appCard("KAU", "An extensive collection of Kotlin Android Utils", "kau.jpg",
+                array("Huge package of one line extension functions",
+                    "Custom UI views",
+                    "Adapter items and animators",
+                    "SearchView",
+                    "Custom delegates"),
+                array("Github" => "https://github.com/AllanWang/KAU",
+                    "Page" => "https://allanwang.github.io/KAU/"));
 
             appCard("Capsule", "An android UI framework library for heavy designs.", "capsule.jpg",
                 array("Built around the coordinator layout view",
                     "Supports easy FAB and permission handling with EventBus",
                     "Comes with many useful util methods"),
                 array("Github" => "https://github.com/AllanWang/Capsule"));
+
+            ?>
+
+        </div>
+        <div class="row" id="showcase">
+
+            <?php
+
+            appCard("Icon Showcase", "An extensive UI library for icon packs.", "icon_showcase.jpg",
+                array("Also contains a request tool, a preview viewpager, a wallpaper chooser, and more.",
+                    "Created with Jahir Fiquitiva"),
+                array("Github" => "https://github.com/jahirfiquitiva/IconShowcase"));
 
             ?>
 
