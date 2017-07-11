@@ -78,6 +78,7 @@ phpNav(); ?>
                     table_header('Aliases', 'Custom Commands');
                     table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push origin master; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
                     table('git config --global alias.fullinit \'!f() { git init && git remote add origin "$*" && git pull origin master && git branch --set-upstream-to origin/master; }; f\'', 'git fullinit [link] will initialize a git, set the link as origin, pull to master, then set the upstream to origin.');
+                    table('git config --global alias.copyHash \'!f() { git log --pretty=format:"%h" -n 1 | clip.exe; }; f\'', 'git copyHash will copy the latest commit hash in the pretty format; note that clip.exe is for windows');
 
                     table_header('Pull Issues', 'Solution');
                     table('Your local changes to the following files would be overwritten by merge', 'Add all your files and commit it; you can pull again afterwards');
