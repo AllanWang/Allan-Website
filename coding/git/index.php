@@ -58,10 +58,12 @@ phpNav(); ?>
                     table('git checkout [branch]', 'switch to [branch]; add -b before it if you are making a new branch as well as switching to it');
                     table('git branch -d [branch]', 'deletes local [branch]');
                     table('git push origin --delete [branch]', 'deletes remote [branch]');
+                    table('git push -u origin [branch]', 'sets the origin of the current branch and pushes');
                     table('git merge [other branch]', 'merges different branch to active branch');
                     table('git remote prune origin', 'remove listed remote branches (from git branch -a) that no longer exist');
 
                     table_header('Tags');
+                    table('git tag --sort=committerdate', 'show tags by date committed rather than alphabetically');
                     table('git push --tags', 'push local tags to remote');
                     table('git tag -d [tag]', 'delete local tag named [tag]');
                     table('git push origin :refs/tags/[tag]', 'after local deletion, deletes the remote tag');
@@ -76,7 +78,7 @@ phpNav(); ?>
                     table('git revert HEAD<br>git revert HEAD~[number]..HEAD', 'creates a commit that undoes the last commit, without deleting the commit<br>With [number], you can revert the last [number] commits');
 
                     table_header('Aliases', 'Custom Commands');
-                    table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push origin master; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
+                    table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
                     table('git config --global alias.fullinit \'!f() { git init && git remote add origin "$*" && git pull origin master && git branch --set-upstream-to origin/master; }; f\'', 'git fullinit [link] will initialize a git, set the link as origin, pull to master, then set the upstream to origin.');
                     table('git config --global alias.copyHash \'!f() { git log --pretty=format:"%h" -n 1 | clip.exe; }; f\'', 'git copyHash will copy the latest commit hash in the pretty format; note that clip.exe is for windows');
                     table('git config --global alias.copyFullHash \'!f() { git rev-parse HEAD | clip.exe; }; f\'', 'git copyFullHash will copy the latest commit hash in its entirety');
