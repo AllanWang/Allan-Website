@@ -35,7 +35,8 @@ $subHeader = 'Summary';
                 "-PCP cannot be decided by any algorithm in a finite amount of time when there are no valid sequences",
                 "-Proof by reduction technique – if PCP was decidable, then another undecidable problem (the halting problem) would be decidable",
                 "<b>The Halting Problem</b> – Given an algorithm and an input, will the algorithm halt on that input or will it loop forever?",
-                "-Algorithms can be fed an input matching their algorithm to return an incorrect response; no algorithm can be always correct"
+                "-Algorithms can be fed an input matching their algorithm to return an incorrect response; no algorithm can be always correct",
+                "<b>Syracuse Conjecture</b> – For any integer n > 0, where S<sub>1</sub> = n, S<sub>i+1</sub> = if (S<sub>i</sub> % 2 == 0) S<sub>i</sub>/2 else 3S<sub>i</sub> + 1, Syracuse(n) = lease i such that S<sub>i</sub> = 0 if S<sub>k</sub> > 1 for all k in [1, i)"
                     );
 
                 pagination();
