@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 
-// Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
+// Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,27 +23,34 @@
 
 
 
-! function($) {
+! function(window, document, $) {
 
 	"use strict";
 
 	var Typed = function(el, options) {
+		var self = this;
 
 		// chosen element to manipulate text
-		this.el = $(el);
+		this.el = el;
 
 		// options
-		this.options = $.extend({}, $.fn.typed.defaults, options);
+		this.options = {};
+		Object.keys(defaults).forEach(function(key) {
+			self.options[key] = defaults[key];
+		});
+		Object.keys(options).forEach(function(key) {
+			self.options[key] = options[key];
+		});
 
 		// attribute to type into
-		this.isInput = this.el.is('input');
+		this.isInput = this.el.tagName.toLowerCase() === 'input';
 		this.attr = this.options.attr;
 
 		// show cursor
 		this.showCursor = this.isInput ? false : this.options.showCursor;
 
 		// text content of element
-		this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text();
+		this.elContent = this.attr ? this.el.getAttribute(this.attr) : this.el.textContent;
 
 		// html or plain text
 		this.contentType = this.options.contentType;
@@ -60,8 +67,17 @@
 		// amount of time to wait before backspacing
 		this.backDelay = this.options.backDelay;
 
+		// Fade out instead of backspace
+		this.fadeOut = this.options.fadeOut;
+		this.fadeOutClass = this.options.fadeOutClass;
+		this.fadeOutDelay = this.options.fadeOutDelay;
+
 		// div containing strings
-		this.stringsElement = this.options.stringsElement;
+		if($ && this.options.stringsElement instanceof $) {
+			this.stringsElement = this.options.stringsElement[0]
+		} else {
+			this.stringsElement = this.options.stringsElement;
+		}
 
 		// input strings of text
 		this.strings = this.options.strings;
@@ -120,16 +136,17 @@
 			var self = this;
 			// Insert cursor
 			if (this.showCursor === true) {
-				this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
-				this.el.after(this.cursor);
+				this.cursor = document.createElement('span');
+				this.cursor.className = 'typed-cursor';
+				this.cursor.innerHTML = this.cursorChar;
+				this.el.parentNode && this.el.parentNode.insertBefore(this.cursor, this.el.nextSibling);
 			}
 			if (this.stringsElement) {
 				this.strings = [];
-				this.stringsElement.hide();
-				console.log(this.stringsElement.children());
-				var strings = this.stringsElement.children();
-				$.each(strings, function(key, value){
-					self.strings.push($(value).html());
+				this.stringsElement.style.display = 'none';
+				var strings = Array.prototype.slice.apply(this.stringsElement.children);
+				strings.forEach(function(stringElement){
+					self.strings.push(stringElement.innerHTML);
 				});
 			}
 			this.init();
@@ -140,6 +157,11 @@
 			// exit when stopped
 			if (this.stop === true) {
 				return;
+			}
+
+			if (this.fadeOut && this.el.classList.contains(this.fadeOutClass)) {
+				this.el.classList.remove(this.fadeOutClass);
+				this.cursor.classList.remove(this.fadeOutClass);
 			}
 
 			// varying values for setTimeout during typing
@@ -176,7 +198,7 @@
 
 				if (self.contentType === 'html') {
 					// skip over html tags while typing
-					var curChar = curString.substr(curStrPos).charAt(0)
+					var curChar = curString.substr(curStrPos).charAt(0);
 					if (curChar === '<' || curChar === '&') {
 						var tag = '';
 						var endTag = '';
@@ -229,14 +251,14 @@
 						// curString: arg, self.el.html: original text inside element
 						var nextString = curString.substr(0, curStrPos + 1);
 						if (self.attr) {
-							self.el.attr(self.attr, nextString);
+							self.el.setAttribute(self.attr, nextString);
 						} else {
 							if (self.isInput) {
-								self.el.val(nextString);
+								self.el.value = nextString;
 							} else if (self.contentType === 'html') {
-								self.el.html(nextString);
+								self.el.innerHTML = nextString;
 							} else {
-								self.el.text(nextString);
+								self.el.textContent = nextString;
 							}
 						}
 
@@ -254,15 +276,20 @@
 		},
 
 		backspace: function(curString, curStrPos) {
+			var self = this;
 			// exit when stopped
 			if (this.stop === true) {
+				return;
+			}
+
+			if (this.fadeOut){
+				this.initFadeOut();
 				return;
 			}
 
 			// varying values for setTimeout during typing
 			// can't be global since number changes each time loop is executed
 			var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
-			var self = this;
 
 			self.timeout = setTimeout(function() {
 
@@ -296,17 +323,7 @@
 				// ----- continue important stuff ----- //
 				// replace text with base text + typed characters
 				var nextString = curString.substr(0, curStrPos);
-				if (self.attr) {
-					self.el.attr(self.attr, nextString);
-				} else {
-					if (self.isInput) {
-						self.el.val(nextString);
-					} else if (self.contentType === 'html') {
-						self.el.html(nextString);
-					} else {
-						self.el.text(nextString);
-					}
-				}
+				self.replaceText(nextString);
 
 				// if the number (id of character in current string) is
 				// less than the stop number, keep going
@@ -336,11 +353,35 @@
 			}, humanize);
 
 		},
-		/**
-		 * Shuffles the numbers in the given array.
-		 * @param {Array} array
-		 * @returns {Array}
-		 */
+
+		// Adds a CSS class to fade out current string
+		initFadeOut: function(){
+			self = this;
+			this.el.className += ' ' + this.fadeOutClass;
+			this.cursor.className += ' ' + this.fadeOutClass;
+			return setTimeout(function() {
+				self.arrayPos++;
+				self.replaceText('')
+				self.typewrite(self.strings[self.sequence[self.arrayPos]], 0);
+			}, self.fadeOutDelay);
+		},
+
+		// Replaces current text in the HTML element
+		replaceText: function(str) {
+			if (this.attr) {
+				this.el.setAttribute(this.attr, str);
+			} else {
+				if (this.isInput) {
+					this.el.value = str;
+				} else if (this.contentType === 'html') {
+					this.el.innerHTML = str;
+				} else {
+					this.el.textContent = str;
+				}
+			}
+		},
+
+		// Shuffles the numbers in the given array.
 		shuffleArray: function(array) {
 			var tmp, current, top = array.length;
 			if(top) while(--top) {
@@ -374,11 +415,11 @@
 		reset: function() {
 			var self = this;
 			clearInterval(self.timeout);
-			var id = this.el.attr('id');
-			this.el.empty();
-			if (typeof this.cursor !== 'undefined') {
-        this.cursor.remove();
-      }
+			var id = this.el.getAttribute('id');
+			this.el.textContent = '';
+			if (typeof this.cursor !== 'undefined' && typeof this.cursor.parentNode !== 'undefined') {
+				this.cursor.parentNode.removeChild(this.cursor);
+			}
 			this.strPos = 0;
 			this.arrayPos = 0;
 			this.curLoop = 0;
@@ -388,18 +429,33 @@
 
 	};
 
-	$.fn.typed = function(option) {
-		return this.each(function() {
-			var $this = $(this),
-				data = $this.data('typed'),
-				options = typeof option == 'object' && option;
-			if (data) { data.reset(); }
-			$this.data('typed', (data = new Typed(this, options)));
-			if (typeof option == 'string') data[option]();
+	Typed.new = function(selector, option) {
+		var elements = Array.prototype.slice.apply(document.querySelectorAll(selector));
+		elements.forEach(function(element) {
+			var instance = element._typed,
+			    options = typeof option == 'object' && option;
+			if (instance) { instance.reset(); }
+			element._typed = instance = new Typed(element, options);
+			if (typeof option == 'string') instance[option]();
 		});
 	};
 
-	$.fn.typed.defaults = {
+	if ($) {
+		$.fn.typed = function(option) {
+			return this.each(function() {
+				var $this = $(this),
+				    data = $this.data('typed'),
+				    options = typeof option == 'object' && option;
+				if (data) { data.reset(); }
+				$this.data('typed', (data = new Typed(this, options)));
+				if (typeof option == 'string') data[option]();
+			});
+		};
+	}
+
+	window.Typed = Typed;
+
+	var defaults = {
 		strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
 		stringsElement: null,
 		// typing speed
@@ -412,6 +468,10 @@
 		shuffle: false,
 		// time before backspacing
 		backDelay: 500,
+		// Fade out instead of backspace
+		fadeOut: false,
+		fadeOutClass: 'typed-fade-out',
+		fadeOutDelay: 500, // milliseconds
 		// loop
 		loop: false,
 		// false = infinite
@@ -435,4 +495,4 @@
 	};
 
 
-}(window.jQuery);
+}(window, document, window.jQuery);
