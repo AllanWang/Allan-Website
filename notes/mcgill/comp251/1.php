@@ -155,7 +155,7 @@ phpNav(); ?>
                     "--Black height of RBT = bh(root)",
                     "-Note",
                     "--h(x)/2 &le; bh(x) &le; h(x) &le; 2bh(x) ",
-                    "--A subtree rooted at any node x has &ge; 2<sup>bh(x)</sup> -= 1 internal nodes",
+                    "--A subtree rooted at any node x has &ge; 2<sup>bh(x)</sup> – 1 internal nodes",
                     "--A RBT with n internal nodes has height &le; 2lg(n+1) (proof by previous point)",
                     "Pseudocode" . code_specific('java', 'RedBlackTree.java')
                 );
