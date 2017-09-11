@@ -27,6 +27,7 @@ $subHeader = 'Lectures 0 – 5';
                 <?php
                 lectureSection(0, '2017/09/06',
                     "<b>Midterm – Wed Oct 18 1:05PM – 2:25PM</b>",
+                    "Office hours: Mondays 3:30 – 4:30, Wednesdays 2:35 – 3:35",
                     "Topics – processes, inter-process communication, scheduling, memory managemet, virtual memory, storage management, network management, security",
                     "Operating System – Trusted software interposed between the hardware and the application/utilities",
                     "Computers were very expensive, so utilization needed to be maximized; it was okay for humans to be idle, but was very expensive for computers",
@@ -53,9 +54,7 @@ $subHeader = 'Lectures 0 – 5';
                     "Control Access to OS is provided through two levels of architecture: <b>trusted mode</b> and <b>untrusted mode</b>",
                     "-OS (at least the core part (Kernel)) runs in trusted mode",
                     "-Applications/utilities run in untrusted mode",
-                    "<b>System call process</b> -= system service requested (call) &rarr; switch mode; verify args & service &rarr; branch to service function via call table &rarr; return from service function; switch mode &rarr; return from system call"
-
-
+                    "<b>System call process</b> – system service requested (call) &rarr; switch mode; verify args & service &rarr; branch to service function via call table &rarr; return from service function; switch mode &rarr; return from system call"
                 );
 
                 pagination();
