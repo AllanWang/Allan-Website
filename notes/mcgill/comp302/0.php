@@ -33,7 +33,8 @@ $subHeader = 'Lectures 0 – 5';
                     "-Show ways to reason about programs – type checking, induction, operational semantics, QuickCheck, etc",
                     "-Introduce fundamental principles in programming language design",
                     "-Grammar & parsing, operation semantics & interpreters, type checking, polymorphism, subtyping",
-                    "-Expose students to different way of thinking about problems"
+                    "-Expose students to different way of thinking about problems",
+                    "Thorough notes for this class will be up on MyCourses each week"
                 );
 
                 pagination();
