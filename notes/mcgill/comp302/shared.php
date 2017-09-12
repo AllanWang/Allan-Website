@@ -31,7 +31,7 @@ function headerBullets()
 {
     inlineBullets(array("Prof's Email" => "mailto:bpientka@cs.mcgill.ca?Subject=Comp%20302",
         "OCaml" => "http://ocaml.org/",
-        "Course Website" => "http://www.cs.mcgill.ca/~bpientka/",
+        "Prof's Website" => "http://www.cs.mcgill.ca/~bpientka/",
     ));
 }
 
