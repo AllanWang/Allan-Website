@@ -51,6 +51,14 @@ $subHeader = 'Lecture 0 – 5';
                     "'assert' is used to evaluate a predicate, and throws an exception if the predicate returns false"
                 );
 
+                lectureSection(3, '2017/09/12',
+                    "In a well encapsulated class, it should not be possible to modify the state of a class without calling a method in that class",
+                    "Scopes are nested – variables in an inner brace are not accessible by variables in the outer brace",
+                    "Constructors that take references and directly save them to global variables break encapsulation, as such references can be leaked and held even after the constructor",
+                    "If we have a class Deck with a stack, along with a method draw() which calls pop(), we may break encapsulation by exposing an EmptyStackException. This tells the user how the deck is implemented",
+                    "Private fields are available to any method in the same class. Be careful with methods that pass such private fields to other objects, thus exposing such properties"
+                );
+
                 pagination();
                 ?>
             </div>

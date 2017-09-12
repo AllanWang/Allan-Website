@@ -69,6 +69,22 @@ $subHeader = 'Lectures 1 – 5';
                     "-Accept states – decision making state, F &sube; Q (double circle)"
                 );
 
+                lectureSection(3, '2017/09/12',
+                    "Next tuesday's class is cancelled",
+                    "Prof. Crep&eacute;au's office hours are cancelled next week",
+                    "Regular Languages",
+                    "-Given definition from last class, and let w = w<sub>1</sub>w<sub>2</sub>...w<sub>n</sub> (n &ge; 0) be a string where each symbol w<sub>i</sub> is from the alphabet &Sigma;<br/>M <b>accepts</b> w if states s<sub>0</sub>,s<sub>1</sub>,...s<sub>n</sub> exist s.t",
+                    "--s<sub>0</sub> = q<sub>0</sub>",
+                    "--s<sub>i+1</sub> = &delta;(s<sub>i</sub>, w<sub>i+1</sub>) for i = 0, ... n – 1",
+                    "--s<sub>n</sub> &isin; F",
+                    "--(w is accepted if it starts at the start state and ends at an accept state)",
+                    "-Note that the size of the state is typically one greater than the size of the string",
+                    "-M <b>recognizes language</b> A if A = { w &#124; M accepts w }",
+                    "-A language is a <b>regular language</b> if some finite automaton recognizes it",
+                    "[Went through example proof by induction]",
+                    "&epsilon; represents an empty string"
+                );
+
                 pagination();
                 ?>
             </div>
