@@ -76,6 +76,8 @@ function addActiveIf($prefix)
                                     310</a></li>
                             <li><a class="l" id="nr_n_comp_330" href="https://allanwang.ca/notes/mcgill/comp330/0.php">Comp
                                     330</a></li>
+                            <li><a class="l" id="nr_n_comp_361" href="https://allanwang.ca/notes/mcgill/comp361/0.php">Comp
+                                    361</a></li>
                             <li><a class="l" id="nr_n_math_240" href="https://allanwang.ca/notes/mcgill/math240">Math
                                     240</a>
                             </li>
