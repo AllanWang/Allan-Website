@@ -25,6 +25,10 @@
         background-color: <?php echo lighterColor($theme_color)?> !important;
     }
 
+    blockquote {
+        border-left: 3px solid <?php echo $theme_color?> !important;
+    }
+
     /*override search bar accents*/
     input:not([type]):focus:not([readonly]),
     input[type=text]:focus:not([readonly]),
