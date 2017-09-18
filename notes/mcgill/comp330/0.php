@@ -85,6 +85,29 @@ $subHeader = 'Lectures 1 – 5';
                     "&epsilon; represents an empty string"
                 );
 
+                lectureSection(4, '2017/09/14',
+                    table_tags(table_contents(-3,
+                        "Regular Operations",
+                        "Union", "A &cup; B", "{ x &#124; x &isin; A or x &isin; B }",
+                        "Concatenation", "A &compfn; B", "{ xy &#124; x &isin; A and y &isin; B }",
+                        "Star", "A*", "{ x<sub>1</sub>x<sub>2</sub> ... x<sub>k</sub> &#124; K &ge; 0 and each x<sub>i</sub> &isin; A }")),
+                    "Non-Deterministic Finite Automata",
+                    "-May jump from state to state without consuming input (eg when encountering the empty string &epsilon;"
+                );
+
+                lectureSection(5, '2017/09/15',
+                    "Tail-recursive functions are ones with nothing to do except return the final value. For such functions, saving its stack frame is redundant.",
+                    "Any function of type 'a -> 'b -> 'c (one argument passed at a time) can be translated to a function of type 'a * 'b -> 'c (all arguments at the same time) and vice versa. This is called <i>currying</i> (uncurrying resp.)",
+                    "-* in this case represents a tuple",
+                    "User defined data types: type suit= Clubs | Spades | Hearts | Diamonds",
+                    "-Set; order doesn't matter",
+                    "-Clubs, Spades.... are constructors; they begin with a capital letter",
+                    "Pattern matching can analyze elements of a given type: match [expression] with | [pattern] -> [expression]",
+                    "User exceptions can be created with the `exception` keyword. They can be used by calling `raise` [exception]",
+                    "Be clear in case descriptions -= they should be easy to understand, structuresd, and use vocabulary of the application domain; avoid using synonyms",
+                    "A base interactino step <b>must</b> always contain the word <b><i>System</i></b> & at least an <b>actor</b>"
+                );
+
                 pagination();
                 ?>
             </div>

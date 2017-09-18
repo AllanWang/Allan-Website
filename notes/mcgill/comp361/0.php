@@ -69,6 +69,18 @@ $subHeader = 'Lectures 0 – 5';
                     "-Tools are important in effectively creating, manipulating, and transforming models"
                 );
 
+                lectureSection(4, '2017/09/18',
+                    "Black-box -= matches user view of system: input & output with an abstract implementation",
+                    "Use cases force one to look at normal & exceptional behaviours & can help formulate system tests",
+                    "Actors",
+                    "-Represent a role that an <b>external</b> entity (user, hardware, etc) plays in interacting with the system",
+                    "-Categories",
+                    "--Primary -= has a goal; obtains value from system",
+                    "--Secondary -= actor with which the system has a goal; supports 'creating value' for other actors",
+                    "--Facilitator -= used by primary/secondary actor to communicate with system",
+                    "-Role -= set of characteristic needs, interests, expectations, behaviours, responsibilities "
+                );
+
                 pagination();
                 ?>
             </div>
