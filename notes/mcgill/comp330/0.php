@@ -105,7 +105,7 @@ $subHeader = 'Lectures 1 – 5';
                     "Pattern matching can analyze elements of a given type: match [expression] with | [pattern] -> [expression]",
                     "User exceptions can be created with the `exception` keyword. They can be used by calling `raise` [exception]",
                     "Be clear in case descriptions -= they should be easy to understand, structuresd, and use vocabulary of the application domain; avoid using synonyms",
-                    "A base interactino step <b>must</b> always contain the word <b><i>System</i></b> & at least an <b>actor</b>"
+                    "A base interaction step <b>must</b> always contain the word <b><i>System</i></b> & at least an <b>actor</b>"
                 );
 
                 pagination();

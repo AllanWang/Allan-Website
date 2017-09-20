@@ -51,6 +51,28 @@ $subHeader = 'Lectures 0 – 5';
                     "-When  the same variable is recreated, it overshadows the previous one. It does not update the previous binding"
                 );
 
+                lectureSection(3, '2017/09/15',
+                    "Tail-recursive functions are ones with nothing to do except return the final value. For such functions, saving its stack frame is redundant.",
+                    "Passing Arguments",
+                    "-At the same time (tuples): 'a * 'b, where ' denotes any value and * is used for creating tuple types",
+                    "One at a time: 'a -> 'b -> 'c",
+                    "-Currying: translating functions from passing one argument at atime to all at once; opposite is uncurrying",
+                    "Non recursive data types can be created like so:",
+                    "-type suit = Clubs | Spades | Hearts | Diamonds",
+                    "-Clubs, Spades, Hearts, Diamonds are constructors",
+                    "Pattern matching is of the syntax `match [expr] with | [pattern] -> [expr] ...`",
+                    "-An underscore (wild card) may be used as a pattern that accepts all inputs"
+                );
+
+                lectureSection(4, '2017/09/19',
+                    "Recursive Data-Type",
+                    "-type card = rank * suit",
+                    "-type hand = Empty | Hand of card * hand",
+                    "--Hand is a constructor defined within hand through the keyword 'of'",
+                    "--A type 'hand' is either 'Empty' or a combination a card to an existing hand",
+                    "Types are defined with lower case, and constructors are capitalized"
+                );
+
                 pagination();
                 ?>
             </div>

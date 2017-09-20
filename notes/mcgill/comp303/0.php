@@ -59,6 +59,16 @@ $subHeader = 'Lecture 0 – 5';
                     "Private fields are available to any method in the same class. Be careful with methods that pass such private fields to other objects, thus exposing such properties"
                 );
 
+                lectureSection(4, '2017/09/14',
+                    "Interface -= list of methods in a given scope",
+                    "Use interface to separate usage from implementation.",
+                    "Is a contract, where the implementor is expected to provide the proper implementation",
+
+                    "Benefits of interfaces - loose coupling and extensibility",
+
+                    "UML - diamond is on the side of the collection"
+                );
+
                 pagination();
                 ?>
             </div>

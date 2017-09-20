@@ -25,7 +25,7 @@ $subHeader = 'Lectures 0 – 5';
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                lectureSection(0, '2017/09/06',
+                lectureSection(1, '2017/09/06',
                     "<b>Midterm – Wed Oct 18 1:05PM – 2:25PM</b>",
                     "Office hours: Mondays 3:30 – 4:30, Wednesdays 2:35 – 3:35",
                     "Topics – processes, inter-process communication, scheduling, memory managemet, virtual memory, storage management, network management, security",
@@ -179,6 +179,39 @@ $subHeader = 'Lectures 0 – 5';
                     "-Alarm event is handled by saving the state of the active process and restoring the state of the interrupt service routine. The CPU switches to supervisory mode, and all other interrupts are disabled."
                 );
 
+                lectureSection(4, '2017/09/18',
+                    "Simple I/O example – write until num of bytes written = num of bytes read, else throw error",
+                    "Process I/O Handles – file descriptors – array structure maintained and held xby kernel for each process",
+                    "Address Spaces – instead of sharing memory space, give each process the full address space",
+                    "-Linux Memory Split: 1GB Kernel, 3Fb User Mode (user programs here)",
+                    "-User space may be abstract, whereas kernel space is always physical",
+                    "-Address Space switches happen on process switches",
+                    "-Layout",
+                    "--Stack",
+                    "--Dynamic" .
+                    "--BSS – block started by symbol – space for uninitialized variables",
+                    "--data",
+                    "--text – read only segment containing program instructions",
+                    "-Kernel space is constant & is suitable for sharing info between processes",
+                    "Output Redirection",
+                    "-Processes typically have stdin, stdout, stderr",
+                    "-Redirection involves remapping stdout to the stdin of another process",
+                    "-Create pipe (has two ends & unidirectional data flow)",
+                    "Concurrency – supports more than one program making processes",
+                    "Parallelism – system can perform more than one task simultaneously (subset of concurrency)",
+                    "Amdhal's Law – performance improvement is limited by the fraction of time for which it may be implemented",
+                    "speedup &le; 1/(S + (1 – S)/N), where S is serial portion, 1 – S is parallel portion, N is # of cores added",
+                    "Note that as N &uarr; &rarr; speed &uarr;, S &uarr; &rarr; speed &darr;",
+                    "<b>ADD STUFF ON PROCESS & THREADS</b>",
+                    "Why are process creations heavy?",
+                    "-Requires new address space & allocated data structures",
+                    "Why are threads lightweight?",
+                    "-Threads live within processes & share resources with other threads within process (minus stack)",
+                    "Threads typically don't compete and have the same goal, whereas processes typically compete for resources",
+                    "<b>PLACEHOLDER -> Kernel-Level Threads</b>",
+                    "High cost for running thread in kernel",
+                    "If one blocks, you may runn any other thread from any other process"
+                );
                 pagination();
                 ?>
             </div>

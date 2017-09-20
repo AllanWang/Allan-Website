@@ -70,15 +70,22 @@ $subHeader = 'Lectures 0 – 5';
                 );
 
                 lectureSection(4, '2017/09/18',
-                    "Black-box -= matches user view of system: input & output with an abstract implementation",
+                    "Black-box – matches user view of system: input & output with an abstract implementation",
                     "Use cases force one to look at normal & exceptional behaviours & can help formulate system tests",
                     "Actors",
                     "-Represent a role that an <b>external</b> entity (user, hardware, etc) plays in interacting with the system",
                     "-Categories",
-                    "--Primary -= has a goal; obtains value from system",
-                    "--Secondary -= actor with which the system has a goal; supports 'creating value' for other actors",
-                    "--Facilitator -= used by primary/secondary actor to communicate with system",
-                    "-Role -= set of characteristic needs, interests, expectations, behaviours, responsibilities "
+                    "--Primary – has a goal; obtains value from system",
+                    "--Secondary – actor with which the system has a goal; supports 'creating value' for other actors",
+                    "--Facilitator – used by primary/secondary actor to communicate with system",
+                    "-Role – set of characteristic needs, interests, expectations, behaviours, responsibilities "
+                );
+
+                lectureSection(5, '2017/09/20',
+                    "Use Case Guidelines",
+                    "-Use the word system in base cases!",
+                    "-Limit each point to one interaction; more interactions can be added as subroutines",
+                    "-Leave out unnecessary details (eg elevator goes to floor 9)"
                 );
 
                 pagination();
