@@ -16,6 +16,7 @@ if (!isset($scriptOnly) || !$scriptOnly):?>
                         <li><a href="mailto:me@allanwang.com?Subject=Web%20Inquiry" target="_blank"><i
                                         class="fa fa-envelope"></i></a></li>
                         <li><a href="https://github.com/AllanWang" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://stackoverflow.com/users/4407321/allan-w" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
                         <li><a href="https://www.paypal.me/Allanw9" target="_blank"><i class="fa fa-paypal"></i></a>
                         </li>
                     </ul>

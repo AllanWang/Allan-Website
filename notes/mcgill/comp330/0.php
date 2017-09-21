@@ -71,7 +71,7 @@ $subHeader = 'Lectures 1 – 5';
 
                 lectureSection(3, '2017/09/12',
                     "Next tuesday's class is cancelled",
-                    "Prof. Crep&eacute;au's office hours are cancelled next week",
+                    "Prof. Cr&eacute;peau's office hours are cancelled next week",
                     "Regular Languages",
                     "-Given definition from last class, and let w = w<sub>1</sub>w<sub>2</sub>...w<sub>n</sub> (n &ge; 0) be a string where each symbol w<sub>i</sub> is from the alphabet &Sigma;<br/>M <b>accepts</b> w if states s<sub>0</sub>,s<sub>1</sub>,...s<sub>n</sub> exist s.t",
                     "--s<sub>0</sub> = q<sub>0</sub>",

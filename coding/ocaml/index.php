@@ -64,6 +64,62 @@ phpNav(); ?>
                     echo code_specific('ocaml', 'basics.ml');
                     ?>
                 </div>
+                <div <?php scrollSpyHeaderData('Recursion') ?>>
+                    <h5>Recursion</h5>
+                    A big part of functional programming rests on the ability to leverage recursive functions. It may be
+                    a bit odd to think recursively (stacked calls), as we are used to thinking with loops (flat calls).
+                    Fortunately, most looping functions can be converted to recursive functions by passing all mutable
+                    states into the method.<br/>
+                    Consider the following question
+                    (from <?php echo linkNewTab("TopCoder", "https://community.topcoder.com/stat?c=problem_statement&pm=1259&rd=4493") ?>
+                    ):
+                    <blockquote>
+                        A sequence of numbers is called a zig-zag sequence if the differences between successive numbers
+                        strictly alternate between positive and negative. The first difference (if one exists) may be
+                        either positive or negative. A sequence with fewer than two elements is trivially a zig-zag
+                        sequence.
+
+                        For example, 1,7,4,9,2,5 is a zig-zag sequence because the differences (6,-3,5,-7,3) are
+                        alternately positive and negative. In contrast, 1,4,7,2,5 and 1,7,4,5,5 are not zig-zag
+                        sequences, the first because its first two differences are positive and the second because its
+                        last difference is zero.
+
+                        Given a sequence of integers, sequence, return the length of the longest subsequence of sequence
+                        that is a zig-zag sequence. A subsequence is obtained by deleting some number of elements
+                        (possibly zero) from the original sequence, leaving the remaining elements in their original
+                        order.
+                    </blockquote>
+
+                    A possible Java implementation is like so:
+
+                    <?php echo code_specific('java', 'zigzag.java'); ?>
+
+                    The logic is to increment the count if the next input changes directions, and to accept the next
+                    input if it increases the absolute value of the marker (as this will allow for more values to change
+                    the
+                    direction).
+
+                    Notice the following:
+                    <ul class="browser-default">
+                        <li>The method takes in of an array of inputs</li>
+                        <li>There are stateful variables (marker, isPeak, count)</li>
+                        <li>There is an int return type</li>
+                    </ul>
+
+                    In recursive functions, you want to avoid stateful variables, as each call executes a new function
+                    in the stack. The basic solution is to pass everything the next function must know inside the
+                    function itself.
+                    <br/><br/>
+                    In other words:
+                    <ul class="browser-default">
+                        <li>The function takes in a list of inputs (ints),
+                            <br/>an int for a marker,
+                            <br/>an int for a count,
+                            <br/>and a bool for whether the zigzag is at its peak
+                        </li>
+                        <li>The return value is still an int</li>
+                    </ul>
+                </div>
             </div>
             <?php
             tableOfContents();
