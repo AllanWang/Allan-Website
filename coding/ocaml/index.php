@@ -12,7 +12,7 @@ $theme_color = "#EE730B"; //ocaml orange
 phpHeader(); ?>
 <body>
 
-<?php code_highlight();
+<?php code_highlight('ocaml');
 phpNav(); ?>
 
 <main>
@@ -57,7 +57,13 @@ phpNav(); ?>
                         ?>
                     </table>
                 </div>
-
+                <div <?php scrollSpyHeaderData("Example") ?>>
+                    <h5>Basic Example</h5>
+                    Here is a sample that shows the structure of an ml file and how functions work
+                    <?php
+                    echo code_specific('ocaml', 'basics.ml');
+                    ?>
+                </div>
             </div>
             <?php
             tableOfContents();

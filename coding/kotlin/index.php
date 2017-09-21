@@ -12,7 +12,7 @@ $theme_color = "#387FB5"; //java blue
 phpHeader(); ?>
 <body>
 
-<?php code_highlight();
+<?php code_highlight('kotlin');
 phpNav(); ?>
 
 <main>

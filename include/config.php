@@ -69,11 +69,13 @@ function mathJax()
     </script>';
 }
 
-function code_highlight()
+function code_highlight($language = "")
 {
-    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github-gist.min.css">';
+    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css">';
     echo "\n";
-    js('highlight.min');
+    js('highlight/highlight.min');
+    if ($language != "")
+        js("highlight/$language.min");
     echo "<script>hljs.initHighlightingOnLoad();</script>\n";
     include_once('code.php');
 

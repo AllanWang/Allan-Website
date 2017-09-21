@@ -73,6 +73,10 @@ $subHeader = 'Lectures 0 – 5';
                     "Types are defined with lower case, and constructors are capitalized"
                 );
 
+                lectureSection(5, '2017/09/21',
+                    "Talked about lists. Up until now, the majority of our content is on syntax.  I have made a page detailing some components " . linkNewTab("here", "/coding/ocaml/")
+                );
+
                 pagination();
                 ?>
             </div>
