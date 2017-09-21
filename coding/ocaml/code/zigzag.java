@@ -12,6 +12,5 @@ public static int getLongestZigZag(int[] inputs) {
         }
         marker = i;
     }
-    System.out.println(String.format("Input: %s\nCount: %d\n", Arrays.toString(inputs), count));
     return count;
 }
