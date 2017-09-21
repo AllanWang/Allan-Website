@@ -50,11 +50,4 @@ global $page_title, $page_description, $page_keywords, $theme_color, $hamburger_
 
     <?php if (isset($header_function)) $header_function() ?>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-5677449339557164",
-            enable_page_level_ads: true
-        });
-    </script>
 </head>
