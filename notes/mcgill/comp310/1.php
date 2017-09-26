@@ -45,7 +45,21 @@ $subHeader = 'Lectures 6 – 10';
                     "---threads for which we are interested in their returns are joinable. If we don't care about the thread, we may detach it with `pthread_detach` to inform the system to do the proper garbage collection",
                     "--pthread_mutex_lock/pthread_mutex_unlock – prevent multiple threads from modifying the same variable during concurrent executions",
                     "In concurrent programming, we want to avoid a sequence of interruptible and mutable operations. For instance, i++ involves 3 operations (load, add, save), which may be interrupted from another thread. We may address this by saving i locally first, incrementing the new value, then saving it. That way, other threads that read i in the process will still get the old value. One example of this implementation is Atomic integers"
+                );
 
+                lectureSection(7, '2017/09/25',
+                    "Critical Section",
+                    "-For multiple programs to cooperate correctly & efficiently",
+                    "--No two processes may be simultaneously in their critical sections",
+                    "--No assumptions may be made about speeds or number of CPUs",
+                    "--No processes outside its critical section may block other processes",
+                    "--No process should have to wait forever to enter critical section",
+                    "-Solution",
+                    "--Disable all interrupts &rarr; not practical as OS operation will be hindered as well",
+                    "Strict Alternation",
+                    "-Two processes take turns in entering critical section using a global variable swap",
+                    "Dekker's Algorithm",
+                    "Peterson's Algorithm"
                 );
 
                 pagination();

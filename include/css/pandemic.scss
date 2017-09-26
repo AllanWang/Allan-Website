@@ -1,0 +1,69 @@
+.board {
+  height: 100%
+}
+
+@mixin translateX($val) {
+  transform: translateX($val * 1%);
+  -webkit-transform: translateX($val * 1%);
+}
+
+.hidden-card {
+  background-color: #ddd;
+  @include translateX(80);
+  height: 300px;
+  width: 200px;
+  float: bottom;
+  animation: slide-down 1s forwards;
+  -webkit-animation: slide-down 1s forwards;
+  &:hover {
+    background-color: #ccc;
+    animation: slide-up 1s forwards;
+    -webkit-animation: slide-up 1s forwards;
+  }
+}
+
+@mixin key-translateY($animationName, $value) {
+  @-webkit-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -webkit-transform: translateY(0%);
+      }
+    }
+    100% {
+      -webkit-transform: translateY($value);
+    }
+  }
+  @-moz-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -moz-transform: translateY(0%);
+      }
+    }
+    100% {
+      -moz-transform: translateY($value);
+    }
+  }
+  @-o-keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        -o-transform: translateY(0%);
+      }
+    }
+    100% {
+      -o-transform: translateY($value);
+    }
+  }
+  @keyframes #{$animationName} {
+    @if ($value != 0) {
+      0% {
+        transform: translateY(0%);
+      }
+    }
+    100% {
+      transform: translateY($value);
+    }
+  }
+}
+
+@include key-translateY(slide-up, 0);
+@include key-translateY(slide-down, 80%);

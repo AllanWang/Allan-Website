@@ -32,6 +32,16 @@ $subHeader = 'Lectures 6 -= 10';
                     "&delta;*(s, w) -= state you went to after reading all letters in word w, starting at state s"
                 );
 
+                lectureSection(7, '2017/09/26',
+                    "Every NFA can be done with a DFA",
+                    "E(R) = { q &#124; q can be reached from R by traveling along 0 or more &epsilon; arrows }",
+                    "R is a regular expression if",
+                    "-<i>a</i> for some <i>a</i> in alphabet &Sigma;",
+                    "&epsilon;",
+                    "&empty;",
+                    "Union, concatenation, and star of regular expressions are regular expressions"
+                );
+
                 pagination();
                 ?>
             </div>

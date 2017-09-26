@@ -88,6 +88,27 @@ $subHeader = 'Lectures 0 – 5';
                     "-Leave out unnecessary details (eg elevator goes to floor 9)"
                 );
 
+                lectureSection(6, '2017/09/25',
+                    "Auction System",
+                    "-Actors – buyer, sellers, maybe system administrators, customer support",
+                    "-Expectation – user-friendliness, performance, security",
+                    "Foundations of Object Orientation",
+                    "-Abstraction, Encapsulation, Modularity, Classification",
+                    "Object identity distinguished an object from all others",
+                    "-It can never be changed, and should not be confused with its name or reference",
+                    "-Identity may be represented through memory address or a special value",
+                    "State of object is its memory" .
+                    "Behaviour - <b>todo add</b>",
+                    "Operations – constructors, observers, modifiers, destructors, iterators",
+                    "In domain modelling, attributes are typically not Objects. 'Object attributes' are viewed as relations, but its implementation may be in the form of an attribute in an object.",
+                    "Objects are created, modified and destroyed. Throughout its lifecycle, its attributes and states may change, but the set of functions it provides remains consistent",
+                    "Interactions involve a destination, <b>TODO check**</b>, and parameters",
+                    "UML Communication diagram – solid arrow &rarr; synchronous; stroke end arrow &rarr; asynchronous",
+                    "A class is a template from which objects are created, where the similarities can be inherited and the differences can by ignored",
+                    "-Objects can be regarded as instances of a class",
+                    "-UML representation – class name on top box with attribute box & operation box below"
+                );
+
                 pagination();
                 ?>
             </div>
