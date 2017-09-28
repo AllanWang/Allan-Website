@@ -39,15 +39,15 @@ phpNav(); ?>
                 lectureSection(8, '2017/09/28',
                     "Binary Tree",
                     "-type 'a tree = Empty | Node of 'a * 'a tree * 'a tree",
-                    "-Exercise -= implement a function to verify that a tree is a binary search tree",
+                    "-Exercise – implement a function to verify that a tree is a binary search tree",
                     "In class code" . code_specific('ocaml', 'lec8.ml'),
                     "Theorem: For all trees t, keys x, and data dx, lookup x (insert (x, dx) t) &rArr;* Some dx",
                     "-Proof by structural induction",
                     "--Case t = Empty",
                     "---lookup x (insert (x, dx) Empty) &rArr; lookup x (Node ((x, dx), Empty, Empty) &rArr; Some dx",
                     "--Case t = Node ((y, dy), l, r)",
-                    "---Induction Hypothesis 1 -= For all x, dx, lookup x (insert (x, dx) l) &rArr;* Some dx",
-                    "---Induction Hypothesis 2 -= For all x, dx, lookup x (insert (x, dx) r) &rArr;* Some dx",
+                    "---Induction Hypothesis 1 – For all x, dx, lookup x (insert (x, dx) l) &rArr;* Some dx",
+                    "---Induction Hypothesis 2 – For all x, dx, lookup x (insert (x, dx) r) &rArr;* Some dx",
                     "---Show that insertion and lookup lead to the IH in all cases"
                 );
 
