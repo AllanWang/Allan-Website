@@ -92,7 +92,10 @@ $subHeader = 'Lectures 1 – 5';
                         "Concatenation", "A &compfn; B", "{ xy &#124; x &isin; A and y &isin; B }",
                         "Star", "A*", "{ x<sub>1</sub>x<sub>2</sub> ... x<sub>k</sub> &#124; K &ge; 0 and each x<sub>i</sub> &isin; A }")),
                     "Non-Deterministic Finite Automata",
-                    "-May jump from state to state without consuming input (eg when encountering the empty string &epsilon;"
+                    "-May jump from state to state without consuming input (eg when encountering the empty string &epsilon;)",
+                    "-Definitions are similar to DFA, except that:",
+                    "--Alphabet – also includes an empty string &epsilon;",
+                    "--Transition function returns P(Q), which is a subset (partition) of Q that meets the requirements"
                 );
 
                 lectureSection(5, '2017/09/15',
@@ -104,7 +107,7 @@ $subHeader = 'Lectures 1 – 5';
                     "-Clubs, Spades.... are constructors; they begin with a capital letter",
                     "Pattern matching can analyze elements of a given type: match [expression] with | [pattern] -> [expression]",
                     "User exceptions can be created with the `exception` keyword. They can be used by calling `raise` [exception]",
-                    "Be clear in case descriptions -= they should be easy to understand, structuresd, and use vocabulary of the application domain; avoid using synonyms",
+                    "Be clear in case descriptions – they should be easy to understand, structuresd, and use vocabulary of the application domain; avoid using synonyms",
                     "A base interaction step <b>must</b> always contain the word <b><i>System</i></b> & at least an <b>actor</b>"
                 );
 
