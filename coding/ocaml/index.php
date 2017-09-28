@@ -34,7 +34,7 @@ phpNav(); ?>
                         "OCaml for Windows" => "https://fdopen.github.io/opam-repository-mingw/",
                         "Pervasives" => "https://caml.inria.fr/pub/docs/manual-ocaml/libref/Pervasives.html",
                         "Atom" => "https://atom.io/",
-                        "Nucleotide" => "https://nuclide.io/"
+                        "Nuclide" => "https://nuclide.io/"
                     ));
                     ?>
 

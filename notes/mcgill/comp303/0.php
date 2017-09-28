@@ -60,13 +60,18 @@ $subHeader = 'Lecture 0 – 5';
                 );
 
                 lectureSection(4, '2017/09/14',
-                    "Interface -= list of methods in a given scope",
+                    "Interface – list of methods in a given scope",
                     "Use interface to separate usage from implementation.",
                     "Is a contract, where the implementor is expected to provide the proper implementation",
 
                     "Benefits of interfaces - loose coupling and extensibility",
 
                     "UML - diamond is on the side of the collection"
+                );
+
+                lectureSection(5, '2017/09/19',
+                    "Taught by TA",
+                    "Deck building"
                 );
 
                 pagination();
