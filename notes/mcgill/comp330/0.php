@@ -92,7 +92,10 @@ $subHeader = 'Lectures 1 – 5';
                         "Concatenation", "A &compfn; B", "{ xy &#124; x &isin; A and y &isin; B }",
                         "Star", "A*", "{ x<sub>1</sub>x<sub>2</sub> ... x<sub>k</sub> &#124; K &ge; 0 and each x<sub>i</sub> &isin; A }")),
                     "Non-Deterministic Finite Automata",
-                    "-May jump from state to state without consuming input (eg when encountering the empty string &epsilon;"
+                    "-May jump from state to state without consuming input (eg when encountering the empty string &epsilon;)",
+                    "-Definitions are similar to DFA, except that:",
+                    "--Alphabet – also includes an empty string &epsilon;",
+                    "--Transition function returns P(Q), which is a subset (partition) of Q that meets the requirements"
                 );
 
                 lectureSection(5, '2017/09/15',
