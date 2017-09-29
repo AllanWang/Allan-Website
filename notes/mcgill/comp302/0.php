@@ -53,6 +53,8 @@ $subHeader = 'Lectures 0 – 5';
 
                 lectureSection(3, '2017/09/15',
                     "Tail-recursive functions are ones with nothing to do except return the final value. For such functions, saving its stack frame is redundant.",
+                    "User defined data types: type suit= Clubs | Spades | Hearts | Diamonds",
+                    "-Set; order doesn't matter",
                     "Passing Arguments",
                     "-At the same time (tuples): 'a * 'b, where ' denotes any value and * is used for creating tuple types",
                     "One at a time: 'a -> 'b -> 'c",

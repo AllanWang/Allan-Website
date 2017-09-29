@@ -85,7 +85,10 @@ $subHeader = 'Lectures 0 – 5';
                     "Use Case Guidelines",
                     "-Use the word system in base cases!",
                     "-Limit each point to one interaction; more interactions can be added as subroutines",
-                    "-Leave out unnecessary details (eg elevator goes to floor 9)"
+                    "-Leave out unnecessary details (eg elevator goes to floor 9)",
+                    "-Be clear in case descriptions – they should be easy to understand, structuresd, and use vocabulary of the application domain; avoid using synonyms",
+                    "-A base interaction step <b>must</b> always contain the word <b><i>System</i></b> & at least an <b>actor</b>"
+
                 );
 
                 lectureSection(6, '2017/09/25',
