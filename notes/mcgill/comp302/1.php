@@ -33,7 +33,7 @@ phpNav(); ?>
                 );
 
                 lectureSection(7, '2017/09/26',
-                    "<b>Todo: data structs</b>"
+                    "Recursion examples; see next class"
                 );
 
                 lectureSection(8, '2017/09/28',
