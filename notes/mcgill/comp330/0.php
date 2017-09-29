@@ -98,9 +98,42 @@ $subHeader = 'Lectures 1 – 5';
                     "--Transition function returns P(Q), which is a subset (partition) of Q that meets the requirements"
                 );
 
-                lectureSection(5, '2017/09/15',
-
-                    );
+                lectureSection(5, '2017/09/21',
+                    "(No class on 19<sup>th</sup>",
+                    "Minimization of DFA",
+                    "-Lumping (quotient by an equivalence relation) -= if two states lead to the same state(s) at all times, and are the same 'state' themselves, they may be merged together as their difference is forgotten after the next step.",
+                    "-" . table_tags(table_contents(-3,
+                        "~ (equivalence relations) are",
+                        "Reflexive", "&forall;x", "x ~ x",
+                        "Symmetric", "&forall;x,y", " x ~ y &rArr; y ~ x",
+                        "Transitive", "&forall;x,y,z", " x~ y, y ~ z &rArr; x ~ z"
+                    )),
+                    "-S/~ represents [s] = { x &#124; x ~ s }",
+                    "&delta;(s, a) – state you went to after reading alphabet a at state s",
+                    "&delta;*(s, w) – state you went to after reading all letters in word w, starting at state s",
+                    "M = (s, s<sub>0</sub>, &delta;, F)<br/>L(M) = { w &#124; &delta;*(s<sub>0</sub>,w) &isin; F }",
+                    "Def p, q &isin; S are <u>equivalent</u> (p &asymp; q) if<br/>&forall;w &isin; &Sigma;* &ensp;&ensp; &delta;*(p,w) &isin; F &hArr; &delta;*(q,w) &isin; F",
+                    "Lemma A",
+                    "-p = q &rArr; &forall;a &isin; &Sigma; &ensp;&ensp; &delta;(p,a) &asymp; &delta;(q,a)",
+                    "-Note that p &asymp; q can be written [p] = [q] (comparing equivalence classes",
+                    "--Therefore: [p] = [q] &rArr; [&delta;(p,a)] = [&delta;(q,a)]",
+                    "For a new machine M' = (s', s<sub>0</sub>', &delta;', F')",
+                    "-s' = s/&asymp;",
+                    "-s<sub>0</sub>' = [s<sub>0</sub>]",
+                    "-&delta;'([s],a) = [&delta;(s,a)]",
+                    "-F' = { [s] &#124; s &isin; F }",
+                    "Lemma B",
+                    "-if p &isin; F & q &asymp; p, then q &isin; F",
+                    "Lemma C",
+                    "-&forall;w &isin; &Sigma;* &ensp;&ensp; &delta;'*([p],w) = [&delta;*(p,w)]",
+                    "-Proof by induction",
+                    "Theorem: L(M') = L(M)",
+                    "Proof",
+                    "-x &isin; L(M') &hArr; &delta;'*([s<sub>0</sub>], x) &isin; F'",
+                    "-&hArr; [&delta;*(s<sub>0</sub>,x)] &isin; F'",
+                    "-&hArr; &delta;*(s<sub>0</sub>,x) &isin; F",
+                    "-&hArr; x &isin; L(M) &#8718;"
+                );
 
                 pagination();
                 ?>
