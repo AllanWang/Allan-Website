@@ -31,6 +31,6 @@ let rec lookup x t = match t with
 (*
   Collection function to convert a tree into a list with infix ordering
  *)
-let rec collct t = match t with
+let rec collect t = match t with
   | Empty = []
   | Node (x, l, r) -> (collect l) @ [x] @ (collect r)

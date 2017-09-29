@@ -51,6 +51,15 @@ phpNav(); ?>
                     "---Show that insertion and lookup lead to the IH in all cases"
                 );
 
+                lectureSection(9, '2017/09/29',
+                    "Higher order functions",
+                    "-Programs can be short & compact",
+                    "-Programs are reusable",
+                    "Functions are first class -= can be passed as parameters and returned as a result",
+                    "In class code" . code_specific('ocaml', 'lec9.ml'),
+                    "We can define functions on the fly without naming them by using anonymous functions"
+                );
+
                 pagination();
                 ?>
             </div>
