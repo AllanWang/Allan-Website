@@ -42,6 +42,13 @@ $subHeader = 'Lectures 6 – 10';
                     "-Hold a reference to each object, and return a new one or the saved one when applicable"
                 );
 
+                lectureSection(8, '2017/09/28',
+                    "Reviewed flyweight pattern (open parliament)",
+                    "Continue UML diagram for solitaire",
+                    "Classes – Deck, Suit Stack, Discard Pile, Card, Working Stack, Game Engine, Iterable (interface), Playing Strategy (interface), Random Strategy, Smart Strategy",
+                    "States – fresh, in progress"
+                );
+
                 pagination();
                 ?>
             </div>
