@@ -101,12 +101,12 @@ $subHeader = 'Lectures 1 – 5';
                 lectureSection(5, '2017/09/21',
                     "(No class on 19<sup>th</sup>",
                     "Minimization of DFA",
-                    "-Lumping (quotient by an equivalence relation) -= if two states lead to the same state(s) at all times, and are the same 'state' themselves, they may be merged together as their difference is forgotten after the next step.",
+                    "-Lumping (quotient by an equivalence relation) – if two states lead to the same state(s) at all times, and are the same 'state' themselves, they may be merged together as their difference is forgotten after the next step.",
                     "-" . table_tags(table_contents(-3,
                         "~ (equivalence relations) are",
                         "Reflexive", "&forall;x", "x ~ x",
                         "Symmetric", "&forall;x,y", " x ~ y &rArr; y ~ x",
-                        "Transitive", "&forall;x,y,z", " x~ y, y ~ z &rArr; x ~ z"
+                        "Transitive", "&forall;x,y,z", " x ~ y, y ~ z &rArr; x ~ z"
                     )),
                     "-S/~ represents [s] = { x &#124; x ~ s }",
                     "&delta;(s, a) – state you went to after reading alphabet a at state s",
@@ -132,7 +132,8 @@ $subHeader = 'Lectures 1 – 5';
                     "-x &isin; L(M') &hArr; &delta;'*([s<sub>0</sub>], x) &isin; F'",
                     "-&hArr; [&delta;*(s<sub>0</sub>,x)] &isin; F'",
                     "-&hArr; &delta;*(s<sub>0</sub>,x) &isin; F",
-                    "-&hArr; x &isin; L(M) &#8718;"
+                    "-&hArr; x &isin; L(M) &#8718;",
+                    "41:29"
                 );
 
                 pagination();
