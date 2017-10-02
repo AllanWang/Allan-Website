@@ -34,7 +34,7 @@ $subHeader = 'Lectures 6 – 10';
                     "-User-level or kernel-level",
                     "-POSIX standard API for thread creation & synchronization",
                     "-Specification, not implementation; varies on devices",
-                    "-include \<pthread.h\>",
+                    "-include &lt;pthread.h&gt;",
                     "-Useful methods",
                     "--pthread_create – returns id of new thread",
                     "--pthead_self – returns id of caller",
@@ -60,6 +60,31 @@ $subHeader = 'Lectures 6 – 10';
                     "-Two processes take turns in entering critical section using a global variable swap",
                     "Dekker's Algorithm",
                     "Peterson's Algorithm"
+                );
+
+                lectureSection(8, '2017/09/27',
+                    "<b>TODO</b>"
+                );
+
+                lectureSection(9, '2017/10/02',
+                    "Deadlock avoidance <b>TODO</b>",
+                    "Simplest model – require each process to declare maximum number of resources of each type it may need",
+                    "-Dynamically examine resource-allocation to ensure that wee can never have circular-wait condition",
+                    "Safe State",
+                    "-Safe when a process P<sub>i</sub> can be satisfied by the available resources and the resources of the processes before it (< i)",
+                    "--P<sub>1</sub> finishes with available resources, P<sub>2</sub> finishes with available resources & resources freed by P<sub>1</sub>, etc",
+                    "Avoidance Algorithms",
+                    "-Single instance of resource type – use resource-allocation graph",
+                    "--Requests can only be granted if conversion of dashed line to solid line does not result in a cycle",
+                    "-Multiple instances of resource type – use banker's algorithm",
+                    "--Processes requesting a resource may have to wait",
+                    "--Process granted resources must return them in a finite amount of time",
+                    "--Banker's algorithm",
+                    "---Given N processes {P<sub>i</sub>} & M resources {R<sub>j</sub>}:",
+                    "----Let [Max<sub>ij</sub>] be N x M matrix, with Max<sub>ij</sub> representing max requests of R<sub>j</sub> for process P<sub>i</sub>",
+                    "----Let [Hold<sub>ij</sub>] represent units of R<sub>j</sub> currently held by P<sub>i</sub>",
+                    "----Let [Need<sub>ij</sub>] represent remaining R<sub>j</sub> needed by P<sub>i</sub>",
+                    "---Need<sub>ij</sub> = Max<sub>ij</sub> – Hold<sub>ij</sub> for all i & j"
                 );
 
                 pagination();
