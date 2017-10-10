@@ -49,6 +49,15 @@ $subHeader = 'Lectures 6 – 10';
                     "States – fresh, in progress"
                 );
 
+                lectureSection(9, '2017/10/03',
+                    "In UML diagrams, the 'yellow cards' are notes",
+                    "Three components of a test",
+                    "-Program unit (eg canMoveTo)",
+                    "-Input data",
+                    "-Oracle",
+                    "Learned a bit about reflection and JUnit"
+                );
+
                 pagination();
                 ?>
             </div>

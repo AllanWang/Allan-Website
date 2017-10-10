@@ -58,7 +58,7 @@ $subHeader = 'Lectures 0 – 5';
                     "Passing Arguments",
                     "-At the same time (tuples): 'a * 'b, where ' denotes any value and * is used for creating tuple types",
                     "One at a time: 'a -> 'b -> 'c",
-                    "-Currying: translating functions from passing one argument at atime to all at once; opposite is uncurrying",
+                    "-Currying: translating functions from passing one argument at a time to all at once; opposite is uncurrying",
                     "Non recursive data types can be created like so:",
                     "-type suit = Clubs | Spades | Hearts | Diamonds",
                     "-Clubs, Spades, Hearts, Diamonds are constructors",
