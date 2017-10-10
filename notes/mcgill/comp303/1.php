@@ -58,6 +58,10 @@ $subHeader = 'Lectures 6 – 10';
                     "Learned a bit about reflection and JUnit"
                 );
 
+                lectureSection(10, '2017/10/05',
+                    "<b>TODO</b>"
+                );
+
                 pagination();
                 ?>
             </div>
