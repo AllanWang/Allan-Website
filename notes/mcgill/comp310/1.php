@@ -87,6 +87,10 @@ $subHeader = 'Lectures 6 – 10';
                     "---Need<sub>ij</sub> = Max<sub>ij</sub> – Hold<sub>ij</sub> for all i & j"
                 );
 
+                lectureSection(10, '2017/10/04',
+                    "<b>TODO</b>"
+                );
+
                 pagination();
                 ?>
             </div>

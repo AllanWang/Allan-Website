@@ -112,6 +112,10 @@ $subHeader = 'Lectures 0 – 5';
                     "-UML representation – class name on top box with attribute box & operation box below"
                 );
 
+                scrollSpySection('oo', 'Object Orientation', 'Object Orientation',
+                    ""
+                    );
+
                 pagination();
                 ?>
             </div>
