@@ -71,13 +71,35 @@ phpNav(); ?>
                 );
 
                 lectureSection(8, '2017/10/02',
-                    "Deadlock avoidance <b>TODO</b>",
+                    "Deadlock – permanent blocking of set of processes that compete for system resources",
+                    "Resource Classification I",
+                    "-Reusable – something that can be used by one process at a time without depletion (CPU, memory, files",
+                    "-Consumable – can be created then destroyed (eg interrupts, messages, signals)",
+                    "Resource Classification II",
+                    "-Preemptable – can be taken away from owner without side effects (eg memory, CPU)",
+                    "-Non-preemptable – cannot be taken away without computation to fail (eg printer, floppy disk)",
+                    "Deadlocks typically occur by using reusable & non-preemptable resources",
+                    "Deadlocks satisfy the following conditions",
+                    "-Mutual exclusion – cannot share resources",
+                    "-Hold & wait – process waits until resource is freed",
+                    "-No preemption",
+                    "-Circular wait – each process holds resource requested by another",
+                    "Resource Allocation Graphs",
+                    "-Process &rBarr; resource – (dashed arrow) process waits for resource",
+                    "-Process &larr; resource – resource allocated for process",
+                    "Deadlock Prevention",
+                    "-Designs to exclude possibility of deadlock",
+                    "-Very conservative – limits resources & imposes restrictions",
+                    "-Eg hold and wait – only run process when all requested processes are free",
                     "Simplest model – require each process to declare maximum number of resources of each type it may need",
                     "-Dynamically examine resource-allocation to ensure that wee can never have circular-wait condition",
                     "Safe State",
                     "-Safe when a process P<sub>i</sub> can be satisfied by the available resources and the resources of the processes before it (< i)",
                     "--P<sub>1</sub> finishes with available resources, P<sub>2</sub> finishes with available resources & resources freed by P<sub>1</sub>, etc",
+                    "--If in safe state, guaranteed no deadlock; if not in safe state, possibility of deadlock",
+                    "--Avoidance involves ensuring the system never enters unsafe state",
                     "Avoidance Algorithms",
+                    "-In between of detection & prevention",
                     "-Single instance of resource type – use resource-allocation graph",
                     "--Requests can only be granted if conversion of dashed line to solid line does not result in a cycle",
                     "-Multiple instances of resource type – use banker's algorithm",
@@ -92,7 +114,22 @@ phpNav(); ?>
                 );
 
                 lectureSection(9, '2017/10/04',
-                    "<b>TODO</b>"
+                    "Deadlock Detection",
+                    "-Does not prevent deadlocks, but periodically checks for circular waits and resolves them if found",
+                    "-Request resources are granted wherever possible",
+                    "-Recovery methods",
+                    "--Preemption – sometimes possible to reassign resources",
+                    "--Rollback – undo transactions to a valid checkpoint",
+                    "--Termination – kill process in cycle; irrecoverable losses may occur",
+                    "Secondary Storage",
+                    "-Non-volatile location for data & programs",
+                    "-Managed by file system in OS",
+                    "-Requirements – should be persistent, be able to handle large information, be accessible concurrently",
+                    "-Storage management – user (what you see) &rarr; file system (data blocks) &rarr; disk system &rarr; bit stream",
+                    "Directories",
+                    "-Symbol table containing info about files, implemented as a file itself",
+                    "-UNIX uses DAG (directed acyclic graphs) structure",
+                    "File Operations – create, write, read, delete, reposition r/w pointer (seek), truncate"
                 );
 
                 lectureSection(10, '2017/10/11',
@@ -148,7 +185,10 @@ phpNav(); ?>
                     "--Shortest Service Time First (SSTF)",
                     "---Select item requiring shortest seek time from given point",
                     "---Random tie breaker used if needed",
-                    "---No guarantee for improved seek time, but generally better than FIFO"
+                    "---No guarantee for improved seek time, but generally better than FIFO",
+                    "--SCAN -= back & forth",
+                    "---Only moves in one direction until last track is reached before reversing",
+                    "---No starvation, but biased against most recently used area on disk"
                 );
 
                 pagination();

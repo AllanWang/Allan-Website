@@ -228,7 +228,7 @@ $subHeader = 'Lectures 0 – 5';
                 lectureSection(5, '2017/09/20',
                     "Review from last class",
                     "Dup – duplicates existing file descriptor",
-                    "-Descriptor returned is the lowest numbered descriptor currently not inn use by process",
+                    "-Descriptor returned is the lowest numbered descriptor currently not in use by process",
                     "Rewiring File Descriptors – Create a pipe &rarr; fork process (cloning the pipe) &rarr; close writing side of pipe &rarr; wire writing side of pipe to new location",
                     "Pthreads",
                     "-User-level or kernel-level",
