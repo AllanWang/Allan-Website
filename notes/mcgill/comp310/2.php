@@ -42,7 +42,7 @@ $subHeader = 'Lectures ';
                     "-What are conditions of critical section",
                     "-Strict Alternation",
                     "-Starvation, live lock, etc",
-                    "-Deadlocks (cycles, knots)"
+                    "-Deadlocks (cycles, knots, Banker's algorithm)"
                 );
 
                 pagination();

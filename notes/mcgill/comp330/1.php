@@ -74,7 +74,12 @@ $subHeader = 'Lectures 6 – 10';
                 );
 
                 lectureSection(9, '2017/10/05',
-                    "<b>TODO</b>"
+                    "Myhill-Nerode Theorem",
+                    "A set of strings (X) is pairwise distinguishable by language L is every two elements in X are distinguishable by L (&forall;x, x' in X, x &nequiv;<sub>L</sub> x')",
+                    "Define an index of L to be the size of a maximum set X that is pairwise disinguishable by L. L is regular iff the index is finite.",
+                    "The smallest index is also the number of states of the smallest DFA recognizing L",
+                    "-If DFA has more states than the index, then there must be some x, y in X such that &delta;(q<sub>0</sub>, x) = &delta;(q<sub>0</sub>, y). However, this is not distinguishable, hence contradiction",
+                    "Minimal DFAs can be discovered using the Myhill-Nerode Theorem by first discovering the pairwise distinguishable set, then by creating a DFA whose states matches the distinguished set values."
                 );
 
                 lectureSection(10, '2017/10/10',
@@ -85,7 +90,7 @@ $subHeader = 'Lectures 6 – 10';
                     "CFG Definition",
                     table_tags(table_contents(2,
                         "Variables", "A, B, C, &lt;TERM&gt;, &lt;EXPR&gt; (Angle brackets denote single variable rather than sequence of letters)",
-                        "Alphabet (of termainals)", "0, 1, #",
+                        "Alphabet (of terminals)", "0, 1, #",
                         "Substitution Rules", "&lt;EXPR&gt; &rarr; &lt;TERM&gt;",
                         "Start Variable", "A (LHS of first substitution rule)")),
                     "u derives v (u &rArr;<sup>*</sup> v if u = v or if u &rArr; u<sub>1</sub> &rArr; u<sub>2</sub> &hellip; u<sub>k</sub> = v, k &ge; 0."

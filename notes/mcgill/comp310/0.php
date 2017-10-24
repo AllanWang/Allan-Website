@@ -26,11 +26,11 @@ $subHeader = 'Lectures 0 – 5';
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
                 lectureSection(1, '2017/09/06',
-                    "<b>Midterm – Wed Oct 18 1:05PM – 2:25PM</b>",
-                    "Office hours: Mondays 3:30 – 4:30, Wednesdays 2:35 – 3:35",
-                    "Topics – processes, inter-process communication, scheduling, memory managemet, virtual memory, storage management, network management, security",
-                    "Operating System – Trusted software interposed between the hardware and the application/utilities",
-                    "Computers were very expensive, so utilization needed to be maximized; it was okay for humans to be idle, but was very expensive for computers",
+                    "#<b>Midterm – Wed Oct 18 1:05PM – 2:25PM</b>",
+                    "#Office hours: Mondays 3:30 – 4:30, Wednesdays 2:35 – 3:35",
+                    "#Topics – processes, inter-process communication, scheduling, memory managemet, virtual memory, storage management, network management, security",
+                    "#Operating System – Trusted software interposed between the hardware and the application/utilities",
+                    "#Computers were very expensive, so utilization needed to be maximized; it was okay for humans to be idle, but was very expensive for computers",
                     "-Batch processing devised; programming was done with punch cards, which were loaded and returned with the output. However, the computer was still idle during loading",
                     "Goal of a computer is to read input, output, then schedule jobs",
                     table_tags(table_contents(-2,
@@ -43,9 +43,9 @@ $subHeader = 'Lectures 0 – 5';
                         "Maximize cpu usage"
                     )),
                     "Access Problem – user wants to access the OS",
-                    "-We must ask ourselves",
-                    "--Why? (Perhaps to access connected devices)",
-                    "--Is the user privileged enough?",
+                    "-#We must ask ourselves",
+                    "--#Why? (Perhaps to access connected devices)",
+                    "--#Is the user privileged enough?",
                     "-Handling I/O",
                     "--<b>Programmed I/O</b> – CPU transfers data (starts I/O operation) &rarr; I/O in progress; CPU is idle and is doing nothing but checking whether the device is free &rarr; I/O finishes; CPU resumes work",
                     "--<b>Interrupt-drive I/O</b> – As I/O is in progress, CPU can do other work until an interrupt is issued",
@@ -251,7 +251,7 @@ $subHeader = 'Lectures 0 – 5';
                 ?>
             </div>
             <?php
-            tableOfContents();
+            tableOfContents(true);
             ?>
         </div>
     </div>
