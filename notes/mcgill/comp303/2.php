@@ -27,7 +27,13 @@ $subHeader = 'Lectures 11 – 15';
                 <?php
                 lectureSection(11, '2017/10/10',
                     "Implement interfaces (like Comparable) in the same class it pertains to to help with information hiding and access to the private variables."
-                    );
+                );
+
+                lectureSection(15, '2017/10/24',
+                    "Learn observable pattern",
+                    "Instead of every model keeping track of shared states, allow them to pass through observers to be called by the actual mutation",
+                    "Avoid adding a lot of conditionals based on an observer. Rather let the observers themselves handle such conditions    "
+                );
 
                 pagination();
                 ?>
