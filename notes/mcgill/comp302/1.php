@@ -60,6 +60,11 @@ phpNav(); ?>
                     "We can define functions on the fly without naming them by using anonymous functions"
                 );
 
+                lectureSection(10, '2017/10/03',
+                    "Currying",
+                    "Methods in languages like JavaScript are uncurried. (such as test(a, b, c)). All values need to be passed in at once, or the function cannot be called. The process of currying involves separating such inputs so that any number of them can be called to return a function needing only the remaining inputs ('a -> 'b -> 'c)"
+                );
+
                 pagination();
                 ?>
             </div>
