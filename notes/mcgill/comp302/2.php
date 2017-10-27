@@ -10,7 +10,8 @@ $subHeader = 'Lectures ';
 
 <body>
 
-<?php phpNav(); ?>
+<?php code_highlight('ocaml');
+phpNav(); ?>
 
 <main>
     <div class="container"><br/>
@@ -44,7 +45,8 @@ $subHeader = 'Lectures ';
 
                 lectureSection(15, '2017/10/13',
                     "Expressions in OCaml have types, and evaluates to a value or diverges",
-                    "Today, we'll see that expressions may also have an <i>effect</i>"
+                    "Today, we'll see that expressions may also have an <i>effect</i>",
+                    "In class code" . code_specific('ocaml', 'lec15.ml')
                 );
 
                 pagination();

@@ -26,7 +26,9 @@ phpNav(); ?>
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                lectureSection();
+                lectureSection(16, '2017/10/17',
+                    "Type, values, & effects" . code_specific('ocaml', 'lec16.ml')
+                );
 
                 pagination();
                 ?>
