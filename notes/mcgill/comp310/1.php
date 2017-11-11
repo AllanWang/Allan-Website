@@ -186,7 +186,7 @@ phpNav(); ?>
                     "---Select item requiring shortest seek time from given point",
                     "---Random tie breaker used if needed",
                     "---No guarantee for improved seek time, but generally better than FIFO",
-                    "--SCAN -= back & forth",
+                    "--SCAN – back & forth",
                     "---Only moves in one direction until last track is reached before reversing",
                     "---No starvation, but biased against most recently used area on disk"
                 );

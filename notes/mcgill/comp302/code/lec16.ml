@@ -1,46 +1,68 @@
-(* Types *)
+(* Code transcript taken from Julian Lore
+https://github.com/julianlore/McGill-Resources/blob/master/COMP302/C302.pdf *)
 
-3 + 2
-(* int; 5; no effect *)
+type 'a rlist = Empty | RCons of 'a * ('a rlist) ref
 
-55
-(* int; 55; no effect *)
-
-fun x -> x + 3 * 2
-(* int -> int; <fun> or fun x -> x + 2 * 3 *)
-
-((fun x -> match x with [] -> true | y::ys -> false), 2.3 *. 2.0)
-(* ('a list -> bool) * float; (<fun>, 6.4); no effect *)
-
-let x = ref 3 in x := !x * 2
-(* unit = (); no effect; x is disposed (removed from stack after evaluation) *)
-
-
-fun x -> x := 3
-(* int ref -> unit; <fun>; effect: updated x to 3 *)
-
-(fun x -> x := 3) y
-(* unit = (); updates y : int ref to 3 *)
-
-fun x -> (x := 3; x)
-(* int ref -> int ref; updates x & returns reference *)
-
-fun x -> (x := 3; !x)
-(* int ref  int; updates x & returns value *)
-
-let x = 3 in print_string (string_of_int x)
-(* unit = (); prints 3 to screen *)
-
-(* --------------------
-Linked List Demo
--------------------- *)
-
-type 'a rlist = Empty | RCons of 'a * ('a rlist) ref;;
-let l1 = ref (RCons (4, ref Empty));;
+let l1 = ref (RCons (4, ref Empty))
 let l2 = ref (RCons (5, l1));;
-(* The 'a rlist ref of l2 is l1, same address *)
 
 l1 := !l2;;
-(* We've created a circular list *)
-!l1;;
-(* int rlist = RCons(5, {contents = <cycle>}) *)
+(* Value is (), effect is changing link to itself *)
+
+(* Append for regular lists *)
+let rec append l1 l2 = match l1 with
+    | [] -> l2
+    | x::xs -> x::(append xs l2)
+
+(* Append for rlist *)
+type 'a refList = ('a rlist) ref
+(* Return unit, as the "result" is the effect *)
+(* 'a refList -> 'a refList -> unit *)
+let rec rapp (r1 : 'a refList) (r2 : 'a refList) = match r1 with
+    | {contents = Empty} -> r1 := !r2
+    | {contents = RCons (x, xs)} -> rapp xs r2
+
+(* 'a refList -> 'a refList -> 'a rlist *)
+let rec rapp' (r1 : 'a refList) (r2 : 'a refList) = match r1 with
+    | {contents = Empty} -> {contents = r2}
+    | {contents = RCons (x, xs)} -> rapp' xs r2
+
+let r = ref (RCons (2, ref Empty))
+let r2 = ref (RCons(5, ref Empty));;
+
+let r3 = rapp' r r2;;
+r3;;
+rapp r r2;;
+r;;
+
+let (tick, reset) =
+    let counter = ref 0 in
+    (* Input is unit, always true. Not the same as void *)
+    let tick () = (counter := !counter + 1 ; !counter) in
+    let reset () = counter := 0 in
+    (tick, reset);;
+
+(* Now we have 2 functions, tick and reset *)
+tick ();;
+tick ();;
+type counter_obj = {tick : unit -> int ; reset : unit -> unit}
+
+let makeCounter () =
+    let counter = ref 0 in
+    {tick = (fun () -> counter := !counter + 1 ; !counter);
+    reset = (fun () -> counter := 0)};;
+
+(* global variable *)
+let global_counter = ref 0
+let makeCounter' () =
+    let counter = ref 0 in
+    {tick = (fun () -> counter := !counter + 1 ; global_counter := !counter ; !counter);
+    reset = (fun () -> counter := 0)};;
+
+let c = makeCounter ();;
+c.tick ();;
+c.tick ();;
+let d = makeCounter ();;
+d.tick ();;
+c.tick ();;
+d.reset ();;

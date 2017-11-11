@@ -10,12 +10,13 @@ $subHeader = 'Lectures ';
 
 <body>
 
-<?php phpNav(); ?>
+<?php code_highlight('ocaml');
+phpNav(); ?>
 
 <main>
     <div class="container"><br/>
         <div class="row" id="header">
-            <h3 class="header center">Comp 303</h3>
+            <h3 class="header center">Comp 302</h3>
             <h6 class="center"><?php echo $subHeader ?></h6>
             <div class="divider"></div>
             <h6 class="center">
@@ -25,18 +26,12 @@ $subHeader = 'Lectures ';
         <div class="row light">
             <div id="notes-container" class="col s12 m9 l10">
                 <?php
-                lectureSection(16, '2017/10/26',
-                    table_tags(table_contents(-2, "GUI Programming in 3 Simple Concepts",
-                        "Component Graphs", "Composite/Decorate Patterns",
-                        "Event Loop", "Frameworks/Concurrency",
-                        "Event Handling", "Observer Design Pattern")),
-                    "GUI Component Graph",
-                    "Visual vs Logical, Static vs Dynamic"
-                );
-
-                lectureSection(17, '2017/10/31',
-                    "Midterm Review",
-                    "-Know textbook implementation of cloning, consisting of calling super, assigning current references, and catching CloneNotSupportedException"
+                lectureSection(21, '2017/10/31',
+                    "Continuation",
+                    "-Representation of execution state of program at certain point in time",
+                    "-Save current state of execution into object & restore state from object later on to resume execution",
+                    "-Base case -= called continuation",
+                    "-Recursive case -= build up computation that still needs to be done"
                 );
 
                 pagination();

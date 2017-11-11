@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures ';
+$subHeader = 'Lectures 11 – 15';
 ?>
 
 <body>
@@ -89,6 +89,79 @@ $subHeader = 'Lectures ';
                     "--Depends on system & interactive workstations",
                     "--Interactive jobs tend to be IO bound"
                 );
+
+                lectureSection(15, '2017/10/30',
+                    "Memory Management",
+                    "Memory contains both program & data",
+                    "Multiprogramming systems can store more than one program + data in memory at same time",
+                    "Provides memory sharing & memory protection",
+                    "Issues in sharing memory",
+                    "-Transparency – processes may co-exist, unaware of each other",
+                    "-Safety – processes must not corrupt each other nor the OS",
+                    "-Efficiency – CPU utilization must be preserved & memory ust be fairly allocated",
+                    "-Relocatino – abaility of program to run different memory locations",
+                    "Main memory information classification",
+                    "-Program (code) & data (variables, constants)",
+                    "-Read-onlly (code, constants) & read-write (variables)",
+                    "-Addresses (eg pointers) or data (other variables); binding (memory allocation) can be static or dynamic",
+                    "-Managed by compiler, linker, loader, & run-time libraries",
+                    "Creating an executable program",
+                    "-Compiling (translating) – generates object code",
+                    "-Linking – combines object code into single self-sufficient executable code",
+                    "-Loading – copies executable code into memory",
+                    "-Execution – dynamic memory allocation",
+                    "Address binding (relocation)",
+                    "-Static – new locations determined before execution",
+                    "--Compile time – compiler/assembler translates symbolic address to absolute address",
+                    "--Load time – compiler translates symbolic address to relative (relocatable) addresses; loader translates these to absolute addresses",
+                    "-Dynamic – new locations determined during execution",
+                    "Linker",
+                    "-Collects all pieces together to form executable code",
+                    "-Issues",
+                    "--Relocation – where to put pieces",
+                    "-Resolving references – where to find pieces",
+                    "-Re-organization – new memory layout",
+                    "Loader",
+                    "-Places executable code in main memory starting at pre-determined location",
+                    "-Absolute loading – always load programs into designated memory location",
+                    "--Problematic if two programs have an overlap; fine for uniprogramming",
+                    "-Relocatable loading – allows loading programs in different memory locations",
+                    "-Dynamic loading – loads functions when first called (if ever)",
+                    "Simple management schemes – for contiguous memory allocation",
+                    "-Needs to make sure that there is enough space before allocation",
+                    "-Direct placement, overlays, partitioning",
+                    "-Direct placement",
+                    "--No relocation",
+                    "--Programs always sequentially loaded into same memory location (absolute loading)",
+                    "--Linker produces same loading address for every user program",
+                    "--Eg early batch monitors, MS-DOS",
+                    "-Overlays",
+                    "--Allows for large programs to executes in smaller memory",
+                    "--Program organized into tree of objects called overlays",
+                    "--Root overlay always laded; subtrees reloaded as needed",
+                    "-Partitioning",
+                    "--Allows several programs to be in memory at same time",
+                    "--Programs are separated into several contiguous blocks",
+                    "--Static",
+                    "---Memory divided into fixed number of partitions",
+                    "---Programs queued to run in smallest available partition",
+                    "---Program prepared for one partition may not be able to run in another without being re-linked (absolute loading)",
+                    "--Dynamic",
+                    "---First fit – allocate first hole that's big enough",
+                    "----Shorter elapsed time than BF/WF",
+                    "----Better memory utilization than WF",
+                    "----Comparable emory utilization to BF",
+                    "---Next fit – first fit using circular free list",
+                    "----Starts with memory after last one selected",
+                    "---Best fit – allocate smallest hole that is big enough",
+                    "----shorter elapsed time & better memory utilization than WF",
+                    "---Worst fit – allocate to largest hole",
+                    "Fragmentation",
+                    "-Unused memory that cannot be allocated",
+                    "-Internal fragmentation – waste of memory within partition – severe in static partitioning schemes",
+                    "-External fragmentation – waste of memroy between partition – caused by scattered noncontiguous free space – present in dynamic partitioning"
+                );
+
                 pagination();
                 ?>
             </div>

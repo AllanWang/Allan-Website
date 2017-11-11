@@ -5,7 +5,7 @@
 include($_SERVER['DOCUMENT_ROOT'] . "/include/config.php");
 include('shared.php');
 hook($_SERVER['PHP_SELF']);
-$subHeader = 'Lectures ';
+$subHeader = 'Lectures 11 – 15';
 ?>
 
 <body>
@@ -39,14 +39,16 @@ phpNav(); ?>
 
                 lectureSection(12, '2017/10/06', "Review for midterm");
 
-                lectureSection(13, '2017/10/10, "No classes – midterm');
+                lectureSection(13, '2017/10/12', "Midterm review");
 
-                lectureSection(14, '2017/10/12', "Midterm review");
-
-                lectureSection(15, '2017/10/13',
+                lectureSection(14, '2017/10/13',
                     "Expressions in OCaml have types, and evaluates to a value or diverges",
                     "Today, we'll see that expressions may also have an <i>effect</i>",
-                    "In class code" . code_specific('ocaml', 'lec15.ml')
+                    "In class code" . code_specific('ocaml', 'lec14.ml')
+                );
+
+                lectureSection(15, '2017/10/17',
+                    "Type, values, & effects" . code_specific('ocaml', 'lec15.ml')
                 );
 
                 pagination();
