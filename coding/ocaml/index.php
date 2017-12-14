@@ -141,6 +141,79 @@ phpNav(); ?>
                     <?php echo code_specific('ocaml', 'zigzag.ml'); ?>
 
                 </div>
+                <div <?php scrollSpyHeaderData('Higher-Order Functions') ?>>
+                    <h5>Higher-Order Functions</h5>
+
+                    In functional paradigms, functions are first class. They can be passed into other functions and used
+                    as return types.
+                    This is very similar to callback methods, or interfaces that have only one method in OOP.
+
+                    <?php echo code_specific('ocaml', 'hof.ml'); ?>
+
+                </div>
+                <div <?php scrollSpyHeaderData('States') ?>>
+                    <h5>States</h5>
+
+                    OCaml can emulate states through the ref tag. Values created as references can be accessed and
+                    modified by other functions.
+
+                    <?php echo table_tags(table_contents(2,
+                        'Creation', 'let x = ref 0',
+                        'Modification', 'x := 3',
+                        'Access', 'if !x = 3 then ...'
+                    )); ?>
+                </div>
+                <div <?php scrollSpyHeaderData('Backtracking') ?>>
+                    <h5>Backtracking</h5>
+
+                    Backtracking involves finding solutions incrementally by abandoning any candidate solution
+                    as soon as it is determined to be unsuccessful. One implementation is to throw exceptions
+                    when a candidate has failed, so the parent may try other solutions.
+
+                    <?php echo code_specific('ocaml', 'change.ml'); ?>
+                </div>
+                <div <?php scrollSpyHeaderData('Modules') ?>>
+                    <h5>Modules</h5>
+
+                    OCaml allows support for interface structures through modules.
+                    It helps control complexity by breaking down large programs into separate pieces.
+
+                    Module signatures help guarantee function headers, without giving away implementation.
+
+                    <?php echo code_specific('ocaml', 'modules.ml'); ?>
+
+                    Module structs can also take in one or more struct parameters and use them within their own
+                    definitions.
+                </div>
+                <div <?php scrollSpyHeaderData('Continuation') ?>>
+                    <h5>Continuation</h5>
+
+                    Continuation represents the execution state of a program (eg a call stack) at a certain point in
+                    time.
+                    The state can be saved and restored at a later point
+
+                    To allow for tail-recursive functions, the header will contain an additional argument, a
+                    continuation, holding the entire state of the function. This will be passed to initialize or build
+                    upon the function.
+                    <br/><br/>
+                    Recursive map function example:
+
+                    <?php echo code_specific('ocaml', 'map_tail_rec.ml'); ?>
+
+                </div>
+                <div <?php scrollSpyHeaderData('Lazy') ?>>
+                    <h5>Lazy Evaluation</h5>
+
+                    The concept of laziness stems from evaluation upon necessity, rather than evaluation upon creation.
+                    Languagues such as OCaml & Java typically evaluate any expression that is assigned to a value
+                    (variable).
+                    This is helpful in that the order is guaranteed, but unused variables may be unnecessarily
+                    evaluated.
+                    The goal of laziness is to avoid such situations, and to only return a value when it is required to
+                    compute something else.
+                    Laziness can be created by wrapping evaluations in functions of the form unit -> 'a, since we know
+                    that functions are not evaluated until execution.
+                </div>
             </div>
             <?php
             tableOfContents();

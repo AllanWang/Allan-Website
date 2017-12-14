@@ -30,8 +30,7 @@ function hook($phpServer)
 function headerBullets()
 {
     inlineBullets(array("Prof's Email" => "mailto:rola.harmouche@mcgill.ca?Subject=Comp%20310",
-        "MyCourses" => "https://mycourses2.mcgill.ca/d2l/le/content/282923/Home",
-        "Textbook" => "https://github.com/yuanhui-yang/Modern-Operating-Systems/blob/master/Modern%20Operating%20Systems%20-%204th%20Edition.pdf"
+        "MyCourses" => "https://mycourses2.mcgill.ca/d2l/le/content/282923/Home"
     ));
 }
 

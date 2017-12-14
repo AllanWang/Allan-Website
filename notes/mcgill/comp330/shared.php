@@ -31,8 +31,7 @@ function headerBullets()
 {
     inlineBullets(array("Prof's Email" => "mailto:cs330@cs.mcgill.ca?Subject=Comp%20330",
         "Course Webpage" => "http://crypto.cs.mcgill.ca/~crepeau/COMP330/",
-        "Facebook Group" => "https://www.facebook.com/groups/mycomp330/",
-        "Textbook" => "https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwimtfjpx47WAhUK74MKHXJFBg0QFggoMAA&url=http%3A%2F%2Fgettextbook.download%2FCS%2520181%2FMichael%2520Silpser%2520-%25202013%2520-%2520Introduction%2520to%2520the%2520theory%2520of%2520computation%2520%255B3rd%2520Edition%255D.pdf&usg=AFQjCNFQP4ZXau8z8dDMZBTd4q5iPgFuPw"
+        "Facebook Group" => "https://www.facebook.com/groups/mycomp330/"
     ));
 }
 

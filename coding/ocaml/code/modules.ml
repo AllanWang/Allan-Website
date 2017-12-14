@@ -1,3 +1,4 @@
+(* Module types are defined using signatures *)
 module type STACK =
     sig
         type stack
@@ -11,7 +12,8 @@ module type STACK =
         (* May use further abstractions through creation functions, but that wasn't covered in class *)
     end
 
-(* Implementation *)
+
+(* Modules are implemented with structs; types can be specified using with *)
 module Stack : (STACK with type el = int) =
     struct
         type el = int

@@ -30,8 +30,8 @@ phpNav(); ?>
                     "Continuation",
                     "-Representation of execution state of program at certain point in time",
                     "-Save current state of execution into object & restore state from object later on to resume execution",
-                    "-Base case -= called continuation",
-                    "-Recursive case -= build up computation that still needs to be done"
+                    "-Base case – called continuation",
+                    "-Recursive case – build up computation that still needs to be done"
                 );
 
                 pagination();
