@@ -25,7 +25,7 @@ phpNav(); ?>
             <div class="divider"></div>
             <h6 class="center grey-text"><?php echo instructionText() ?></h6>
             <h6 class="center grey-text">Questions marked with * are added by me, and were not a part of the original
-                practice</h6>
+                practice; some of them are meant to be harder.</h6>
         </div>
         <div id="shell">
             <div id="q-and-a">
@@ -83,7 +83,7 @@ phpNav(); ?>
                         opposed to a <i>while</i> loop.
                     </div>
                     <div class="answer">
-                        <b>False</b><br> For, while, and do are different ways of doing the same thing. They have their
+                        <b>False</b><br> For, while, and do are three ways of looping. They have their
                         differences, but you can accomplish any loop with any implementation.
                     </div>
                 </div>
@@ -94,7 +94,7 @@ phpNav(); ?>
                     </div>
                     <div class="answer">
                         <b>False</b><br>
-                        To compile a for loop, you must have three components in the statement, separated by semicolons.
+                        The loop is valid. To compile a for loop, you must have three components in the statement, separated by semicolons.
                         However, those components may be blank. The code is equivalent to how you might write a while
                         loop
                         <pre><code class="java">int i = 0;<br>while (i < 15) ... i++;</code></pre>
@@ -209,6 +209,24 @@ phpNav(); ?>
                         <b>[2, 3, 4, 5, 6, 2]</b><br>
                         The numbers are shifted left, so every number at index i is the original value at index (i + 1).
                         However, notice that at the end, the last index takes the value at a[0], which is now 2, not 1.
+                    </div>
+                </div>
+                <div class="qa-row">
+                    <div class="question">
+                        * What prints?
+                        <?php echo code_specific('java', 'Increment.java') ?>
+                    </div>
+                    <div class="answer">
+                        <b>33</b><br>
+                        When <code>++</code> is a prefix, it will execute first. This makes <code>input1[0] = 2 =
+                            input1[1]</code>.<br>
+                        When <code>++</code> is a suffix, it executes after the comparison. This means that <code>input2[1]
+                            = 2 &ne; input2[2]</code>, but <code>input2[1]</code> is still incremented to 3
+                        afterwards.<br>
+                        As <code>test2</code> returns false, <code>test3</code> is never called.<br>
+                        Our condition is false, so we print <code>data[1] = 3</code>, followed by <code>data[2] =
+                            3</code>.
+                        Note that given we are passing arrays, the changes in each method modifies <code>data</code>
                     </div>
                 </div>
                 <!--
