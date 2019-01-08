@@ -80,7 +80,7 @@ $subHeader = 'Lectures 11 – Midterm Review';
                     "Bipartite graph – graph where vertices can be partitioned into 2 sets (A & B), where all edges cross the sets (no edges are from one set to the same set)",
                     "-If made into a DFS tree, can be coloured in 2 colours where every edge spans from one colour to the other colour",
                     "-Is bipartite iff it does not contain an odd cycle",
-                    "-" . linkNewTab('From Math 240', 'https://www.allanwang.ca/pdf/MATH%20240.pdf#page=36'),
+                    "-" . linkNewTab('From Math 240', 'https://www.allanwang.ca/pdf/MATH-240.pdf#page=36'),
                     "Matching – subset of edges such that no two edges share a vertex",
                     "Perfect matching – every vertex in subset A has a matching in subset B and vice versa",
                     "Complete bipartite graph – every vertex in A is connected to every vertex in B and vice versa",
