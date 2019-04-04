@@ -79,6 +79,7 @@ phpNav(); ?>
 
                     table_header('Aliases', 'Custom Commands');
                     table('git config --global alias.cmp \'!f() { git add -A && git commit -m "$*" && git push; }; f\'', 'git cmp [message] will add all changes, commit that message, and push it (cmp = commit merge push)');
+                    table('git config --global alias.delete-merged \'!f() { git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d; }; f\'', 'git delete-merged will remove all branches that have been merged, excluding master and dev');
                     table('git config --global alias.fullinit \'!f() { git init && git remote add origin "$*" && git pull origin master && git branch --set-upstream-to origin/master; }; f\'', 'git fullinit [link] will initialize a git, set the link as origin, pull to master, then set the upstream to origin.');
                     table('git config --global alias.copyHash \'!f() { git log --pretty=format:"%h" -n 1 | clip.exe; }; f\'', 'git copyHash will copy the latest commit hash in the pretty format; note that clip.exe is for windows. You may use `xclip -selection clipboard` for linux, and `pbcopy` for mac.');
                     table('git config --global alias.copyFullHash \'!f() { git rev-parse HEAD | clip.exe; }; f\'', 'git copyFullHash will copy the latest commit hash in its entirety');
