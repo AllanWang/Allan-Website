@@ -3,4 +3,7 @@
 *.min.js
 *.min.css
 
+.DS_Store
+
 .idea/
+.vscode/
